@@ -36,21 +36,23 @@ public class RemoveTagRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/impactedResources/{impactedResource%2Did}/removeTag", rawUrl);
     }
     /**
-     * Invoke action removeTag
+     * Remove a user-defined tag from an impactedResource object. To remove the same tag from multiple impacted resources in a single request, use the removeTag action on the impactedResources collection.
      * @param body The request body
      * @return a {@link ImpactedResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-removetag?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ImpactedResource post(@jakarta.annotation.Nonnull final RemoveTagPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action removeTag
+     * Remove a user-defined tag from an impactedResource object. To remove the same tag from multiple impacted resources in a single request, use the removeTag action on the impactedResources collection.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ImpactedResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-removetag?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ImpactedResource post(@jakarta.annotation.Nonnull final RemoveTagPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -61,7 +63,7 @@ public class RemoveTagRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ImpactedResource::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action removeTag
+     * Remove a user-defined tag from an impactedResource object. To remove the same tag from multiple impacted resources in a single request, use the removeTag action on the impactedResources collection.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +72,7 @@ public class RemoveTagRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action removeTag
+     * Remove a user-defined tag from an impactedResource object. To remove the same tag from multiple impacted resources in a single request, use the removeTag action on the impactedResources collection.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

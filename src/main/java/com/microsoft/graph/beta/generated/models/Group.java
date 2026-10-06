@@ -156,6 +156,14 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("description");
     }
     /**
+     * Gets the disableNesting property value. Indicates whether other groups can be added as members of this group. The default value is false. When set to true, other groups can&apos;t be added as members. You can set this property only for security groups that have isAssignableToRole set to false. The property is read-only for Microsoft 365 groups and groups that have isAssignableToRole set to true. Not nullable. Requires $select to retrieve. Supports $filter (eq). The least privileged permission to read or write this property is Group-NestingSupport.ReadWrite.All.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getDisableNesting() {
+        return this.backingStore.get("disableNesting");
+    }
+    /**
      * Gets the displayName property value. The display name for the group. Required. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      * @return a {@link String}
      */
@@ -234,6 +242,7 @@ public class Group extends DirectoryObject implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("createdOnBehalfOf", (n) -> { this.setCreatedOnBehalfOf(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("disableNesting", (n) -> { this.setDisableNesting(n.getBooleanValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("drive", (n) -> { this.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
         deserializerMap.put("drives", (n) -> { this.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
@@ -815,6 +824,7 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("createdOnBehalfOf", this.getCreatedOnBehalfOf());
         writer.writeStringValue("description", this.getDescription());
+        writer.writeBooleanValue("disableNesting", this.getDisableNesting());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("drive", this.getDrive());
         writer.writeCollectionOfObjectValues("drives", this.getDrives());
@@ -995,6 +1005,13 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
+    }
+    /**
+     * Sets the disableNesting property value. Indicates whether other groups can be added as members of this group. The default value is false. When set to true, other groups can&apos;t be added as members. You can set this property only for security groups that have isAssignableToRole set to false. The property is read-only for Microsoft 365 groups and groups that have isAssignableToRole set to true. Not nullable. Requires $select to retrieve. Supports $filter (eq). The least privileged permission to read or write this property is Group-NestingSupport.ReadWrite.All.
+     * @param value Value to set for the disableNesting property.
+     */
+    public void setDisableNesting(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("disableNesting", value);
     }
     /**
      * Sets the displayName property value. The display name for the group. Required. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.

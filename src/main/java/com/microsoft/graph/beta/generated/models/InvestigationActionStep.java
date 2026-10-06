@@ -35,7 +35,7 @@ public class InvestigationActionStep implements AdditionalDataHolder, BackedMode
         return new InvestigationActionStep();
     }
     /**
-     * Gets the actionUrl property value. The actionUrl property
+     * Gets the actionUrl property value. The follow-on API reference for the step, containing the URL template and a machine-readable execution directive that a client uses to retrieve the drill-in data.
      * @return a {@link InvestigationActionUrl}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class InvestigationActionStep implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the stepNumber property value. The stepNumber property
+     * Gets the stepNumber property value. The one-based order, as a string, in which the step should be evaluated by a client. Steps are intended to be run in ascending stepNumber order because later steps can depend on the output of earlier steps. This value is the key of the resource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class InvestigationActionStep implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("stepNumber");
     }
     /**
-     * Gets the text property value. The text property
+     * Gets the text property value. Human-readable guidance that explains what the step does and why it&apos;s useful for investigating the related metric.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class InvestigationActionStep implements AdditionalDataHolder, BackedMode
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the actionUrl property value. The actionUrl property
+     * Sets the actionUrl property value. The follow-on API reference for the step, containing the URL template and a machine-readable execution directive that a client uses to retrieve the drill-in data.
      * @param value Value to set for the actionUrl property.
      */
     public void setActionUrl(@jakarta.annotation.Nullable final InvestigationActionUrl value) {
@@ -142,14 +142,14 @@ public class InvestigationActionStep implements AdditionalDataHolder, BackedMode
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the stepNumber property value. The stepNumber property
+     * Sets the stepNumber property value. The one-based order, as a string, in which the step should be evaluated by a client. Steps are intended to be run in ascending stepNumber order because later steps can depend on the output of earlier steps. This value is the key of the resource.
      * @param value Value to set for the stepNumber property.
      */
     public void setStepNumber(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("stepNumber", value);
     }
     /**
-     * Sets the text property value. The text property
+     * Sets the text property value. Human-readable guidance that explains what the step does and why it&apos;s useful for investigating the related metric.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {

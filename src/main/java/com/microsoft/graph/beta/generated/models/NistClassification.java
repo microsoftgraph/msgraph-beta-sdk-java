@@ -56,7 +56,7 @@ public class NistClassification implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore;
     }
     /**
-     * Gets the category property value. The category property
+     * Gets the category property value. The NIST CSF 2.0 category name, for example Adverse Event Analysis.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class NistClassification implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("category");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A description of the NIST CSF 2.0 category.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class NistClassification implements AdditionalDataHolder, BackedModel, Pa
         return deserializerMap;
     }
     /**
-     * Gets the function property value. The function property
+     * Gets the function property value. The NIST CSF 2.0 function, for example Detect (DE).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class NistClassification implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("function");
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The NIST CSF 2.0 category identifier, for example DE.AE.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,28 +138,28 @@ public class NistClassification implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore = value;
     }
     /**
-     * Sets the category property value. The category property
+     * Sets the category property value. The NIST CSF 2.0 category name, for example Adverse Event Analysis.
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("category", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A description of the NIST CSF 2.0 category.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the function property value. The function property
+     * Sets the function property value. The NIST CSF 2.0 function, for example Detect (DE).
      * @param value Value to set for the function property.
      */
     public void setFunction(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("function", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The NIST CSF 2.0 category identifier, for example DE.AE.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

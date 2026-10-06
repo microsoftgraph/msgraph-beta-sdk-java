@@ -36,21 +36,23 @@ public class ProvisionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/devices/provision", rawUrl);
     }
     /**
-     * Invoke action provision
+     * Provision a device on behalf of an approved Virtual Desktop Infrastructure (VDI) provider. This action wraps the Zero Touch Deployment (ZTD) protocol to create a device in a pending state in the customer&apos;s directory. The device can&apos;t be used for authentication until it completes its registration. The created device is stamped with a system label that identifies the approved VDI provider. Only VDI applications on Microsoft&apos;s approved list of VDI providers can successfully call this action. Calls from other applications are blocked even when the application is granted the required permission.
      * @param body The request body
      * @return a {@link ProvisionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/device-provision?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProvisionResponse post(@jakarta.annotation.Nonnull final ProvisionPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action provision
+     * Provision a device on behalf of an approved Virtual Desktop Infrastructure (VDI) provider. This action wraps the Zero Touch Deployment (ZTD) protocol to create a device in a pending state in the customer&apos;s directory. The device can&apos;t be used for authentication until it completes its registration. The created device is stamped with a system label that identifies the approved VDI provider. Only VDI applications on Microsoft&apos;s approved list of VDI providers can successfully call this action. Calls from other applications are blocked even when the application is granted the required permission.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProvisionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/device-provision?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProvisionResponse post(@jakarta.annotation.Nonnull final ProvisionPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -61,7 +63,7 @@ public class ProvisionRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProvisionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action provision
+     * Provision a device on behalf of an approved Virtual Desktop Infrastructure (VDI) provider. This action wraps the Zero Touch Deployment (ZTD) protocol to create a device in a pending state in the customer&apos;s directory. The device can&apos;t be used for authentication until it completes its registration. The created device is stamped with a system label that identifies the approved VDI provider. Only VDI applications on Microsoft&apos;s approved list of VDI providers can successfully call this action. Calls from other applications are blocked even when the application is granted the required permission.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +72,7 @@ public class ProvisionRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action provision
+     * Provision a device on behalf of an approved Virtual Desktop Infrastructure (VDI) provider. This action wraps the Zero Touch Deployment (ZTD) protocol to create a device in a pending state in the customer&apos;s directory. The device can&apos;t be used for authentication until it completes its registration. The created device is stamped with a system label that identifies the approved VDI provider. Only VDI applications on Microsoft&apos;s approved list of VDI providers can successfully call this action. Calls from other applications are blocked even when the application is granted the required permission.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

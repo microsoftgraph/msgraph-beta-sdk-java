@@ -70,7 +70,7 @@ public class RelatedTenantsRefreshStatus implements AdditionalDataHolder, Backed
         return deserializerMap;
     }
     /**
-     * Gets the isFirstRefresh property value. The isFirstRefresh property
+     * Gets the isFirstRefresh property value. Describes whether the related tenants refresh was the initial aggregation done by our service or not.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class RelatedTenantsRefreshStatus implements AdditionalDataHolder, Backed
         return this.backingStore.get("mostRecentRefreshDateTime");
     }
     /**
-     * Gets the mostRecentRefreshRequestStatus property value. The mostRecentRefreshRequestStatus property
+     * Gets the mostRecentRefreshRequestStatus property value. The status of the refresh operation
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class RelatedTenantsRefreshStatus implements AdditionalDataHolder, Backed
         this.backingStore = value;
     }
     /**
-     * Sets the isFirstRefresh property value. The isFirstRefresh property
+     * Sets the isFirstRefresh property value. Describes whether the related tenants refresh was the initial aggregation done by our service or not.
      * @param value Value to set for the isFirstRefresh property.
      */
     public void setIsFirstRefresh(@jakarta.annotation.Nullable final Boolean value) {
@@ -143,7 +143,7 @@ public class RelatedTenantsRefreshStatus implements AdditionalDataHolder, Backed
         this.backingStore.set("mostRecentRefreshDateTime", value);
     }
     /**
-     * Sets the mostRecentRefreshRequestStatus property value. The mostRecentRefreshRequestStatus property
+     * Sets the mostRecentRefreshRequestStatus property value. The status of the refresh operation
      * @param value Value to set for the mostRecentRefreshRequestStatus property.
      */
     public void setMostRecentRefreshRequestStatus(@jakarta.annotation.Nullable final String value) {

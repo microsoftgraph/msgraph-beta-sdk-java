@@ -1,4 +1,4 @@
-package com.microsoft.graph.beta.teamwork.messaging.customemojis.item;
+package com.microsoft.graph.beta.teamwork.messaging.customemojiswithdisplayname;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.TeamworkCustomEmoji;
@@ -19,22 +19,24 @@ import java.util.Objects;
  * Provides operations to manage the customEmojis property of the microsoft.graph.teamworkMessaging entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TeamworkCustomEmojiDisplayNameItemRequestBuilder extends BaseRequestBuilder {
+public class CustomEmojisWithDisplayNameRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new {@link TeamworkCustomEmojiDisplayNameItemRequestBuilder} and sets the default values.
+     * Instantiates a new {@link CustomEmojisWithDisplayNameRequestBuilder} and sets the default values.
+     * @param displayName Alternate key of teamworkCustomEmoji
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public TeamworkCustomEmojiDisplayNameItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teamwork/messaging/customEmojis/{teamworkCustomEmoji%2DdisplayName}{?%24expand,%24select}", pathParameters);
+    public CustomEmojisWithDisplayNameRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String displayName) {
+        super(requestAdapter, "{+baseurl}/teamwork/messaging/customEmojis(displayName='{displayName}'){?%24expand,%24select}", pathParameters);
+        this.pathParameters.put("displayName", displayName);
     }
     /**
-     * Instantiates a new {@link TeamworkCustomEmojiDisplayNameItemRequestBuilder} and sets the default values.
+     * Instantiates a new {@link CustomEmojisWithDisplayNameRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public TeamworkCustomEmojiDisplayNameItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teamwork/messaging/customEmojis/{teamworkCustomEmoji%2DdisplayName}{?%24expand,%24select}", rawUrl);
+    public CustomEmojisWithDisplayNameRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/teamwork/messaging/customEmojis(displayName='{displayName}'){?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property customEmojis for teamwork
@@ -168,12 +170,12 @@ public class TeamworkCustomEmojiDisplayNameItemRequestBuilder extends BaseReques
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link TeamworkCustomEmojiDisplayNameItemRequestBuilder}
+     * @return a {@link CustomEmojisWithDisplayNameRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public TeamworkCustomEmojiDisplayNameItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public CustomEmojisWithDisplayNameRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new TeamworkCustomEmojiDisplayNameItemRequestBuilder(rawUrl, requestAdapter);
+        return new CustomEmojisWithDisplayNameRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

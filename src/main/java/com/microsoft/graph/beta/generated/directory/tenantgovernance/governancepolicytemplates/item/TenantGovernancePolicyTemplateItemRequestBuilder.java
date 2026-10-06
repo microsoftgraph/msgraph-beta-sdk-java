@@ -37,7 +37,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/directory/tenantGovernance/governancePolicyTemplates/{tenantGovernancePolicyTemplate%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a governancePolicyTemplate object. You can&apos;t delete the default template or templates currently used by active relationships.
+     * Delete a tenantGovernancePolicyTemplate object. You can&apos;t delete the default template or templates currently used by active relationships.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-delete-governancepolicytemplates?view=graph-rest-beta">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         delete(null);
     }
     /**
-     * Delete a governancePolicyTemplate object. You can&apos;t delete the default template or templates currently used by active relationships.
+     * Delete a tenantGovernancePolicyTemplate object. You can&apos;t delete the default template or templates currently used by active relationships.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-delete-governancepolicytemplates?view=graph-rest-beta">Find more info here</a>
@@ -57,7 +57,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties of a governancePolicyTemplate object.
+     * Read the properties of a tenantGovernancePolicyTemplate object.
      * @return a {@link TenantGovernancePolicyTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-governancepolicytemplate-get?view=graph-rest-beta">Find more info here</a>
@@ -67,7 +67,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         return get(null);
     }
     /**
-     * Read the properties of a governancePolicyTemplate object.
+     * Read the properties of a tenantGovernancePolicyTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantGovernancePolicyTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -81,7 +81,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, TenantGovernancePolicyTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a governancePolicyTemplate object.
+     * Update the properties of a tenantGovernancePolicyTemplate object.
      * @param body The request body
      * @return a {@link TenantGovernancePolicyTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -92,7 +92,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         return patch(body, null);
     }
     /**
-     * Update the properties of a governancePolicyTemplate object.
+     * Update the properties of a tenantGovernancePolicyTemplate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantGovernancePolicyTemplate}
@@ -108,7 +108,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, TenantGovernancePolicyTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Delete a governancePolicyTemplate object. You can&apos;t delete the default template or templates currently used by active relationships.
+     * Delete a tenantGovernancePolicyTemplate object. You can&apos;t delete the default template or templates currently used by active relationships.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a governancePolicyTemplate object. You can&apos;t delete the default template or templates currently used by active relationships.
+     * Delete a tenantGovernancePolicyTemplate object. You can&apos;t delete the default template or templates currently used by active relationships.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +128,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Read the properties of a governancePolicyTemplate object.
+     * Read the properties of a tenantGovernancePolicyTemplate object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +136,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of a governancePolicyTemplate object.
+     * Read the properties of a tenantGovernancePolicyTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,7 +148,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Update the properties of a governancePolicyTemplate object.
+     * Update the properties of a tenantGovernancePolicyTemplate object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +157,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a governancePolicyTemplate object.
+     * Update the properties of a tenantGovernancePolicyTemplate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +188,7 @@ public class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties of a governancePolicyTemplate object.
+     * Read the properties of a tenantGovernancePolicyTemplate object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

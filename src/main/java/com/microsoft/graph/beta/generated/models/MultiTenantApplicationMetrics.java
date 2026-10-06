@@ -45,7 +45,7 @@ public class MultiTenantApplicationMetrics extends Entity implements Parsable {
         return this.backingStore.get("initial");
     }
     /**
-     * Gets the investigationHints property value. The investigationHints property
+     * Gets the investigationHints property value. Ordered drill-in guidance for investigating multitenant application counts. This collection is returned only when explicitly requested by using a nested $expand query parameter, for example $expand=multiTenantApplicationMetrics($expand=investigationHints).
      * @return a {@link java.util.List<InvestigationActionStep>}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class MultiTenantApplicationMetrics extends Entity implements Parsable {
         this.backingStore.set("initial", value);
     }
     /**
-     * Sets the investigationHints property value. The investigationHints property
+     * Sets the investigationHints property value. Ordered drill-in guidance for investigating multitenant application counts. This collection is returned only when explicitly requested by using a nested $expand query parameter, for example $expand=multiTenantApplicationMetrics($expand=investigationHints).
      * @param value Value to set for the investigationHints property.
      */
     public void setInvestigationHints(@jakarta.annotation.Nullable final java.util.List<InvestigationActionStep> value) {

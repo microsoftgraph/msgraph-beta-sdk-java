@@ -36,19 +36,21 @@ public class AcceptRiskRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recommendations/{recommendation%2Did}/impactedResources/{impactedResource%2Did}/acceptRisk", rawUrl);
     }
     /**
-     * Invoke action acceptRisk
+     * Accept the risk for an impactedResource object and update its status to riskAccepted.
      * @return a {@link ImpactedResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-acceptrisk?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ImpactedResource post() {
         return post(null);
     }
     /**
-     * Invoke action acceptRisk
+     * Accept the risk for an impactedResource object and update its status to riskAccepted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ImpactedResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-acceptrisk?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ImpactedResource post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class AcceptRiskRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ImpactedResource::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action acceptRisk
+     * Accept the risk for an impactedResource object and update its status to riskAccepted.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class AcceptRiskRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action acceptRisk
+     * Accept the risk for an impactedResource object and update its status to riskAccepted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

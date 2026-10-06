@@ -55,7 +55,7 @@ public class RecommendationTagItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get tags from directory
+     * The user-defined free-form labels applied to the recommendation. The collection isn&apos;t directly writable; tags are created and removed through the addTag and removeTag actions.
      * @return a {@link RecommendationTag}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class RecommendationTagItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get tags from directory
+     * The user-defined free-form labels applied to the recommendation. The collection isn&apos;t directly writable; tags are created and removed through the addTag and removeTag actions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RecommendationTag}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class RecommendationTagItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get tags from directory
+     * The user-defined free-form labels applied to the recommendation. The collection isn&apos;t directly writable; tags are created and removed through the addTag and removeTag actions.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class RecommendationTagItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get tags from directory
+     * The user-defined free-form labels applied to the recommendation. The collection isn&apos;t directly writable; tags are created and removed through the addTag and removeTag actions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class RecommendationTagItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get tags from directory
+     * The user-defined free-form labels applied to the recommendation. The collection isn&apos;t directly writable; tags are created and removed through the addTag and removeTag actions.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

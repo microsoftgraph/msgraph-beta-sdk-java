@@ -60,7 +60,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/impactedResources/{impactedResource%2Did}/tags{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get tags from directory
+     * The user-defined free-form labels applied to the impactedResource. The collection isn&apos;t directly writable; tags are created and removed through the addTag and removeTag actions.
      * @return a {@link RecommendationTagCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get tags from directory
+     * The user-defined free-form labels applied to the impactedResource. The collection isn&apos;t directly writable; tags are created and removed through the addTag and removeTag actions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RecommendationTagCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RecommendationTag::createFromDiscriminatorValue);
     }
     /**
-     * Get tags from directory
+     * The user-defined free-form labels applied to the impactedResource. The collection isn&apos;t directly writable; tags are created and removed through the addTag and removeTag actions.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get tags from directory
+     * The user-defined free-form labels applied to the impactedResource. The collection isn&apos;t directly writable; tags are created and removed through the addTag and removeTag actions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class TagsRequestBuilder extends BaseRequestBuilder {
         return new TagsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get tags from directory
+     * The user-defined free-form labels applied to the impactedResource. The collection isn&apos;t directly writable; tags are created and removed through the addTag and removeTag actions.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

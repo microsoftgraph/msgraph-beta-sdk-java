@@ -100,7 +100,7 @@ public class RelatedTenantItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of microsoft.graph.tenantGovernanceServices.relatedTenant object.
+     * Read the properties and relationships of microsoft.graph.relatedTenant object.
      * @return a {@link RelatedTenant}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-relatedtenant-get?view=graph-rest-beta">Find more info here</a>
@@ -110,7 +110,7 @@ public class RelatedTenantItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of microsoft.graph.tenantGovernanceServices.relatedTenant object.
+     * Read the properties and relationships of microsoft.graph.relatedTenant object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RelatedTenant}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -169,7 +169,7 @@ public class RelatedTenantItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of microsoft.graph.tenantGovernanceServices.relatedTenant object.
+     * Read the properties and relationships of microsoft.graph.relatedTenant object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -177,7 +177,7 @@ public class RelatedTenantItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of microsoft.graph.tenantGovernanceServices.relatedTenant object.
+     * Read the properties and relationships of microsoft.graph.relatedTenant object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -229,7 +229,7 @@ public class RelatedTenantItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of microsoft.graph.tenantGovernanceServices.relatedTenant object.
+     * Read the properties and relationships of microsoft.graph.relatedTenant object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
