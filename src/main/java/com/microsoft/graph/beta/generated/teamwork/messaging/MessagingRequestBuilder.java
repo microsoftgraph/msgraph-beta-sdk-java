@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.teamwork.messaging;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.TeamworkMessaging;
 import com.microsoft.graph.beta.teamwork.messaging.customemojis.CustomEmojisRequestBuilder;
+import com.microsoft.graph.beta.teamwork.messaging.customemojiswithdisplayname.CustomEmojisWithDisplayNameRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -44,6 +45,16 @@ public class MessagingRequestBuilder extends BaseRequestBuilder {
      */
     public MessagingRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/teamwork/messaging{?%24expand,%24select}", rawUrl);
+    }
+    /**
+     * Provides operations to manage the customEmojis property of the microsoft.graph.teamworkMessaging entity.
+     * @param displayName Alternate key of teamworkCustomEmoji
+     * @return a {@link CustomEmojisWithDisplayNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CustomEmojisWithDisplayNameRequestBuilder customEmojisWithDisplayName(@jakarta.annotation.Nonnull final String displayName) {
+        Objects.requireNonNull(displayName);
+        return new CustomEmojisWithDisplayNameRequestBuilder(pathParameters, requestAdapter, displayName);
     }
     /**
      * Delete navigation property messaging for teamwork

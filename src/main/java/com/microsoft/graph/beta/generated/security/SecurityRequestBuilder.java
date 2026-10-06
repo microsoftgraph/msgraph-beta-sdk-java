@@ -22,6 +22,7 @@ import com.microsoft.graph.beta.security.informationprotection.InformationProtec
 import com.microsoft.graph.beta.security.ipsecurityprofiles.IpSecurityProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.labels.LabelsRequestBuilder;
 import com.microsoft.graph.beta.security.microsoftgraphsecuritygethuntingschema.MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder;
+import com.microsoft.graph.beta.security.microsoftgraphsecuritygethuntingschematableswithworkspaceid.MicrosoftGraphSecurityGetHuntingSchemaTablesWithWorkspaceIdRequestBuilder;
 import com.microsoft.graph.beta.security.microsoftgraphsecuritygetrunhuntingquerywithquerytimespantimespanwithworkspaceid.MicrosoftGraphSecurityGetRunHuntingQueryWithQuerytimespanTimespanWithWorkspaceIdRequestBuilder;
 import com.microsoft.graph.beta.security.microsoftgraphsecurityrunhuntingquery.MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
 import com.microsoft.graph.beta.security.partner.PartnerRequestBuilder;
@@ -216,6 +217,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder microsoftGraphSecurityGetHuntingSchema() {
         return new MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getHuntingSchemaTables method.
+     * @return a {@link MicrosoftGraphSecurityGetHuntingSchemaTablesWithWorkspaceIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityGetHuntingSchemaTablesWithWorkspaceIdRequestBuilder microsoftGraphSecurityGetHuntingSchemaTablesWithWorkspaceId() {
+        return new MicrosoftGraphSecurityGetHuntingSchemaTablesWithWorkspaceIdRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the runHuntingQuery method.

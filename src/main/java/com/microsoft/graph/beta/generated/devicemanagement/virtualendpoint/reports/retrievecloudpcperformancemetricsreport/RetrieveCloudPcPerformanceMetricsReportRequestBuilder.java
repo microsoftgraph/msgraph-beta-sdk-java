@@ -36,21 +36,23 @@ public class RetrieveCloudPcPerformanceMetricsReportRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/reports/retrieveCloudPcPerformanceMetricsReport", rawUrl);
     }
     /**
-     * Invoke action retrieveCloudPcPerformanceMetricsReport
+     * Get VM-level utilization and performance metrics for a specific Cloud PC from the cloudPcReports resource, including CPU, memory, and network metrics. The metrics are returned as flattened time-series data. This API supports only Windows 365 Enterprise Cloud PCs and Windows 365 Frontline Cloud PCs in dedicated mode.
      * @param body The request body
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-retrievecloudpcperformancemetricsreport?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream post(@jakarta.annotation.Nonnull final RetrieveCloudPcPerformanceMetricsReportPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action retrieveCloudPcPerformanceMetricsReport
+     * Get VM-level utilization and performance metrics for a specific Cloud PC from the cloudPcReports resource, including CPU, memory, and network metrics. The metrics are returned as flattened time-series data. This API supports only Windows 365 Enterprise Cloud PCs and Windows 365 Frontline Cloud PCs in dedicated mode.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-retrievecloudpcperformancemetricsreport?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream post(@jakarta.annotation.Nonnull final RetrieveCloudPcPerformanceMetricsReportPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -61,7 +63,7 @@ public class RetrieveCloudPcPerformanceMetricsReportRequestBuilder extends BaseR
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke action retrieveCloudPcPerformanceMetricsReport
+     * Get VM-level utilization and performance metrics for a specific Cloud PC from the cloudPcReports resource, including CPU, memory, and network metrics. The metrics are returned as flattened time-series data. This API supports only Windows 365 Enterprise Cloud PCs and Windows 365 Frontline Cloud PCs in dedicated mode.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +72,7 @@ public class RetrieveCloudPcPerformanceMetricsReportRequestBuilder extends BaseR
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action retrieveCloudPcPerformanceMetricsReport
+     * Get VM-level utilization and performance metrics for a specific Cloud PC from the cloudPcReports resource, including CPU, memory, and network metrics. The metrics are returned as flattened time-series data. This API supports only Windows 365 Enterprise Cloud PCs and Windows 365 Frontline Cloud PCs in dedicated mode.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

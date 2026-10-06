@@ -39,10 +39,7 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property items for admin
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -50,10 +47,7 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property items for admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -64,11 +58,8 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
      * The collection of items in this folder.
      * @return a {@link MailboxItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MailboxItem get() {
         return get(null);
     }
@@ -77,11 +68,8 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MailboxItem get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -91,11 +79,8 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property items for admin
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -103,11 +88,8 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property items for admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -117,11 +99,8 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of items in this folder.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -129,11 +108,8 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
      * The collection of items in this folder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -144,11 +120,8 @@ public class MailboxItemItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link MailboxItemItemRequestBuilder}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public MailboxItemItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new MailboxItemItemRequestBuilder(rawUrl, requestAdapter);

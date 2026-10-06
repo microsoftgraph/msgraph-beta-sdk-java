@@ -36,21 +36,23 @@ public class AddTagRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recommendations/{recommendation%2Did}/addTag", rawUrl);
     }
     /**
-     * Invoke action addTag
+     * Add a user-defined tag to a recommendation object. Tags help you organize, group, and filter recommendations in the Microsoft Entra admin center.
      * @param body The request body
      * @return a {@link RecommendationTag}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-addtag?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RecommendationTag post(@jakarta.annotation.Nonnull final AddTagPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action addTag
+     * Add a user-defined tag to a recommendation object. Tags help you organize, group, and filter recommendations in the Microsoft Entra admin center.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RecommendationTag}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-addtag?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RecommendationTag post(@jakarta.annotation.Nonnull final AddTagPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -61,7 +63,7 @@ public class AddTagRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RecommendationTag::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action addTag
+     * Add a user-defined tag to a recommendation object. Tags help you organize, group, and filter recommendations in the Microsoft Entra admin center.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +72,7 @@ public class AddTagRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action addTag
+     * Add a user-defined tag to a recommendation object. Tags help you organize, group, and filter recommendations in the Microsoft Entra admin center.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

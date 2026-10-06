@@ -36,19 +36,21 @@ public class MarkPlannedRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recommendations/{recommendation%2Did}/markPlanned", rawUrl);
     }
     /**
-     * Invoke action markPlanned
+     * Mark a recommendation object as planned and update its status to planned.
      * @return a {@link Recommendation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-markplanned?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Recommendation post() {
         return post(null);
     }
     /**
-     * Invoke action markPlanned
+     * Mark a recommendation object as planned and update its status to planned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Recommendation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-markplanned?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Recommendation post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class MarkPlannedRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Recommendation::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action markPlanned
+     * Mark a recommendation object as planned and update its status to planned.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class MarkPlannedRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action markPlanned
+     * Mark a recommendation object as planned and update its status to planned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

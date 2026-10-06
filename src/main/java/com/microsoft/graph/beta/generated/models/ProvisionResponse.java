@@ -56,7 +56,7 @@ public class ProvisionResponse implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore;
     }
     /**
-     * Gets the challenge property value. The challenge property
+     * Gets the challenge property value. The cryptographic challenge that the device uses to complete its registration with the directory.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class ProvisionResponse implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("challenge");
     }
     /**
-     * Gets the deviceId property value. The deviceId property
+     * Gets the deviceId property value. The unique identifier of the provisioned device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class ProvisionResponse implements AdditionalDataHolder, BackedModel, Par
         this.backingStore = value;
     }
     /**
-     * Sets the challenge property value. The challenge property
+     * Sets the challenge property value. The cryptographic challenge that the device uses to complete its registration with the directory.
      * @param value Value to set for the challenge property.
      */
     public void setChallenge(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("challenge", value);
     }
     /**
-     * Sets the deviceId property value. The deviceId property
+     * Sets the deviceId property value. The unique identifier of the provisioned device.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {

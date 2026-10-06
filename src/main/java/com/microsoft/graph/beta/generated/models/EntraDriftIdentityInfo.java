@@ -32,7 +32,16 @@ public class EntraDriftIdentityInfo extends DriftIdentityInfo implements Parsabl
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("identityType", (n) -> { this.setIdentityType(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the identityType property value. The identityType property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getIdentityType() {
+        return this.backingStore.get("identityType");
     }
     /**
      * Serializes information the current object
@@ -41,5 +50,13 @@ public class EntraDriftIdentityInfo extends DriftIdentityInfo implements Parsabl
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("identityType", this.getIdentityType());
+    }
+    /**
+     * Sets the identityType property value. The identityType property
+     * @param value Value to set for the identityType property.
+     */
+    public void setIdentityType(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("identityType", value);
     }
 }

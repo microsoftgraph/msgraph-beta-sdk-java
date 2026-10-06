@@ -30,6 +30,14 @@ public class AgentRegistration extends Entity implements Parsable {
         return new AgentRegistration();
     }
     /**
+     * Gets the a2aAuthorization property value. Authentication configuration used to invoke the Agent2Agent server.
+     * @return a {@link A2aAuthorization}
+     */
+    @jakarta.annotation.Nullable
+    public A2aAuthorization getA2aAuthorization() {
+        return this.backingStore.get("a2aAuthorization");
+    }
+    /**
      * Gets the agentCard property value. Flexible Json manifest containing agent card information following public manifestspecifications. Can include displayName, description, iconUrl, version, provider,capabilities, skills, security, and other manifest-defined fields.
      * @return a {@link UntypedNode}
      */
@@ -84,6 +92,7 @@ public class AgentRegistration extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("a2aAuthorization", (n) -> { this.setA2aAuthorization(n.getObjectValue(A2aAuthorization::createFromDiscriminatorValue)); });
         deserializerMap.put("agentCard", (n) -> { this.setAgentCard(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         deserializerMap.put("agentIdentityBlueprintId", (n) -> { this.setAgentIdentityBlueprintId(n.getStringValue()); });
         deserializerMap.put("agentIdentityId", (n) -> { this.setAgentIdentityId(n.getStringValue()); });
@@ -162,6 +171,7 @@ public class AgentRegistration extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("a2aAuthorization", this.getA2aAuthorization());
         writer.writeObjectValue("agentCard", this.getAgentCard());
         writer.writeStringValue("agentIdentityBlueprintId", this.getAgentIdentityBlueprintId());
         writer.writeStringValue("agentIdentityId", this.getAgentIdentityId());
@@ -175,6 +185,13 @@ public class AgentRegistration extends Entity implements Parsable {
         writer.writeStringValue("sourceAgentId", this.getSourceAgentId());
         writer.writeOffsetDateTimeValue("sourceCreatedDateTime", this.getSourceCreatedDateTime());
         writer.writeOffsetDateTimeValue("sourceLastModifiedDateTime", this.getSourceLastModifiedDateTime());
+    }
+    /**
+     * Sets the a2aAuthorization property value. Authentication configuration used to invoke the Agent2Agent server.
+     * @param value Value to set for the a2aAuthorization property.
+     */
+    public void setA2aAuthorization(@jakarta.annotation.Nullable final A2aAuthorization value) {
+        this.backingStore.set("a2aAuthorization", value);
     }
     /**
      * Sets the agentCard property value. Flexible Json manifest containing agent card information following public manifestspecifications. Can include displayName, description, iconUrl, version, provider,capabilities, skills, security, and other manifest-defined fields.

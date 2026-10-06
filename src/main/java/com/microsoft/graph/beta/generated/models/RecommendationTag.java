@@ -25,7 +25,7 @@ public class RecommendationTag extends Entity implements Parsable {
         return new RecommendationTag();
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The free-form label text. All characters and Unicode (all languages) are supported.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class RecommendationTag extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The free-form label text. All characters and Unicode (all languages) are supported.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

@@ -45,7 +45,7 @@ public class RecommendationConfiguration extends Entity implements Parsable {
         return this.backingStore.get("isNotificationEnabled");
     }
     /**
-     * Gets the lastRefreshedDateTime property value. The lastRefreshedDateTime property
+     * Gets the lastRefreshedDateTime property value. The date and time of the most recent refresh cycle in which every pipeline that populates Microsoft Entra recommendations completed successfully for the tenant&apos;s region. The value advances only when all contributing pipelines succeed and remains at the last fully successful cycle if any contributing pipeline is unhealthy. A successful refresh doesn&apos;t imply that any individual recommendation changed. Is null when no fully successful refresh has been recorded yet. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class RecommendationConfiguration extends Entity implements Parsable {
         this.backingStore.set("isNotificationEnabled", value);
     }
     /**
-     * Sets the lastRefreshedDateTime property value. The lastRefreshedDateTime property
+     * Sets the lastRefreshedDateTime property value. The date and time of the most recent refresh cycle in which every pipeline that populates Microsoft Entra recommendations completed successfully for the tenant&apos;s region. The value advances only when all contributing pipelines succeed and remains at the last fully successful cycle if any contributing pipeline is unhealthy. A successful refresh doesn&apos;t imply that any individual recommendation changed. Is null when no fully successful refresh has been recorded yet. Read-only.
      * @param value Value to set for the lastRefreshedDateTime property.
      */
     public void setLastRefreshedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

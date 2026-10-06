@@ -113,7 +113,7 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the offboardRequestedDateTime property value. The time when protection unit offboard was requested.
+     * Gets the offboardRequestedDateTime property value. The time when protection unit offboard was requested. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         return this.backingStore.get("offboardRequestedDateTime");
     }
     /**
-     * Gets the pendingRetentionPeriodChange property value. The pendingRetentionPeriodChange property
+     * Gets the pendingRetentionPeriodChange property value. The retention period change to be applied to the protection unit.
      * @return a {@link RetentionPeriodChange}
      */
     @jakarta.annotation.Nullable
@@ -221,14 +221,14 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the offboardRequestedDateTime property value. The time when protection unit offboard was requested.
+     * Sets the offboardRequestedDateTime property value. The time when protection unit offboard was requested. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @param value Value to set for the offboardRequestedDateTime property.
      */
     public void setOffboardRequestedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("offboardRequestedDateTime", value);
     }
     /**
-     * Sets the pendingRetentionPeriodChange property value. The pendingRetentionPeriodChange property
+     * Sets the pendingRetentionPeriodChange property value. The retention period change to be applied to the protection unit.
      * @param value Value to set for the pendingRetentionPeriodChange property.
      */
     public void setPendingRetentionPeriodChange(@jakarta.annotation.Nullable final RetentionPeriodChange value) {

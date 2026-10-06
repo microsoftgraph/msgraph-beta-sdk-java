@@ -10,6 +10,9 @@ import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Aggregated count of environments of a given kind within a zone.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AggregatedEnvironment implements AdditionalDataHolder, BackedModel, Parsable {
     /**

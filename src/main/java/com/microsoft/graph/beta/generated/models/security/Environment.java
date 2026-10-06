@@ -7,6 +7,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Represents a single cloud environment onboarded for security posture management.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Environment extends Entity implements Parsable {
     /**
@@ -36,7 +39,7 @@ public class Environment extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the kind property value. The kind property
+     * Gets the kind property value. The kind of cloud environment onboarded to security posture management.
      * @return a {@link EnvironmentKind}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +56,7 @@ public class Environment extends Entity implements Parsable {
         writer.writeEnumValue("kind", this.getKind());
     }
     /**
-     * Sets the kind property value. The kind property
+     * Sets the kind property value. The kind of cloud environment onboarded to security posture management.
      * @param value Value to set for the kind property.
      */
     public void setKind(@jakarta.annotation.Nullable final EnvironmentKind value) {

@@ -40,10 +40,7 @@ public class ExchangeMessageTraceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property messageTraces for admin
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -51,10 +48,7 @@ public class ExchangeMessageTraceItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property messageTraces for admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -65,11 +59,8 @@ public class ExchangeMessageTraceItemRequestBuilder extends BaseRequestBuilder {
      * Represents the trace information of messages that pass-through Exchange Online organizations.
      * @return a {@link ExchangeMessageTrace}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ExchangeMessageTrace get() {
         return get(null);
     }
@@ -78,11 +69,8 @@ public class ExchangeMessageTraceItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExchangeMessageTrace}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ExchangeMessageTrace get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -93,11 +81,8 @@ public class ExchangeMessageTraceItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getDetailsByRecipient method.
      * @param recipientAddress Usage: recipientAddress=&apos;{recipientAddress}&apos;
      * @return a {@link GetDetailsByRecipientWithRecipientAddressRequestBuilder}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public GetDetailsByRecipientWithRecipientAddressRequestBuilder getDetailsByRecipientWithRecipientAddress(@jakarta.annotation.Nonnull final String recipientAddress) {
         Objects.requireNonNull(recipientAddress);
         return new GetDetailsByRecipientWithRecipientAddressRequestBuilder(pathParameters, requestAdapter, recipientAddress);
@@ -107,11 +92,8 @@ public class ExchangeMessageTraceItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link ExchangeMessageTrace}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ExchangeMessageTrace patch(@jakarta.annotation.Nonnull final ExchangeMessageTrace body) {
         return patch(body, null);
     }
@@ -121,11 +103,8 @@ public class ExchangeMessageTraceItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExchangeMessageTrace}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ExchangeMessageTrace patch(@jakarta.annotation.Nonnull final ExchangeMessageTrace body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -136,11 +115,8 @@ public class ExchangeMessageTraceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property messageTraces for admin
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -148,11 +124,8 @@ public class ExchangeMessageTraceItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property messageTraces for admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -162,11 +135,8 @@ public class ExchangeMessageTraceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the trace information of messages that pass-through Exchange Online organizations.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -174,11 +144,8 @@ public class ExchangeMessageTraceItemRequestBuilder extends BaseRequestBuilder {
      * Represents the trace information of messages that pass-through Exchange Online organizations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -189,11 +156,8 @@ public class ExchangeMessageTraceItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property messageTraces in admin
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ExchangeMessageTrace body) {
         return toPatchRequestInformation(body, null);
     }
@@ -202,11 +166,8 @@ public class ExchangeMessageTraceItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ExchangeMessageTrace body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -219,11 +180,8 @@ public class ExchangeMessageTraceItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ExchangeMessageTraceItemRequestBuilder}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public ExchangeMessageTraceItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ExchangeMessageTraceItemRequestBuilder(rawUrl, requestAdapter);

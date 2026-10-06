@@ -56,7 +56,7 @@ public class InvestigationActionUrl implements AdditionalDataHolder, BackedModel
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. A machine-readable directive that describes how a client should run the step, in the form metricPathoperationinputoutput (for example, b2BRegistrationMetrics.recent.inboundTotalUserssingle$verifiedDomains). Clients use this value to chain steps together and to interpret the output of the associated url.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class InvestigationActionUrl implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the url property value. The url property
+     * Gets the url property value. A Microsoft Graph or Azure Resource Manager (ARM) URL template that the client invokes to retrieve the drill-in data for the step. The template can include placeholders such as {@id}, {startDate}, {endDate}, or {sourceDomain} that the client resolves from the related tenant, the caller context, or the output of earlier steps. This value can be empty for steps that only transform data returned by a previous step.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class InvestigationActionUrl implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. A machine-readable directive that describes how a client should run the step, in the form metricPathoperationinputoutput (for example, b2BRegistrationMetrics.recent.inboundTotalUserssingle$verifiedDomains). Clients use this value to chain steps together and to interpret the output of the associated url.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -132,7 +132,7 @@ public class InvestigationActionUrl implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the url property value. The url property
+     * Sets the url property value. A Microsoft Graph or Azure Resource Manager (ARM) URL template that the client invokes to retrieve the drill-in data for the step. The template can include placeholders such as {@id}, {startDate}, {endDate}, or {sourceDomain} that the client resolves from the related tenant, the caller context, or the output of earlier steps. This value can be empty for steps that only transform data returned by a previous step.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {

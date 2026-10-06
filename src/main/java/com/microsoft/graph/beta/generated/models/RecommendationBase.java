@@ -65,7 +65,7 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.backingStore.get("categoryGroup");
     }
     /**
-     * Gets the completedBySystemDateTime property value. The completedBySystemDateTime property
+     * Gets the completedBySystemDateTime property value. The date and time when the recommendations service verified that the recommendation was fully remediated and set its status to completedBySystem. Is null if the recommendation wasn&apos;t completed by the system. Supports $filter.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.backingStore.get("completedBySystemDateTime");
     }
     /**
-     * Gets the completedByUserDateTime property value. The completedByUserDateTime property
+     * Gets the completedByUserDateTime property value. The date and time when the recommendation was marked as completed by the user for the current review cycle, including when the value is rolled up from all impacted resources being marked as completed by the user. Is null if the recommendation wasn&apos;t completed by a user in the current cycle. Supports $filter.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the failedReviewDateTime property value. The failedReviewDateTime property
+     * Gets the failedReviewDateTime property value. The date and time when the recommendations service most recently verified that one or more impacted resources the user marked as completed are still impacted, moving them to needsMoreAction. Is cleared when the reviewed resources are remediated, so it&apos;s mutually exclusive with remediatedDateTime. Is null when no user-reviewed resource is currently failing verification. Supports $filter.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -225,7 +225,7 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.backingStore.get("maxScore");
     }
     /**
-     * Gets the needsMoreActionResourceCount property value. The needsMoreActionResourceCount property
+     * Gets the needsMoreActionResourceCount property value. The number of impacted resources that the user marked as completed and that the recommendations service subsequently verified are still impacted (moved to needsMoreAction). This value is greater than zero exactly when failedReviewDateTime is set. Is null when the recommendation doesn&apos;t participate in the review lifecycle.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -233,7 +233,7 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.backingStore.get("needsMoreActionResourceCount");
     }
     /**
-     * Gets the nistClassifications property value. The nistClassifications property
+     * Gets the nistClassifications property value. The NIST Cybersecurity Framework (CSF) 2.0 categories that the recommendation maps to. Read-only.
      * @return a {@link java.util.List<NistClassification>}
      */
     @jakarta.annotation.Nullable
@@ -273,7 +273,7 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.backingStore.get("releaseType");
     }
     /**
-     * Gets the remediatedDateTime property value. The remediatedDateTime property
+     * Gets the remediatedDateTime property value. The date and time when the recommendations service verified that the impacted resources the user marked as completed were remediated, meaning the user-reviewed resources reached completedBySystem. Is superseded by failedReviewDateTime if a reviewed resource subsequently fails verification. Is null if the system hasn&apos;t verified a user-driven remediation in the current cycle. Supports $filter.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -289,7 +289,7 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.backingStore.get("remediationImpact");
     }
     /**
-     * Gets the requiredLicenses property value. The required licenses to view the recommendation. The possible values are: notApplicable, microsoftEntraIdFree, microsoftEntraIdP1, microsoftEntraIdP2, microsoftEntraIdGovernance, microsoftEntraWorkloadId, unknownFutureValue, aatp. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: aatp.
+     * Gets the requiredLicenses property value. The required licenses to view the recommendation. The possible values are: notApplicable, microsoftEntraIdFree, microsoftEntraIdP1, microsoftEntraIdP2, microsoftEntraIdGovernance, microsoftEntraWorkloadId, unknownFutureValue, aatp, microsoftEntraSuite. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: aatp, microsoftEntraSuite.
      * @return a {@link RequiredLicenses}
      */
     @jakarta.annotation.Nullable
@@ -305,7 +305,7 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the statusModifiedDateTime property value. The statusModifiedDateTime property
+     * Gets the statusModifiedDateTime property value. The date and time when the recommendation&apos;s status last changed, for example from active to completedByUser, dismissed, postponed, or needsMoreAction. Unlike lastModifiedDateTime, this value isn&apos;t updated when only the recommendation&apos;s insight data changes while the status stays the same. Is null until the recommendation&apos;s status changes for the first time. Supports $filter.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -313,7 +313,7 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.backingStore.get("statusModifiedDateTime");
     }
     /**
-     * Gets the tags property value. The tags property
+     * Gets the tags property value. The user-defined free-form labels applied to the recommendation. The collection isn&apos;t directly writable; tags are created and removed through the addTag and removeTag actions.
      * @return a {@link java.util.List<RecommendationTag>}
      */
     @jakarta.annotation.Nullable
@@ -388,14 +388,14 @@ public class RecommendationBase extends Entity implements Parsable {
         this.backingStore.set("categoryGroup", value);
     }
     /**
-     * Sets the completedBySystemDateTime property value. The completedBySystemDateTime property
+     * Sets the completedBySystemDateTime property value. The date and time when the recommendations service verified that the recommendation was fully remediated and set its status to completedBySystem. Is null if the recommendation wasn&apos;t completed by the system. Supports $filter.
      * @param value Value to set for the completedBySystemDateTime property.
      */
     public void setCompletedBySystemDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("completedBySystemDateTime", value);
     }
     /**
-     * Sets the completedByUserDateTime property value. The completedByUserDateTime property
+     * Sets the completedByUserDateTime property value. The date and time when the recommendation was marked as completed by the user for the current review cycle, including when the value is rolled up from all impacted resources being marked as completed by the user. Is null if the recommendation wasn&apos;t completed by a user in the current cycle. Supports $filter.
      * @param value Value to set for the completedByUserDateTime property.
      */
     public void setCompletedByUserDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -423,7 +423,7 @@ public class RecommendationBase extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the failedReviewDateTime property value. The failedReviewDateTime property
+     * Sets the failedReviewDateTime property value. The date and time when the recommendations service most recently verified that one or more impacted resources the user marked as completed are still impacted, moving them to needsMoreAction. Is cleared when the reviewed resources are remediated, so it&apos;s mutually exclusive with remediatedDateTime. Is null when no user-reviewed resource is currently failing verification. Supports $filter.
      * @param value Value to set for the failedReviewDateTime property.
      */
     public void setFailedReviewDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -493,14 +493,14 @@ public class RecommendationBase extends Entity implements Parsable {
         this.backingStore.set("maxScore", value);
     }
     /**
-     * Sets the needsMoreActionResourceCount property value. The needsMoreActionResourceCount property
+     * Sets the needsMoreActionResourceCount property value. The number of impacted resources that the user marked as completed and that the recommendations service subsequently verified are still impacted (moved to needsMoreAction). This value is greater than zero exactly when failedReviewDateTime is set. Is null when the recommendation doesn&apos;t participate in the review lifecycle.
      * @param value Value to set for the needsMoreActionResourceCount property.
      */
     public void setNeedsMoreActionResourceCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("needsMoreActionResourceCount", value);
     }
     /**
-     * Sets the nistClassifications property value. The nistClassifications property
+     * Sets the nistClassifications property value. The NIST Cybersecurity Framework (CSF) 2.0 categories that the recommendation maps to. Read-only.
      * @param value Value to set for the nistClassifications property.
      */
     public void setNistClassifications(@jakarta.annotation.Nullable final java.util.List<NistClassification> value) {
@@ -535,7 +535,7 @@ public class RecommendationBase extends Entity implements Parsable {
         this.backingStore.set("releaseType", value);
     }
     /**
-     * Sets the remediatedDateTime property value. The remediatedDateTime property
+     * Sets the remediatedDateTime property value. The date and time when the recommendations service verified that the impacted resources the user marked as completed were remediated, meaning the user-reviewed resources reached completedBySystem. Is superseded by failedReviewDateTime if a reviewed resource subsequently fails verification. Is null if the system hasn&apos;t verified a user-driven remediation in the current cycle. Supports $filter.
      * @param value Value to set for the remediatedDateTime property.
      */
     public void setRemediatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -549,7 +549,7 @@ public class RecommendationBase extends Entity implements Parsable {
         this.backingStore.set("remediationImpact", value);
     }
     /**
-     * Sets the requiredLicenses property value. The required licenses to view the recommendation. The possible values are: notApplicable, microsoftEntraIdFree, microsoftEntraIdP1, microsoftEntraIdP2, microsoftEntraIdGovernance, microsoftEntraWorkloadId, unknownFutureValue, aatp. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: aatp.
+     * Sets the requiredLicenses property value. The required licenses to view the recommendation. The possible values are: notApplicable, microsoftEntraIdFree, microsoftEntraIdP1, microsoftEntraIdP2, microsoftEntraIdGovernance, microsoftEntraWorkloadId, unknownFutureValue, aatp, microsoftEntraSuite. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: aatp, microsoftEntraSuite.
      * @param value Value to set for the requiredLicenses property.
      */
     public void setRequiredLicenses(@jakarta.annotation.Nullable final RequiredLicenses value) {
@@ -563,14 +563,14 @@ public class RecommendationBase extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the statusModifiedDateTime property value. The statusModifiedDateTime property
+     * Sets the statusModifiedDateTime property value. The date and time when the recommendation&apos;s status last changed, for example from active to completedByUser, dismissed, postponed, or needsMoreAction. Unlike lastModifiedDateTime, this value isn&apos;t updated when only the recommendation&apos;s insight data changes while the status stays the same. Is null until the recommendation&apos;s status changes for the first time. Supports $filter.
      * @param value Value to set for the statusModifiedDateTime property.
      */
     public void setStatusModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("statusModifiedDateTime", value);
     }
     /**
-     * Sets the tags property value. The tags property
+     * Sets the tags property value. The user-defined free-form labels applied to the recommendation. The collection isn&apos;t directly writable; tags are created and removed through the addTag and removeTag actions.
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<RecommendationTag> value) {

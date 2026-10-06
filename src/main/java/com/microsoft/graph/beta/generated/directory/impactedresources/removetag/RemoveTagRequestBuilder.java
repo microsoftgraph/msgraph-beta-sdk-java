@@ -39,6 +39,7 @@ public class RemoveTagRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RemoveTagPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-removetag-collection?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RemoveTagPostResponse post(@jakarta.annotation.Nonnull final RemoveTagPostRequestBody body) {
@@ -50,6 +51,7 @@ public class RemoveTagRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RemoveTagPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-removetag-collection?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RemoveTagPostResponse post(@jakarta.annotation.Nonnull final RemoveTagPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

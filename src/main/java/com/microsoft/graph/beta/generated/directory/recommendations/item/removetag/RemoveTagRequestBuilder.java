@@ -36,21 +36,23 @@ public class RemoveTagRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recommendations/{recommendation%2Did}/removeTag", rawUrl);
     }
     /**
-     * Invoke action removeTag
+     * Remove a user-defined tag from a recommendation object.
      * @param body The request body
      * @return a {@link Recommendation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-removetag?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Recommendation post(@jakarta.annotation.Nonnull final RemoveTagPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action removeTag
+     * Remove a user-defined tag from a recommendation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Recommendation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-removetag?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Recommendation post(@jakarta.annotation.Nonnull final RemoveTagPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -61,7 +63,7 @@ public class RemoveTagRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Recommendation::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action removeTag
+     * Remove a user-defined tag from a recommendation object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +72,7 @@ public class RemoveTagRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action removeTag
+     * Remove a user-defined tag from a recommendation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
