@@ -51,7 +51,7 @@ public class RestoreTaskActivityLog extends ActivityLogBase implements Parsable 
         return deserializerMap;
     }
     /**
-     * Gets the restoreArtifactDetails property value. The restoreArtifactDetails property
+     * Gets the restoreArtifactDetails property value. Contains detailed information about the artifacts being restored, including counts and status of restored items.
      * @return a {@link RestoreArtifactDetails}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class RestoreTaskActivityLog extends ActivityLogBase implements Parsable 
         return this.backingStore.get("restoreArtifactDetails");
     }
     /**
-     * Gets the restoreCompletionDateTime property value. The restoreCompletionDateTime property
+     * Gets the restoreCompletionDateTime property value. The date and time when the restore task was completed.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class RestoreTaskActivityLog extends ActivityLogBase implements Parsable 
         return this.backingStore.get("restoreCompletionDateTime");
     }
     /**
-     * Gets the restoreSessionId property value. The restoreSessionId property
+     * Gets the restoreSessionId property value. The unique identifier of the restore session associated with this activity log.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -112,21 +112,21 @@ public class RestoreTaskActivityLog extends ActivityLogBase implements Parsable 
         this.backingStore.set("destinationType", value);
     }
     /**
-     * Sets the restoreArtifactDetails property value. The restoreArtifactDetails property
+     * Sets the restoreArtifactDetails property value. Contains detailed information about the artifacts being restored, including counts and status of restored items.
      * @param value Value to set for the restoreArtifactDetails property.
      */
     public void setRestoreArtifactDetails(@jakarta.annotation.Nullable final RestoreArtifactDetails value) {
         this.backingStore.set("restoreArtifactDetails", value);
     }
     /**
-     * Sets the restoreCompletionDateTime property value. The restoreCompletionDateTime property
+     * Sets the restoreCompletionDateTime property value. The date and time when the restore task was completed.
      * @param value Value to set for the restoreCompletionDateTime property.
      */
     public void setRestoreCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("restoreCompletionDateTime", value);
     }
     /**
-     * Sets the restoreSessionId property value. The restoreSessionId property
+     * Sets the restoreSessionId property value. The unique identifier of the restore session associated with this activity log.
      * @param value Value to set for the restoreSessionId property.
      */
     public void setRestoreSessionId(@jakarta.annotation.Nullable final String value) {

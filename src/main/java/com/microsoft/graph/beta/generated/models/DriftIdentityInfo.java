@@ -64,7 +64,7 @@ public class DriftIdentityInfo implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the identity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class DriftIdentityInfo implements AdditionalDataHolder, BackedModel, Par
         return deserializerMap;
     }
     /**
-     * Gets the identifier property value. The identifier property
+     * Gets the identifier property value. The unique identifier for the identity within the drift record.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class DriftIdentityInfo implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the principalName property value. The principalName property
+     * Gets the principalName property value. The principal name of the identity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -136,14 +136,14 @@ public class DriftIdentityInfo implements AdditionalDataHolder, BackedModel, Par
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the identity.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the identifier property value. The identifier property
+     * Sets the identifier property value. The unique identifier for the identity within the drift record.
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final String value) {
@@ -157,7 +157,7 @@ public class DriftIdentityInfo implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the principalName property value. The principalName property
+     * Sets the principalName property value. The principal name of the identity.
      * @param value Value to set for the principalName property.
      */
     public void setPrincipalName(@jakarta.annotation.Nullable final String value) {

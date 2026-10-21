@@ -17,6 +17,7 @@ import com.microsoft.graph.beta.models.security.ThreatIntelligence;
 import com.microsoft.graph.beta.models.security.ThreatSubmissionRoot;
 import com.microsoft.graph.beta.models.security.TriggersRoot;
 import com.microsoft.graph.beta.models.security.TriggerTypesRoot;
+import com.microsoft.graph.beta.models.security.Workbook;
 import com.microsoft.graph.beta.models.security.Zone;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -167,7 +168,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(35);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(36);
         deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("alerts_v2", (n) -> { this.setAlertsV2(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("attackSimulation", (n) -> { this.setAttackSimulation(n.getObjectValue(AttackSimulationRoot::createFromDiscriminatorValue)); });
@@ -202,6 +203,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("triggers", (n) -> { this.setTriggers(n.getObjectValue(TriggersRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("triggerTypes", (n) -> { this.setTriggerTypes(n.getObjectValue(TriggerTypesRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("userSecurityProfiles", (n) -> { this.setUserSecurityProfiles(n.getCollectionOfObjectValues(UserSecurityProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("workbooks", (n) -> { this.setWorkbooks(n.getCollectionOfObjectValues(Workbook::createFromDiscriminatorValue)); });
         deserializerMap.put("zones", (n) -> { this.setZones(n.getCollectionOfObjectValues(Zone::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -390,6 +392,14 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("userSecurityProfiles");
     }
     /**
+     * Gets the workbooks property value. The Microsoft Security workbooks in the tenant. The collection response omits workbook content by default; explicitly select content to include it.
+     * @return a {@link java.util.List<Workbook>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Workbook> getWorkbooks() {
+        return this.backingStore.get("workbooks");
+    }
+    /**
      * Gets the zones property value. A collection of cloud zones in Microsoft Defender for Cloud that group and manage cloud environments across multiple cloud providers.
      * @return a {@link java.util.List<Zone>}
      */
@@ -437,6 +447,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeObjectValue("triggers", this.getTriggers());
         writer.writeObjectValue("triggerTypes", this.getTriggerTypes());
         writer.writeCollectionOfObjectValues("userSecurityProfiles", this.getUserSecurityProfiles());
+        writer.writeCollectionOfObjectValues("workbooks", this.getWorkbooks());
         writer.writeCollectionOfObjectValues("zones", this.getZones());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -692,6 +703,13 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setUserSecurityProfiles(@jakarta.annotation.Nullable final java.util.List<UserSecurityProfile> value) {
         this.backingStore.set("userSecurityProfiles", value);
+    }
+    /**
+     * Sets the workbooks property value. The Microsoft Security workbooks in the tenant. The collection response omits workbook content by default; explicitly select content to include it.
+     * @param value Value to set for the workbooks property.
+     */
+    public void setWorkbooks(@jakarta.annotation.Nullable final java.util.List<Workbook> value) {
+        this.backingStore.set("workbooks", value);
     }
     /**
      * Sets the zones property value. A collection of cloud zones in Microsoft Defender for Cloud that group and manage cloud environments across multiple cloud providers.

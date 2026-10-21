@@ -4,8 +4,10 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.Planner;
 import com.microsoft.graph.beta.planner.buckets.BucketsRequestBuilder;
 import com.microsoft.graph.beta.planner.goals.GoalsRequestBuilder;
+import com.microsoft.graph.beta.planner.plans_v2.PlansV2RequestBuilder;
 import com.microsoft.graph.beta.planner.plans.PlansRequestBuilder;
 import com.microsoft.graph.beta.planner.rosters.RostersRequestBuilder;
+import com.microsoft.graph.beta.planner.tasks_v2.TasksV2RequestBuilder;
 import com.microsoft.graph.beta.planner.tasks.TasksRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -50,6 +52,14 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return new PlansRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the plans_v2 property of the microsoft.graph.planner entity.
+     * @return a {@link PlansV2RequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PlansV2RequestBuilder plansV2() {
+        return new PlansV2RequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the rosters property of the microsoft.graph.planner entity.
      * @return a {@link RostersRequestBuilder}
      */
@@ -64,6 +74,14 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TasksRequestBuilder tasks() {
         return new TasksRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tasks_v2 property of the microsoft.graph.planner entity.
+     * @return a {@link TasksV2RequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TasksV2RequestBuilder tasksV2() {
+        return new TasksV2RequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link PlannerRequestBuilder} and sets the default values.
@@ -82,19 +100,21 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get planner
+     * Read the properties and relationships of planner object.
      * @return a {@link Planner}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/planner-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Planner get() {
         return get(null);
     }
     /**
-     * Get planner
+     * Read the properties and relationships of planner object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Planner}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/planner-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Planner get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,21 +124,23 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Planner::createFromDiscriminatorValue);
     }
     /**
-     * Update planner
+     * Update the properties of a planner object.
      * @param body The request body
      * @return a {@link Planner}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/planner-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Planner patch(@jakarta.annotation.Nonnull final Planner body) {
         return patch(body, null);
     }
     /**
-     * Update planner
+     * Update the properties of a planner object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Planner}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/planner-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Planner patch(@jakarta.annotation.Nonnull final Planner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -129,7 +151,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Planner::createFromDiscriminatorValue);
     }
     /**
-     * Get planner
+     * Read the properties and relationships of planner object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +159,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get planner
+     * Read the properties and relationships of planner object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -149,7 +171,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update planner
+     * Update the properties of a planner object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -158,7 +180,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update planner
+     * Update the properties of a planner object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -183,7 +205,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return new PlannerRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get planner
+     * Read the properties and relationships of planner object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

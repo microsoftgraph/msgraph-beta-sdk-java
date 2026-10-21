@@ -88,7 +88,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, BackedMod
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The unique identifier (ID) of the source image. Read-only. The id property is deprecated and will stop returning data on January 31, 2024. Going forward, use the resourceId property.
+     * Gets the id property value. The unique identifier (ID) of the source image. Read-only. The id property is deprecated and will stop returning data on December 7, 2026. Going forward, use the resourceId property.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -172,7 +172,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, BackedMod
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the id property value. The unique identifier (ID) of the source image. Read-only. The id property is deprecated and will stop returning data on January 31, 2024. Going forward, use the resourceId property.
+     * Sets the id property value. The unique identifier (ID) of the source image. Read-only. The id property is deprecated and will stop returning data on December 7, 2026. Going forward, use the resourceId property.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {

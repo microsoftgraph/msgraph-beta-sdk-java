@@ -11,6 +11,7 @@ import com.microsoft.graph.beta.solutions.backuprestore.driveprotectionunits.Dri
 import com.microsoft.graph.beta.solutions.backuprestore.driveprotectionunitsbulkadditionjobs.DriveProtectionUnitsBulkAdditionJobsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.emailnotificationssetting.EmailNotificationsSettingRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.enable.EnableRequestBuilder;
+import com.microsoft.graph.beta.solutions.backuprestore.entraprotectionpolicies.EntraProtectionPoliciesRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.exchangeprotectionpolicies.ExchangeProtectionPoliciesRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.exchangerestoresessions.ExchangeRestoreSessionsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.exclusionunits.ExclusionUnitsRequestBuilder;
@@ -125,6 +126,14 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public EnableRequestBuilder enable() {
         return new EnableRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the entraProtectionPolicies property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link EntraProtectionPoliciesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public EntraProtectionPoliciesRequestBuilder entraProtectionPolicies() {
+        return new EntraProtectionPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the exchangeProtectionPolicies property of the microsoft.graph.backupRestoreRoot entity.

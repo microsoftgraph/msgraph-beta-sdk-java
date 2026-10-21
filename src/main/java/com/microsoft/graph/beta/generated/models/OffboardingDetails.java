@@ -57,7 +57,7 @@ public class OffboardingDetails implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore;
     }
     /**
-     * Gets the cancelledCount property value. The cancelledCount property
+     * Gets the cancelledCount property value. The number of protection units whose offboarding was cancelled during the operation.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class OffboardingDetails implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("cancelledCount");
     }
     /**
-     * Gets the failedCount property value. The failedCount property
+     * Gets the failedCount property value. The number of protection units that failed to be offboarded during the operation.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class OffboardingDetails implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the offboardedCount property value. The offboardedCount property
+     * Gets the offboardedCount property value. The number of protection units that were successfully offboarded during the operation.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class OffboardingDetails implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("offboardedCount");
     }
     /**
-     * Gets the offboardEndDateTime property value. The offboardEndDateTime property
+     * Gets the offboardEndDateTime property value. The date and time when the offboarding operation ended.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class OffboardingDetails implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("offboardEndDateTime");
     }
     /**
-     * Gets the offboardingStatus property value. The offboardingStatus property
+     * Gets the offboardingStatus property value. The current status of the offboarding operation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class OffboardingDetails implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("offboardingStatus");
     }
     /**
-     * Gets the offboardStartDateTime property value. The offboardStartDateTime property
+     * Gets the offboardStartDateTime property value. The date and time when the offboarding operation started.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class OffboardingDetails implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("offboardStartDateTime");
     }
     /**
-     * Gets the totalRequestedCount property value. The totalRequestedCount property
+     * Gets the totalRequestedCount property value. The total number of protection units that were requested to be offboarded in this operation.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -169,14 +169,14 @@ public class OffboardingDetails implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore = value;
     }
     /**
-     * Sets the cancelledCount property value. The cancelledCount property
+     * Sets the cancelledCount property value. The number of protection units whose offboarding was cancelled during the operation.
      * @param value Value to set for the cancelledCount property.
      */
     public void setCancelledCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("cancelledCount", value);
     }
     /**
-     * Sets the failedCount property value. The failedCount property
+     * Sets the failedCount property value. The number of protection units that failed to be offboarded during the operation.
      * @param value Value to set for the failedCount property.
      */
     public void setFailedCount(@jakarta.annotation.Nullable final Integer value) {
@@ -190,35 +190,35 @@ public class OffboardingDetails implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the offboardedCount property value. The offboardedCount property
+     * Sets the offboardedCount property value. The number of protection units that were successfully offboarded during the operation.
      * @param value Value to set for the offboardedCount property.
      */
     public void setOffboardedCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("offboardedCount", value);
     }
     /**
-     * Sets the offboardEndDateTime property value. The offboardEndDateTime property
+     * Sets the offboardEndDateTime property value. The date and time when the offboarding operation ended.
      * @param value Value to set for the offboardEndDateTime property.
      */
     public void setOffboardEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("offboardEndDateTime", value);
     }
     /**
-     * Sets the offboardingStatus property value. The offboardingStatus property
+     * Sets the offboardingStatus property value. The current status of the offboarding operation.
      * @param value Value to set for the offboardingStatus property.
      */
     public void setOffboardingStatus(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("offboardingStatus", value);
     }
     /**
-     * Sets the offboardStartDateTime property value. The offboardStartDateTime property
+     * Sets the offboardStartDateTime property value. The date and time when the offboarding operation started.
      * @param value Value to set for the offboardStartDateTime property.
      */
     public void setOffboardStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("offboardStartDateTime", value);
     }
     /**
-     * Sets the totalRequestedCount property value. The totalRequestedCount property
+     * Sets the totalRequestedCount property value. The total number of protection units that were requested to be offboarded in this operation.
      * @param value Value to set for the totalRequestedCount property.
      */
     public void setTotalRequestedCount(@jakarta.annotation.Nullable final Integer value) {

@@ -62,12 +62,14 @@ public class CloudPCUserSettingsPersistenceProfile implements AdditionalDataHold
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("lastProfileAttachedDateTime", (n) -> { this.setLastProfileAttachedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("profileDiskEncryptionType", (n) -> { this.setProfileDiskEncryptionType(n.getEnumValue(CloudPcDiskEncryptionType::forValue)); });
         deserializerMap.put("profileId", (n) -> { this.setProfileId(n.getStringValue()); });
         deserializerMap.put("profileSizeInGB", (n) -> { this.setProfileSizeInGB(n.getIntegerValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CloudPCUserSettingsPersistenceProfileStatus::forValue)); });
+        deserializerMap.put("usageDetail", (n) -> { this.setUsageDetail(n.getObjectValue(CloudPCUserSettingsPersistenceProfileUsageDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -86,6 +88,14 @@ public class CloudPCUserSettingsPersistenceProfile implements AdditionalDataHold
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.backingStore.get("odataType");
+    }
+    /**
+     * Gets the profileDiskEncryptionType property value. The profileDiskEncryptionType property
+     * @return a {@link CloudPcDiskEncryptionType}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcDiskEncryptionType getProfileDiskEncryptionType() {
+        return this.backingStore.get("profileDiskEncryptionType");
     }
     /**
      * Gets the profileId property value. Indicates the unique identifier of the Cloud PC user settings persistence profile for the selected Cloud PC user settings persistence. Required. Read-only.
@@ -112,6 +122,14 @@ public class CloudPCUserSettingsPersistenceProfile implements AdditionalDataHold
         return this.backingStore.get("status");
     }
     /**
+     * Gets the usageDetail property value. The usageDetail property
+     * @return a {@link CloudPCUserSettingsPersistenceProfileUsageDetail}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPCUserSettingsPersistenceProfileUsageDetail getUsageDetail() {
+        return this.backingStore.get("usageDetail");
+    }
+    /**
      * Gets the userPrincipalName property value. The user principal name of the owner of the cloud profile. For example, connie@contoso.com. Required. Read-only.
      * @return a {@link String}
      */
@@ -127,9 +145,11 @@ public class CloudPCUserSettingsPersistenceProfile implements AdditionalDataHold
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastProfileAttachedDateTime", this.getLastProfileAttachedDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeEnumValue("profileDiskEncryptionType", this.getProfileDiskEncryptionType());
         writer.writeStringValue("profileId", this.getProfileId());
         writer.writeIntegerValue("profileSizeInGB", this.getProfileSizeInGB());
         writer.writeEnumValue("status", this.getStatus());
+        writer.writeObjectValue("usageDetail", this.getUsageDetail());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -163,6 +183,13 @@ public class CloudPCUserSettingsPersistenceProfile implements AdditionalDataHold
         this.backingStore.set("odataType", value);
     }
     /**
+     * Sets the profileDiskEncryptionType property value. The profileDiskEncryptionType property
+     * @param value Value to set for the profileDiskEncryptionType property.
+     */
+    public void setProfileDiskEncryptionType(@jakarta.annotation.Nullable final CloudPcDiskEncryptionType value) {
+        this.backingStore.set("profileDiskEncryptionType", value);
+    }
+    /**
      * Sets the profileId property value. Indicates the unique identifier of the Cloud PC user settings persistence profile for the selected Cloud PC user settings persistence. Required. Read-only.
      * @param value Value to set for the profileId property.
      */
@@ -182,6 +209,13 @@ public class CloudPCUserSettingsPersistenceProfile implements AdditionalDataHold
      */
     public void setStatus(@jakarta.annotation.Nullable final CloudPCUserSettingsPersistenceProfileStatus value) {
         this.backingStore.set("status", value);
+    }
+    /**
+     * Sets the usageDetail property value. The usageDetail property
+     * @param value Value to set for the usageDetail property.
+     */
+    public void setUsageDetail(@jakarta.annotation.Nullable final CloudPCUserSettingsPersistenceProfileUsageDetail value) {
+        this.backingStore.set("usageDetail", value);
     }
     /**
      * Sets the userPrincipalName property value. The user principal name of the owner of the cloud profile. For example, connie@contoso.com. Required. Read-only.

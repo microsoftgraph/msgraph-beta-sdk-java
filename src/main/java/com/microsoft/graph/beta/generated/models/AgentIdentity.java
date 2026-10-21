@@ -63,6 +63,10 @@ public class AgentIdentity extends ServicePrincipal implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("inheritedAppRoleAssignments", (n) -> { this.setInheritedAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("inheritedOauth2PermissionGrants", (n) -> { this.setInheritedOauth2PermissionGrants(n.getCollectionOfObjectValues(OAuth2PermissionGrant::createFromDiscriminatorValue)); });
+        deserializerMap.put("lifecyclePolicyComplianceState", (n) -> { this.setLifecyclePolicyComplianceState(n.getEnumValue(LifecyclePolicyComplianceState::forValue)); });
+        deserializerMap.put("lifecyclePolicyComplianceStateLastModifiedDateTime", (n) -> { this.setLifecyclePolicyComplianceStateLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lifecyclePolicyComplianceStateReason", (n) -> { this.setLifecyclePolicyComplianceStateReason(n.getStringValue()); });
+        deserializerMap.put("lifecyclePolicyNonComplianceDisablementDateTime", (n) -> { this.setLifecyclePolicyNonComplianceDisablementDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("managerApplications", (n) -> { this.setManagerApplications(n.getCollectionOfPrimitiveValues(UUID.class)); });
         deserializerMap.put("sponsors", (n) -> { this.setSponsors(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -82,6 +86,38 @@ public class AgentIdentity extends ServicePrincipal implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<OAuth2PermissionGrant> getInheritedOauth2PermissionGrants() {
         return this.backingStore.get("inheritedOauth2PermissionGrants");
+    }
+    /**
+     * Gets the lifecyclePolicyComplianceState property value. The lifecyclePolicyComplianceState property
+     * @return a {@link LifecyclePolicyComplianceState}
+     */
+    @jakarta.annotation.Nullable
+    public LifecyclePolicyComplianceState getLifecyclePolicyComplianceState() {
+        return this.backingStore.get("lifecyclePolicyComplianceState");
+    }
+    /**
+     * Gets the lifecyclePolicyComplianceStateLastModifiedDateTime property value. The lifecyclePolicyComplianceStateLastModifiedDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLifecyclePolicyComplianceStateLastModifiedDateTime() {
+        return this.backingStore.get("lifecyclePolicyComplianceStateLastModifiedDateTime");
+    }
+    /**
+     * Gets the lifecyclePolicyComplianceStateReason property value. The lifecyclePolicyComplianceStateReason property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getLifecyclePolicyComplianceStateReason() {
+        return this.backingStore.get("lifecyclePolicyComplianceStateReason");
+    }
+    /**
+     * Gets the lifecyclePolicyNonComplianceDisablementDateTime property value. The lifecyclePolicyNonComplianceDisablementDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLifecyclePolicyNonComplianceDisablementDateTime() {
+        return this.backingStore.get("lifecyclePolicyNonComplianceDisablementDateTime");
     }
     /**
      * Gets the managerApplications property value. The collection of application IDs designated as managers of this agent identity&apos;s backing agentIdentityBlueprint. Read-only; the value is server-managed and reflects the managerApplications of the backing agentIdentityBlueprint. To change the managers, an owner or administrator must update the managerApplications property on the backing agentIdentityBlueprint in the tenant where it&apos;s registered. For multitenant agent identity blueprints, admins in a tenant where the blueprint is only consumed can&apos;t make this change  they must ask an owner or administrator in the blueprint&apos;s home tenant. Not nullable. Returned only on $select.
@@ -111,6 +147,10 @@ public class AgentIdentity extends ServicePrincipal implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeCollectionOfObjectValues("inheritedAppRoleAssignments", this.getInheritedAppRoleAssignments());
         writer.writeCollectionOfObjectValues("inheritedOauth2PermissionGrants", this.getInheritedOauth2PermissionGrants());
+        writer.writeEnumValue("lifecyclePolicyComplianceState", this.getLifecyclePolicyComplianceState());
+        writer.writeOffsetDateTimeValue("lifecyclePolicyComplianceStateLastModifiedDateTime", this.getLifecyclePolicyComplianceStateLastModifiedDateTime());
+        writer.writeStringValue("lifecyclePolicyComplianceStateReason", this.getLifecyclePolicyComplianceStateReason());
+        writer.writeOffsetDateTimeValue("lifecyclePolicyNonComplianceDisablementDateTime", this.getLifecyclePolicyNonComplianceDisablementDateTime());
         writer.writeCollectionOfObjectValues("sponsors", this.getSponsors());
     }
     /**
@@ -147,6 +187,34 @@ public class AgentIdentity extends ServicePrincipal implements Parsable {
      */
     public void setInheritedOauth2PermissionGrants(@jakarta.annotation.Nullable final java.util.List<OAuth2PermissionGrant> value) {
         this.backingStore.set("inheritedOauth2PermissionGrants", value);
+    }
+    /**
+     * Sets the lifecyclePolicyComplianceState property value. The lifecyclePolicyComplianceState property
+     * @param value Value to set for the lifecyclePolicyComplianceState property.
+     */
+    public void setLifecyclePolicyComplianceState(@jakarta.annotation.Nullable final LifecyclePolicyComplianceState value) {
+        this.backingStore.set("lifecyclePolicyComplianceState", value);
+    }
+    /**
+     * Sets the lifecyclePolicyComplianceStateLastModifiedDateTime property value. The lifecyclePolicyComplianceStateLastModifiedDateTime property
+     * @param value Value to set for the lifecyclePolicyComplianceStateLastModifiedDateTime property.
+     */
+    public void setLifecyclePolicyComplianceStateLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lifecyclePolicyComplianceStateLastModifiedDateTime", value);
+    }
+    /**
+     * Sets the lifecyclePolicyComplianceStateReason property value. The lifecyclePolicyComplianceStateReason property
+     * @param value Value to set for the lifecyclePolicyComplianceStateReason property.
+     */
+    public void setLifecyclePolicyComplianceStateReason(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("lifecyclePolicyComplianceStateReason", value);
+    }
+    /**
+     * Sets the lifecyclePolicyNonComplianceDisablementDateTime property value. The lifecyclePolicyNonComplianceDisablementDateTime property
+     * @param value Value to set for the lifecyclePolicyNonComplianceDisablementDateTime property.
+     */
+    public void setLifecyclePolicyNonComplianceDisablementDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lifecyclePolicyNonComplianceDisablementDateTime", value);
     }
     /**
      * Sets the managerApplications property value. The collection of application IDs designated as managers of this agent identity&apos;s backing agentIdentityBlueprint. Read-only; the value is server-managed and reflects the managerApplications of the backing agentIdentityBlueprint. To change the managers, an owner or administrator must update the managerApplications property on the backing agentIdentityBlueprint in the tenant where it&apos;s registered. For multitenant agent identity blueprints, admins in a tenant where the blueprint is only consumed can&apos;t make this change  they must ask an owner or administrator in the blueprint&apos;s home tenant. Not nullable. Returned only on $select.

@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.groups.item.planner;
 
+import com.microsoft.graph.beta.groups.item.planner.plans_v2.PlansV2RequestBuilder;
 import com.microsoft.graph.beta.groups.item.planner.plans.PlansRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.PlannerGroup;
@@ -30,6 +31,14 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return new PlansRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the plans_v2 property of the microsoft.graph.plannerGroup entity.
+     * @return a {@link PlansV2RequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PlansV2RequestBuilder plansV2() {
+        return new PlansV2RequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new {@link PlannerRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -46,16 +55,18 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/planner{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property planner for groups
+     * Delete a plannerGroup object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-delete-planner?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property planner for groups
+     * Delete a plannerGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-delete-planner?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -64,19 +75,21 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Selective Planner services available to the group. Read-only. Nullable.
+     * Read the properties and relationships of plannerGroup object.
      * @return a {@link PlannerGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannergroup-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerGroup get() {
         return get(null);
     }
     /**
-     * Selective Planner services available to the group. Read-only. Nullable.
+     * Read the properties and relationships of plannerGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannergroup-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerGroup get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +99,23 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerGroup::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property planner in groups
+     * Update the properties of a plannerGroup object.
      * @param body The request body
      * @return a {@link PlannerGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannergroup-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerGroup patch(@jakarta.annotation.Nonnull final PlannerGroup body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property planner in groups
+     * Update the properties of a plannerGroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannergroup-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerGroup patch(@jakarta.annotation.Nonnull final PlannerGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -111,7 +126,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerGroup::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property planner for groups
+     * Delete a plannerGroup object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +134,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property planner for groups
+     * Delete a plannerGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +146,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Selective Planner services available to the group. Read-only. Nullable.
+     * Read the properties and relationships of plannerGroup object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +154,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Selective Planner services available to the group. Read-only. Nullable.
+     * Read the properties and relationships of plannerGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +166,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property planner in groups
+     * Update the properties of a plannerGroup object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +175,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property planner in groups
+     * Update the properties of a plannerGroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +206,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Selective Planner services available to the group. Read-only. Nullable.
+     * Read the properties and relationships of plannerGroup object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

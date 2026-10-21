@@ -60,10 +60,12 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         deserializerMap.put("favoritePlans", (n) -> { this.setFavoritePlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
         deserializerMap.put("myDayTasks", (n) -> { this.setMyDayTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
         deserializerMap.put("plans", (n) -> { this.setPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("plans_v2", (n) -> { this.setPlansV2(n.getCollectionOfObjectValues(Plan::createFromDiscriminatorValue)); });
         deserializerMap.put("recentPlanReferences", (n) -> { this.setRecentPlanReferences(n.getObjectValue(PlannerRecentPlanReferenceCollection::createFromDiscriminatorValue)); });
         deserializerMap.put("recentPlans", (n) -> { this.setRecentPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
         deserializerMap.put("rosterPlans", (n) -> { this.setRosterPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
         deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
+        deserializerMap.put("tasks_v2", (n) -> { this.setTasksV2(n.getCollectionOfObjectValues(Task::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -81,6 +83,14 @@ public class PlannerUser extends PlannerDelta implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<PlannerPlan> getPlans() {
         return this.backingStore.get("plans");
+    }
+    /**
+     * Gets the plans_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 plans associated with the user.
+     * @return a {@link java.util.List<Plan>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Plan> getPlansV2() {
+        return this.backingStore.get("plansV2");
     }
     /**
      * Gets the recentPlanReferences property value. A collection that contains references to the plans that the user recently viewed in apps that support recent plans.
@@ -115,6 +125,14 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         return this.backingStore.get("tasks");
     }
     /**
+     * Gets the tasks_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 tasks assigned to the user.
+     * @return a {@link java.util.List<Task>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Task> getTasksV2() {
+        return this.backingStore.get("tasksV2");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -126,10 +144,12 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         writer.writeCollectionOfObjectValues("favoritePlans", this.getFavoritePlans());
         writer.writeCollectionOfObjectValues("myDayTasks", this.getMyDayTasks());
         writer.writeCollectionOfObjectValues("plans", this.getPlans());
+        writer.writeCollectionOfObjectValues("plans_v2", this.getPlansV2());
         writer.writeObjectValue("recentPlanReferences", this.getRecentPlanReferences());
         writer.writeCollectionOfObjectValues("recentPlans", this.getRecentPlans());
         writer.writeCollectionOfObjectValues("rosterPlans", this.getRosterPlans());
         writer.writeCollectionOfObjectValues("tasks", this.getTasks());
+        writer.writeCollectionOfObjectValues("tasks_v2", this.getTasksV2());
     }
     /**
      * Sets the all property value. The all property
@@ -167,6 +187,13 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         this.backingStore.set("plans", value);
     }
     /**
+     * Sets the plans_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 plans associated with the user.
+     * @param value Value to set for the plans_v2 property.
+     */
+    public void setPlansV2(@jakarta.annotation.Nullable final java.util.List<Plan> value) {
+        this.backingStore.set("plansV2", value);
+    }
+    /**
      * Sets the recentPlanReferences property value. A collection that contains references to the plans that the user recently viewed in apps that support recent plans.
      * @param value Value to set for the recentPlanReferences property.
      */
@@ -193,5 +220,12 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      */
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<PlannerTask> value) {
         this.backingStore.set("tasks", value);
+    }
+    /**
+     * Sets the tasks_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 tasks assigned to the user.
+     * @param value Value to set for the tasks_v2 property.
+     */
+    public void setTasksV2(@jakarta.annotation.Nullable final java.util.List<Task> value) {
+        this.backingStore.set("tasksV2", value);
     }
 }

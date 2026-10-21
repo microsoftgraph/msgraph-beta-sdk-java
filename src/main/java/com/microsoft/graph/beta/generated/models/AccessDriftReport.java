@@ -26,7 +26,7 @@ public class AccessDriftReport extends Entity implements Parsable {
         return new AccessDriftReport();
     }
     /**
-     * Gets the downloadUri property value. The downloadUri property
+     * Gets the downloadUri property value. The time-limited SAS URI for downloading the report file. This property is populated only in the response of the generateDownloadUri action.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class AccessDriftReport extends Entity implements Parsable {
         return this.backingStore.get("downloadUri");
     }
     /**
-     * Gets the expiresAt property value. The expiresAt property
+     * Gets the expiresAt property value. The date and time when the download URI expires. This property is populated only in the response of the generateDownloadUri action.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -71,14 +71,14 @@ public class AccessDriftReport extends Entity implements Parsable {
         writer.writeEnumValue("resourceType", this.getResourceType());
     }
     /**
-     * Sets the downloadUri property value. The downloadUri property
+     * Sets the downloadUri property value. The time-limited SAS URI for downloading the report file. This property is populated only in the response of the generateDownloadUri action.
      * @param value Value to set for the downloadUri property.
      */
     public void setDownloadUri(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("downloadUri", value);
     }
     /**
-     * Sets the expiresAt property value. The expiresAt property
+     * Sets the expiresAt property value. The date and time when the download URI expires. This property is populated only in the response of the generateDownloadUri action.
      * @param value Value to set for the expiresAt property.
      */
     public void setExpiresAt(@jakarta.annotation.Nullable final OffsetDateTime value) {

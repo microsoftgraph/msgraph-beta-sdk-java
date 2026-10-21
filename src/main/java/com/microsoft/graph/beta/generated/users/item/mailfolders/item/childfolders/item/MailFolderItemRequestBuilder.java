@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item;
 import com.microsoft.graph.beta.models.MailFolder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.copy.CopyRequestBuilder;
+import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.importmime.ImportMimeRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.messagerules.MessageRulesRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.messages.MessagesRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.move.MoveRequestBuilder;
@@ -35,6 +36,14 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CopyRequestBuilder copy() {
         return new CopyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the importMime method.
+     * @return a {@link ImportMimeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ImportMimeRequestBuilder importMime() {
+        return new ImportMimeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the messageRules property of the microsoft.graph.mailFolder entity.

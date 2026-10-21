@@ -167,7 +167,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("isContinuousAccessEvaluationEnabled");
     }
     /**
-     * Gets the isDeviceAccessEnabled property value. The isDeviceAccessEnabled property
+     * Gets the isDeviceAccessEnabled property value. Indicates whether the Microsoft Entra Private Access application is accessible or available in device access mode. false by default.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -451,7 +451,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("isContinuousAccessEvaluationEnabled", value);
     }
     /**
-     * Sets the isDeviceAccessEnabled property value. The isDeviceAccessEnabled property
+     * Sets the isDeviceAccessEnabled property value. Indicates whether the Microsoft Entra Private Access application is accessible or available in device access mode. false by default.
      * @param value Value to set for the isDeviceAccessEnabled property.
      */
     public void setIsDeviceAccessEnabled(@jakarta.annotation.Nullable final Boolean value) {

@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.models;
 
 import com.microsoft.graph.beta.models.cloudlicensing.UserCloudLicensing;
+import com.microsoft.graph.beta.models.identitygovernance.UserIdentityLifecycle;
 import com.microsoft.graph.beta.models.security.Security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -614,6 +615,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("legalAgeGroupClassification", (n) -> { this.setLegalAgeGroupClassification(n.getStringValue()); });
         deserializerMap.put("licenseAssignmentStates", (n) -> { this.setLicenseAssignmentStates(n.getCollectionOfObjectValues(LicenseAssignmentState::createFromDiscriminatorValue)); });
         deserializerMap.put("licenseDetails", (n) -> { this.setLicenseDetails(n.getCollectionOfObjectValues(LicenseDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("lifecycle", (n) -> { this.setLifecycle(n.getObjectValue(UserIdentityLifecycle::createFromDiscriminatorValue)); });
         deserializerMap.put("mail", (n) -> { this.setMail(n.getStringValue()); });
         deserializerMap.put("mailboxSettings", (n) -> { this.setMailboxSettings(n.getObjectValue(MailboxSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("mailFolders", (n) -> { this.setMailFolders(n.getCollectionOfObjectValues(MailFolder::createFromDiscriminatorValue)); });
@@ -881,6 +883,14 @@ public class User extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<LicenseDetails> getLicenseDetails() {
         return this.backingStore.get("licenseDetails");
+    }
+    /**
+     * Gets the lifecycle property value. Lifecycle information for the user. Read-only.
+     * @return a {@link UserIdentityLifecycle}
+     */
+    @jakarta.annotation.Nullable
+    public UserIdentityLifecycle getLifecycle() {
+        return this.backingStore.get("lifecycle");
     }
     /**
      * Gets the mail property value. The SMTP address for the user, for example, admin@contoso.com. Changes to this property also update the user&apos;s proxyAddresses collection to include the value as an SMTP address. This property can&apos;t contain accent characters.  NOTE: We don&apos;t recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
@@ -1629,6 +1639,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeStringValue("legalAgeGroupClassification", this.getLegalAgeGroupClassification());
         writer.writeCollectionOfObjectValues("licenseAssignmentStates", this.getLicenseAssignmentStates());
         writer.writeCollectionOfObjectValues("licenseDetails", this.getLicenseDetails());
+        writer.writeObjectValue("lifecycle", this.getLifecycle());
         writer.writeStringValue("mail", this.getMail());
         writer.writeObjectValue("mailboxSettings", this.getMailboxSettings());
         writer.writeCollectionOfObjectValues("mailFolders", this.getMailFolders());
@@ -2299,6 +2310,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setLicenseDetails(@jakarta.annotation.Nullable final java.util.List<LicenseDetails> value) {
         this.backingStore.set("licenseDetails", value);
+    }
+    /**
+     * Sets the lifecycle property value. Lifecycle information for the user. Read-only.
+     * @param value Value to set for the lifecycle property.
+     */
+    public void setLifecycle(@jakarta.annotation.Nullable final UserIdentityLifecycle value) {
+        this.backingStore.set("lifecycle", value);
     }
     /**
      * Sets the mail property value. The SMTP address for the user, for example, admin@contoso.com. Changes to this property also update the user&apos;s proxyAddresses collection to include the value as an SMTP address. This property can&apos;t contain accent characters.  NOTE: We don&apos;t recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
