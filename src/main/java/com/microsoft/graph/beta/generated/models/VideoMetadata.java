@@ -56,7 +56,7 @@ public class VideoMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore;
     }
     /**
-     * Gets the bitrateKbps property value. The bitrateKbps property
+     * Gets the bitrateKbps property value. Video bitrate in kilobits per second.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class VideoMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("bitrateKbps");
     }
     /**
-     * Gets the codec property value. The codec property
+     * Gets the codec property value. The video codec used (for example, H.264 or VP9).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class VideoMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the frameRate property value. The frameRate property
+     * Gets the frameRate property value. Frame rate in frames per second.
      * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
@@ -128,21 +128,21 @@ public class VideoMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore = value;
     }
     /**
-     * Sets the bitrateKbps property value. The bitrateKbps property
+     * Sets the bitrateKbps property value. Video bitrate in kilobits per second.
      * @param value Value to set for the bitrateKbps property.
      */
     public void setBitrateKbps(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("bitrateKbps", value);
     }
     /**
-     * Sets the codec property value. The codec property
+     * Sets the codec property value. The video codec used (for example, H.264 or VP9).
      * @param value Value to set for the codec property.
      */
     public void setCodec(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("codec", value);
     }
     /**
-     * Sets the frameRate property value. The frameRate property
+     * Sets the frameRate property value. Frame rate in frames per second.
      * @param value Value to set for the frameRate property.
      */
     public void setFrameRate(@jakarta.annotation.Nullable final Double value) {

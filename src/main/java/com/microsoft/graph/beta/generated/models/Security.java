@@ -28,9 +28,6 @@ import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/**
- * Security singleton providing access to audit log resources.
- */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Security implements AdditionalDataHolder, BackedModel, Parsable {
     /**

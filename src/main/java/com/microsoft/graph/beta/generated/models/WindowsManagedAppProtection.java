@@ -4,6 +4,7 @@ import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -30,6 +31,14 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return new WindowsManagedAppProtection();
     }
     /**
+     * Gets the allowedInboundDataTransferSourceApps property value. Windows MAM data transfer locations
+     * @return a {@link EnumSet<WindowsManagedAppDataTransferLocations>}
+     */
+    @jakarta.annotation.Nullable
+    public EnumSet<WindowsManagedAppDataTransferLocations> getAllowedInboundDataTransferSourceApps() {
+        return this.backingStore.get("allowedInboundDataTransferSourceApps");
+    }
+    /**
      * Gets the allowedInboundDataTransferSources property value. Data can be transferred from/to these classes of apps
      * @return a {@link WindowsManagedAppDataTransferLevel}
      */
@@ -44,6 +53,14 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     @jakarta.annotation.Nullable
     public WindowsManagedAppClipboardSharingLevel getAllowedOutboundClipboardSharingLevel() {
         return this.backingStore.get("allowedOutboundClipboardSharingLevel");
+    }
+    /**
+     * Gets the allowedOutboundDataTransferDestinationApps property value. Windows MAM data transfer locations
+     * @return a {@link EnumSet<WindowsManagedAppDataTransferLocations>}
+     */
+    @jakarta.annotation.Nullable
+    public EnumSet<WindowsManagedAppDataTransferLocations> getAllowedOutboundDataTransferDestinationApps() {
+        return this.backingStore.get("allowedOutboundDataTransferDestinationApps");
     }
     /**
      * Gets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps
@@ -100,8 +117,10 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedInboundDataTransferSourceApps", (n) -> { this.setAllowedInboundDataTransferSourceApps(n.getEnumSetValue(WindowsManagedAppDataTransferLocations::forValue)); });
         deserializerMap.put("allowedInboundDataTransferSources", (n) -> { this.setAllowedInboundDataTransferSources(n.getEnumValue(WindowsManagedAppDataTransferLevel::forValue)); });
         deserializerMap.put("allowedOutboundClipboardSharingLevel", (n) -> { this.setAllowedOutboundClipboardSharingLevel(n.getEnumValue(WindowsManagedAppClipboardSharingLevel::forValue)); });
+        deserializerMap.put("allowedOutboundDataTransferDestinationApps", (n) -> { this.setAllowedOutboundDataTransferDestinationApps(n.getEnumSetValue(WindowsManagedAppDataTransferLocations::forValue)); });
         deserializerMap.put("allowedOutboundDataTransferDestinations", (n) -> { this.setAllowedOutboundDataTransferDestinations(n.getEnumValue(WindowsManagedAppDataTransferLevel::forValue)); });
         deserializerMap.put("appActionIfUnableToAuthenticateUser", (n) -> { this.setAppActionIfUnableToAuthenticateUser(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
         deserializerMap.put("apps", (n) -> { this.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
@@ -270,8 +289,10 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumSetValue("allowedInboundDataTransferSourceApps", this.getAllowedInboundDataTransferSourceApps());
         writer.writeEnumValue("allowedInboundDataTransferSources", this.getAllowedInboundDataTransferSources());
         writer.writeEnumValue("allowedOutboundClipboardSharingLevel", this.getAllowedOutboundClipboardSharingLevel());
+        writer.writeEnumSetValue("allowedOutboundDataTransferDestinationApps", this.getAllowedOutboundDataTransferDestinationApps());
         writer.writeEnumValue("allowedOutboundDataTransferDestinations", this.getAllowedOutboundDataTransferDestinations());
         writer.writeEnumValue("appActionIfUnableToAuthenticateUser", this.getAppActionIfUnableToAuthenticateUser());
         writer.writeCollectionOfObjectValues("apps", this.getApps());
@@ -297,6 +318,13 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         writer.writeBooleanValue("printBlocked", this.getPrintBlocked());
     }
     /**
+     * Sets the allowedInboundDataTransferSourceApps property value. Windows MAM data transfer locations
+     * @param value Value to set for the allowedInboundDataTransferSourceApps property.
+     */
+    public void setAllowedInboundDataTransferSourceApps(@jakarta.annotation.Nullable final EnumSet<WindowsManagedAppDataTransferLocations> value) {
+        this.backingStore.set("allowedInboundDataTransferSourceApps", value);
+    }
+    /**
      * Sets the allowedInboundDataTransferSources property value. Data can be transferred from/to these classes of apps
      * @param value Value to set for the allowedInboundDataTransferSources property.
      */
@@ -309,6 +337,13 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      */
     public void setAllowedOutboundClipboardSharingLevel(@jakarta.annotation.Nullable final WindowsManagedAppClipboardSharingLevel value) {
         this.backingStore.set("allowedOutboundClipboardSharingLevel", value);
+    }
+    /**
+     * Sets the allowedOutboundDataTransferDestinationApps property value. Windows MAM data transfer locations
+     * @param value Value to set for the allowedOutboundDataTransferDestinationApps property.
+     */
+    public void setAllowedOutboundDataTransferDestinationApps(@jakarta.annotation.Nullable final EnumSet<WindowsManagedAppDataTransferLocations> value) {
+        this.backingStore.set("allowedOutboundDataTransferDestinationApps", value);
     }
     /**
      * Sets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps

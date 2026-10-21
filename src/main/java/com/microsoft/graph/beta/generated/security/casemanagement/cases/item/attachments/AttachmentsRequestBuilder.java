@@ -84,7 +84,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AttachmentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create an attachment for a case.
+     * Create attachment metadata for a case. This method doesn&apos;t upload the file content. After creating the attachment, use Upload attachment content.
      * @param body The request body
      * @return a {@link Attachment}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -95,7 +95,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create an attachment for a case.
+     * Create attachment metadata for a case. This method doesn&apos;t upload the file content. After creating the attachment, use Upload attachment content.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Attachment}
@@ -131,7 +131,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an attachment for a case.
+     * Create attachment metadata for a case. This method doesn&apos;t upload the file content. After creating the attachment, use Upload attachment content.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +140,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an attachment for a case.
+     * Create attachment metadata for a case. This method doesn&apos;t upload the file content. After creating the attachment, use Upload attachment content.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

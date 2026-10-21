@@ -26,7 +26,7 @@ public class ClientCredentialAuthenticationInfo extends AuthenticationInfo imple
         return new ClientCredentialAuthenticationInfo();
     }
     /**
-     * Gets the accessTokenUrl property value. The accessTokenUrl property
+     * Gets the accessTokenUrl property value. The URL endpoint used to obtain access tokens for authentication with the external system.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class ClientCredentialAuthenticationInfo extends AuthenticationInfo imple
         return this.backingStore.get("accessTokenUrl");
     }
     /**
-     * Gets the clientId property value. The clientId property
+     * Gets the clientId property value. The client identifier used for authentication with the external system.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class ClientCredentialAuthenticationInfo extends AuthenticationInfo imple
         return deserializerMap;
     }
     /**
-     * Gets the secretName property value. The secretName property
+     * Gets the secretName property value. The name of the secret in Azure Key Vault that contains the client secret.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class ClientCredentialAuthenticationInfo extends AuthenticationInfo imple
         writer.writeStringValue("secretName", this.getSecretName());
     }
     /**
-     * Sets the accessTokenUrl property value. The accessTokenUrl property
+     * Sets the accessTokenUrl property value. The URL endpoint used to obtain access tokens for authentication with the external system.
      * @param value Value to set for the accessTokenUrl property.
      */
     public void setAccessTokenUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("accessTokenUrl", value);
     }
     /**
-     * Sets the clientId property value. The clientId property
+     * Sets the clientId property value. The client identifier used for authentication with the external system.
      * @param value Value to set for the clientId property.
      */
     public void setClientId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("clientId", value);
     }
     /**
-     * Sets the secretName property value. The secretName property
+     * Sets the secretName property value. The name of the secret in Azure Key Vault that contains the client secret.
      * @param value Value to set for the secretName property.
      */
     public void setSecretName(@jakarta.annotation.Nullable final String value) {

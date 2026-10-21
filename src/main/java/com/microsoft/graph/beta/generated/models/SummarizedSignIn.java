@@ -83,6 +83,7 @@ public class SummarizedSignIn extends Entity implements Parsable {
         deserializerMap.put("managedServiceIdentity", (n) -> { this.setManagedServiceIdentity(n.getObjectValue(ManagedIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceDisplayName", (n) -> { this.setResourceDisplayName(n.getStringValue()); });
         deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
+        deserializerMap.put("rootActorId", (n) -> { this.setRootActorId(n.getStringValue()); });
         deserializerMap.put("servicePrincipalId", (n) -> { this.setServicePrincipalId(n.getStringValue()); });
         deserializerMap.put("servicePrincipalName", (n) -> { this.setServicePrincipalName(n.getStringValue()); });
         deserializerMap.put("signInCount", (n) -> { this.setSignInCount(n.getLongValue()); });
@@ -131,6 +132,14 @@ public class SummarizedSignIn extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getResourceId() {
         return this.backingStore.get("resourceId");
+    }
+    /**
+     * Gets the rootActorId property value. The rootActorId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getRootActorId() {
+        return this.backingStore.get("rootActorId");
     }
     /**
      * Gets the servicePrincipalId property value. The application identifier of the specific service principal instance of the application identifier used for sign-in. This field is populated when you&apos;re signing in using an application and is different than the appId property. Supports $filter (eq).
@@ -205,6 +214,7 @@ public class SummarizedSignIn extends Entity implements Parsable {
         writer.writeObjectValue("managedServiceIdentity", this.getManagedServiceIdentity());
         writer.writeStringValue("resourceDisplayName", this.getResourceDisplayName());
         writer.writeStringValue("resourceId", this.getResourceId());
+        writer.writeStringValue("rootActorId", this.getRootActorId());
         writer.writeStringValue("servicePrincipalId", this.getServicePrincipalId());
         writer.writeStringValue("servicePrincipalName", this.getServicePrincipalName());
         writer.writeLongValue("signInCount", this.getSignInCount());
@@ -282,6 +292,13 @@ public class SummarizedSignIn extends Entity implements Parsable {
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceId", value);
+    }
+    /**
+     * Sets the rootActorId property value. The rootActorId property
+     * @param value Value to set for the rootActorId property.
+     */
+    public void setRootActorId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("rootActorId", value);
     }
     /**
      * Sets the servicePrincipalId property value. The application identifier of the specific service principal instance of the application identifier used for sign-in. This field is populated when you&apos;re signing in using an application and is different than the appId property. Supports $filter (eq).

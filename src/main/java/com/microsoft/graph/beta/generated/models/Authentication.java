@@ -68,6 +68,7 @@ public class Authentication extends Entity implements Parsable {
         deserializerMap.put("platformCredentialMethods", (n) -> { this.setPlatformCredentialMethods(n.getCollectionOfObjectValues(PlatformCredentialAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("qrCodePinMethod", (n) -> { this.setQrCodePinMethod(n.getObjectValue(QrCodePinAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("requirements", (n) -> { this.setRequirements(n.getObjectValue(StrongAuthenticationRequirements::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceAccountKeyAuthenticationMethods", (n) -> { this.setResourceAccountKeyAuthenticationMethods(n.getCollectionOfObjectValues(ResourceAccountKeyAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("signInPreferences", (n) -> { this.setSignInPreferences(n.getObjectValue(SignInPreferences::createFromDiscriminatorValue)); });
         deserializerMap.put("softwareOathMethods", (n) -> { this.setSoftwareOathMethods(n.getCollectionOfObjectValues(SoftwareOathAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("temporaryAccessPassMethods", (n) -> { this.setTemporaryAccessPassMethods(n.getCollectionOfObjectValues(TemporaryAccessPassAuthenticationMethod::createFromDiscriminatorValue)); });
@@ -155,6 +156,14 @@ public class Authentication extends Entity implements Parsable {
         return this.backingStore.get("requirements");
     }
     /**
+     * Gets the resourceAccountKeyAuthenticationMethods property value. Represents the resource account key credentials registered to a user for authentication on shared devices.
+     * @return a {@link java.util.List<ResourceAccountKeyAuthenticationMethod>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ResourceAccountKeyAuthenticationMethod> getResourceAccountKeyAuthenticationMethods() {
+        return this.backingStore.get("resourceAccountKeyAuthenticationMethods");
+    }
+    /**
      * Gets the signInPreferences property value. The settings and preferences for the sign-in experience of a user. Use this property to configure the user&apos;s default multifactor authentication (MFA) method.
      * @return a {@link SignInPreferences}
      */
@@ -206,6 +215,7 @@ public class Authentication extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("platformCredentialMethods", this.getPlatformCredentialMethods());
         writer.writeObjectValue("qrCodePinMethod", this.getQrCodePinMethod());
         writer.writeObjectValue("requirements", this.getRequirements());
+        writer.writeCollectionOfObjectValues("resourceAccountKeyAuthenticationMethods", this.getResourceAccountKeyAuthenticationMethods());
         writer.writeObjectValue("signInPreferences", this.getSignInPreferences());
         writer.writeCollectionOfObjectValues("softwareOathMethods", this.getSoftwareOathMethods());
         writer.writeCollectionOfObjectValues("temporaryAccessPassMethods", this.getTemporaryAccessPassMethods());
@@ -301,6 +311,13 @@ public class Authentication extends Entity implements Parsable {
      */
     public void setRequirements(@jakarta.annotation.Nullable final StrongAuthenticationRequirements value) {
         this.backingStore.set("requirements", value);
+    }
+    /**
+     * Sets the resourceAccountKeyAuthenticationMethods property value. Represents the resource account key credentials registered to a user for authentication on shared devices.
+     * @param value Value to set for the resourceAccountKeyAuthenticationMethods property.
+     */
+    public void setResourceAccountKeyAuthenticationMethods(@jakarta.annotation.Nullable final java.util.List<ResourceAccountKeyAuthenticationMethod> value) {
+        this.backingStore.set("resourceAccountKeyAuthenticationMethods", value);
     }
     /**
      * Sets the signInPreferences property value. The settings and preferences for the sign-in experience of a user. Use this property to configure the user&apos;s default multifactor authentication (MFA) method.

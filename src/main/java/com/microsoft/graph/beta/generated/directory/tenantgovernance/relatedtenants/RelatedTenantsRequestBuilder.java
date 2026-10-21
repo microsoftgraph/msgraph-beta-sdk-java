@@ -2,11 +2,11 @@ package com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants;
 
 import com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.count.CountRequestBuilder;
 import com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.item.RelatedTenantItemRequestBuilder;
-import com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.microsoftgraphtenantgovernanceservicesrefresh.MicrosoftGraphTenantGovernanceServicesRefreshRequestBuilder;
-import com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.microsoftgraphtenantgovernanceservicesrefreshstatus.MicrosoftGraphTenantGovernanceServicesRefreshStatusRequestBuilder;
+import com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.refresh.RefreshRequestBuilder;
+import com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.refreshstatus.RefreshStatusRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.tenantgovernanceservices.RelatedTenant;
-import com.microsoft.graph.beta.models.tenantgovernanceservices.RelatedTenantCollectionResponse;
+import com.microsoft.graph.beta.models.RelatedTenant;
+import com.microsoft.graph.beta.models.RelatedTenantCollectionResponse;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the relatedTenants property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.
+ * Provides operations to manage the relatedTenants property of the microsoft.graph.tenantGovernance entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RelatedTenantsRequestBuilder extends BaseRequestBuilder {
@@ -35,22 +35,22 @@ public class RelatedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the refresh method.
-     * @return a {@link MicrosoftGraphTenantGovernanceServicesRefreshRequestBuilder}
+     * @return a {@link RefreshRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphTenantGovernanceServicesRefreshRequestBuilder microsoftGraphTenantGovernanceServicesRefresh() {
-        return new MicrosoftGraphTenantGovernanceServicesRefreshRequestBuilder(pathParameters, requestAdapter);
+    public RefreshRequestBuilder refresh() {
+        return new RefreshRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the refreshStatus method.
-     * @return a {@link MicrosoftGraphTenantGovernanceServicesRefreshStatusRequestBuilder}
+     * @return a {@link RefreshStatusRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphTenantGovernanceServicesRefreshStatusRequestBuilder microsoftGraphTenantGovernanceServicesRefreshStatus() {
-        return new MicrosoftGraphTenantGovernanceServicesRefreshStatusRequestBuilder(pathParameters, requestAdapter);
+    public RefreshStatusRequestBuilder refreshStatus() {
+        return new RefreshStatusRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the relatedTenants property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.
+     * Provides operations to manage the relatedTenants property of the microsoft.graph.tenantGovernance entity.
      * @param relatedTenantId The unique identifier of relatedTenant
      * @return a {@link RelatedTenantItemRequestBuilder}
      */

@@ -4,7 +4,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.TeamworkCustomEmoji;
 import com.microsoft.graph.beta.models.TeamworkCustomEmojiCollectionResponse;
 import com.microsoft.graph.beta.teamwork.messaging.customemojis.count.CountRequestBuilder;
-import com.microsoft.graph.beta.teamwork.messaging.customemojis.item.TeamworkCustomEmojiDisplayNameItemRequestBuilder;
+import com.microsoft.graph.beta.teamwork.messaging.customemojis.item.TeamworkCustomEmojiItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -33,15 +33,15 @@ public class CustomEmojisRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the customEmojis property of the microsoft.graph.teamworkMessaging entity.
-     * @param teamworkCustomEmojiDisplayName The unique identifier of teamworkCustomEmoji
-     * @return a {@link TeamworkCustomEmojiDisplayNameItemRequestBuilder}
+     * @param teamworkCustomEmojiId The unique identifier of teamworkCustomEmoji
+     * @return a {@link TeamworkCustomEmojiItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public TeamworkCustomEmojiDisplayNameItemRequestBuilder byTeamworkCustomEmojiDisplayName(@jakarta.annotation.Nonnull final String teamworkCustomEmojiDisplayName) {
-        Objects.requireNonNull(teamworkCustomEmojiDisplayName);
+    public TeamworkCustomEmojiItemRequestBuilder byTeamworkCustomEmojiId(@jakarta.annotation.Nonnull final String teamworkCustomEmojiId) {
+        Objects.requireNonNull(teamworkCustomEmojiId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("teamworkCustomEmoji%2DdisplayName", teamworkCustomEmojiDisplayName);
-        return new TeamworkCustomEmojiDisplayNameItemRequestBuilder(urlTplParams, requestAdapter);
+        urlTplParams.put("teamworkCustomEmoji%2Did", teamworkCustomEmojiId);
+        return new TeamworkCustomEmojiItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link CustomEmojisRequestBuilder} and sets the default values.

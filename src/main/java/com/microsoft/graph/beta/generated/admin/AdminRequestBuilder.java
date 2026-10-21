@@ -53,7 +53,7 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
         return new CloudLicensingRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the configurationManagement property of the microsoft.graph.admin entity.
+     * The configurationManagement property
      * @return a {@link ConfigurationManagementRequestBuilder}
      */
     @jakarta.annotation.Nonnull

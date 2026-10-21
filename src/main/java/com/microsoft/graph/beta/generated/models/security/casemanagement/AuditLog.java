@@ -54,7 +54,7 @@ public class AuditLog extends Activity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the modifiedProperties property value. The collection of property changes recorded in the audit log.
+     * Gets the modifiedProperties property value. The collection of property changes recorded in the audit log. Supports $filter.
      * @return a {@link java.util.List<ModifiedProperty>}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class AuditLog extends Activity implements Parsable {
         this.backingStore.set("details", value);
     }
     /**
-     * Sets the modifiedProperties property value. The collection of property changes recorded in the audit log.
+     * Sets the modifiedProperties property value. The collection of property changes recorded in the audit log. Supports $filter.
      * @param value Value to set for the modifiedProperties property.
      */
     public void setModifiedProperties(@jakarta.annotation.Nullable final java.util.List<ModifiedProperty> value) {

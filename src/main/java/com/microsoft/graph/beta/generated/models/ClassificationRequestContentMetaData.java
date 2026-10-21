@@ -75,7 +75,7 @@ public class ClassificationRequestContentMetaData implements AdditionalDataHolde
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sourceId property value. The sourceId property
+     * Gets the sourceId property value. An identifier for the source of the content being classified.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class ClassificationRequestContentMetaData implements AdditionalDataHolde
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sourceId property value. The sourceId property
+     * Sets the sourceId property value. An identifier for the source of the content being classified.
      * @param value Value to set for the sourceId property.
      */
     public void setSourceId(@jakarta.annotation.Nullable final String value) {

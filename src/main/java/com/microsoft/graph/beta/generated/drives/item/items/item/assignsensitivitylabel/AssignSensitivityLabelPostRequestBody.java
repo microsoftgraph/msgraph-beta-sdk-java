@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.drives.item.items.item.assignsensitivitylabel;
 
 import com.microsoft.graph.beta.models.SensitivityLabelAssignmentMethod;
+import com.microsoft.graph.beta.models.UserIdentity;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -49,6 +50,14 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
         return value;
     }
     /**
+     * Gets the appliedByUser property value. The appliedByUser property
+     * @return a {@link UserIdentity}
+     */
+    @jakarta.annotation.Nullable
+    public UserIdentity getAppliedByUser() {
+        return this.backingStore.get("appliedByUser");
+    }
+    /**
      * Gets the assignmentMethod property value. The assignmentMethod property
      * @return a {@link SensitivityLabelAssignmentMethod}
      */
@@ -70,7 +79,8 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("appliedByUser", (n) -> { this.setAppliedByUser(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("assignmentMethod", (n) -> { this.setAssignmentMethod(n.getEnumValue(SensitivityLabelAssignmentMethod::forValue)); });
         deserializerMap.put("justificationText", (n) -> { this.setJustificationText(n.getStringValue()); });
         deserializerMap.put("sensitivityLabelId", (n) -> { this.setSensitivityLabelId(n.getStringValue()); });
@@ -98,6 +108,7 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("appliedByUser", this.getAppliedByUser());
         writer.writeEnumValue("assignmentMethod", this.getAssignmentMethod());
         writer.writeStringValue("justificationText", this.getJustificationText());
         writer.writeStringValue("sensitivityLabelId", this.getSensitivityLabelId());
@@ -109,6 +120,13 @@ public class AssignSensitivityLabelPostRequestBody implements AdditionalDataHold
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the appliedByUser property value. The appliedByUser property
+     * @param value Value to set for the appliedByUser property.
+     */
+    public void setAppliedByUser(@jakarta.annotation.Nullable final UserIdentity value) {
+        this.backingStore.set("appliedByUser", value);
     }
     /**
      * Sets the assignmentMethod property value. The assignmentMethod property

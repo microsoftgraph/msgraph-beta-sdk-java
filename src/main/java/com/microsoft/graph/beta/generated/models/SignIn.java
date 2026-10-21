@@ -314,6 +314,7 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("riskLevelAggregated", (n) -> { this.setRiskLevelAggregated(n.getEnumValue(RiskLevel::forValue)); });
         deserializerMap.put("riskLevelDuringSignIn", (n) -> { this.setRiskLevelDuringSignIn(n.getEnumValue(RiskLevel::forValue)); });
         deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState::forValue)); });
+        deserializerMap.put("rootActorId", (n) -> { this.setRootActorId(n.getStringValue()); });
         deserializerMap.put("servicePrincipalCredentialKeyId", (n) -> { this.setServicePrincipalCredentialKeyId(n.getStringValue()); });
         deserializerMap.put("servicePrincipalCredentialThumbprint", (n) -> { this.setServicePrincipalCredentialThumbprint(n.getStringValue()); });
         deserializerMap.put("servicePrincipalId", (n) -> { this.setServicePrincipalId(n.getStringValue()); });
@@ -561,6 +562,14 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("riskState");
     }
     /**
+     * Gets the rootActorId property value. The rootActorId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getRootActorId() {
+        return this.backingStore.get("rootActorId");
+    }
+    /**
      * Gets the servicePrincipalCredentialKeyId property value. The unique identifier of the key credential used by the service principal to authenticate.
      * @return a {@link String}
      */
@@ -783,6 +792,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeEnumValue("riskLevelAggregated", this.getRiskLevelAggregated());
         writer.writeEnumValue("riskLevelDuringSignIn", this.getRiskLevelDuringSignIn());
         writer.writeEnumValue("riskState", this.getRiskState());
+        writer.writeStringValue("rootActorId", this.getRootActorId());
         writer.writeStringValue("servicePrincipalCredentialKeyId", this.getServicePrincipalCredentialKeyId());
         writer.writeStringValue("servicePrincipalCredentialThumbprint", this.getServicePrincipalCredentialThumbprint());
         writer.writeStringValue("servicePrincipalId", this.getServicePrincipalId());
@@ -1195,6 +1205,13 @@ public class SignIn extends Entity implements Parsable {
      */
     public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {
         this.backingStore.set("riskState", value);
+    }
+    /**
+     * Sets the rootActorId property value. The rootActorId property
+     * @param value Value to set for the rootActorId property.
+     */
+    public void setRootActorId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("rootActorId", value);
     }
     /**
      * Sets the servicePrincipalCredentialKeyId property value. The unique identifier of the key credential used by the service principal to authenticate.

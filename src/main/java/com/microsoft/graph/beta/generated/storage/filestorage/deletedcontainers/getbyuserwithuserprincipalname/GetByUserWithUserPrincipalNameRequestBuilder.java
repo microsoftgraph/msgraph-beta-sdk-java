@@ -38,21 +38,19 @@ public class GetByUserWithUserPrincipalNameRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/storage/fileStorage/deletedContainers/getByUser(userPrincipalName='{userPrincipalName}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of fileStorageContainer objects that are owned by a user (either as owner or as principalOwner). You can also filter the results to only list containers for which the user is the principalOwner.
+     * Invoke function getByUser
      * @return a {@link GetByUserWithUserPrincipalNameGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainer-getbyuser?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetByUserWithUserPrincipalNameGetResponse get() {
         return get(null);
     }
     /**
-     * Get a list of fileStorageContainer objects that are owned by a user (either as owner or as principalOwner). You can also filter the results to only list containers for which the user is the principalOwner.
+     * Invoke function getByUser
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetByUserWithUserPrincipalNameGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainer-getbyuser?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetByUserWithUserPrincipalNameGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -62,7 +60,7 @@ public class GetByUserWithUserPrincipalNameRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, GetByUserWithUserPrincipalNameGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of fileStorageContainer objects that are owned by a user (either as owner or as principalOwner). You can also filter the results to only list containers for which the user is the principalOwner.
+     * Invoke function getByUser
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +68,7 @@ public class GetByUserWithUserPrincipalNameRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of fileStorageContainer objects that are owned by a user (either as owner or as principalOwner). You can also filter the results to only list containers for which the user is the principalOwner.
+     * Invoke function getByUser
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -92,7 +90,7 @@ public class GetByUserWithUserPrincipalNameRequestBuilder extends BaseRequestBui
         return new GetByUserWithUserPrincipalNameRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of fileStorageContainer objects that are owned by a user (either as owner or as principalOwner). You can also filter the results to only list containers for which the user is the principalOwner.
+     * Invoke function getByUser
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

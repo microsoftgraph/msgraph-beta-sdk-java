@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.devices.delta.DeltaRequestBuilder;
 import com.microsoft.graph.beta.devices.getbyids.GetByIdsRequestBuilder;
 import com.microsoft.graph.beta.devices.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
 import com.microsoft.graph.beta.devices.item.DeviceItemRequestBuilder;
+import com.microsoft.graph.beta.devices.provision.ProvisionRequestBuilder;
 import com.microsoft.graph.beta.devices.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.graph.beta.models.Device;
 import com.microsoft.graph.beta.models.DeviceCollectionResponse;
@@ -58,6 +59,14 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetUserOwnedObjectsRequestBuilder getUserOwnedObjects() {
         return new GetUserOwnedObjectsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the provision method.
+     * @return a {@link ProvisionRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ProvisionRequestBuilder provision() {
+        return new ProvisionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the validateProperties method.

@@ -51,8 +51,10 @@ public class VerifiedIdProfile extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("faceCheckConfiguration", (n) -> { this.setFaceCheckConfiguration(n.getObjectValue(FaceCheckConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("mobileDriversLicenseConfiguration", (n) -> { this.setMobileDriversLicenseConfiguration(n.getObjectValue(MobileDriversLicenseConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("selfServiceIssuance", (n) -> { this.setSelfServiceIssuance(n.getObjectValue(VerifiedIdSelfServiceIssuance::createFromDiscriminatorValue)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(VerifiedIdProfileState::forValue)); });
         deserializerMap.put("verifiedIdProfileConfiguration", (n) -> { this.setVerifiedIdProfileConfiguration(n.getObjectValue(VerifiedIdProfileConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("verifiedIdUsageConfigurations", (n) -> { this.setVerifiedIdUsageConfigurations(n.getCollectionOfObjectValues(VerifiedIdUsageConfiguration::createFromDiscriminatorValue)); });
@@ -66,6 +68,14 @@ public class VerifiedIdProfile extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.backingStore.get("lastModifiedDateTime");
+    }
+    /**
+     * Gets the mobileDriversLicenseConfiguration property value. Configuration for accepting mobile driver&apos;s licenses. Optional.
+     * @return a {@link MobileDriversLicenseConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public MobileDriversLicenseConfiguration getMobileDriversLicenseConfiguration() {
+        return this.backingStore.get("mobileDriversLicenseConfiguration");
     }
     /**
      * Gets the name property value. Display name for the verified ID profile. Required.
@@ -82,6 +92,14 @@ public class VerifiedIdProfile extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Integer getPriority() {
         return this.backingStore.get("priority");
+    }
+    /**
+     * Gets the selfServiceIssuance property value. Configuration for self-service issuance. Optional.
+     * @return a {@link VerifiedIdSelfServiceIssuance}
+     */
+    @jakarta.annotation.Nullable
+    public VerifiedIdSelfServiceIssuance getSelfServiceIssuance() {
+        return this.backingStore.get("selfServiceIssuance");
     }
     /**
      * Gets the state property value. The state property
@@ -125,8 +143,10 @@ public class VerifiedIdProfile extends Entity implements Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeObjectValue("faceCheckConfiguration", this.getFaceCheckConfiguration());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeObjectValue("mobileDriversLicenseConfiguration", this.getMobileDriversLicenseConfiguration());
         writer.writeStringValue("name", this.getName());
         writer.writeIntegerValue("priority", this.getPriority());
+        writer.writeObjectValue("selfServiceIssuance", this.getSelfServiceIssuance());
         writer.writeEnumValue("state", this.getState());
         writer.writeObjectValue("verifiedIdProfileConfiguration", this.getVerifiedIdProfileConfiguration());
         writer.writeCollectionOfObjectValues("verifiedIdUsageConfigurations", this.getVerifiedIdUsageConfigurations());
@@ -154,6 +174,13 @@ public class VerifiedIdProfile extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
+     * Sets the mobileDriversLicenseConfiguration property value. Configuration for accepting mobile driver&apos;s licenses. Optional.
+     * @param value Value to set for the mobileDriversLicenseConfiguration property.
+     */
+    public void setMobileDriversLicenseConfiguration(@jakarta.annotation.Nullable final MobileDriversLicenseConfiguration value) {
+        this.backingStore.set("mobileDriversLicenseConfiguration", value);
+    }
+    /**
      * Sets the name property value. Display name for the verified ID profile. Required.
      * @param value Value to set for the name property.
      */
@@ -166,6 +193,13 @@ public class VerifiedIdProfile extends Entity implements Parsable {
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("priority", value);
+    }
+    /**
+     * Sets the selfServiceIssuance property value. Configuration for self-service issuance. Optional.
+     * @param value Value to set for the selfServiceIssuance property.
+     */
+    public void setSelfServiceIssuance(@jakarta.annotation.Nullable final VerifiedIdSelfServiceIssuance value) {
+        this.backingStore.set("selfServiceIssuance", value);
     }
     /**
      * Sets the state property value. The state property

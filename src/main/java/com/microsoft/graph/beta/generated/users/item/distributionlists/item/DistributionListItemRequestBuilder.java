@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.models.DistributionList;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.users.item.distributionlists.item.addmembers.AddMembersRequestBuilder;
 import com.microsoft.graph.beta.users.item.distributionlists.item.deletemembers.DeleteMembersRequestBuilder;
+import com.microsoft.graph.beta.users.item.distributionlists.item.members.MembersRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -37,6 +38,14 @@ public class DistributionListItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DeleteMembersRequestBuilder deleteMembers() {
         return new DeleteMembersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the members property of the microsoft.graph.distributionList entity.
+     * @return a {@link MembersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MembersRequestBuilder members() {
+        return new MembersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link DistributionListItemRequestBuilder} and sets the default values.

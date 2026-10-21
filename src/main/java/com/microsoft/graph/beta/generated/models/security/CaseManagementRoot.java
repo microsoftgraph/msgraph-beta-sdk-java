@@ -28,7 +28,7 @@ public class CaseManagementRoot extends Entity implements Parsable {
         return new CaseManagementRoot();
     }
     /**
-     * Gets the cases property value. The collection of security cases managed through the case management entry point. Supports $filter, $orderby, $select, $top, $skip, and $count.
+     * Gets the cases property value. The collection of security cases managed through the case management entry point. Supports $filter, $orderby, $select, $top, and $skip.
      * @return a {@link java.util.List<CaseEscaped>}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class CaseManagementRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("caseTypeConfigurations", this.getCaseTypeConfigurations());
     }
     /**
-     * Sets the cases property value. The collection of security cases managed through the case management entry point. Supports $filter, $orderby, $select, $top, $skip, and $count.
+     * Sets the cases property value. The collection of security cases managed through the case management entry point. Supports $filter, $orderby, $select, $top, and $skip.
      * @param value Value to set for the cases property.
      */
     public void setCases(@jakarta.annotation.Nullable final java.util.List<CaseEscaped> value) {

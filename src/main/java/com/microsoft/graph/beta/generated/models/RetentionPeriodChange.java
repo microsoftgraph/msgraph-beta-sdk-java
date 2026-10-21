@@ -57,7 +57,7 @@ public class RetentionPeriodChange implements AdditionalDataHolder, BackedModel,
         return this.backingStore;
     }
     /**
-     * Gets the effectiveFromDateTime property value. The effectiveFromDateTime property
+     * Gets the effectiveFromDateTime property value. The date and time from which the retention period change takes effect. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2026, is 2026-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class RetentionPeriodChange implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("status");
     }
     /**
-     * Gets the targetRetentionPeriodInDays property value. The targetRetentionPeriodInDays property
+     * Gets the targetRetentionPeriodInDays property value. Specifies the retention period, in days, that applies after the change is completed.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class RetentionPeriodChange implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the effectiveFromDateTime property value. The effectiveFromDateTime property
+     * Sets the effectiveFromDateTime property value. The date and time from which the retention period change takes effect. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2026, is 2026-01-01T00:00:00Z.
      * @param value Value to set for the effectiveFromDateTime property.
      */
     public void setEffectiveFromDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -150,7 +150,7 @@ public class RetentionPeriodChange implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the targetRetentionPeriodInDays property value. The targetRetentionPeriodInDays property
+     * Sets the targetRetentionPeriodInDays property value. Specifies the retention period, in days, that applies after the change is completed.
      * @param value Value to set for the targetRetentionPeriodInDays property.
      */
     public void setTargetRetentionPeriodInDays(@jakarta.annotation.Nullable final Integer value) {

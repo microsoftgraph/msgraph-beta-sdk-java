@@ -48,7 +48,7 @@ public class MediaMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return value;
     }
     /**
-     * Gets the audioMetadata property value. The audioMetadata property
+     * Gets the audioMetadata property value. Audio-specific encoding details. Nullable. Set when the analyzed content is audio or multimodal.
      * @return a {@link AudioMetadata}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class MediaMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore;
     }
     /**
-     * Gets the byteSize property value. The byteSize property
+     * Gets the byteSize property value. Size of the content in bytes. Set this value to 0 for live streams where the total size is unknown; for recorded files, specify the actual size.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class MediaMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("byteSize");
     }
     /**
-     * Gets the duration property value. The duration property
+     * Gets the duration property value. Duration of the analyzed content in whole seconds. Sub-second or millisecond windows are rounded to the nearest second. For a continuous live stream, set this value to the length of the analysis window.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class MediaMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the isRealTime property value. The isRealTime property
+     * Gets the isRealTime property value. Indicates whether the analysis was performed in real time on a live stream.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class MediaMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("isRealTime");
     }
     /**
-     * Gets the mimeType property value. The mimeType property
+     * Gets the mimeType property value. MIME type of the analyzed content. Common values for Teams media include audio/pcm, video/mp4, and video/h264.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class MediaMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the streamingMetadata property value. The streamingMetadata property
+     * Gets the streamingMetadata property value. Network and real-time streaming quality metrics. Nullable. Set when the analyzed content was streamed in real time.
      * @return a {@link StreamingMetadata}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class MediaMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("streamingMetadata");
     }
     /**
-     * Gets the videoMetadata property value. The videoMetadata property
+     * Gets the videoMetadata property value. Video-specific encoding and quality details. Nullable. Set when the analyzed content is video or multimodal.
      * @return a {@link VideoMetadata}
      */
     @jakarta.annotation.Nullable
@@ -170,7 +170,7 @@ public class MediaMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the audioMetadata property value. The audioMetadata property
+     * Sets the audioMetadata property value. Audio-specific encoding details. Nullable. Set when the analyzed content is audio or multimodal.
      * @param value Value to set for the audioMetadata property.
      */
     public void setAudioMetadata(@jakarta.annotation.Nullable final AudioMetadata value) {
@@ -185,28 +185,28 @@ public class MediaMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore = value;
     }
     /**
-     * Sets the byteSize property value. The byteSize property
+     * Sets the byteSize property value. Size of the content in bytes. Set this value to 0 for live streams where the total size is unknown; for recorded files, specify the actual size.
      * @param value Value to set for the byteSize property.
      */
     public void setByteSize(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("byteSize", value);
     }
     /**
-     * Sets the duration property value. The duration property
+     * Sets the duration property value. Duration of the analyzed content in whole seconds. Sub-second or millisecond windows are rounded to the nearest second. For a continuous live stream, set this value to the length of the analysis window.
      * @param value Value to set for the duration property.
      */
     public void setDuration(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("duration", value);
     }
     /**
-     * Sets the isRealTime property value. The isRealTime property
+     * Sets the isRealTime property value. Indicates whether the analysis was performed in real time on a live stream.
      * @param value Value to set for the isRealTime property.
      */
     public void setIsRealTime(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isRealTime", value);
     }
     /**
-     * Sets the mimeType property value. The mimeType property
+     * Sets the mimeType property value. MIME type of the analyzed content. Common values for Teams media include audio/pcm, video/mp4, and video/h264.
      * @param value Value to set for the mimeType property.
      */
     public void setMimeType(@jakarta.annotation.Nullable final String value) {
@@ -227,14 +227,14 @@ public class MediaMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the streamingMetadata property value. The streamingMetadata property
+     * Sets the streamingMetadata property value. Network and real-time streaming quality metrics. Nullable. Set when the analyzed content was streamed in real time.
      * @param value Value to set for the streamingMetadata property.
      */
     public void setStreamingMetadata(@jakarta.annotation.Nullable final StreamingMetadata value) {
         this.backingStore.set("streamingMetadata", value);
     }
     /**
-     * Sets the videoMetadata property value. The videoMetadata property
+     * Sets the videoMetadata property value. Video-specific encoding and quality details. Nullable. Set when the analyzed content is video or multimodal.
      * @param value Value to set for the videoMetadata property.
      */
     public void setVideoMetadata(@jakarta.annotation.Nullable final VideoMetadata value) {

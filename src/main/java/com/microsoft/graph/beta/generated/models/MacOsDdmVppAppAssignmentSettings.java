@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Contains properties used to assign a macOS Declarative Device Management (DDM) VPP mobile app to a group.
  */
@@ -37,6 +38,14 @@ public class MacOsDdmVppAppAssignmentSettings extends MobileAppAssignmentSetting
         return this.backingStore.get("automaticAppUpdates");
     }
     /**
+     * Gets the ddmAppConfigId property value. The unique identifier of the DDM app configuration to associate with the app.
+     * @return a {@link UUID}
+     */
+    @jakarta.annotation.Nullable
+    public UUID getDdmAppConfigId() {
+        return this.backingStore.get("ddmAppConfigId");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -44,6 +53,7 @@ public class MacOsDdmVppAppAssignmentSettings extends MobileAppAssignmentSetting
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("automaticAppUpdates", (n) -> { this.setAutomaticAppUpdates(n.getEnumValue(DdmAppAutomaticAppUpdates::forValue)); });
+        deserializerMap.put("ddmAppConfigId", (n) -> { this.setDdmAppConfigId(n.getUUIDValue()); });
         deserializerMap.put("isIosApp", (n) -> { this.setIsIosApp(n.getBooleanValue()); });
         deserializerMap.put("useDeviceLicensing", (n) -> { this.setUseDeviceLicensing(n.getBooleanValue()); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getIntegerValue()); });
@@ -81,6 +91,7 @@ public class MacOsDdmVppAppAssignmentSettings extends MobileAppAssignmentSetting
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("automaticAppUpdates", this.getAutomaticAppUpdates());
+        writer.writeUUIDValue("ddmAppConfigId", this.getDdmAppConfigId());
         writer.writeBooleanValue("isIosApp", this.getIsIosApp());
         writer.writeBooleanValue("useDeviceLicensing", this.getUseDeviceLicensing());
         writer.writeIntegerValue("version", this.getVersion());
@@ -91,6 +102,13 @@ public class MacOsDdmVppAppAssignmentSettings extends MobileAppAssignmentSetting
      */
     public void setAutomaticAppUpdates(@jakarta.annotation.Nullable final DdmAppAutomaticAppUpdates value) {
         this.backingStore.set("automaticAppUpdates", value);
+    }
+    /**
+     * Sets the ddmAppConfigId property value. The unique identifier of the DDM app configuration to associate with the app.
+     * @param value Value to set for the ddmAppConfigId property.
+     */
+    public void setDdmAppConfigId(@jakarta.annotation.Nullable final UUID value) {
+        this.backingStore.set("ddmAppConfigId", value);
     }
     /**
      * Sets the isIosApp property value. If true, the device installs an iOS or iPadOS app that runs on a Mac with Apple Silicon. This is only used when the app is a VPP app. Default is false.

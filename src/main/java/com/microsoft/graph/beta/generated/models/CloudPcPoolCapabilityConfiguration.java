@@ -63,12 +63,21 @@ public class CloudPcPoolCapabilityConfiguration implements AdditionalDataHolder,
         return this.backingStore;
     }
     /**
+     * Gets the enableSingleSignOn property value. The enableSingleSignOn property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getEnableSingleSignOn() {
+        return this.backingStore.get("enableSingleSignOn");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        deserializerMap.put("enableSingleSignOn", (n) -> { this.setEnableSingleSignOn(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -86,6 +95,7 @@ public class CloudPcPoolCapabilityConfiguration implements AdditionalDataHolder,
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeBooleanValue("enableSingleSignOn", this.getEnableSingleSignOn());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -103,6 +113,13 @@ public class CloudPcPoolCapabilityConfiguration implements AdditionalDataHolder,
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the enableSingleSignOn property value. The enableSingleSignOn property
+     * @param value Value to set for the enableSingleSignOn property.
+     */
+    public void setEnableSingleSignOn(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("enableSingleSignOn", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

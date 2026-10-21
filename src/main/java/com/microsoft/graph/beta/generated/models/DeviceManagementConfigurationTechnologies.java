@@ -41,7 +41,9 @@ public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
     /** Setting can be deployed using the Operating System Recovery channel */
     WindowsOsRecovery("windowsOsRecovery"),
     /** Indicates the settings that can be deployed through the Android channel. */
-    Android("android");
+    Android("android"),
+    /** Setting can be deployed through the Intune Open Extensibility channel for scenarios such as Windows Recovery Environment (WinRE) configuration policies. */
+    IntuneOpenExtensibility("intuneOpenExtensibility");
     public final String value;
     DeviceManagementConfigurationTechnologies(final String value) {
         this.value = value;
@@ -69,6 +71,7 @@ public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
             case "unknownFutureValue": return UnknownFutureValue;
             case "windowsOsRecovery": return WindowsOsRecovery;
             case "android": return Android;
+            case "intuneOpenExtensibility": return IntuneOpenExtensibility;
             default: return null;
         }
     }

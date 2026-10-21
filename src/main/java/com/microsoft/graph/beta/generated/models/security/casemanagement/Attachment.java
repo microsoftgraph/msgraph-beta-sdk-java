@@ -26,7 +26,7 @@ public class Attachment extends CaseManagementEntity implements Parsable {
         return new Attachment();
     }
     /**
-     * Gets the content property value. The binary content stream for the attachment.
+     * Gets the content property value. The binary content stream for the attachment. Use the Upload content and Download content methods to access it.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class Attachment extends CaseManagementEntity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the fileExtension property value. The file extension of the attachment.
+     * Gets the fileExtension property value. The file extension of the attachment. The service normalizes the value to include a leading period.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class Attachment extends CaseManagementEntity implements Parsable {
         return this.backingStore.get("fileExtension");
     }
     /**
-     * Gets the fileSize property value. The size of the attachment in bytes.
+     * Gets the fileSize property value. The size of the attachment in bytes. The maximum file size is 100 MB.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class Attachment extends CaseManagementEntity implements Parsable {
         writer.writeEnumValue("scanResult", this.getScanResult());
     }
     /**
-     * Sets the content property value. The binary content stream for the attachment.
+     * Sets the content property value. The binary content stream for the attachment. Use the Upload content and Download content methods to access it.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
@@ -134,14 +134,14 @@ public class Attachment extends CaseManagementEntity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the fileExtension property value. The file extension of the attachment.
+     * Sets the fileExtension property value. The file extension of the attachment. The service normalizes the value to include a leading period.
      * @param value Value to set for the fileExtension property.
      */
     public void setFileExtension(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("fileExtension", value);
     }
     /**
-     * Sets the fileSize property value. The size of the attachment in bytes.
+     * Sets the fileSize property value. The size of the attachment in bytes. The maximum file size is 100 MB.
      * @param value Value to set for the fileSize property.
      */
     public void setFileSize(@jakarta.annotation.Nullable final Long value) {

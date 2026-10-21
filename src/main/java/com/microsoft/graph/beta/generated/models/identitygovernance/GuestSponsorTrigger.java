@@ -36,7 +36,7 @@ public class GuestSponsorTrigger extends WorkflowExecutionTrigger implements Par
         return deserializerMap;
     }
     /**
-     * Gets the minimumRequiredSponsors property value. The minimumRequiredSponsors property
+     * Gets the minimumRequiredSponsors property value. The minimum number of sponsors required for a guest user. When a guest has fewer sponsors than this value, the workflow is triggered.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class GuestSponsorTrigger extends WorkflowExecutionTrigger implements Par
         writer.writeIntegerValue("minimumRequiredSponsors", this.getMinimumRequiredSponsors());
     }
     /**
-     * Sets the minimumRequiredSponsors property value. The minimumRequiredSponsors property
+     * Sets the minimumRequiredSponsors property value. The minimum number of sponsors required for a guest user. When a guest has fewer sponsors than this value, the workflow is triggered.
      * @param value Value to set for the minimumRequiredSponsors property.
      */
     public void setMinimumRequiredSponsors(@jakarta.annotation.Nullable final Integer value) {

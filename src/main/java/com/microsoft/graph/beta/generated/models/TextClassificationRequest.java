@@ -26,12 +26,20 @@ public class TextClassificationRequest extends Entity implements Parsable {
         return new TextClassificationRequest();
     }
     /**
-     * Gets the contentMetaData property value. The contentMetaData property
+     * Gets the contentMetaData property value. Metadata that describes the content being classified.
      * @return a {@link ClassificationRequestContentMetaData}
      */
     @jakarta.annotation.Nullable
     public ClassificationRequestContentMetaData getContentMetaData() {
         return this.backingStore.get("contentMetaData");
+    }
+    /**
+     * Gets the embeddings property value. Optional caller-supplied precomputed embeddings for the text, so the service can skip recomputing them. Embeddings for models outside the allow-list are rejected with a 400.
+     * @return a {@link java.util.List<EmbeddingInput>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<EmbeddingInput> getEmbeddings() {
+        return this.backingStore.get("embeddings");
     }
     /**
      * The deserialization information for the current model
@@ -41,6 +49,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contentMetaData", (n) -> { this.setContentMetaData(n.getObjectValue(ClassificationRequestContentMetaData::createFromDiscriminatorValue)); });
+        deserializerMap.put("embeddings", (n) -> { this.setEmbeddings(n.getCollectionOfObjectValues(EmbeddingInput::createFromDiscriminatorValue)); });
         deserializerMap.put("fileExtension", (n) -> { this.setFileExtension(n.getStringValue()); });
         deserializerMap.put("matchTolerancesToInclude", (n) -> { this.setMatchTolerancesToInclude(n.getEnumSetValue(MlClassificationMatchTolerance::forValue)); });
         deserializerMap.put("scopesToRun", (n) -> { this.setScopesToRun(n.getEnumSetValue(SensitiveTypeScope::forValue)); });
@@ -49,7 +58,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the fileExtension property value. The fileExtension property
+     * Gets the fileExtension property value. The file extension of the content being classified.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +66,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
         return this.backingStore.get("fileExtension");
     }
     /**
-     * Gets the matchTolerancesToInclude property value. The matchTolerancesToInclude property
+     * Gets the matchTolerancesToInclude property value. The match tolerance levels to include in the classification results. The possible values are: exact, near.
      * @return a {@link EnumSet<MlClassificationMatchTolerance>}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +74,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
         return this.backingStore.get("matchTolerancesToInclude");
     }
     /**
-     * Gets the scopesToRun property value. The scopesToRun property
+     * Gets the scopesToRun property value. The document scopes over which to run classification. The possible values are: fullDocument, partialDocument.
      * @return a {@link EnumSet<SensitiveTypeScope>}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +82,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
         return this.backingStore.get("scopesToRun");
     }
     /**
-     * Gets the sensitiveTypeIds property value. The sensitiveTypeIds property
+     * Gets the sensitiveTypeIds property value. The identifiers of the sensitive information types to evaluate against the text.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +90,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
         return this.backingStore.get("sensitiveTypeIds");
     }
     /**
-     * Gets the text property value. The text property
+     * Gets the text property value. The text to classify.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -96,6 +105,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("contentMetaData", this.getContentMetaData());
+        writer.writeCollectionOfObjectValues("embeddings", this.getEmbeddings());
         writer.writeStringValue("fileExtension", this.getFileExtension());
         writer.writeEnumSetValue("matchTolerancesToInclude", this.getMatchTolerancesToInclude());
         writer.writeEnumSetValue("scopesToRun", this.getScopesToRun());
@@ -103,42 +113,49 @@ public class TextClassificationRequest extends Entity implements Parsable {
         writer.writeStringValue("text", this.getText());
     }
     /**
-     * Sets the contentMetaData property value. The contentMetaData property
+     * Sets the contentMetaData property value. Metadata that describes the content being classified.
      * @param value Value to set for the contentMetaData property.
      */
     public void setContentMetaData(@jakarta.annotation.Nullable final ClassificationRequestContentMetaData value) {
         this.backingStore.set("contentMetaData", value);
     }
     /**
-     * Sets the fileExtension property value. The fileExtension property
+     * Sets the embeddings property value. Optional caller-supplied precomputed embeddings for the text, so the service can skip recomputing them. Embeddings for models outside the allow-list are rejected with a 400.
+     * @param value Value to set for the embeddings property.
+     */
+    public void setEmbeddings(@jakarta.annotation.Nullable final java.util.List<EmbeddingInput> value) {
+        this.backingStore.set("embeddings", value);
+    }
+    /**
+     * Sets the fileExtension property value. The file extension of the content being classified.
      * @param value Value to set for the fileExtension property.
      */
     public void setFileExtension(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("fileExtension", value);
     }
     /**
-     * Sets the matchTolerancesToInclude property value. The matchTolerancesToInclude property
+     * Sets the matchTolerancesToInclude property value. The match tolerance levels to include in the classification results. The possible values are: exact, near.
      * @param value Value to set for the matchTolerancesToInclude property.
      */
     public void setMatchTolerancesToInclude(@jakarta.annotation.Nullable final EnumSet<MlClassificationMatchTolerance> value) {
         this.backingStore.set("matchTolerancesToInclude", value);
     }
     /**
-     * Sets the scopesToRun property value. The scopesToRun property
+     * Sets the scopesToRun property value. The document scopes over which to run classification. The possible values are: fullDocument, partialDocument.
      * @param value Value to set for the scopesToRun property.
      */
     public void setScopesToRun(@jakarta.annotation.Nullable final EnumSet<SensitiveTypeScope> value) {
         this.backingStore.set("scopesToRun", value);
     }
     /**
-     * Sets the sensitiveTypeIds property value. The sensitiveTypeIds property
+     * Sets the sensitiveTypeIds property value. The identifiers of the sensitive information types to evaluate against the text.
      * @param value Value to set for the sensitiveTypeIds property.
      */
     public void setSensitiveTypeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("sensitiveTypeIds", value);
     }
     /**
-     * Sets the text property value. The text property
+     * Sets the text property value. The text to classify.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {

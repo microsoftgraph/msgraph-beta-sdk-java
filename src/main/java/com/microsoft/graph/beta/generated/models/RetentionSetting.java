@@ -85,7 +85,7 @@ public class RetentionSetting implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the period property value. The period of time to retain the protected data for a single Microsoft 365 service.
+     * Gets the period property value. The period of time to retain the protected data for a single Microsoft 365 service. The possible values are: P90D, P180D, P365D, P730D, P1095D, P1460D, P1825D, P2190D, P2555D, P2920D, P3285D, and P3650D. Other values aren&apos;t supported.
      * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class RetentionSetting implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the period property value. The period of time to retain the protected data for a single Microsoft 365 service.
+     * Sets the period property value. The period of time to retain the protected data for a single Microsoft 365 service. The possible values are: P90D, P180D, P365D, P730D, P1095D, P1460D, P1825D, P2190D, P2555D, P2920D, P3285D, and P3650D. Other values aren&apos;t supported.
      * @param value Value to set for the period property.
      */
     public void setPeriod(@jakarta.annotation.Nullable final PeriodAndDuration value) {

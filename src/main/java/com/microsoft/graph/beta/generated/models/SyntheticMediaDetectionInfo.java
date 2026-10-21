@@ -57,7 +57,7 @@ public class SyntheticMediaDetectionInfo implements AdditionalDataHolder, Backed
         return this.backingStore;
     }
     /**
-     * Gets the detectionId property value. The detectionId property
+     * Gets the detectionId property value. Unique identifier for the detection event. This property correlates with the id parameter that the detection bot passed to reportSyntheticMedia.
      * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class SyntheticMediaDetectionInfo implements AdditionalDataHolder, Backed
         return this.backingStore.get("detectionId");
     }
     /**
-     * Gets the detectorBot property value. The detectorBot property
+     * Gets the detectorBot property value. Identifier of the detection bot that produced this result.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class SyntheticMediaDetectionInfo implements AdditionalDataHolder, Backed
         return deserializerMap;
     }
     /**
-     * Gets the isParticipantTrusted property value. The isParticipantTrusted property
+     * Gets the isParticipantTrusted property value. Set to true if the participant is classified as trusted or reliable (for example, a known internal user); otherwise, false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class SyntheticMediaDetectionInfo implements AdditionalDataHolder, Backed
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the syntheticConfidence property value. The syntheticConfidence property
+     * Gets the syntheticConfidence property value. Confidence score (0.0 to 1.0) that the participant&apos;s media is synthetic.
      * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
@@ -139,21 +139,21 @@ public class SyntheticMediaDetectionInfo implements AdditionalDataHolder, Backed
         this.backingStore = value;
     }
     /**
-     * Sets the detectionId property value. The detectionId property
+     * Sets the detectionId property value. Unique identifier for the detection event. This property correlates with the id parameter that the detection bot passed to reportSyntheticMedia.
      * @param value Value to set for the detectionId property.
      */
     public void setDetectionId(@jakarta.annotation.Nullable final UUID value) {
         this.backingStore.set("detectionId", value);
     }
     /**
-     * Sets the detectorBot property value. The detectorBot property
+     * Sets the detectorBot property value. Identifier of the detection bot that produced this result.
      * @param value Value to set for the detectorBot property.
      */
     public void setDetectorBot(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("detectorBot", value);
     }
     /**
-     * Sets the isParticipantTrusted property value. The isParticipantTrusted property
+     * Sets the isParticipantTrusted property value. Set to true if the participant is classified as trusted or reliable (for example, a known internal user); otherwise, false.
      * @param value Value to set for the isParticipantTrusted property.
      */
     public void setIsParticipantTrusted(@jakarta.annotation.Nullable final Boolean value) {
@@ -167,7 +167,7 @@ public class SyntheticMediaDetectionInfo implements AdditionalDataHolder, Backed
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the syntheticConfidence property value. The syntheticConfidence property
+     * Sets the syntheticConfidence property value. Confidence score (0.0 to 1.0) that the participant&apos;s media is synthetic.
      * @param value Value to set for the syntheticConfidence property.
      */
     public void setSyntheticConfidence(@jakarta.annotation.Nullable final Double value) {

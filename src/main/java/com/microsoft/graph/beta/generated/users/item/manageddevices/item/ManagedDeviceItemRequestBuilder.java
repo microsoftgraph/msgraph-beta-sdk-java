@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.users.item.manageddevices.item.activatedeviceesim.ActivateDeviceEsimRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.assignmentfilterevaluationstatusdetails.AssignmentFilterEvaluationStatusDetailsRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.bypassactivationlock.BypassActivationLockRequestBuilder;
+import com.microsoft.graph.beta.users.item.manageddevices.item.cancelenhancedlogcollection.CancelEnhancedLogCollectionRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.changeassignments.ChangeAssignmentsRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.cleanwindowsdevice.CleanWindowsDeviceRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.createdevicelogcollectionrequest.CreateDeviceLogCollectionRequestRequestBuilder;
@@ -57,6 +58,7 @@ import com.microsoft.graph.beta.users.item.manageddevices.item.shutdown.ShutDown
 import com.microsoft.graph.beta.users.item.manageddevices.item.suspendmanagedhomescreen.SuspendManagedHomeScreenRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.syncdevice.SyncDeviceRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.triggerconfigurationmanageraction.TriggerConfigurationManagerActionRequestBuilder;
+import com.microsoft.graph.beta.users.item.manageddevices.item.triggerenhancedlogcollection.TriggerEnhancedLogCollectionRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.updatewindowsdeviceaccount.UpdateWindowsDeviceAccountRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.users.UsersRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.windowsdefenderscan.WindowsDefenderScanRequestBuilder;
@@ -104,6 +106,14 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public BypassActivationLockRequestBuilder bypassActivationLock() {
         return new BypassActivationLockRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the cancelEnhancedLogCollection method.
+     * @return a {@link CancelEnhancedLogCollectionRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CancelEnhancedLogCollectionRequestBuilder cancelEnhancedLogCollection() {
+        return new CancelEnhancedLogCollectionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the changeAssignments method.
@@ -520,6 +530,14 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TriggerConfigurationManagerActionRequestBuilder triggerConfigurationManagerAction() {
         return new TriggerConfigurationManagerActionRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the triggerEnhancedLogCollection method.
+     * @return a {@link TriggerEnhancedLogCollectionRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TriggerEnhancedLogCollectionRequestBuilder triggerEnhancedLogCollection() {
+        return new TriggerEnhancedLogCollectionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the updateWindowsDeviceAccount method.

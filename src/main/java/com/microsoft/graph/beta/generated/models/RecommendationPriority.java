@@ -7,7 +7,9 @@ import java.util.Objects;
 public enum RecommendationPriority implements ValuedEnum {
     Low("low"),
     Medium("medium"),
-    High("high");
+    High("high"),
+    Critical("critical"),
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     RecommendationPriority(final String value) {
         this.value = value;
@@ -21,6 +23,8 @@ public enum RecommendationPriority implements ValuedEnum {
             case "low": return Low;
             case "medium": return Medium;
             case "high": return High;
+            case "critical": return Critical;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

@@ -49,7 +49,7 @@ public class ExternalSapAcConnectionInfo extends ConnectionInfo implements Parsa
         return deserializerMap;
     }
     /**
-     * Gets the keyVaultName property value. The keyVaultName property
+     * Gets the keyVaultName property value. The name of the Azure Key Vault that stores the credentials used for authentication.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class ExternalSapAcConnectionInfo extends ConnectionInfo implements Parsa
         return this.backingStore.get("keyVaultName");
     }
     /**
-     * Gets the resourceGroup property value. The resourceGroup property
+     * Gets the resourceGroup property value. The Azure resource group that contains the Key Vault.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class ExternalSapAcConnectionInfo extends ConnectionInfo implements Parsa
         return this.backingStore.get("resourceGroup");
     }
     /**
-     * Gets the subscriptionId property value. The subscriptionId property
+     * Gets the subscriptionId property value. The Azure subscription ID that contains the Key Vault.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class ExternalSapAcConnectionInfo extends ConnectionInfo implements Parsa
         return this.backingStore.get("subscriptionId");
     }
     /**
-     * Gets the systemId property value. The systemId property
+     * Gets the systemId property value. The identifier of the target SAP AC system.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class ExternalSapAcConnectionInfo extends ConnectionInfo implements Parsa
         return this.backingStore.get("systemId");
     }
     /**
-     * Gets the userIdentifier property value. The userIdentifier property
+     * Gets the userIdentifier property value. The user identifier used to connect to the SAP AC system.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -110,35 +110,35 @@ public class ExternalSapAcConnectionInfo extends ConnectionInfo implements Parsa
         this.backingStore.set("authenticationInfo", value);
     }
     /**
-     * Sets the keyVaultName property value. The keyVaultName property
+     * Sets the keyVaultName property value. The name of the Azure Key Vault that stores the credentials used for authentication.
      * @param value Value to set for the keyVaultName property.
      */
     public void setKeyVaultName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("keyVaultName", value);
     }
     /**
-     * Sets the resourceGroup property value. The resourceGroup property
+     * Sets the resourceGroup property value. The Azure resource group that contains the Key Vault.
      * @param value Value to set for the resourceGroup property.
      */
     public void setResourceGroup(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceGroup", value);
     }
     /**
-     * Sets the subscriptionId property value. The subscriptionId property
+     * Sets the subscriptionId property value. The Azure subscription ID that contains the Key Vault.
      * @param value Value to set for the subscriptionId property.
      */
     public void setSubscriptionId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("subscriptionId", value);
     }
     /**
-     * Sets the systemId property value. The systemId property
+     * Sets the systemId property value. The identifier of the target SAP AC system.
      * @param value Value to set for the systemId property.
      */
     public void setSystemId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("systemId", value);
     }
     /**
-     * Sets the userIdentifier property value. The userIdentifier property
+     * Sets the userIdentifier property value. The user identifier used to connect to the SAP AC system.
      * @param value Value to set for the userIdentifier property.
      */
     public void setUserIdentifier(@jakarta.annotation.Nullable final String value) {

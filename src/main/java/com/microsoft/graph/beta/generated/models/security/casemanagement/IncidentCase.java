@@ -27,7 +27,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return new IncidentCase();
     }
     /**
-     * Gets the aiAgentIds property value. The list of AI agent identifiers associated with the incident.
+     * Gets the aiAgentIds property value. The list of AI agent identifiers associated with the incident. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("aiAgentIds");
     }
     /**
-     * Gets the alertCounts property value. A summary of alert counts grouped by severity and status.
+     * Gets the alertCounts property value. A summary of alert counts grouped by severity and status. Supports $filter.
      * @return a {@link AlertCounts}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("alertCounts");
     }
     /**
-     * Gets the alertPolicyIds property value. The list of alert policy identifiers associated with the incident.
+     * Gets the alertPolicyIds property value. The list of alert policy identifiers associated with the incident. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("alertPolicyIds");
     }
     /**
-     * Gets the assignedTo property value. The user assigned to investigate the incident case.
+     * Gets the assignedTo property value. The user assigned to investigate the incident case. Supports $filter and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("assignedTo");
     }
     /**
-     * Gets the associatedThreatIds property value. The list of threat identifiers associated with the incident.
+     * Gets the associatedThreatIds property value. The list of threat identifiers associated with the incident. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("associatedThreatIds");
     }
     /**
-     * Gets the categories property value. The incident categories.
+     * Gets the categories property value. The incident categories. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("classification");
     }
     /**
-     * Gets the cloudScopes property value. The cloud scopes associated with the incident.
+     * Gets the cloudScopes property value. The cloud scopes associated with the incident. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("cloudScopes");
     }
     /**
-     * Gets the dataSensitivityLabels property value. The data sensitivity labels associated with the incident.
+     * Gets the dataSensitivityLabels property value. The data sensitivity labels associated with the incident. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("dataSensitivityLabels");
     }
     /**
-     * Gets the dataStreams property value. The data streams associated with the incident.
+     * Gets the dataStreams property value. The data streams associated with the incident. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("dataStreams");
     }
     /**
-     * Gets the detectionSources property value. The detection sources that identified the incident.
+     * Gets the detectionSources property value. The detection sources that identified the incident. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("determination");
     }
     /**
-     * Gets the dueDateTime property value. The target completion date and time for the incident case.
+     * Gets the dueDateTime property value. The target completion date and time for the incident case. Supports $filter.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("dueDateTime");
     }
     /**
-     * Gets the emailNotificationRecipients property value. The email notification recipients for the incident case.
+     * Gets the emailNotificationRecipients property value. The email notification recipients for the incident case. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -183,7 +183,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the firstEventTime property value. The date and time of the first event in the incident.
+     * Gets the firstEventTime property value. The date and time of the first event in the incident. Supports $filter.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -191,7 +191,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("firstEventTime");
     }
     /**
-     * Gets the impactedAssets property value. A summary of impacted asset counts for the incident.
+     * Gets the impactedAssets property value. A summary of impacted asset counts for the incident. Supports $filter.
      * @return a {@link ImpactedAssetsCounts}
      */
     @jakarta.annotation.Nullable
@@ -199,7 +199,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("impactedAssets");
     }
     /**
-     * Gets the incidentId property value. The Microsoft Security incident identifier.
+     * Gets the incidentId property value. The Microsoft Security incident identifier. Supports $filter.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -207,7 +207,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("incidentId");
     }
     /**
-     * Gets the incidentWebUrl property value. The URL for the incident in the Microsoft Defender portal.
+     * Gets the incidentWebUrl property value. The URL for the incident in the Microsoft Defender portal. Supports $filter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -215,7 +215,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("incidentWebUrl");
     }
     /**
-     * Gets the investigation property value. A summary of investigation details associated with the incident.
+     * Gets the investigation property value. A summary of investigation details associated with the incident. Supports $filter.
      * @return a {@link Investigation}
      */
     @jakarta.annotation.Nullable
@@ -223,7 +223,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("investigation");
     }
     /**
-     * Gets the investigationIds property value. The list of investigation identifiers associated with the incident.
+     * Gets the investigationIds property value. The list of investigation identifiers associated with the incident. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -231,7 +231,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("investigationIds");
     }
     /**
-     * Gets the investigationStates property value. The list of investigation states associated with the incident.
+     * Gets the investigationStates property value. The list of investigation states associated with the incident. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -239,7 +239,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("investigationStates");
     }
     /**
-     * Gets the lastEventTime property value. The date and time of the most recent event in the incident.
+     * Gets the lastEventTime property value. The date and time of the most recent event in the incident. Supports $filter.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -247,7 +247,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("lastEventTime");
     }
     /**
-     * Gets the machineGroupIds property value. The list of machine group identifiers associated with the incident.
+     * Gets the machineGroupIds property value. The list of machine group identifiers associated with the incident. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -255,7 +255,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("machineGroupIds");
     }
     /**
-     * Gets the osPlatforms property value. The operating system platforms associated with the incident.
+     * Gets the osPlatforms property value. The operating system platforms associated with the incident. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -263,7 +263,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("osPlatforms");
     }
     /**
-     * Gets the policyNames property value. The policy names associated with the incident.
+     * Gets the policyNames property value. The policy names associated with the incident. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -271,7 +271,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("policyNames");
     }
     /**
-     * Gets the priorityScore property value. The priority score assigned to the incident.
+     * Gets the priorityScore property value. The priority score assigned to the incident. Supports $filter.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -279,7 +279,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("priorityScore");
     }
     /**
-     * Gets the productNames property value. The product names associated with the incident.
+     * Gets the productNames property value. The product names associated with the incident. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -287,7 +287,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("productNames");
     }
     /**
-     * Gets the redirectCaseId property value. The case identifier to which this case redirects when merged.
+     * Gets the redirectCaseId property value. The redirectCaseId property
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -295,7 +295,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("redirectCaseId");
     }
     /**
-     * Gets the redirectIncidentId property value. The incident identifier to which this incident redirects when merged.
+     * Gets the redirectIncidentId property value. The redirectIncidentId property
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -303,7 +303,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("redirectIncidentId");
     }
     /**
-     * Gets the serviceSources property value. The service sources associated with the incident.
+     * Gets the serviceSources property value. The service sources associated with the incident. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -319,7 +319,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("severity");
     }
     /**
-     * Gets the summary property value. A summary of the incident.
+     * Gets the summary property value. A summary of the incident. Supports $filter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -327,7 +327,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("summary");
     }
     /**
-     * Gets the systemTags property value. The system tags associated with the incident.
+     * Gets the systemTags property value. The system tags associated with the incident. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -335,7 +335,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("systemTags");
     }
     /**
-     * Gets the topRiskScore property value. The top risk score associated with the incident.
+     * Gets the topRiskScore property value. The top risk score associated with the incident. Supports $filter.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -343,7 +343,7 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("topRiskScore");
     }
     /**
-     * Gets the workspaceIds property value. The list of workspace identifiers associated with the incident.
+     * Gets the workspaceIds property value. The list of workspace identifiers associated with the incident. Supports $filter.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -394,42 +394,42 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         writer.writeCollectionOfPrimitiveValues("workspaceIds", this.getWorkspaceIds());
     }
     /**
-     * Sets the aiAgentIds property value. The list of AI agent identifiers associated with the incident.
+     * Sets the aiAgentIds property value. The list of AI agent identifiers associated with the incident. Supports $filter.
      * @param value Value to set for the aiAgentIds property.
      */
     public void setAiAgentIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("aiAgentIds", value);
     }
     /**
-     * Sets the alertCounts property value. A summary of alert counts grouped by severity and status.
+     * Sets the alertCounts property value. A summary of alert counts grouped by severity and status. Supports $filter.
      * @param value Value to set for the alertCounts property.
      */
     public void setAlertCounts(@jakarta.annotation.Nullable final AlertCounts value) {
         this.backingStore.set("alertCounts", value);
     }
     /**
-     * Sets the alertPolicyIds property value. The list of alert policy identifiers associated with the incident.
+     * Sets the alertPolicyIds property value. The list of alert policy identifiers associated with the incident. Supports $filter.
      * @param value Value to set for the alertPolicyIds property.
      */
     public void setAlertPolicyIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("alertPolicyIds", value);
     }
     /**
-     * Sets the assignedTo property value. The user assigned to investigate the incident case.
+     * Sets the assignedTo property value. The user assigned to investigate the incident case. Supports $filter and $orderby.
      * @param value Value to set for the assignedTo property.
      */
     public void setAssignedTo(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("assignedTo", value);
     }
     /**
-     * Sets the associatedThreatIds property value. The list of threat identifiers associated with the incident.
+     * Sets the associatedThreatIds property value. The list of threat identifiers associated with the incident. Supports $filter.
      * @param value Value to set for the associatedThreatIds property.
      */
     public void setAssociatedThreatIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("associatedThreatIds", value);
     }
     /**
-     * Sets the categories property value. The incident categories.
+     * Sets the categories property value. The incident categories. Supports $filter.
      * @param value Value to set for the categories property.
      */
     public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -443,28 +443,28 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         this.backingStore.set("classification", value);
     }
     /**
-     * Sets the cloudScopes property value. The cloud scopes associated with the incident.
+     * Sets the cloudScopes property value. The cloud scopes associated with the incident. Supports $filter.
      * @param value Value to set for the cloudScopes property.
      */
     public void setCloudScopes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("cloudScopes", value);
     }
     /**
-     * Sets the dataSensitivityLabels property value. The data sensitivity labels associated with the incident.
+     * Sets the dataSensitivityLabels property value. The data sensitivity labels associated with the incident. Supports $filter.
      * @param value Value to set for the dataSensitivityLabels property.
      */
     public void setDataSensitivityLabels(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("dataSensitivityLabels", value);
     }
     /**
-     * Sets the dataStreams property value. The data streams associated with the incident.
+     * Sets the dataStreams property value. The data streams associated with the incident. Supports $filter.
      * @param value Value to set for the dataStreams property.
      */
     public void setDataStreams(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("dataStreams", value);
     }
     /**
-     * Sets the detectionSources property value. The detection sources that identified the incident.
+     * Sets the detectionSources property value. The detection sources that identified the incident. Supports $filter.
      * @param value Value to set for the detectionSources property.
      */
     public void setDetectionSources(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -478,126 +478,126 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         this.backingStore.set("determination", value);
     }
     /**
-     * Sets the dueDateTime property value. The target completion date and time for the incident case.
+     * Sets the dueDateTime property value. The target completion date and time for the incident case. Supports $filter.
      * @param value Value to set for the dueDateTime property.
      */
     public void setDueDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("dueDateTime", value);
     }
     /**
-     * Sets the emailNotificationRecipients property value. The email notification recipients for the incident case.
+     * Sets the emailNotificationRecipients property value. The email notification recipients for the incident case. Supports $filter.
      * @param value Value to set for the emailNotificationRecipients property.
      */
     public void setEmailNotificationRecipients(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("emailNotificationRecipients", value);
     }
     /**
-     * Sets the firstEventTime property value. The date and time of the first event in the incident.
+     * Sets the firstEventTime property value. The date and time of the first event in the incident. Supports $filter.
      * @param value Value to set for the firstEventTime property.
      */
     public void setFirstEventTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("firstEventTime", value);
     }
     /**
-     * Sets the impactedAssets property value. A summary of impacted asset counts for the incident.
+     * Sets the impactedAssets property value. A summary of impacted asset counts for the incident. Supports $filter.
      * @param value Value to set for the impactedAssets property.
      */
     public void setImpactedAssets(@jakarta.annotation.Nullable final ImpactedAssetsCounts value) {
         this.backingStore.set("impactedAssets", value);
     }
     /**
-     * Sets the incidentId property value. The Microsoft Security incident identifier.
+     * Sets the incidentId property value. The Microsoft Security incident identifier. Supports $filter.
      * @param value Value to set for the incidentId property.
      */
     public void setIncidentId(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("incidentId", value);
     }
     /**
-     * Sets the incidentWebUrl property value. The URL for the incident in the Microsoft Defender portal.
+     * Sets the incidentWebUrl property value. The URL for the incident in the Microsoft Defender portal. Supports $filter.
      * @param value Value to set for the incidentWebUrl property.
      */
     public void setIncidentWebUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("incidentWebUrl", value);
     }
     /**
-     * Sets the investigation property value. A summary of investigation details associated with the incident.
+     * Sets the investigation property value. A summary of investigation details associated with the incident. Supports $filter.
      * @param value Value to set for the investigation property.
      */
     public void setInvestigation(@jakarta.annotation.Nullable final Investigation value) {
         this.backingStore.set("investigation", value);
     }
     /**
-     * Sets the investigationIds property value. The list of investigation identifiers associated with the incident.
+     * Sets the investigationIds property value. The list of investigation identifiers associated with the incident. Supports $filter.
      * @param value Value to set for the investigationIds property.
      */
     public void setInvestigationIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("investigationIds", value);
     }
     /**
-     * Sets the investigationStates property value. The list of investigation states associated with the incident.
+     * Sets the investigationStates property value. The list of investigation states associated with the incident. Supports $filter.
      * @param value Value to set for the investigationStates property.
      */
     public void setInvestigationStates(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("investigationStates", value);
     }
     /**
-     * Sets the lastEventTime property value. The date and time of the most recent event in the incident.
+     * Sets the lastEventTime property value. The date and time of the most recent event in the incident. Supports $filter.
      * @param value Value to set for the lastEventTime property.
      */
     public void setLastEventTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastEventTime", value);
     }
     /**
-     * Sets the machineGroupIds property value. The list of machine group identifiers associated with the incident.
+     * Sets the machineGroupIds property value. The list of machine group identifiers associated with the incident. Supports $filter.
      * @param value Value to set for the machineGroupIds property.
      */
     public void setMachineGroupIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("machineGroupIds", value);
     }
     /**
-     * Sets the osPlatforms property value. The operating system platforms associated with the incident.
+     * Sets the osPlatforms property value. The operating system platforms associated with the incident. Supports $filter.
      * @param value Value to set for the osPlatforms property.
      */
     public void setOsPlatforms(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("osPlatforms", value);
     }
     /**
-     * Sets the policyNames property value. The policy names associated with the incident.
+     * Sets the policyNames property value. The policy names associated with the incident. Supports $filter.
      * @param value Value to set for the policyNames property.
      */
     public void setPolicyNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("policyNames", value);
     }
     /**
-     * Sets the priorityScore property value. The priority score assigned to the incident.
+     * Sets the priorityScore property value. The priority score assigned to the incident. Supports $filter.
      * @param value Value to set for the priorityScore property.
      */
     public void setPriorityScore(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("priorityScore", value);
     }
     /**
-     * Sets the productNames property value. The product names associated with the incident.
+     * Sets the productNames property value. The product names associated with the incident. Supports $filter.
      * @param value Value to set for the productNames property.
      */
     public void setProductNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("productNames", value);
     }
     /**
-     * Sets the redirectCaseId property value. The case identifier to which this case redirects when merged.
+     * Sets the redirectCaseId property value. The redirectCaseId property
      * @param value Value to set for the redirectCaseId property.
      */
     public void setRedirectCaseId(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("redirectCaseId", value);
     }
     /**
-     * Sets the redirectIncidentId property value. The incident identifier to which this incident redirects when merged.
+     * Sets the redirectIncidentId property value. The redirectIncidentId property
      * @param value Value to set for the redirectIncidentId property.
      */
     public void setRedirectIncidentId(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("redirectIncidentId", value);
     }
     /**
-     * Sets the serviceSources property value. The service sources associated with the incident.
+     * Sets the serviceSources property value. The service sources associated with the incident. Supports $filter.
      * @param value Value to set for the serviceSources property.
      */
     public void setServiceSources(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -611,28 +611,28 @@ public class IncidentCase extends CaseEscaped implements Parsable {
         this.backingStore.set("severity", value);
     }
     /**
-     * Sets the summary property value. A summary of the incident.
+     * Sets the summary property value. A summary of the incident. Supports $filter.
      * @param value Value to set for the summary property.
      */
     public void setSummary(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("summary", value);
     }
     /**
-     * Sets the systemTags property value. The system tags associated with the incident.
+     * Sets the systemTags property value. The system tags associated with the incident. Supports $filter.
      * @param value Value to set for the systemTags property.
      */
     public void setSystemTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("systemTags", value);
     }
     /**
-     * Sets the topRiskScore property value. The top risk score associated with the incident.
+     * Sets the topRiskScore property value. The top risk score associated with the incident. Supports $filter.
      * @param value Value to set for the topRiskScore property.
      */
     public void setTopRiskScore(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("topRiskScore", value);
     }
     /**
-     * Sets the workspaceIds property value. The list of workspace identifiers associated with the incident.
+     * Sets the workspaceIds property value. The list of workspace identifiers associated with the incident. Supports $filter.
      * @param value Value to set for the workspaceIds property.
      */
     public void setWorkspaceIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

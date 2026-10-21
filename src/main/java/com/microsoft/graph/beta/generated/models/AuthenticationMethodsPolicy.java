@@ -8,12 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AuthenticationMethodsPolicy extends Entity implements Parsable {
+public class AuthenticationMethodsPolicy extends PolicyDeletableItem implements Parsable {
     /**
      * Instantiates a new {@link AuthenticationMethodsPolicy} and sets the default values.
      */
     public AuthenticationMethodsPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.authenticationMethodsPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,6 +60,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
         deserializerMap.put("authenticationMethodConfigurations", (n) -> { this.setAuthenticationMethodConfigurations(n.getCollectionOfObjectValues(AuthenticationMethodConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("microsoftAuthenticatorPlatformSettings", (n) -> { this.setMicrosoftAuthenticatorPlatformSettings(n.getObjectValue(MicrosoftAuthenticatorPlatformSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("policyMigrationState", (n) -> { this.setPolicyMigrationState(n.getEnumValue(AuthenticationMethodsPolicyMigrationState::forValue)); });
@@ -68,6 +70,14 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
         deserializerMap.put("reportSuspiciousActivitySettings", (n) -> { this.setReportSuspiciousActivitySettings(n.getObjectValue(ReportSuspiciousActivitySettings::createFromDiscriminatorValue)); });
         deserializerMap.put("systemCredentialPreferences", (n) -> { this.setSystemCredentialPreferences(n.getObjectValue(SystemCredentialPreferences::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the id property value. The id property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getId() {
+        return this.backingStore.get("id");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time of the last update to the policy.
@@ -143,6 +153,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("authenticationMethodConfigurations", this.getAuthenticationMethodConfigurations());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("id", this.getId());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeObjectValue("microsoftAuthenticatorPlatformSettings", this.getMicrosoftAuthenticatorPlatformSettings());
         writer.writeEnumValue("policyMigrationState", this.getPolicyMigrationState());
@@ -172,6 +183,13 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the id property value. The id property
+     * @param value Value to set for the id property.
+     */
+    public void setId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time of the last update to the policy.

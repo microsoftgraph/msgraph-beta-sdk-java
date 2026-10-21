@@ -1,9 +1,15 @@
 package com.microsoft.graph.beta.directory.recommendations.item.impactedresources.item;
 
+import com.microsoft.graph.beta.directory.recommendations.item.impactedresources.item.acceptrisk.AcceptRiskRequestBuilder;
+import com.microsoft.graph.beta.directory.recommendations.item.impactedresources.item.addtag.AddTagRequestBuilder;
+import com.microsoft.graph.beta.directory.recommendations.item.impactedresources.item.applyalternatemitigation.ApplyAlternateMitigationRequestBuilder;
 import com.microsoft.graph.beta.directory.recommendations.item.impactedresources.item.complete.CompleteRequestBuilder;
 import com.microsoft.graph.beta.directory.recommendations.item.impactedresources.item.dismiss.DismissRequestBuilder;
+import com.microsoft.graph.beta.directory.recommendations.item.impactedresources.item.markplanned.MarkPlannedRequestBuilder;
 import com.microsoft.graph.beta.directory.recommendations.item.impactedresources.item.postpone.PostponeRequestBuilder;
 import com.microsoft.graph.beta.directory.recommendations.item.impactedresources.item.reactivate.ReactivateRequestBuilder;
+import com.microsoft.graph.beta.directory.recommendations.item.impactedresources.item.removetag.RemoveTagRequestBuilder;
+import com.microsoft.graph.beta.directory.recommendations.item.impactedresources.item.tags.TagsRequestBuilder;
 import com.microsoft.graph.beta.models.ImpactedResource;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +31,30 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to call the acceptRisk method.
+     * @return a {@link AcceptRiskRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AcceptRiskRequestBuilder acceptRisk() {
+        return new AcceptRiskRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the addTag method.
+     * @return a {@link AddTagRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AddTagRequestBuilder addTag() {
+        return new AddTagRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the applyAlternateMitigation method.
+     * @return a {@link ApplyAlternateMitigationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ApplyAlternateMitigationRequestBuilder applyAlternateMitigation() {
+        return new ApplyAlternateMitigationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the complete method.
      * @return a {@link CompleteRequestBuilder}
      */
@@ -41,6 +71,14 @@ public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
         return new DismissRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the markPlanned method.
+     * @return a {@link MarkPlannedRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MarkPlannedRequestBuilder markPlanned() {
+        return new MarkPlannedRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the postpone method.
      * @return a {@link PostponeRequestBuilder}
      */
@@ -55,6 +93,22 @@ public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ReactivateRequestBuilder reactivate() {
         return new ReactivateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the removeTag method.
+     * @return a {@link RemoveTagRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RemoveTagRequestBuilder removeTag() {
+        return new RemoveTagRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tags property of the microsoft.graph.impactedResource entity.
+     * @return a {@link TagsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TagsRequestBuilder tags() {
+        return new TagsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ImpactedResourceItemRequestBuilder} and sets the default values.

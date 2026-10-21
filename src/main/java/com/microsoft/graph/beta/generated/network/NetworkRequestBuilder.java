@@ -60,7 +60,7 @@ public class NetworkRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update network
-     * @param body Singleton for network operations on Microsoft Graph.
+     * @param body The request body
      * @return a {@link Network}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -70,7 +70,7 @@ public class NetworkRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update network
-     * @param body Singleton for network operations on Microsoft Graph.
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Network}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -105,7 +105,7 @@ public class NetworkRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update network
-     * @param body Singleton for network operations on Microsoft Graph.
+     * @param body The request body
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class NetworkRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update network
-     * @param body Singleton for network operations on Microsoft Graph.
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

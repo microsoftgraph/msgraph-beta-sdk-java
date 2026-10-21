@@ -64,7 +64,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         return this.backingStore;
     }
     /**
-     * Gets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Use conversation metadata for content like prompts and responses, file metadata for files, and content activity metadata for enforcement result status entries. Required.
+     * Gets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Use conversation metadata for content like prompts and responses and file metadata for files. For the ContentActivity API only, use content activity metadata for DLP enforcement results or evaluation incomplete activity metadata when policy evaluation couldn&apos;t be completed. The ContentActivity-specific types aren&apos;t supported by the processContent or processContentAsync APIs. Required.
      * @return a {@link java.util.List<ProcessContentMetadataBase>}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("deviceMetadata");
     }
     /**
-     * Gets the evaluationScope property value. The evaluationScope property
+     * Gets the evaluationScope property value. Specifies the evaluation context for the request. Optional generally; required for the tenant-scoped processContent action, where type must be agent. When omitted from other actions, the request uses the default tenant evaluation context.
      * @return a {@link EvaluationScope}
      */
     @jakarta.annotation.Nullable
@@ -175,7 +175,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Use conversation metadata for content like prompts and responses, file metadata for files, and content activity metadata for enforcement result status entries. Required.
+     * Sets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Use conversation metadata for content like prompts and responses and file metadata for files. For the ContentActivity API only, use content activity metadata for DLP enforcement results or evaluation incomplete activity metadata when policy evaluation couldn&apos;t be completed. The ContentActivity-specific types aren&apos;t supported by the processContent or processContentAsync APIs. Required.
      * @param value Value to set for the contentEntries property.
      */
     public void setContentEntries(@jakarta.annotation.Nullable final java.util.List<ProcessContentMetadataBase> value) {
@@ -196,7 +196,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("deviceMetadata", value);
     }
     /**
-     * Sets the evaluationScope property value. The evaluationScope property
+     * Sets the evaluationScope property value. Specifies the evaluation context for the request. Optional generally; required for the tenant-scoped processContent action, where type must be agent. When omitted from other actions, the request uses the default tenant evaluation context.
      * @param value Value to set for the evaluationScope property.
      */
     public void setEvaluationScope(@jakarta.annotation.Nullable final EvaluationScope value) {

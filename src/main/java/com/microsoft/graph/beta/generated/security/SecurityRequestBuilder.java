@@ -22,6 +22,7 @@ import com.microsoft.graph.beta.security.informationprotection.InformationProtec
 import com.microsoft.graph.beta.security.ipsecurityprofiles.IpSecurityProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.labels.LabelsRequestBuilder;
 import com.microsoft.graph.beta.security.microsoftgraphsecuritygethuntingschema.MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder;
+import com.microsoft.graph.beta.security.microsoftgraphsecuritygethuntingschematableswithworkspaceid.MicrosoftGraphSecurityGetHuntingSchemaTablesWithWorkspaceIdRequestBuilder;
 import com.microsoft.graph.beta.security.microsoftgraphsecuritygetrunhuntingquerywithquerytimespantimespanwithworkspaceid.MicrosoftGraphSecurityGetRunHuntingQueryWithQuerytimespanTimespanWithWorkspaceIdRequestBuilder;
 import com.microsoft.graph.beta.security.microsoftgraphsecurityrunhuntingquery.MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
 import com.microsoft.graph.beta.security.partner.PartnerRequestBuilder;
@@ -218,6 +219,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         return new MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the getHuntingSchemaTables method.
+     * @return a {@link MicrosoftGraphSecurityGetHuntingSchemaTablesWithWorkspaceIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityGetHuntingSchemaTablesWithWorkspaceIdRequestBuilder microsoftGraphSecurityGetHuntingSchemaTablesWithWorkspaceId() {
+        return new MicrosoftGraphSecurityGetHuntingSchemaTablesWithWorkspaceIdRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the runHuntingQuery method.
      * @return a {@link MicrosoftGraphSecurityRunHuntingQueryRequestBuilder}
      */
@@ -395,7 +404,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update security
-     * @param body Security singleton providing access to audit log resources.
+     * @param body The request body
      * @return a {@link Security}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -405,7 +414,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update security
-     * @param body Security singleton providing access to audit log resources.
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Security}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -440,7 +449,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update security
-     * @param body Security singleton providing access to audit log resources.
+     * @param body The request body
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -449,7 +458,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update security
-     * @param body Security singleton providing access to audit log resources.
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

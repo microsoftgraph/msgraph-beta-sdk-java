@@ -41,14 +41,6 @@ public class CloudPcPool extends Entity implements Parsable {
         return this.backingStore.get("assignments");
     }
     /**
-     * Gets the capabilities property value. The capabilities property
-     * @return a {@link CloudPcPoolCapabilityConfiguration}
-     */
-    @jakarta.annotation.Nullable
-    public CloudPcPoolCapabilityConfiguration getCapabilities() {
-        return this.backingStore.get("capabilities");
-    }
-    /**
      * Gets the cloudPcConfiguration property value. The cloudPcConfiguration property
      * @return a {@link CloudPcConfiguration}
      */
@@ -88,7 +80,6 @@ public class CloudPcPool extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(CloudPcPoolAssignment::createFromDiscriminatorValue)); });
-        deserializerMap.put("capabilities", (n) -> { this.setCapabilities(n.getObjectValue(CloudPcPoolCapabilityConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudPcConfiguration", (n) -> { this.setCloudPcConfiguration(n.getObjectValue(CloudPcConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -121,7 +112,6 @@ public class CloudPcPool extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
-        writer.writeObjectValue("capabilities", this.getCapabilities());
         writer.writeObjectValue("cloudPcConfiguration", this.getCloudPcConfiguration());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
@@ -135,13 +125,6 @@ public class CloudPcPool extends Entity implements Parsable {
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<CloudPcPoolAssignment> value) {
         this.backingStore.set("assignments", value);
-    }
-    /**
-     * Sets the capabilities property value. The capabilities property
-     * @param value Value to set for the capabilities property.
-     */
-    public void setCapabilities(@jakarta.annotation.Nullable final CloudPcPoolCapabilityConfiguration value) {
-        this.backingStore.set("capabilities", value);
     }
     /**
      * Sets the cloudPcConfiguration property value. The cloudPcConfiguration property

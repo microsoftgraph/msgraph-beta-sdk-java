@@ -78,6 +78,7 @@ public class CallAiInsight extends Entity implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("meetingNotes", (n) -> { this.setMeetingNotes(n.getCollectionOfObjectValues(MeetingNote::createFromDiscriminatorValue)); });
+        deserializerMap.put("recapUrl", (n) -> { this.setRecapUrl(n.getStringValue()); });
         deserializerMap.put("viewpoint", (n) -> { this.setViewpoint(n.getObjectValue(CallAiInsightViewPoint::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -88,6 +89,14 @@ public class CallAiInsight extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<MeetingNote> getMeetingNotes() {
         return this.backingStore.get("meetingNotes");
+    }
+    /**
+     * Gets the recapUrl property value. The recapUrl property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getRecapUrl() {
+        return this.backingStore.get("recapUrl");
     }
     /**
      * Gets the viewpoint property value. The viewpoint property
@@ -110,6 +119,7 @@ public class CallAiInsight extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeCollectionOfObjectValues("meetingNotes", this.getMeetingNotes());
+        writer.writeStringValue("recapUrl", this.getRecapUrl());
         writer.writeObjectValue("viewpoint", this.getViewpoint());
     }
     /**
@@ -153,6 +163,13 @@ public class CallAiInsight extends Entity implements Parsable {
      */
     public void setMeetingNotes(@jakarta.annotation.Nullable final java.util.List<MeetingNote> value) {
         this.backingStore.set("meetingNotes", value);
+    }
+    /**
+     * Sets the recapUrl property value. The recapUrl property
+     * @param value Value to set for the recapUrl property.
+     */
+    public void setRecapUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("recapUrl", value);
     }
     /**
      * Sets the viewpoint property value. The viewpoint property

@@ -26,12 +26,21 @@ public class TenantDataSecurityAndGovernance extends DataSecurityAndGovernance i
         return new TenantDataSecurityAndGovernance();
     }
     /**
+     * Gets the activities property value. The activities property
+     * @return a {@link TenantActivitiesContainer}
+     */
+    @jakarta.annotation.Nullable
+    public TenantActivitiesContainer getActivities() {
+        return this.backingStore.get("activities");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activities", (n) -> { this.setActivities(n.getObjectValue(TenantActivitiesContainer::createFromDiscriminatorValue)); });
         deserializerMap.put("policyFiles", (n) -> { this.setPolicyFiles(n.getCollectionOfObjectValues(PolicyFile::createFromDiscriminatorValue)); });
         deserializerMap.put("protectionScopes", (n) -> { this.setProtectionScopes(n.getObjectValue(TenantProtectionScopeContainer::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -59,8 +68,16 @@ public class TenantDataSecurityAndGovernance extends DataSecurityAndGovernance i
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("activities", this.getActivities());
         writer.writeCollectionOfObjectValues("policyFiles", this.getPolicyFiles());
         writer.writeObjectValue("protectionScopes", this.getProtectionScopes());
+    }
+    /**
+     * Sets the activities property value. The activities property
+     * @param value Value to set for the activities property.
+     */
+    public void setActivities(@jakarta.annotation.Nullable final TenantActivitiesContainer value) {
+        this.backingStore.set("activities", value);
     }
     /**
      * Sets the policyFiles property value. The policyFiles property

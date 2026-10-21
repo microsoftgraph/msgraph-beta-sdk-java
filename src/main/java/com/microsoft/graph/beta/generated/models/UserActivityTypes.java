@@ -14,7 +14,8 @@ public enum UserActivityTypes implements ValuedEnum {
     CopyToClipboard("copyToClipboard"),
     PasteFromClipboard("pasteFromClipboard"),
     Print("print"),
-    AccessDebugTools("accessDebugTools");
+    AccessDebugTools("accessDebugTools"),
+    ContentFiltering("contentFiltering");
     public final String value;
     UserActivityTypes(final String value) {
         this.value = value;
@@ -35,6 +36,7 @@ public enum UserActivityTypes implements ValuedEnum {
             case "pasteFromClipboard": return PasteFromClipboard;
             case "print": return Print;
             case "accessDebugTools": return AccessDebugTools;
+            case "contentFiltering": return ContentFiltering;
             default: return null;
         }
     }

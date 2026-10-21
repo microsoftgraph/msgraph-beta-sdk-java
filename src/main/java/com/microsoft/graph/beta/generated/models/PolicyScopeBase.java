@@ -96,7 +96,7 @@ public class PolicyScopeBase implements AdditionalDataHolder, BackedModel, Parsa
         return deserializerMap;
     }
     /**
-     * Gets the locationExclusions property value. The locationExclusions property
+     * Gets the locationExclusions property value. Locations excluded from the policy scope. When specified, the effective scope is the set of locations in locations minus the locations in locationExclusions. Required.
      * @return a {@link java.util.List<PolicyLocation>}
      */
     @jakarta.annotation.Nullable
@@ -171,7 +171,7 @@ public class PolicyScopeBase implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("executionMode", value);
     }
     /**
-     * Sets the locationExclusions property value. The locationExclusions property
+     * Sets the locationExclusions property value. Locations excluded from the policy scope. When specified, the effective scope is the set of locations in locations minus the locations in locationExclusions. Required.
      * @param value Value to set for the locationExclusions property.
      */
     public void setLocationExclusions(@jakarta.annotation.Nullable final java.util.List<PolicyLocation> value) {

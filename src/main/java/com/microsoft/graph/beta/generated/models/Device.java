@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.graph.beta.models.cloudlicensing.DeviceCloudLicensing;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -57,6 +58,14 @@ public class Device extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getApproximateLastSignInDateTime() {
         return this.backingStore.get("approximateLastSignInDateTime");
+    }
+    /**
+     * Gets the cloudLicensing property value. The cloud licensing relationships for this device, including assignments, usage rights, and waiting members.
+     * @return a {@link DeviceCloudLicensing}
+     */
+    @jakarta.annotation.Nullable
+    public DeviceCloudLicensing getCloudLicensing() {
+        return this.backingStore.get("cloudLicensing");
     }
     /**
      * Gets the commands property value. Set of commands sent to this device.
@@ -181,6 +190,7 @@ public class Device extends DirectoryObject implements Parsable {
         deserializerMap.put("alternativeNames", (n) -> { this.setAlternativeNames(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("alternativeSecurityIds", (n) -> { this.setAlternativeSecurityIds(n.getCollectionOfObjectValues(AlternativeSecurityId::createFromDiscriminatorValue)); });
         deserializerMap.put("approximateLastSignInDateTime", (n) -> { this.setApproximateLastSignInDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("cloudLicensing", (n) -> { this.setCloudLicensing(n.getObjectValue(DeviceCloudLicensing::createFromDiscriminatorValue)); });
         deserializerMap.put("commands", (n) -> { this.setCommands(n.getCollectionOfObjectValues(Command::createFromDiscriminatorValue)); });
         deserializerMap.put("complianceExpirationDateTime", (n) -> { this.setComplianceExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("deviceCategory", (n) -> { this.setDeviceCategory(n.getStringValue()); });
@@ -460,6 +470,7 @@ public class Device extends DirectoryObject implements Parsable {
         writer.writeCollectionOfPrimitiveValues("alternativeNames", this.getAlternativeNames());
         writer.writeCollectionOfObjectValues("alternativeSecurityIds", this.getAlternativeSecurityIds());
         writer.writeOffsetDateTimeValue("approximateLastSignInDateTime", this.getApproximateLastSignInDateTime());
+        writer.writeObjectValue("cloudLicensing", this.getCloudLicensing());
         writer.writeCollectionOfObjectValues("commands", this.getCommands());
         writer.writeOffsetDateTimeValue("complianceExpirationDateTime", this.getComplianceExpirationDateTime());
         writer.writeStringValue("deviceCategory", this.getDeviceCategory());
@@ -530,6 +541,13 @@ public class Device extends DirectoryObject implements Parsable {
      */
     public void setApproximateLastSignInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("approximateLastSignInDateTime", value);
+    }
+    /**
+     * Sets the cloudLicensing property value. The cloud licensing relationships for this device, including assignments, usage rights, and waiting members.
+     * @param value Value to set for the cloudLicensing property.
+     */
+    public void setCloudLicensing(@jakarta.annotation.Nullable final DeviceCloudLicensing value) {
+        this.backingStore.set("cloudLicensing", value);
     }
     /**
      * Sets the commands property value. Set of commands sent to this device.

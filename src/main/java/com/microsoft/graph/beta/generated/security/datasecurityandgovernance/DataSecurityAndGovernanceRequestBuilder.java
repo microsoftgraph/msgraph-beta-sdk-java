@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.security.datasecurityandgovernance;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.TenantDataSecurityAndGovernance;
+import com.microsoft.graph.beta.security.datasecurityandgovernance.activities.ActivitiesRequestBuilder;
 import com.microsoft.graph.beta.security.datasecurityandgovernance.policyfiles.PolicyFilesRequestBuilder;
 import com.microsoft.graph.beta.security.datasecurityandgovernance.processcontent.ProcessContentRequestBuilder;
 import com.microsoft.graph.beta.security.datasecurityandgovernance.processcontentasync.ProcessContentAsyncRequestBuilder;
@@ -25,6 +26,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DataSecurityAndGovernanceRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the activities property of the microsoft.graph.tenantDataSecurityAndGovernance entity.
+     * @return a {@link ActivitiesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ActivitiesRequestBuilder activities() {
+        return new ActivitiesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the policyFiles property of the microsoft.graph.tenantDataSecurityAndGovernance entity.
      * @return a {@link PolicyFilesRequestBuilder}

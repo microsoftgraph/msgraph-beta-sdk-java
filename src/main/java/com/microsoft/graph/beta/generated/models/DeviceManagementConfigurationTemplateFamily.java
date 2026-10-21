@@ -43,7 +43,9 @@ public enum DeviceManagementConfigurationTemplateFamily implements ValuedEnum {
     /** Template Family for Company Portal settings */
     CompanyPortal("companyPortal"),
     /** Windows Recovery and Remediation Configuration Policy */
-    WindowsRecoveryAndRemediationConfiguration("windowsRecoveryAndRemediationConfiguration");
+    WindowsRecoveryAndRemediationConfiguration("windowsRecoveryAndRemediationConfiguration"),
+    /** Indicates Template Family for Maintenance Windows templates */
+    MaintenanceWindows("maintenanceWindows");
     public final String value;
     DeviceManagementConfigurationTemplateFamily(final String value) {
         this.value = value;
@@ -72,6 +74,7 @@ public enum DeviceManagementConfigurationTemplateFamily implements ValuedEnum {
             case "windowsOsRecoveryPolicies": return WindowsOsRecoveryPolicies;
             case "companyPortal": return CompanyPortal;
             case "windowsRecoveryAndRemediationConfiguration": return WindowsRecoveryAndRemediationConfiguration;
+            case "maintenanceWindows": return MaintenanceWindows;
             default: return null;
         }
     }

@@ -117,7 +117,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the platform property value. Indicates the operating system platform type that this compliance script targets.
+     * Gets the platform property value. Indicates the device platform on which the device compliance script will be executed. Possible values are: windows10AndLater (default), linux. The default value is windows10AndLater.
      * @return a {@link DeviceComplianceScriptPlatformType}
      */
     @jakarta.annotation.Nullable
@@ -250,7 +250,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the platform property value. Indicates the operating system platform type that this compliance script targets.
+     * Sets the platform property value. Indicates the device platform on which the device compliance script will be executed. Possible values are: windows10AndLater (default), linux. The default value is windows10AndLater.
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final DeviceComplianceScriptPlatformType value) {

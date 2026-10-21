@@ -236,7 +236,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         return this.backingStore.get("protectionUnits");
     }
     /**
-     * Gets the reports property value. The reports property
+     * Gets the reports property value. Report corresponding to a protection policy.
      * @return a {@link BackupReport}
      */
     @jakarta.annotation.Nullable
@@ -529,7 +529,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         this.backingStore.set("protectionUnits", value);
     }
     /**
-     * Sets the reports property value. The reports property
+     * Sets the reports property value. Report corresponding to a protection policy.
      * @param value Value to set for the reports property.
      */
     public void setReports(@jakarta.annotation.Nullable final BackupReport value) {

@@ -69,7 +69,7 @@ public class StreamingMetadata implements AdditionalDataHolder, BackedModel, Par
         return deserializerMap;
     }
     /**
-     * Gets the frameDropRate property value. The frameDropRate property
+     * Gets the frameDropRate property value. Percentage of frames dropped during streaming, expressed as a value between 0.0 and 1.0.
      * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class StreamingMetadata implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("frameDropRate");
     }
     /**
-     * Gets the latencyMs property value. The latencyMs property
+     * Gets the latencyMs property value. Network latency in milliseconds.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class StreamingMetadata implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("latencyMs");
     }
     /**
-     * Gets the networkJitterMs property value. The networkJitterMs property
+     * Gets the networkJitterMs property value. Network jitter in milliseconds.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -128,21 +128,21 @@ public class StreamingMetadata implements AdditionalDataHolder, BackedModel, Par
         this.backingStore = value;
     }
     /**
-     * Sets the frameDropRate property value. The frameDropRate property
+     * Sets the frameDropRate property value. Percentage of frames dropped during streaming, expressed as a value between 0.0 and 1.0.
      * @param value Value to set for the frameDropRate property.
      */
     public void setFrameDropRate(@jakarta.annotation.Nullable final Double value) {
         this.backingStore.set("frameDropRate", value);
     }
     /**
-     * Sets the latencyMs property value. The latencyMs property
+     * Sets the latencyMs property value. Network latency in milliseconds.
      * @param value Value to set for the latencyMs property.
      */
     public void setLatencyMs(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("latencyMs", value);
     }
     /**
-     * Sets the networkJitterMs property value. The networkJitterMs property
+     * Sets the networkJitterMs property value. Network jitter in milliseconds.
      * @param value Value to set for the networkJitterMs property.
      */
     public void setNetworkJitterMs(@jakarta.annotation.Nullable final Integer value) {

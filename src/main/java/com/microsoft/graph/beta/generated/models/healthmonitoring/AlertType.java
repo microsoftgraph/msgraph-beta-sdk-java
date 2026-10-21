@@ -11,7 +11,11 @@ public enum AlertType implements ValuedEnum {
     CompliantDeviceSignInFailure("compliantDeviceSignInFailure"),
     UnknownFutureValue("unknownFutureValue"),
     ConditionalAccessBlockedSignIn("conditionalAccessBlockedSignIn"),
-    SamlSignInFailure("samlSignInFailure");
+    SamlSignInFailure("samlSignInFailure"),
+    InternetAppBlockedByPolicy("internetAppBlockedByPolicy"),
+    PrivateAppBlockedByConnector("privateAppBlockedByConnector"),
+    RemoteNetworkTunnelConnectivity("remoteNetworkTunnelConnectivity"),
+    RemoteNetworkBgpConnectivity("remoteNetworkBgpConnectivity");
     public final String value;
     AlertType(final String value) {
         this.value = value;
@@ -29,6 +33,10 @@ public enum AlertType implements ValuedEnum {
             case "unknownFutureValue": return UnknownFutureValue;
             case "conditionalAccessBlockedSignIn": return ConditionalAccessBlockedSignIn;
             case "samlSignInFailure": return SamlSignInFailure;
+            case "internetAppBlockedByPolicy": return InternetAppBlockedByPolicy;
+            case "privateAppBlockedByConnector": return PrivateAppBlockedByConnector;
+            case "remoteNetworkTunnelConnectivity": return RemoteNetworkTunnelConnectivity;
+            case "remoteNetworkBgpConnectivity": return RemoteNetworkBgpConnectivity;
             default: return null;
         }
     }

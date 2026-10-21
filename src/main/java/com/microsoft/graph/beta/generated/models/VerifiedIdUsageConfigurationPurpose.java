@@ -8,7 +8,8 @@ public enum VerifiedIdUsageConfigurationPurpose implements ValuedEnum {
     Recovery("recovery"),
     Onboarding("onboarding"),
     All("all"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Verification("verification");
     public final String value;
     VerifiedIdUsageConfigurationPurpose(final String value) {
         this.value = value;
@@ -23,6 +24,7 @@ public enum VerifiedIdUsageConfigurationPurpose implements ValuedEnum {
             case "onboarding": return Onboarding;
             case "all": return All;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "verification": return Verification;
             default: return null;
         }
     }

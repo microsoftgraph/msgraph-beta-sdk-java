@@ -34,6 +34,14 @@ public class CloudPcAgentPool extends CloudPcPool implements Parsable {
         return this.backingStore.get("billingConfiguration");
     }
     /**
+     * Gets the capabilities property value. The capabilities property
+     * @return a {@link CloudPcAgentPoolCapabilityConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcAgentPoolCapabilityConfiguration getCapabilities() {
+        return this.backingStore.get("capabilities");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -41,6 +49,7 @@ public class CloudPcAgentPool extends CloudPcPool implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("billingConfiguration", (n) -> { this.setBillingConfiguration(n.getObjectValue(CloudPcAgentPoolBillingConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("capabilities", (n) -> { this.setCapabilities(n.getObjectValue(CloudPcAgentPoolCapabilityConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("poolUrl", (n) -> { this.setPoolUrl(n.getStringValue()); });
         deserializerMap.put("scalingPolicy", (n) -> { this.setScalingPolicy(n.getObjectValue(CloudPcAgentPoolScalingPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("sessionUsage", (n) -> { this.setSessionUsage(n.getObjectValue(CloudPcAgentPoolSessionUsage::createFromDiscriminatorValue)); });
@@ -78,6 +87,7 @@ public class CloudPcAgentPool extends CloudPcPool implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("billingConfiguration", this.getBillingConfiguration());
+        writer.writeObjectValue("capabilities", this.getCapabilities());
         writer.writeStringValue("poolUrl", this.getPoolUrl());
         writer.writeObjectValue("scalingPolicy", this.getScalingPolicy());
         writer.writeObjectValue("sessionUsage", this.getSessionUsage());
@@ -88,6 +98,13 @@ public class CloudPcAgentPool extends CloudPcPool implements Parsable {
      */
     public void setBillingConfiguration(@jakarta.annotation.Nullable final CloudPcAgentPoolBillingConfiguration value) {
         this.backingStore.set("billingConfiguration", value);
+    }
+    /**
+     * Sets the capabilities property value. The capabilities property
+     * @param value Value to set for the capabilities property.
+     */
+    public void setCapabilities(@jakarta.annotation.Nullable final CloudPcAgentPoolCapabilityConfiguration value) {
+        this.backingStore.set("capabilities", value);
     }
     /**
      * Sets the poolUrl property value. The endpoint URL used to check out and check in agent sessions. This value becomes available after the pool reaches the active status. Read-only.

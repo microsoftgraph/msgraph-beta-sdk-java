@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows
 
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.runs.item.subjectprocessingresults.count.CountRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.runs.item.subjectprocessingresults.item.SubjectProcessingResultItemRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.runs.item.subjectprocessingresults.microsoftgraphidentitygovernancesummarywithstartdatetimewithenddatetime.MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.beta.models.identitygovernance.SubjectProcessingResultCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -13,6 +14,7 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
+import java.time.OffsetDateTime;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -81,6 +83,18 @@ public class SubjectProcessingResultsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SubjectProcessingResultCollectionResponse::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to call the summary method.
+     * @param endDateTime Usage: endDateTime={endDateTime}
+     * @param startDateTime Usage: startDateTime={startDateTime}
+     * @return a {@link MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+        Objects.requireNonNull(endDateTime);
+        Objects.requireNonNull(startDateTime);
+        return new MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
      * Get a list of the subjectProcessingResult objects for a specific workflow run. Each result represents the processing outcome for a single subject.

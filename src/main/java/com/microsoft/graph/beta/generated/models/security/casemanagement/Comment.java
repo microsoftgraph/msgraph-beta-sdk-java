@@ -36,7 +36,7 @@ public class Comment extends Activity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the message property value. The comment body.
+     * Gets the message property value. The comment body. Supports $filter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class Comment extends Activity implements Parsable {
         writer.writeStringValue("message", this.getMessage());
     }
     /**
-     * Sets the message property value. The comment body.
+     * Sets the message property value. The comment body. Supports $filter.
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {

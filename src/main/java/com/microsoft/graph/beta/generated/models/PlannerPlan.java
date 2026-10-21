@@ -113,6 +113,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("creationSource", (n) -> { this.setCreationSource(n.getObjectValue(PlannerPlanCreation::createFromDiscriminatorValue)); });
         deserializerMap.put("details", (n) -> { this.setDetails(n.getObjectValue(PlannerPlanDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("goals", (n) -> { this.setGoals(n.getCollectionOfObjectValues(PlannerGoal::createFromDiscriminatorValue)); });
         deserializerMap.put("historyItems", (n) -> { this.setHistoryItems(n.getCollectionOfObjectValues(PlannerHistoryItem::createFromDiscriminatorValue)); });
         deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("owner", (n) -> { this.setOwner(n.getStringValue()); });
@@ -120,6 +121,14 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
         deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the goals property value. Collection of goals in the plan. Read-only. Nullable.
+     * @return a {@link java.util.List<PlannerGoal>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PlannerGoal> getGoals() {
+        return this.backingStore.get("goals");
     }
     /**
      * Gets the historyItems property value. Collection of history items for entities in the plan. Read-only. Nullable.
@@ -185,6 +194,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("creationSource", this.getCreationSource());
         writer.writeObjectValue("details", this.getDetails());
+        writer.writeCollectionOfObjectValues("goals", this.getGoals());
         writer.writeCollectionOfObjectValues("historyItems", this.getHistoryItems());
         writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeStringValue("owner", this.getOwner());
@@ -254,6 +264,13 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      */
     public void setDetails(@jakarta.annotation.Nullable final PlannerPlanDetails value) {
         this.backingStore.set("details", value);
+    }
+    /**
+     * Sets the goals property value. Collection of goals in the plan. Read-only. Nullable.
+     * @param value Value to set for the goals property.
+     */
+    public void setGoals(@jakarta.annotation.Nullable final java.util.List<PlannerGoal> value) {
+        this.backingStore.set("goals", value);
     }
     /**
      * Sets the historyItems property value. Collection of history items for entities in the plan. Read-only. Nullable.

@@ -65,6 +65,14 @@ public class ChatMessage extends Entity implements Parsable {
         return this.backingStore.get("chatId");
     }
     /**
+     * Gets the citations property value. Read-only. Inline citations that reference external sources cited in the message. Citations are system-generated for bot messages and appear as a typed collection.
+     * @return a {@link java.util.List<ChatMessageCitation>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ChatMessageCitation> getCitations() {
+        return this.backingStore.get("citations");
+    }
+    /**
      * Gets the createdDateTime property value. Timestamp of when the chat message was created.
      * @return a {@link OffsetDateTime}
      */
@@ -107,11 +115,13 @@ public class ChatMessage extends Entity implements Parsable {
         deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ChatMessageBody::createFromDiscriminatorValue)); });
         deserializerMap.put("channelIdentity", (n) -> { this.setChannelIdentity(n.getObjectValue(ChannelIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("chatId", (n) -> { this.setChatId(n.getStringValue()); });
+        deserializerMap.put("citations", (n) -> { this.setCitations(n.getCollectionOfObjectValues(ChatMessageCitation::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("deletedDateTime", (n) -> { this.setDeletedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("etag", (n) -> { this.setEtag(n.getStringValue()); });
         deserializerMap.put("eventDetail", (n) -> { this.setEventDetail(n.getObjectValue(EventMessageDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("from", (n) -> { this.setFrom(n.getObjectValue(ChatMessageFromIdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("hasReplies", (n) -> { this.setHasReplies(n.getBooleanValue()); });
         deserializerMap.put("hostedContents", (n) -> { this.setHostedContents(n.getCollectionOfObjectValues(ChatMessageHostedContent::createFromDiscriminatorValue)); });
         deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(ChatMessageImportance::forValue)); });
         deserializerMap.put("lastEditedDateTime", (n) -> { this.setLastEditedDateTime(n.getOffsetDateTimeValue()); });
@@ -137,6 +147,14 @@ public class ChatMessage extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public ChatMessageFromIdentitySet getFrom() {
         return this.backingStore.get("from");
+    }
+    /**
+     * Gets the hasReplies property value. The hasReplies property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getHasReplies() {
+        return this.backingStore.get("hasReplies");
     }
     /**
      * Gets the hostedContents property value. Content in a message hosted by Microsoft Teams - for example, images or code snippets.
@@ -277,11 +295,13 @@ public class ChatMessage extends Entity implements Parsable {
         writer.writeObjectValue("body", this.getBody());
         writer.writeObjectValue("channelIdentity", this.getChannelIdentity());
         writer.writeStringValue("chatId", this.getChatId());
+        writer.writeCollectionOfObjectValues("citations", this.getCitations());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeOffsetDateTimeValue("deletedDateTime", this.getDeletedDateTime());
         writer.writeStringValue("etag", this.getEtag());
         writer.writeObjectValue("eventDetail", this.getEventDetail());
         writer.writeObjectValue("from", this.getFrom());
+        writer.writeBooleanValue("hasReplies", this.getHasReplies());
         writer.writeCollectionOfObjectValues("hostedContents", this.getHostedContents());
         writer.writeEnumValue("importance", this.getImportance());
         writer.writeOffsetDateTimeValue("lastEditedDateTime", this.getLastEditedDateTime());
@@ -328,6 +348,13 @@ public class ChatMessage extends Entity implements Parsable {
         this.backingStore.set("chatId", value);
     }
     /**
+     * Sets the citations property value. Read-only. Inline citations that reference external sources cited in the message. Citations are system-generated for bot messages and appear as a typed collection.
+     * @param value Value to set for the citations property.
+     */
+    public void setCitations(@jakarta.annotation.Nullable final java.util.List<ChatMessageCitation> value) {
+        this.backingStore.set("citations", value);
+    }
+    /**
      * Sets the createdDateTime property value. Timestamp of when the chat message was created.
      * @param value Value to set for the createdDateTime property.
      */
@@ -361,6 +388,13 @@ public class ChatMessage extends Entity implements Parsable {
      */
     public void setFrom(@jakarta.annotation.Nullable final ChatMessageFromIdentitySet value) {
         this.backingStore.set("from", value);
+    }
+    /**
+     * Sets the hasReplies property value. The hasReplies property
+     * @param value Value to set for the hasReplies property.
+     */
+    public void setHasReplies(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("hasReplies", value);
     }
     /**
      * Sets the hostedContents property value. Content in a message hosted by Microsoft Teams - for example, images or code snippets.

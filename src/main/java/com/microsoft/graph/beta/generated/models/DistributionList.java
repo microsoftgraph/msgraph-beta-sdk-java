@@ -41,22 +41,22 @@ public class DistributionList extends OutlookItem implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(Member::createFromDiscriminatorValue)); });
+        deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(DistributionListMember::createFromDiscriminatorValue)); });
         deserializerMap.put("notes", (n) -> { this.setNotes(n.getStringValue()); });
-        deserializerMap.put("personIdentifier", (n) -> { this.setPersonIdentifier(n.getStringValue()); });
+        deserializerMap.put("personId", (n) -> { this.setPersonId(n.getStringValue()); });
         deserializerMap.put("singleValueExtendedProperties", (n) -> { this.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the members property value. The list of members in the distribution list. Not returned by default; use $select=members to include.
-     * @return a {@link java.util.List<Member>}
+     * Gets the members property value. The members of the distribution list. Not returned by default; use $expand=members to include. Read-only.
+     * @return a {@link java.util.List<DistributionListMember>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<Member> getMembers() {
+    public java.util.List<DistributionListMember> getMembers() {
         return this.backingStore.get("members");
     }
     /**
-     * Gets the notes property value. The notes property
+     * Gets the notes property value. Notes about the distribution list.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,15 +64,15 @@ public class DistributionList extends OutlookItem implements Parsable {
         return this.backingStore.get("notes");
     }
     /**
-     * Gets the personIdentifier property value. The personIdentifier property
+     * Gets the personId property value. The personId property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
-    public String getPersonIdentifier() {
-        return this.backingStore.get("personIdentifier");
+    public String getPersonId() {
+        return this.backingStore.get("personId");
     }
     /**
-     * Gets the singleValueExtendedProperties property value. The singleValueExtendedProperties property
+     * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the distribution list. Read-only.
      * @return a {@link java.util.List<SingleValueLegacyExtendedProperty>}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class DistributionList extends OutlookItem implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
         writer.writeStringValue("notes", this.getNotes());
-        writer.writeStringValue("personIdentifier", this.getPersonIdentifier());
+        writer.writeStringValue("personId", this.getPersonId());
         writer.writeCollectionOfObjectValues("singleValueExtendedProperties", this.getSingleValueExtendedProperties());
     }
     /**
@@ -100,28 +100,28 @@ public class DistributionList extends OutlookItem implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the members property value. The list of members in the distribution list. Not returned by default; use $select=members to include.
+     * Sets the members property value. The members of the distribution list. Not returned by default; use $expand=members to include. Read-only.
      * @param value Value to set for the members property.
      */
-    public void setMembers(@jakarta.annotation.Nullable final java.util.List<Member> value) {
+    public void setMembers(@jakarta.annotation.Nullable final java.util.List<DistributionListMember> value) {
         this.backingStore.set("members", value);
     }
     /**
-     * Sets the notes property value. The notes property
+     * Sets the notes property value. Notes about the distribution list.
      * @param value Value to set for the notes property.
      */
     public void setNotes(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("notes", value);
     }
     /**
-     * Sets the personIdentifier property value. The personIdentifier property
-     * @param value Value to set for the personIdentifier property.
+     * Sets the personId property value. The personId property
+     * @param value Value to set for the personId property.
      */
-    public void setPersonIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("personIdentifier", value);
+    public void setPersonId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("personId", value);
     }
     /**
-     * Sets the singleValueExtendedProperties property value. The singleValueExtendedProperties property
+     * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the distribution list. Read-only.
      * @param value Value to set for the singleValueExtendedProperties property.
      */
     public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {

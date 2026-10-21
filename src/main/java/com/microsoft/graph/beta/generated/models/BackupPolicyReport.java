@@ -56,7 +56,7 @@ public class BackupPolicyReport implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore;
     }
     /**
-     * Gets the backupPolicyId property value. The backupPolicyId property
+     * Gets the backupPolicyId property value. The ID of the backup policy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class BackupPolicyReport implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("countStatistics");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the backup policy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class BackupPolicyReport implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore = value;
     }
     /**
-     * Sets the backupPolicyId property value. The backupPolicyId property
+     * Sets the backupPolicyId property value. The ID of the backup policy.
      * @param value Value to set for the backupPolicyId property.
      */
     public void setBackupPolicyId(@jakarta.annotation.Nullable final String value) {
@@ -142,7 +142,7 @@ public class BackupPolicyReport implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("countStatistics", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the backup policy.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

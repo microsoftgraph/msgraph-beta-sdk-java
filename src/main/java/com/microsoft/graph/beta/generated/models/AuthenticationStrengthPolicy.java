@@ -9,12 +9,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AuthenticationStrengthPolicy extends Entity implements Parsable {
+public class AuthenticationStrengthPolicy extends PolicyDeletableItem implements Parsable {
     /**
      * Instantiates a new {@link AuthenticationStrengthPolicy} and sets the default values.
      */
     public AuthenticationStrengthPolicy() {
         super();
+        this.setOdataType("#microsoft.graph.authenticationStrengthPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -78,10 +79,19 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("policyType", (n) -> { this.setPolicyType(n.getEnumValue(AuthenticationStrengthPolicyType::forValue)); });
         deserializerMap.put("requirementsSatisfied", (n) -> { this.setRequirementsSatisfied(n.getEnumSetValue(AuthenticationStrengthRequirements::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the id property value. The id property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getId() {
+        return this.backingStore.get("id");
     }
     /**
      * Gets the modifiedDateTime property value. The datetime when this policy was last modified.
@@ -119,6 +129,7 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("id", this.getId());
         writer.writeOffsetDateTimeValue("modifiedDateTime", this.getModifiedDateTime());
         writer.writeEnumValue("policyType", this.getPolicyType());
         writer.writeEnumSetValue("requirementsSatisfied", this.getRequirementsSatisfied());
@@ -157,6 +168,13 @@ public class AuthenticationStrengthPolicy extends Entity implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the id property value. The id property
+     * @param value Value to set for the id property.
+     */
+    public void setId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the modifiedDateTime property value. The datetime when this policy was last modified.

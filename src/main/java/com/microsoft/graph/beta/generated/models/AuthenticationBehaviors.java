@@ -64,13 +64,22 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("blockAzureADGraphAccess");
     }
     /**
+     * Gets the coopEnforcement property value. Indicates whether Cross-Origin-Opener-Policy (COOP) headers are enforced on browser-based authentication responses for the application. Set to true to enable enforcement, false to temporarily suppress enforcement, or null to use the service default. For how-to guidance, see Control Cross-Origin-Opener-Policy enforcement.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getCoopEnforcement() {
+        return this.backingStore.get("coopEnforcement");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("blockAzureADGraphAccess", (n) -> { this.setBlockAzureADGraphAccess(n.getBooleanValue()); });
+        deserializerMap.put("coopEnforcement", (n) -> { this.setCoopEnforcement(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("removeUnverifiedEmailClaim", (n) -> { this.setRemoveUnverifiedEmailClaim(n.getBooleanValue()); });
         deserializerMap.put("requireClientServicePrincipal", (n) -> { this.setRequireClientServicePrincipal(n.getBooleanValue()); });
@@ -107,6 +116,7 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, BackedMode
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("blockAzureADGraphAccess", this.getBlockAzureADGraphAccess());
+        writer.writeBooleanValue("coopEnforcement", this.getCoopEnforcement());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("removeUnverifiedEmailClaim", this.getRemoveUnverifiedEmailClaim());
         writer.writeBooleanValue("requireClientServicePrincipal", this.getRequireClientServicePrincipal());
@@ -133,6 +143,13 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, BackedMode
      */
     public void setBlockAzureADGraphAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("blockAzureADGraphAccess", value);
+    }
+    /**
+     * Sets the coopEnforcement property value. Indicates whether Cross-Origin-Opener-Policy (COOP) headers are enforced on browser-based authentication responses for the application. Set to true to enable enforcement, false to temporarily suppress enforcement, or null to use the service default. For how-to guidance, see Control Cross-Origin-Opener-Policy enforcement.
+     * @param value Value to set for the coopEnforcement property.
+     */
+    public void setCoopEnforcement(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("coopEnforcement", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
