@@ -26,10 +26,23 @@ public class PlannerDelta extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.bucket": return new Bucket();
                 case "#microsoft.graph.businessScenarioTask": return new BusinessScenarioTask();
+                case "#microsoft.graph.categoryDefinition": return new CategoryDefinition();
+                case "#microsoft.graph.checklistItemV4": return new ChecklistItemV4();
+                case "#microsoft.graph.contentLink": return new ContentLink();
+                case "#microsoft.graph.customChoiceOption": return new CustomChoiceOption();
+                case "#microsoft.graph.customFieldDefinition": return new CustomFieldDefinition();
+                case "#microsoft.graph.customFieldValue": return new CustomFieldValue();
+                case "#microsoft.graph.dependency": return new Dependency();
+                case "#microsoft.graph.goal": return new Goal();
+                case "#microsoft.graph.historyItem": return new HistoryItem();
+                case "#microsoft.graph.plan": return new Plan();
+                case "#microsoft.graph.planContextLink": return new PlanContextLink();
                 case "#microsoft.graph.plannerAssignedToTaskBoardTaskFormat": return new PlannerAssignedToTaskBoardTaskFormat();
                 case "#microsoft.graph.plannerBucket": return new PlannerBucket();
                 case "#microsoft.graph.plannerBucketTaskBoardTaskFormat": return new PlannerBucketTaskBoardTaskFormat();
+                case "#microsoft.graph.plannerChatMessage": return new PlannerChatMessage();
                 case "#microsoft.graph.plannerGoal": return new PlannerGoal();
                 case "#microsoft.graph.plannerHistoryItem": return new PlannerHistoryItem();
                 case "#microsoft.graph.plannerPlan": return new PlannerPlan();
@@ -38,7 +51,9 @@ public class PlannerDelta extends Entity implements Parsable {
                 case "#microsoft.graph.plannerTask": return new PlannerTask();
                 case "#microsoft.graph.plannerTaskDetails": return new PlannerTaskDetails();
                 case "#microsoft.graph.plannerUser": return new PlannerUser();
+                case "#microsoft.graph.task": return new Task();
                 case "#microsoft.graph.taskHistoryItem": return new TaskHistoryItem();
+                case "#microsoft.graph.userAssignment": return new UserAssignment();
             }
         }
         return new PlannerDelta();

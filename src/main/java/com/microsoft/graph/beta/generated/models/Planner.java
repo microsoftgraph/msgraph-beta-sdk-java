@@ -42,8 +42,10 @@ public class Planner extends Entity implements Parsable {
         deserializerMap.put("buckets", (n) -> { this.setBuckets(n.getCollectionOfObjectValues(PlannerBucket::createFromDiscriminatorValue)); });
         deserializerMap.put("goals", (n) -> { this.setGoals(n.getCollectionOfObjectValues(PlannerGoal::createFromDiscriminatorValue)); });
         deserializerMap.put("plans", (n) -> { this.setPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("plans_v2", (n) -> { this.setPlansV2(n.getCollectionOfObjectValues(Plan::createFromDiscriminatorValue)); });
         deserializerMap.put("rosters", (n) -> { this.setRosters(n.getCollectionOfObjectValues(PlannerRoster::createFromDiscriminatorValue)); });
         deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
+        deserializerMap.put("tasks_v2", (n) -> { this.setTasksV2(n.getCollectionOfObjectValues(Task::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -63,6 +65,14 @@ public class Planner extends Entity implements Parsable {
         return this.backingStore.get("plans");
     }
     /**
+     * Gets the plans_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 plans.
+     * @return a {@link java.util.List<Plan>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Plan> getPlansV2() {
+        return this.backingStore.get("plansV2");
+    }
+    /**
      * Gets the rosters property value. Read-only. Nullable. Returns a collection of the specified rosters
      * @return a {@link java.util.List<PlannerRoster>}
      */
@@ -79,6 +89,14 @@ public class Planner extends Entity implements Parsable {
         return this.backingStore.get("tasks");
     }
     /**
+     * Gets the tasks_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 tasks.
+     * @return a {@link java.util.List<Task>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Task> getTasksV2() {
+        return this.backingStore.get("tasksV2");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -88,8 +106,10 @@ public class Planner extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("buckets", this.getBuckets());
         writer.writeCollectionOfObjectValues("goals", this.getGoals());
         writer.writeCollectionOfObjectValues("plans", this.getPlans());
+        writer.writeCollectionOfObjectValues("plans_v2", this.getPlansV2());
         writer.writeCollectionOfObjectValues("rosters", this.getRosters());
         writer.writeCollectionOfObjectValues("tasks", this.getTasks());
+        writer.writeCollectionOfObjectValues("tasks_v2", this.getTasksV2());
     }
     /**
      * Sets the buckets property value. Read-only. Nullable. Returns a collection of the specified buckets
@@ -113,6 +133,13 @@ public class Planner extends Entity implements Parsable {
         this.backingStore.set("plans", value);
     }
     /**
+     * Sets the plans_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 plans.
+     * @param value Value to set for the plans_v2 property.
+     */
+    public void setPlansV2(@jakarta.annotation.Nullable final java.util.List<Plan> value) {
+        this.backingStore.set("plansV2", value);
+    }
+    /**
      * Sets the rosters property value. Read-only. Nullable. Returns a collection of the specified rosters
      * @param value Value to set for the rosters property.
      */
@@ -125,5 +152,12 @@ public class Planner extends Entity implements Parsable {
      */
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<PlannerTask> value) {
         this.backingStore.set("tasks", value);
+    }
+    /**
+     * Sets the tasks_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 tasks.
+     * @param value Value to set for the tasks_v2 property.
+     */
+    public void setTasksV2(@jakarta.annotation.Nullable final java.util.List<Task> value) {
+        this.backingStore.set("tasksV2", value);
     }
 }

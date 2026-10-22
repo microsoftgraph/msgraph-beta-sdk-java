@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.UnifiedRoleDefinition;
 import com.microsoft.graph.beta.rolemanagement.enterpriseapps.item.roledefinitions.item.assignedprincipalswithtransitivedirectoryscopetypedirectoryscopetypedirectoryscopeiddirectoryscopeid.AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeIdRequestBuilder;
 import com.microsoft.graph.beta.rolemanagement.enterpriseapps.item.roledefinitions.item.inheritspermissionsfrom.InheritsPermissionsFromRequestBuilder;
+import com.microsoft.graph.beta.rolemanagement.enterpriseapps.item.roledefinitions.item.restore.RestoreRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -37,6 +38,14 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
     @jakarta.annotation.Nonnull
     public InheritsPermissionsFromRequestBuilder inheritsPermissionsFrom() {
         return new InheritsPermissionsFromRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the restore method.
+     * @return a {@link RestoreRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RestoreRequestBuilder restore() {
+        return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link UnifiedRoleDefinitionItemRequestBuilder} and sets the default values.

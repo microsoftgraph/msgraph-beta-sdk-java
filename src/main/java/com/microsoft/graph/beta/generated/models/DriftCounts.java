@@ -69,7 +69,7 @@ public class DriftCounts implements AdditionalDataHolder, BackedModel, Parsable 
         return deserializerMap;
     }
     /**
-     * Gets the missing property value. The missing property
+     * Gets the missing property value. The number of assignments that are expected but not present on the resource.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class DriftCounts implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the total property value. The total property
+     * Gets the total property value. The total number of unauthorized and missing access assignments.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class DriftCounts implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("total");
     }
     /**
-     * Gets the unauthorized property value. The unauthorized property
+     * Gets the unauthorized property value. The number of assignments that exist on the resource but are not expected.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class DriftCounts implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore = value;
     }
     /**
-     * Sets the missing property value. The missing property
+     * Sets the missing property value. The number of assignments that are expected but not present on the resource.
      * @param value Value to set for the missing property.
      */
     public void setMissing(@jakarta.annotation.Nullable final Integer value) {
@@ -142,14 +142,14 @@ public class DriftCounts implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the total property value. The total property
+     * Sets the total property value. The total number of unauthorized and missing access assignments.
      * @param value Value to set for the total property.
      */
     public void setTotal(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("total", value);
     }
     /**
-     * Sets the unauthorized property value. The unauthorized property
+     * Sets the unauthorized property value. The number of assignments that exist on the resource but are not expected.
      * @param value Value to set for the unauthorized property.
      */
     public void setUnauthorized(@jakarta.annotation.Nullable final Integer value) {

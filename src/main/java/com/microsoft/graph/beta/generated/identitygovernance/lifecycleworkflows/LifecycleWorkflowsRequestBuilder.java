@@ -3,6 +3,8 @@ package com.microsoft.graph.beta.identitygovernance.lifecycleworkflows;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.customtaskextensions.CustomTaskExtensionsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.deleteditems.DeletedItemsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.insights.InsightsRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.lifecyclepolicies.LifecyclePoliciesRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.lifecyclepolicypriorityconfigurations.LifecyclePolicyPriorityConfigurationsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.settings.SettingsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.taskdefinitions.TaskDefinitionsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.WorkflowsRequestBuilder;
@@ -50,6 +52,22 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public InsightsRequestBuilder insights() {
         return new InsightsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the lifecyclePolicies property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity.
+     * @return a {@link LifecyclePoliciesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public LifecyclePoliciesRequestBuilder lifecyclePolicies() {
+        return new LifecyclePoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the lifecyclePolicyPriorityConfigurations property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity.
+     * @return a {@link LifecyclePolicyPriorityConfigurationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public LifecyclePolicyPriorityConfigurationsRequestBuilder lifecyclePolicyPriorityConfigurations() {
+        return new LifecyclePolicyPriorityConfigurationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity.

@@ -111,7 +111,7 @@ public class AuditLogQuery extends Entity implements Parsable {
         return this.backingStore.get("isRecordCountLimitExceeded");
     }
     /**
-     * Gets the keywordFilter property value. Free text field to search non-indexed properties of the audit log.
+     * Gets the keywordFilter property value. Free text to match against the non-indexed content of each record: the workload-specific properties inside auditData, including its AppAccessContext object. The indexed common-schema properties, such as the operation name, aren&apos;t matched by keyword; use their own filters, such as operationFilters, for those.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -253,7 +253,7 @@ public class AuditLogQuery extends Entity implements Parsable {
         this.backingStore.set("isRecordCountLimitExceeded", value);
     }
     /**
-     * Sets the keywordFilter property value. Free text field to search non-indexed properties of the audit log.
+     * Sets the keywordFilter property value. Free text to match against the non-indexed content of each record: the workload-specific properties inside auditData, including its AppAccessContext object. The indexed common-schema properties, such as the operation name, aren&apos;t matched by keyword; use their own filters, such as operationFilters, for those.
      * @param value Value to set for the keywordFilter property.
      */
     public void setKeywordFilter(@jakarta.annotation.Nullable final String value) {

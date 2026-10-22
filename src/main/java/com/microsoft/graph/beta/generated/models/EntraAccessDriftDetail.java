@@ -25,7 +25,7 @@ public class EntraAccessDriftDetail extends AccessDriftDetail implements Parsabl
         return new EntraAccessDriftDetail();
     }
     /**
-     * Gets the accessPackage property value. The accessPackage property
+     * Gets the accessPackage property value. The access package associated with this drift record.
      * @return a {@link DriftAccessPackageInfo}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class EntraAccessDriftDetail extends AccessDriftDetail implements Parsabl
         return this.backingStore.get("accessPackage");
     }
     /**
-     * Gets the assignedRole property value. The assignedRole property
+     * Gets the assignedRole property value. The role currently assigned to the identity on the resource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class EntraAccessDriftDetail extends AccessDriftDetail implements Parsabl
         return this.backingStore.get("assignedRole");
     }
     /**
-     * Gets the expectedRole property value. The expectedRole property
+     * Gets the expectedRole property value. The role expected based on the access package assignment.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -69,21 +69,21 @@ public class EntraAccessDriftDetail extends AccessDriftDetail implements Parsabl
         super.serialize(writer);
     }
     /**
-     * Sets the accessPackage property value. The accessPackage property
+     * Sets the accessPackage property value. The access package associated with this drift record.
      * @param value Value to set for the accessPackage property.
      */
     public void setAccessPackage(@jakarta.annotation.Nullable final DriftAccessPackageInfo value) {
         this.backingStore.set("accessPackage", value);
     }
     /**
-     * Sets the assignedRole property value. The assignedRole property
+     * Sets the assignedRole property value. The role currently assigned to the identity on the resource.
      * @param value Value to set for the assignedRole property.
      */
     public void setAssignedRole(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("assignedRole", value);
     }
     /**
-     * Sets the expectedRole property value. The expectedRole property
+     * Sets the expectedRole property value. The role expected based on the access package assignment.
      * @param value Value to set for the expectedRole property.
      */
     public void setExpectedRole(@jakarta.annotation.Nullable final String value) {

@@ -33,7 +33,7 @@ public class AccessDriftDetail extends Entity implements Parsable {
         return new AccessDriftDetail();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the drift record was created.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -71,7 +71,7 @@ public class AccessDriftDetail extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identities property value. The identities property
+     * Gets the identities property value. The identities affected by this drift record.
      * @return a {@link java.util.List<DriftIdentityInfo>}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class AccessDriftDetail extends Entity implements Parsable {
         writer.writeObjectValue("resource", this.getResource());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the drift record was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -120,7 +120,7 @@ public class AccessDriftDetail extends Entity implements Parsable {
         this.backingStore.set("driftType", value);
     }
     /**
-     * Sets the identities property value. The identities property
+     * Sets the identities property value. The identities affected by this drift record.
      * @param value Value to set for the identities property.
      */
     public void setIdentities(@jakarta.annotation.Nullable final java.util.List<DriftIdentityInfo> value) {

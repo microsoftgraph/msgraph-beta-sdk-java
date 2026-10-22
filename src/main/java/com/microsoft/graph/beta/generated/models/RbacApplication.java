@@ -25,12 +25,21 @@ public class RbacApplication extends Entity implements Parsable {
         return new RbacApplication();
     }
     /**
+     * Gets the deletedItems property value. Container for soft-deleted directory role management resources.
+     * @return a {@link DirectoryRoleManagementDeletedItemContainer}
+     */
+    @jakarta.annotation.Nullable
+    public DirectoryRoleManagementDeletedItemContainer getDeletedItems() {
+        return this.backingStore.get("deletedItems");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deletedItems", (n) -> { this.setDeletedItems(n.getObjectValue(DirectoryRoleManagementDeletedItemContainer::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceNamespaces", (n) -> { this.setResourceNamespaces(n.getCollectionOfObjectValues(UnifiedRbacResourceNamespace::createFromDiscriminatorValue)); });
         deserializerMap.put("roleAssignmentApprovals", (n) -> { this.setRoleAssignmentApprovals(n.getCollectionOfObjectValues(Approval::createFromDiscriminatorValue)); });
         deserializerMap.put("roleAssignments", (n) -> { this.setRoleAssignments(n.getCollectionOfObjectValues(UnifiedRoleAssignment::createFromDiscriminatorValue)); });
@@ -139,6 +148,7 @@ public class RbacApplication extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("deletedItems", this.getDeletedItems());
         writer.writeCollectionOfObjectValues("resourceNamespaces", this.getResourceNamespaces());
         writer.writeCollectionOfObjectValues("roleAssignmentApprovals", this.getRoleAssignmentApprovals());
         writer.writeCollectionOfObjectValues("roleAssignments", this.getRoleAssignments());
@@ -150,6 +160,13 @@ public class RbacApplication extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("roleEligibilityScheduleRequests", this.getRoleEligibilityScheduleRequests());
         writer.writeCollectionOfObjectValues("roleEligibilitySchedules", this.getRoleEligibilitySchedules());
         writer.writeCollectionOfObjectValues("transitiveRoleAssignments", this.getTransitiveRoleAssignments());
+    }
+    /**
+     * Sets the deletedItems property value. Container for soft-deleted directory role management resources.
+     * @param value Value to set for the deletedItems property.
+     */
+    public void setDeletedItems(@jakarta.annotation.Nullable final DirectoryRoleManagementDeletedItemContainer value) {
+        this.backingStore.set("deletedItems", value);
     }
     /**
      * Sets the resourceNamespaces property value. The resourceNamespaces property

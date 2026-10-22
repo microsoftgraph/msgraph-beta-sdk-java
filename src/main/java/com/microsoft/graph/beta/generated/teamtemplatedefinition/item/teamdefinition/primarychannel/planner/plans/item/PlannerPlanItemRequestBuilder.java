@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.models.PlannerPlan;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.planner.plans.item.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.planner.plans.item.buckets.BucketsRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.planner.plans.item.details.DetailsRequestBuilder;
+import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.planner.plans.item.extendexpiry.ExtendExpiryRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.planner.plans.item.getusagerights.GetUsageRightsRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.planner.plans.item.goals.GoalsRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.planner.plans.item.historyitems.HistoryItemsRequestBuilder;
@@ -52,6 +53,14 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DetailsRequestBuilder details() {
         return new DetailsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the extendExpiry method.
+     * @return a {@link ExtendExpiryRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ExtendExpiryRequestBuilder extendExpiry() {
+        return new ExtendExpiryRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getUsageRights method.

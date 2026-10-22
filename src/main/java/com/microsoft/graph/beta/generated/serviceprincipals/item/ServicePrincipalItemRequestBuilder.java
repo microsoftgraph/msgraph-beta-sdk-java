@@ -22,7 +22,9 @@ import com.microsoft.graph.beta.serviceprincipals.item.getmemberobjects.GetMembe
 import com.microsoft.graph.beta.serviceprincipals.item.getpasswordsinglesignoncredentials.GetPasswordSingleSignOnCredentialsRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.licensedetails.LicenseDetailsRequestBuilder;
+import com.microsoft.graph.beta.serviceprincipals.item.lifecycle.LifecycleRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.memberof.MemberOfRequestBuilder;
+import com.microsoft.graph.beta.serviceprincipals.item.microsoftgraphidentitygovernanceattest.MicrosoftGraphIdentityGovernanceAttestRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.ownedobjects.OwnedObjectsRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.owners.OwnersRequestBuilder;
@@ -205,12 +207,28 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         return new LicenseDetailsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the lifecycle property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link LifecycleRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public LifecycleRequestBuilder lifecycle() {
+        return new LifecycleRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the memberOf property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link MemberOfRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MemberOfRequestBuilder memberOf() {
         return new MemberOfRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the attest method.
+     * @return a {@link MicrosoftGraphIdentityGovernanceAttestRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphIdentityGovernanceAttestRequestBuilder microsoftGraphIdentityGovernanceAttest() {
+        return new MicrosoftGraphIdentityGovernanceAttestRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the oauth2PermissionGrants property of the microsoft.graph.servicePrincipal entity.

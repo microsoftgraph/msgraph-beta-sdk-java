@@ -1,8 +1,11 @@
 package com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.usersettingspersistencedetail;
 
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.usersettingspersistencedetail.batchcleanupusersettingspersistenceprofile.BatchCleanupUserSettingsPersistenceProfileRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.usersettingspersistencedetail.bulkcreateuserprofilesnapshot.BulkCreateUserProfileSnapshotRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.usersettingspersistencedetail.bulkexportuserprofilesnapshot.BulkExportUserProfileSnapshotRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.usersettingspersistencedetail.retrieveusersettingspersistenceprofileswithconfigurationid.RetrieveUserSettingsPersistenceProfilesWithConfigurationIdRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.usersettingspersistencedetail.retrieveusersettingspersistenceprofileusagewithconfigurationid.RetrieveUserSettingsPersistenceProfileUsageWithConfigurationIdRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.usersettingspersistencedetail.userprofilesnapshots.UserProfileSnapshotsRequestBuilder;
 import com.microsoft.graph.beta.models.CloudPCUserSettingsPersistenceDetail;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -30,6 +33,30 @@ public class UserSettingsPersistenceDetailRequestBuilder extends BaseRequestBuil
     @jakarta.annotation.Nonnull
     public BatchCleanupUserSettingsPersistenceProfileRequestBuilder batchCleanupUserSettingsPersistenceProfile() {
         return new BatchCleanupUserSettingsPersistenceProfileRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the bulkCreateUserProfileSnapshot method.
+     * @return a {@link BulkCreateUserProfileSnapshotRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public BulkCreateUserProfileSnapshotRequestBuilder bulkCreateUserProfileSnapshot() {
+        return new BulkCreateUserProfileSnapshotRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the bulkExportUserProfileSnapshot method.
+     * @return a {@link BulkExportUserProfileSnapshotRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public BulkExportUserProfileSnapshotRequestBuilder bulkExportUserProfileSnapshot() {
+        return new BulkExportUserProfileSnapshotRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userProfileSnapshots property of the microsoft.graph.cloudPCUserSettingsPersistenceDetail entity.
+     * @return a {@link UserProfileSnapshotsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UserProfileSnapshotsRequestBuilder userProfileSnapshots() {
+        return new UserProfileSnapshotsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link UserSettingsPersistenceDetailRequestBuilder} and sets the default values.

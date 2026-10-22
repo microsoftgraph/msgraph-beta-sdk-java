@@ -75,7 +75,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the offer property value. The offer name of this gallery image that is passed to ARM to retrieve the image resource. Read-only. The offer property is deprecated and will stop returning data on January 31, 2024. Going forward, use the offerName property.
+     * Gets the offer property value. The offer name of this gallery image that is passed to ARM to retrieve the image resource. Read-only. The offer property is deprecated and will stop returning data on December 7, 2026. Going forward, use the offerName property.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("offer");
     }
     /**
-     * Gets the offerDisplayName property value. The official display offer name of this gallery image. For example, Windows 11 Enterprise. The offerDisplayName property is deprecated and will stop returning data on January 31, 2024.
+     * Gets the offerDisplayName property value. The official display offer name of this gallery image. For example, Windows 11 Enterprise + Microsoft 365 Apps. The offerDisplayName property is deprecated and will stop returning data on December 7, 2026. Going forward, use the displayName property.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("osVersionNumber");
     }
     /**
-     * Gets the publisher property value. The publisher name of this gallery image that is passed to ARM to retrieve the image resource. Read-only. The publisher property is deprecated and will stop returning data on January 31, 2024. Going forward, use the publisherName property.
+     * Gets the publisher property value. The publisher name of this gallery image that is passed to ARM to retrieve the image resource. Read-only. The publisher property is deprecated and will stop returning data on December 7, 2026. Going forward, use the publisherName property.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("publisherName");
     }
     /**
-     * Gets the recommendedSku property value. The recommended Cloud PC SKU for this gallery image. Read-only. The recommendedSku property is deprecated and will stop returning data on January 31, 2024.
+     * Gets the recommendedSku property value. The recommended Cloud PC SKU for this gallery image. Read-only. The recommendedSku property is deprecated and will stop returning data on December 7, 2026. No replacement is planned.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("sizeInGB");
     }
     /**
-     * Gets the sku property value. The SKU name of this image that is passed to ARM to retrieve the image resource. Read-only. The sku property is deprecated and will stop returning data on January 31, 2024. Going forward, use the skuName property.
+     * Gets the sku property value. The SKU name of this image that is passed to ARM to retrieve the image resource. Read-only. The sku property is deprecated and will stop returning data on December 7, 2026. Going forward, use the skuName property.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -147,7 +147,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("sku");
     }
     /**
-     * Gets the skuDisplayName property value. The official display SKU name of this gallery image. For example, 2004. Read-only. The skuDisplayName property is deprecated and will stop returning data on January 31, 2024.
+     * Gets the skuDisplayName property value. The official display SKU name of this gallery image. For example, 22H2. Read-only. The skuDisplayName property is deprecated and will stop returning data on December 7, 2026. Going forward, use the displayName property.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -224,14 +224,14 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         this.backingStore.set("expirationDate", value);
     }
     /**
-     * Sets the offer property value. The offer name of this gallery image that is passed to ARM to retrieve the image resource. Read-only. The offer property is deprecated and will stop returning data on January 31, 2024. Going forward, use the offerName property.
+     * Sets the offer property value. The offer name of this gallery image that is passed to ARM to retrieve the image resource. Read-only. The offer property is deprecated and will stop returning data on December 7, 2026. Going forward, use the offerName property.
      * @param value Value to set for the offer property.
      */
     public void setOffer(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("offer", value);
     }
     /**
-     * Sets the offerDisplayName property value. The official display offer name of this gallery image. For example, Windows 11 Enterprise. The offerDisplayName property is deprecated and will stop returning data on January 31, 2024.
+     * Sets the offerDisplayName property value. The official display offer name of this gallery image. For example, Windows 11 Enterprise + Microsoft 365 Apps. The offerDisplayName property is deprecated and will stop returning data on December 7, 2026. Going forward, use the displayName property.
      * @param value Value to set for the offerDisplayName property.
      */
     public void setOfferDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -252,7 +252,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         this.backingStore.set("osVersionNumber", value);
     }
     /**
-     * Sets the publisher property value. The publisher name of this gallery image that is passed to ARM to retrieve the image resource. Read-only. The publisher property is deprecated and will stop returning data on January 31, 2024. Going forward, use the publisherName property.
+     * Sets the publisher property value. The publisher name of this gallery image that is passed to ARM to retrieve the image resource. Read-only. The publisher property is deprecated and will stop returning data on December 7, 2026. Going forward, use the publisherName property.
      * @param value Value to set for the publisher property.
      */
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
@@ -266,7 +266,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         this.backingStore.set("publisherName", value);
     }
     /**
-     * Sets the recommendedSku property value. The recommended Cloud PC SKU for this gallery image. Read-only. The recommendedSku property is deprecated and will stop returning data on January 31, 2024.
+     * Sets the recommendedSku property value. The recommended Cloud PC SKU for this gallery image. Read-only. The recommendedSku property is deprecated and will stop returning data on December 7, 2026. No replacement is planned.
      * @param value Value to set for the recommendedSku property.
      */
     public void setRecommendedSku(@jakarta.annotation.Nullable final String value) {
@@ -280,14 +280,14 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         this.backingStore.set("sizeInGB", value);
     }
     /**
-     * Sets the sku property value. The SKU name of this image that is passed to ARM to retrieve the image resource. Read-only. The sku property is deprecated and will stop returning data on January 31, 2024. Going forward, use the skuName property.
+     * Sets the sku property value. The SKU name of this image that is passed to ARM to retrieve the image resource. Read-only. The sku property is deprecated and will stop returning data on December 7, 2026. Going forward, use the skuName property.
      * @param value Value to set for the sku property.
      */
     public void setSku(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("sku", value);
     }
     /**
-     * Sets the skuDisplayName property value. The official display SKU name of this gallery image. For example, 2004. Read-only. The skuDisplayName property is deprecated and will stop returning data on January 31, 2024.
+     * Sets the skuDisplayName property value. The official display SKU name of this gallery image. For example, 22H2. Read-only. The skuDisplayName property is deprecated and will stop returning data on December 7, 2026. Going forward, use the displayName property.
      * @param value Value to set for the skuDisplayName property.
      */
     public void setSkuDisplayName(@jakarta.annotation.Nullable final String value) {

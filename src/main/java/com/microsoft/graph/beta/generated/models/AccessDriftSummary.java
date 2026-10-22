@@ -26,7 +26,7 @@ public class AccessDriftSummary extends Entity implements Parsable {
         return new AccessDriftSummary();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the drift snapshot was created.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class AccessDriftSummary extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the details property value. The details property
+     * Gets the details property value. The collection of access drift details for this summary.
      * @return a {@link java.util.List<AccessDriftDetail>}
      */
     @jakarta.annotation.Nullable
@@ -92,14 +92,14 @@ public class AccessDriftSummary extends Entity implements Parsable {
         writer.writeObjectValue("resource", this.getResource());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the drift snapshot was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the details property value. The details property
+     * Sets the details property value. The collection of access drift details for this summary.
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final java.util.List<AccessDriftDetail> value) {

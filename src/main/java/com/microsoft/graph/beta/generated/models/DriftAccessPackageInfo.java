@@ -56,7 +56,7 @@ public class DriftAccessPackageInfo implements AdditionalDataHolder, BackedModel
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the access package.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class DriftAccessPackageInfo implements AdditionalDataHolder, BackedModel
         return deserializerMap;
     }
     /**
-     * Gets the identifier property value. The identifier property
+     * Gets the identifier property value. The unique identifier of the access package.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class DriftAccessPackageInfo implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the access package.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the identifier property value. The identifier property
+     * Sets the identifier property value. The unique identifier of the access package.
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final String value) {

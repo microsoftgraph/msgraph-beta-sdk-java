@@ -67,13 +67,22 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
         return this.backingStore.get("dataType");
     }
     /**
+     * Gets the evaluationSource property value. Identifies the data source used to evaluate an assignment filter property.
+     * @return a {@link AssignmentFilterPropertyEvaluationSource}
+     */
+    @jakarta.annotation.Nullable
+    public AssignmentFilterPropertyEvaluationSource getEvaluationSource() {
+        return this.backingStore.get("evaluationSource");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("dataType", (n) -> { this.setDataType(n.getStringValue()); });
+        deserializerMap.put("evaluationSource", (n) -> { this.setEvaluationSource(n.getEnumValue(AssignmentFilterPropertyEvaluationSource::forValue)); });
         deserializerMap.put("isCollection", (n) -> { this.setIsCollection(n.getBooleanValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -137,6 +146,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("dataType", this.getDataType());
+        writer.writeEnumValue("evaluationSource", this.getEvaluationSource());
         writer.writeBooleanValue("isCollection", this.getIsCollection());
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -166,6 +176,13 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
      */
     public void setDataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("dataType", value);
+    }
+    /**
+     * Sets the evaluationSource property value. Identifies the data source used to evaluate an assignment filter property.
+     * @param value Value to set for the evaluationSource property.
+     */
+    public void setEvaluationSource(@jakarta.annotation.Nullable final AssignmentFilterPropertyEvaluationSource value) {
+        this.backingStore.set("evaluationSource", value);
     }
     /**
      * Sets the isCollection property value. Indicates whether the property is a collection type or not.

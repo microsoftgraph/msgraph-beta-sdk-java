@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.groups.item.team.primarychannel.planner;
 
+import com.microsoft.graph.beta.groups.item.team.primarychannel.planner.plans_v2.PlansV2RequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.primarychannel.planner.plans.PlansRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.TeamsChannelPlanner;
@@ -28,6 +29,14 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PlansRequestBuilder plans() {
         return new PlansRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the plans_v2 property of the microsoft.graph.teamsChannelPlanner entity.
+     * @return a {@link PlansV2RequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PlansV2RequestBuilder plansV2() {
+        return new PlansV2RequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link PlannerRequestBuilder} and sets the default values.

@@ -36,7 +36,7 @@ public class EntraDriftIdentityInfo extends DriftIdentityInfo implements Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the identityType property value. The identityType property
+     * Gets the identityType property value. The type of identity. The possible values are user and group.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class EntraDriftIdentityInfo extends DriftIdentityInfo implements Parsabl
         writer.writeStringValue("identityType", this.getIdentityType());
     }
     /**
-     * Sets the identityType property value. The identityType property
+     * Sets the identityType property value. The type of identity. The possible values are user and group.
      * @param value Value to set for the identityType property.
      */
     public void setIdentityType(@jakarta.annotation.Nullable final String value) {

@@ -64,7 +64,7 @@ public class DriftResourceInfo implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore;
     }
     /**
-     * Gets the catalogIdentifier property value. The catalogIdentifier property
+     * Gets the catalogIdentifier property value. The identifier of the entitlement management catalog that contains the resource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class DriftResourceInfo implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("catalogIdentifier");
     }
     /**
-     * Gets the catalogName property value. The catalogName property
+     * Gets the catalogName property value. The display name of the entitlement management catalog.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class DriftResourceInfo implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("catalogName");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the governed resource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class DriftResourceInfo implements AdditionalDataHolder, BackedModel, Par
         return deserializerMap;
     }
     /**
-     * Gets the identifier property value. The identifier property
+     * Gets the identifier property value. The unique identifier of the governed resource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -156,28 +156,28 @@ public class DriftResourceInfo implements AdditionalDataHolder, BackedModel, Par
         this.backingStore = value;
     }
     /**
-     * Sets the catalogIdentifier property value. The catalogIdentifier property
+     * Sets the catalogIdentifier property value. The identifier of the entitlement management catalog that contains the resource.
      * @param value Value to set for the catalogIdentifier property.
      */
     public void setCatalogIdentifier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("catalogIdentifier", value);
     }
     /**
-     * Sets the catalogName property value. The catalogName property
+     * Sets the catalogName property value. The display name of the entitlement management catalog.
      * @param value Value to set for the catalogName property.
      */
     public void setCatalogName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("catalogName", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the governed resource.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the identifier property value. The identifier property
+     * Sets the identifier property value. The unique identifier of the governed resource.
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final String value) {

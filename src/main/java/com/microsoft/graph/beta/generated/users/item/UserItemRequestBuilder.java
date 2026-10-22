@@ -70,6 +70,7 @@ import com.microsoft.graph.beta.users.item.ismanagedappuserblocked.IsManagedAppU
 import com.microsoft.graph.beta.users.item.joinedgroups.JoinedGroupsRequestBuilder;
 import com.microsoft.graph.beta.users.item.joinedteams.JoinedTeamsRequestBuilder;
 import com.microsoft.graph.beta.users.item.licensedetails.LicenseDetailsRequestBuilder;
+import com.microsoft.graph.beta.users.item.lifecycle.LifecycleRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailboxsettings.MailboxSettingsRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.MailFoldersRequestBuilder;
 import com.microsoft.graph.beta.users.item.managedapplogcollectionrequests.ManagedAppLogCollectionRequestsRequestBuilder;
@@ -78,6 +79,9 @@ import com.microsoft.graph.beta.users.item.manageddevices.ManagedDevicesRequestB
 import com.microsoft.graph.beta.users.item.manager.ManagerRequestBuilder;
 import com.microsoft.graph.beta.users.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.beta.users.item.messages.MessagesRequestBuilder;
+import com.microsoft.graph.beta.users.item.microsoftgraphidentitygovernanceaddselfassponsor.MicrosoftGraphIdentityGovernanceAddSelfAsSponsorRequestBuilder;
+import com.microsoft.graph.beta.users.item.microsoftgraphidentitygovernanceattest.MicrosoftGraphIdentityGovernanceAttestRequestBuilder;
+import com.microsoft.graph.beta.users.item.microsoftgraphidentitygovernanceremoveselfassponsor.MicrosoftGraphIdentityGovernanceRemoveSelfAsSponsorRequestBuilder;
 import com.microsoft.graph.beta.users.item.mobileappintentandstates.MobileAppIntentAndStatesRequestBuilder;
 import com.microsoft.graph.beta.users.item.mobileapptroubleshootingevents.MobileAppTroubleshootingEventsRequestBuilder;
 import com.microsoft.graph.beta.users.item.notifications.NotificationsRequestBuilder;
@@ -657,6 +661,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new LicenseDetailsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the lifecycle property of the microsoft.graph.user entity.
+     * @return a {@link LifecycleRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public LifecycleRequestBuilder lifecycle() {
+        return new LifecycleRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * The mailboxSettings property
      * @return a {@link MailboxSettingsRequestBuilder}
      */
@@ -719,6 +731,30 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MessagesRequestBuilder messages() {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the addSelfAsSponsor method.
+     * @return a {@link MicrosoftGraphIdentityGovernanceAddSelfAsSponsorRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphIdentityGovernanceAddSelfAsSponsorRequestBuilder microsoftGraphIdentityGovernanceAddSelfAsSponsor() {
+        return new MicrosoftGraphIdentityGovernanceAddSelfAsSponsorRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the attest method.
+     * @return a {@link MicrosoftGraphIdentityGovernanceAttestRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphIdentityGovernanceAttestRequestBuilder microsoftGraphIdentityGovernanceAttest() {
+        return new MicrosoftGraphIdentityGovernanceAttestRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the removeSelfAsSponsor method.
+     * @return a {@link MicrosoftGraphIdentityGovernanceRemoveSelfAsSponsorRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphIdentityGovernanceRemoveSelfAsSponsorRequestBuilder microsoftGraphIdentityGovernanceRemoveSelfAsSponsor() {
+        return new MicrosoftGraphIdentityGovernanceRemoveSelfAsSponsorRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the mobileAppIntentAndStates property of the microsoft.graph.user entity.

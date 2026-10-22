@@ -61,6 +61,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
         deserializerMap.put("autoUpdateSettings", (n) -> { this.setAutoUpdateSettings(n.getObjectValue(Win32LobAppAutoUpdateSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("deliveryOptimizationPriority", (n) -> { this.setDeliveryOptimizationPriority(n.getEnumValue(Win32LobAppDeliveryOptimizationPriority::forValue)); });
         deserializerMap.put("installTimeSettings", (n) -> { this.setInstallTimeSettings(n.getObjectValue(MobileAppInstallTimeSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("inUseSettings", (n) -> { this.setInUseSettings(n.getObjectValue(Win32LobAppInUseSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("notifications", (n) -> { this.setNotifications(n.getEnumValue(Win32LobAppNotification::forValue)); });
         deserializerMap.put("restartSettings", (n) -> { this.setRestartSettings(n.getObjectValue(Win32LobAppRestartSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -72,6 +73,14 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     @jakarta.annotation.Nullable
     public MobileAppInstallTimeSettings getInstallTimeSettings() {
         return this.backingStore.get("installTimeSettings");
+    }
+    /**
+     * Gets the inUseSettings property value. The in-use deferral and countdown settings for the associated app assignment. These settings are only applied when the app&apos;s `installExperience.inUseBehavior` is set to `terminateWithUserInteraction`. When `inUseBehavior` is set to any other value, this property is ignored.
+     * @return a {@link Win32LobAppInUseSettings}
+     */
+    @jakarta.annotation.Nullable
+    public Win32LobAppInUseSettings getInUseSettings() {
+        return this.backingStore.get("inUseSettings");
     }
     /**
      * Gets the notifications property value. Contains value for notification status.
@@ -99,6 +108,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
         writer.writeObjectValue("autoUpdateSettings", this.getAutoUpdateSettings());
         writer.writeEnumValue("deliveryOptimizationPriority", this.getDeliveryOptimizationPriority());
         writer.writeObjectValue("installTimeSettings", this.getInstallTimeSettings());
+        writer.writeObjectValue("inUseSettings", this.getInUseSettings());
         writer.writeEnumValue("notifications", this.getNotifications());
         writer.writeObjectValue("restartSettings", this.getRestartSettings());
     }
@@ -122,6 +132,13 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     public void setInstallTimeSettings(@jakarta.annotation.Nullable final MobileAppInstallTimeSettings value) {
         this.backingStore.set("installTimeSettings", value);
+    }
+    /**
+     * Sets the inUseSettings property value. The in-use deferral and countdown settings for the associated app assignment. These settings are only applied when the app&apos;s `installExperience.inUseBehavior` is set to `terminateWithUserInteraction`. When `inUseBehavior` is set to any other value, this property is ignored.
+     * @param value Value to set for the inUseSettings property.
+     */
+    public void setInUseSettings(@jakarta.annotation.Nullable final Win32LobAppInUseSettings value) {
+        this.backingStore.set("inUseSettings", value);
     }
     /**
      * Sets the notifications property value. Contains value for notification status.

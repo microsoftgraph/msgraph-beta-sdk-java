@@ -32,6 +32,7 @@ public class PlannerGroup extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("plans", (n) -> { this.setPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("plans_v2", (n) -> { this.setPlansV2(n.getCollectionOfObjectValues(Plan::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -43,6 +44,14 @@ public class PlannerGroup extends Entity implements Parsable {
         return this.backingStore.get("plans");
     }
     /**
+     * Gets the plans_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 plans owned by the group.
+     * @return a {@link java.util.List<Plan>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Plan> getPlansV2() {
+        return this.backingStore.get("plansV2");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -50,6 +59,7 @@ public class PlannerGroup extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("plans", this.getPlans());
+        writer.writeCollectionOfObjectValues("plans_v2", this.getPlansV2());
     }
     /**
      * Sets the plans property value. Read-only. Nullable. Returns the plannerPlans owned by the group.
@@ -57,5 +67,12 @@ public class PlannerGroup extends Entity implements Parsable {
      */
     public void setPlans(@jakarta.annotation.Nullable final java.util.List<PlannerPlan> value) {
         this.backingStore.set("plans", value);
+    }
+    /**
+     * Sets the plans_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 plans owned by the group.
+     * @param value Value to set for the plans_v2 property.
+     */
+    public void setPlansV2(@jakarta.annotation.Nullable final java.util.List<Plan> value) {
+        this.backingStore.set("plansV2", value);
     }
 }

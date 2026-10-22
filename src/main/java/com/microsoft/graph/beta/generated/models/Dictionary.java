@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.models;
 
 import com.microsoft.graph.beta.models.networkaccess.ExtendedProperties;
 import com.microsoft.graph.beta.models.partner.security.AdditionalDataDictionary;
+import com.microsoft.graph.beta.models.security.WorkbookContent;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -46,6 +47,7 @@ public class Dictionary implements AdditionalDataHolder, BackedModel, Parsable {
                 case "#microsoft.graph.partner.security.additionalDataDictionary": return new AdditionalDataDictionary();
                 case "#microsoft.graph.plannerFormsDictionary": return new PlannerFormsDictionary();
                 case "#microsoft.graph.resultTemplateDictionary": return new ResultTemplateDictionary();
+                case "#microsoft.graph.security.workbookContent": return new WorkbookContent();
                 case "#microsoft.graph.stringDictionary": return new StringDictionary();
                 case "#microsoft.graph.wafAllowedHeadersDictionary": return new WafAllowedHeadersDictionary();
             }

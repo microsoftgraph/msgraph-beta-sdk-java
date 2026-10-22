@@ -62,12 +62,23 @@ public class PlannerArchivalInfo implements AdditionalDataHolder, BackedModel, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
+        deserializerMap.put("modifiedBy", (n) -> { this.setModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("statusChangedBy", (n) -> { this.setStatusChangedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("statusChangedDateTime", (n) -> { this.setStatusChangedDateTime(n.getOffsetDateTimeValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isArchived property value. Read-only. Indicates whether the entity is archived.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsArchived() {
+        return this.backingStore.get("isArchived");
     }
     /**
      * Gets the justification property value. Read-only. Reason why the entity was archived or unarchived.
@@ -76,6 +87,22 @@ public class PlannerArchivalInfo implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nullable
     public String getJustification() {
         return this.backingStore.get("justification");
+    }
+    /**
+     * Gets the modifiedBy property value. Read-only. Identity of the user who archived or unarchived the entity.
+     * @return a {@link IdentitySet}
+     */
+    @jakarta.annotation.Nullable
+    public IdentitySet getModifiedBy() {
+        return this.backingStore.get("modifiedBy");
+    }
+    /**
+     * Gets the modifiedDateTime property value. Read-only. Date and time at which the entity&apos;s archive status changed.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getModifiedDateTime() {
+        return this.backingStore.get("modifiedDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -107,7 +134,10 @@ public class PlannerArchivalInfo implements AdditionalDataHolder, BackedModel, P
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeStringValue("justification", this.getJustification());
+        writer.writeObjectValue("modifiedBy", this.getModifiedBy());
+        writer.writeOffsetDateTimeValue("modifiedDateTime", this.getModifiedDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("statusChangedBy", this.getStatusChangedBy());
         writer.writeOffsetDateTimeValue("statusChangedDateTime", this.getStatusChangedDateTime());
@@ -129,11 +159,32 @@ public class PlannerArchivalInfo implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
+     * Sets the isArchived property value. Read-only. Indicates whether the entity is archived.
+     * @param value Value to set for the isArchived property.
+     */
+    public void setIsArchived(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isArchived", value);
+    }
+    /**
      * Sets the justification property value. Read-only. Reason why the entity was archived or unarchived.
      * @param value Value to set for the justification property.
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("justification", value);
+    }
+    /**
+     * Sets the modifiedBy property value. Read-only. Identity of the user who archived or unarchived the entity.
+     * @param value Value to set for the modifiedBy property.
+     */
+    public void setModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
+        this.backingStore.set("modifiedBy", value);
+    }
+    /**
+     * Sets the modifiedDateTime property value. Read-only. Date and time at which the entity&apos;s archive status changed.
+     * @param value Value to set for the modifiedDateTime property.
+     */
+    public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("modifiedDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

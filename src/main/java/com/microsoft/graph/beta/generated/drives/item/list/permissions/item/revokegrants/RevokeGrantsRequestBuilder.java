@@ -36,7 +36,7 @@ public class RevokeGrantsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/list/permissions/{permission%2Did}/revokeGrants", rawUrl);
     }
     /**
-     * Revoke access to a listItem or driveItem granted via a sharing link by removing the specified recipient from the link.
+     * Revoke access to a listItem or driveItem granted via a sharing link by removing the specified driveRecipient entries from the link. Recipients who already redeemed the link and recipients who only received an invitation both lose access. Revoking a grant removes the recipient from this sharing link only; it doesn&apos;t remove any access the recipient has through a different sharing link, a direct grant, or membership in a group that has access.
      * @param body The request body
      * @return a {@link Permission}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class RevokeGrantsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Revoke access to a listItem or driveItem granted via a sharing link by removing the specified recipient from the link.
+     * Revoke access to a listItem or driveItem granted via a sharing link by removing the specified driveRecipient entries from the link. Recipients who already redeemed the link and recipients who only received an invitation both lose access. Revoking a grant removes the recipient from this sharing link only; it doesn&apos;t remove any access the recipient has through a different sharing link, a direct grant, or membership in a group that has access.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Permission}
@@ -63,7 +63,7 @@ public class RevokeGrantsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Permission::createFromDiscriminatorValue);
     }
     /**
-     * Revoke access to a listItem or driveItem granted via a sharing link by removing the specified recipient from the link.
+     * Revoke access to a listItem or driveItem granted via a sharing link by removing the specified driveRecipient entries from the link. Recipients who already redeemed the link and recipients who only received an invitation both lose access. Revoking a grant removes the recipient from this sharing link only; it doesn&apos;t remove any access the recipient has through a different sharing link, a direct grant, or membership in a group that has access.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class RevokeGrantsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Revoke access to a listItem or driveItem granted via a sharing link by removing the specified recipient from the link.
+     * Revoke access to a listItem or driveItem granted via a sharing link by removing the specified driveRecipient entries from the link. Recipients who already redeemed the link and recipients who only received an invitation both lose access. Revoking a grant removes the recipient from this sharing link only; it doesn&apos;t remove any access the recipient has through a different sharing link, a direct grant, or membership in a group that has access.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

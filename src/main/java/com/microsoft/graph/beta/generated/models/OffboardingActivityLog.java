@@ -39,7 +39,7 @@ public class OffboardingActivityLog extends ActivityLogBase implements Parsable 
         return deserializerMap;
     }
     /**
-     * Gets the offboardingDetails property value. The offboardingDetails property
+     * Gets the offboardingDetails property value. Contains detailed information about the offboarding operation, including affected protection units and their status.
      * @return a {@link OffboardingDetails}
      */
     @jakarta.annotation.Nullable
@@ -47,7 +47,7 @@ public class OffboardingActivityLog extends ActivityLogBase implements Parsable 
         return this.backingStore.get("offboardingDetails");
     }
     /**
-     * Gets the policyId property value. The policyId property
+     * Gets the policyId property value. The unique identifier of the protection policy associated with the activity log.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class OffboardingActivityLog extends ActivityLogBase implements Parsable 
         return this.backingStore.get("policyId");
     }
     /**
-     * Gets the policyName property value. The policyName property
+     * Gets the policyName property value. Name of the protection policy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,21 +83,21 @@ public class OffboardingActivityLog extends ActivityLogBase implements Parsable 
         writer.writeEnumValue("policyStatus", this.getPolicyStatus());
     }
     /**
-     * Sets the offboardingDetails property value. The offboardingDetails property
+     * Sets the offboardingDetails property value. Contains detailed information about the offboarding operation, including affected protection units and their status.
      * @param value Value to set for the offboardingDetails property.
      */
     public void setOffboardingDetails(@jakarta.annotation.Nullable final OffboardingDetails value) {
         this.backingStore.set("offboardingDetails", value);
     }
     /**
-     * Sets the policyId property value. The policyId property
+     * Sets the policyId property value. The unique identifier of the protection policy associated with the activity log.
      * @param value Value to set for the policyId property.
      */
     public void setPolicyId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("policyId", value);
     }
     /**
-     * Sets the policyName property value. The policyName property
+     * Sets the policyName property value. Name of the protection policy.
      * @param value Value to set for the policyName property.
      */
     public void setPolicyName(@jakarta.annotation.Nullable final String value) {
