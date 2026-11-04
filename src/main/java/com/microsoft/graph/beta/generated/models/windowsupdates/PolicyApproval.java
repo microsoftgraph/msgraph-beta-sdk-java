@@ -27,6 +27,14 @@ public class PolicyApproval extends Entity implements Parsable {
         return new PolicyApproval();
     }
     /**
+     * Gets the approvedBy property value. The approvedBy property
+     * @return a {@link ApprovedBy}
+     */
+    @jakarta.annotation.Nullable
+    public ApprovedBy getApprovedBy() {
+        return this.backingStore.get("approvedBy");
+    }
+    /**
      * Gets the catalogEntry property value. The content that you can approve for deployment. Read-only.
      * @return a {@link CatalogEntry}
      */
@@ -57,10 +65,12 @@ public class PolicyApproval extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("approvedBy", (n) -> { this.setApprovedBy(n.getEnumValue(ApprovedBy::forValue)); });
         deserializerMap.put("catalogEntry", (n) -> { this.setCatalogEntry(n.getObjectValue(CatalogEntry::createFromDiscriminatorValue)); });
         deserializerMap.put("catalogEntryId", (n) -> { this.setCatalogEntryId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ApprovalStatus::forValue)); });
         return deserializerMap;
     }
@@ -71,6 +81,14 @@ public class PolicyApproval extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.backingStore.get("lastModifiedDateTime");
+    }
+    /**
+     * Gets the startDateTime property value. The date and time when the approved content can start being offered. If omitted when the approval is created, the service uses the current time.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getStartDateTime() {
+        return this.backingStore.get("startDateTime");
     }
     /**
      * Gets the status property value. The status property
@@ -87,11 +105,20 @@ public class PolicyApproval extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("approvedBy", this.getApprovedBy());
         writer.writeObjectValue("catalogEntry", this.getCatalogEntry());
         writer.writeStringValue("catalogEntryId", this.getCatalogEntryId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("status", this.getStatus());
+    }
+    /**
+     * Sets the approvedBy property value. The approvedBy property
+     * @param value Value to set for the approvedBy property.
+     */
+    public void setApprovedBy(@jakarta.annotation.Nullable final ApprovedBy value) {
+        this.backingStore.set("approvedBy", value);
     }
     /**
      * Sets the catalogEntry property value. The content that you can approve for deployment. Read-only.
@@ -120,6 +147,13 @@ public class PolicyApproval extends Entity implements Parsable {
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
+    }
+    /**
+     * Sets the startDateTime property value. The date and time when the approved content can start being offered. If omitted when the approval is created, the service uses the current time.
+     * @param value Value to set for the startDateTime property.
+     */
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("startDateTime", value);
     }
     /**
      * Sets the status property value. The status property

@@ -36,7 +36,10 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the authenticationStrengths property of the microsoft.graph.conditionalAccessRoot entity.
      * @return a {@link AuthenticationStrengthsRequestBuilder}
+     * @deprecated
+     * The &amp;apos;authenticationStrengths&amp;apos; segment is deprecated. Please use &amp;apos;authenticationStrength&amp;apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AuthenticationStrengthsRequestBuilder authenticationStrengths() {
         return new AuthenticationStrengthsRequestBuilder(pathParameters, requestAdapter);

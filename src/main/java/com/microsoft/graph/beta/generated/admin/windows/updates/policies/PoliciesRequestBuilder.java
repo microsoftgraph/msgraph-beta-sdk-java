@@ -60,7 +60,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/policies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the policy objects and their properties.  You can use this method with the following child object type: qualityUpdatePolicy.
+     * Get a list of the policy objects and their properties.  You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @return a {@link PolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-adminwindowsupdates-list-policies?view=graph-rest-beta">Find more info here</a>
@@ -70,7 +70,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the policy objects and their properties.  You can use this method with the following child object type: qualityUpdatePolicy.
+     * Get a list of the policy objects and their properties.  You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -84,7 +84,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new Windows update policy object. You can use this method with the following child object type: qualityUpdatePolicy.
+     * Create a new Windows update policy object. You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @param body The request body
      * @return a {@link Policy}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -95,7 +95,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new Windows update policy object. You can use this method with the following child object type: qualityUpdatePolicy.
+     * Create a new Windows update policy object. You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Policy}
@@ -111,7 +111,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Policy::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the policy objects and their properties.  You can use this method with the following child object type: qualityUpdatePolicy.
+     * Get a list of the policy objects and their properties.  You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the policy objects and their properties.  You can use this method with the following child object type: qualityUpdatePolicy.
+     * Get a list of the policy objects and their properties.  You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +131,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new Windows update policy object. You can use this method with the following child object type: qualityUpdatePolicy.
+     * Create a new Windows update policy object. You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +140,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new Windows update policy object. You can use this method with the following child object type: qualityUpdatePolicy.
+     * Create a new Windows update policy object. You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +165,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return new PoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the policy objects and their properties.  You can use this method with the following child object type: qualityUpdatePolicy.
+     * Get a list of the policy objects and their properties.  You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

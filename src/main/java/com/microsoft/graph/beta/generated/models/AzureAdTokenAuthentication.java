@@ -36,7 +36,7 @@ public class AzureAdTokenAuthentication extends CustomExtensionAuthenticationCon
         return deserializerMap;
     }
     /**
-     * Gets the resourceId property value. The appID of the Microsoft Entra application to use to authenticate a logic app with a custom access package workflow extension.
+     * Gets the resourceId property value. The app ID or identifier URI of the Microsoft Entra application used to authenticate calls to the external app.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class AzureAdTokenAuthentication extends CustomExtensionAuthenticationCon
         writer.writeStringValue("resourceId", this.getResourceId());
     }
     /**
-     * Sets the resourceId property value. The appID of the Microsoft Entra application to use to authenticate a logic app with a custom access package workflow extension.
+     * Sets the resourceId property value. The app ID or identifier URI of the Microsoft Entra application used to authenticate calls to the external app.
      * @param value Value to set for the resourceId property.
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {

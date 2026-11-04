@@ -37,7 +37,7 @@ public class VerifiableCredentialsAuthenticationMethodConfiguration extends Auth
         return deserializerMap;
     }
     /**
-     * Gets the identityVerificationEventsConfiguration property value. The identityVerificationEventsConfiguration property
+     * Gets the identityVerificationEventsConfiguration property value. The optional tenant-level configuration that controls whether identity verification events and credential provenance information are collected and exposed for Verified ID verification. This setting isn&apos;t scoped to individual Verified ID profiles. If no configuration is stored or the stored value is null, event collection and exposure are disabled. Omitting this property from a PATCH request leaves its existing value unchanged.
      * @return a {@link IdentityVerificationEventsConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class VerifiableCredentialsAuthenticationMethodConfiguration extends Auth
         writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
     }
     /**
-     * Sets the identityVerificationEventsConfiguration property value. The identityVerificationEventsConfiguration property
+     * Sets the identityVerificationEventsConfiguration property value. The optional tenant-level configuration that controls whether identity verification events and credential provenance information are collected and exposed for Verified ID verification. This setting isn&apos;t scoped to individual Verified ID profiles. If no configuration is stored or the stored value is null, event collection and exposure are disabled. Omitting this property from a PATCH request leaves its existing value unchanged.
      * @param value Value to set for the identityVerificationEventsConfiguration property.
      */
     public void setIdentityVerificationEventsConfiguration(@jakarta.annotation.Nullable final IdentityVerificationEventsConfiguration value) {

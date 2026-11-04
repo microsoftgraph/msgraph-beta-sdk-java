@@ -34,7 +34,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("adDomainName");
     }
     /**
-     * Gets the adDomainPassword property value. The password associated with adDomainUsername.
+     * Gets the adDomainPassword property value. The password associated with adDomainUsername. This deprecated property is retained for backward compatibility and will be removed on December 31, 2026. Going forward use the domainJoinCredential property instead. If both properties are provided, domainJoinCredential takes precedence.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("adDomainPassword");
     }
     /**
-     * Gets the adDomainUsername property value. The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com. Optional.
+     * Gets the adDomainUsername property value. The username of an Active Directory account that has permissions to create computer objects in Active Directory. This deprecated property is retained for backward compatibility and will be removed on December 31, 2026. Going forward use the domainJoinCredential/domainUserPrincipalName property instead.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -74,6 +74,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
+     * Gets the domainJoinCredential property value. The Active Directory credential that Windows 365 uses to join Cloud PCs to the on-premises domain. Set @odata.type to #microsoft.graph.cloudPcPlainTextDomainJoinCredential to supply the username and password directly, or to #microsoft.graph.cloudPcKeyVaultDomainJoinCredential to retrieve the password from a customer-owned Azure Key Vault. Takes precedence over the deprecated adDomainPassword property when both are supplied.
+     * @return a {@link CloudPcDomainJoinCredential}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcDomainJoinCredential getDomainJoinCredential() {
+        return this.backingStore.get("domainJoinCredential");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -86,6 +94,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         deserializerMap.put("alternateResourceUrl", (n) -> { this.setAlternateResourceUrl(n.getStringValue()); });
         deserializerMap.put("connectionType", (n) -> { this.setConnectionType(n.getEnumValue(CloudPcOnPremisesConnectionType::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("domainJoinCredential", (n) -> { this.setDomainJoinCredential(n.getObjectValue(CloudPcDomainJoinCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("healthCheckPaused", (n) -> { this.setHealthCheckPaused(n.getBooleanValue()); });
         deserializerMap.put("healthCheckStatus", (n) -> { this.setHealthCheckStatus(n.getEnumValue(CloudPcOnPremisesConnectionStatus::forValue)); });
         deserializerMap.put("healthCheckStatusDetail", (n) -> { this.setHealthCheckStatusDetail(n.getObjectValue(CloudPcOnPremisesConnectionStatusDetail::createFromDiscriminatorValue)); });
@@ -130,7 +139,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("healthCheckStatusDetail");
     }
     /**
-     * Gets the healthCheckStatusDetails property value. The details of the connection&apos;s health checks and the corresponding results. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
+     * Gets the healthCheckStatusDetails property value. Indicates the health checks for the connection and their respective results. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only. The healthCheckStatusDetails property is deprecated and stopped returning data on January 31, 2024. Going forward, use the healthCheckStatusDetail property.
      * @return a {@link CloudPcOnPremisesConnectionStatusDetails}
      */
     @jakarta.annotation.Nullable
@@ -254,6 +263,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         writer.writeStringValue("alternateResourceUrl", this.getAlternateResourceUrl());
         writer.writeEnumValue("connectionType", this.getConnectionType());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeObjectValue("domainJoinCredential", this.getDomainJoinCredential());
         writer.writeBooleanValue("healthCheckPaused", this.getHealthCheckPaused());
         writer.writeEnumValue("healthCheckStatus", this.getHealthCheckStatus());
         writer.writeObjectValue("healthCheckStatusDetail", this.getHealthCheckStatusDetail());
@@ -280,14 +290,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("adDomainName", value);
     }
     /**
-     * Sets the adDomainPassword property value. The password associated with adDomainUsername.
+     * Sets the adDomainPassword property value. The password associated with adDomainUsername. This deprecated property is retained for backward compatibility and will be removed on December 31, 2026. Going forward use the domainJoinCredential property instead. If both properties are provided, domainJoinCredential takes precedence.
      * @param value Value to set for the adDomainPassword property.
      */
     public void setAdDomainPassword(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("adDomainPassword", value);
     }
     /**
-     * Sets the adDomainUsername property value. The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com. Optional.
+     * Sets the adDomainUsername property value. The username of an Active Directory account that has permissions to create computer objects in Active Directory. This deprecated property is retained for backward compatibility and will be removed on December 31, 2026. Going forward use the domainJoinCredential/domainUserPrincipalName property instead.
      * @param value Value to set for the adDomainUsername property.
      */
     public void setAdDomainUsername(@jakarta.annotation.Nullable final String value) {
@@ -315,6 +325,13 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
+     * Sets the domainJoinCredential property value. The Active Directory credential that Windows 365 uses to join Cloud PCs to the on-premises domain. Set @odata.type to #microsoft.graph.cloudPcPlainTextDomainJoinCredential to supply the username and password directly, or to #microsoft.graph.cloudPcKeyVaultDomainJoinCredential to retrieve the password from a customer-owned Azure Key Vault. Takes precedence over the deprecated adDomainPassword property when both are supplied.
+     * @param value Value to set for the domainJoinCredential property.
+     */
+    public void setDomainJoinCredential(@jakarta.annotation.Nullable final CloudPcDomainJoinCredential value) {
+        this.backingStore.set("domainJoinCredential", value);
+    }
+    /**
      * Sets the healthCheckPaused property value. Indicates whether regular health checks on the network or domain configuration are paused or active. false if the regular health checks on the network or domain configuration are currently active. true if the checks are paused. If you perform a create or update operation on a onPremisesNetworkConnection resource, this value is set to false for four weeks. If you retry a health check on network or domain configuration, this value is set to false for two weeks. If the onPremisesNetworkConnection resource is attached in a provisioningPolicy or used by a Cloud PC in the past four weeks, healthCheckPaused is set to false. Read-only. Default is false.
      * @param value Value to set for the healthCheckPaused property.
      */
@@ -336,7 +353,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("healthCheckStatusDetail", value);
     }
     /**
-     * Sets the healthCheckStatusDetails property value. The details of the connection&apos;s health checks and the corresponding results. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
+     * Sets the healthCheckStatusDetails property value. Indicates the health checks for the connection and their respective results. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only. The healthCheckStatusDetails property is deprecated and stopped returning data on January 31, 2024. Going forward, use the healthCheckStatusDetail property.
      * @param value Value to set for the healthCheckStatusDetails property.
      */
     public void setHealthCheckStatusDetails(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionStatusDetails value) {

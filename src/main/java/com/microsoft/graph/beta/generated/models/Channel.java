@@ -42,6 +42,14 @@ public class Channel extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
+     * Gets the deletedDateTime property value. The deletedDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getDeletedDateTime() {
+        return this.backingStore.get("deletedDateTime");
+    }
+    /**
      * Gets the description property value. Optional textual description for the channel.
      * @return a {@link String}
      */
@@ -82,6 +90,7 @@ public class Channel extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allMembers", (n) -> { this.setAllMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deletedDateTime", (n) -> { this.setDeletedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
@@ -250,6 +259,7 @@ public class Channel extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("allMembers", this.getAllMembers());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeOffsetDateTimeValue("deletedDateTime", this.getDeletedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("email", this.getEmail());
@@ -285,6 +295,13 @@ public class Channel extends Entity implements Parsable {
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
+    }
+    /**
+     * Sets the deletedDateTime property value. The deletedDateTime property
+     * @param value Value to set for the deletedDateTime property.
+     */
+    public void setDeletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("deletedDateTime", value);
     }
     /**
      * Sets the description property value. Optional textual description for the channel.

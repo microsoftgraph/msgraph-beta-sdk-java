@@ -28,13 +28,23 @@ public class Policy extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.windowsUpdates.driverUpdatePolicy": return new DriverUpdatePolicy();
+                case "#microsoft.graph.windowsUpdates.featureUpdatePolicy": return new FeatureUpdatePolicy();
                 case "#microsoft.graph.windowsUpdates.qualityUpdatePolicy": return new QualityUpdatePolicy();
             }
         }
         return new Policy();
     }
     /**
-     * Gets the applicableContent property value. Represents content applicable for offering to the related collection of devices.
+     * Gets the applicableCatalogs property value. The catalog entries that apply to devices targeted by the policy.
+     * @return a {@link java.util.List<ApplicableCatalog>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ApplicableCatalog> getApplicableCatalogs() {
+        return this.backingStore.get("applicableCatalogs");
+    }
+    /**
+     * Gets the applicableContent property value. The existing applicable-content collection. For driver and feature update applicability, use applicableCatalogs.
      * @return a {@link java.util.List<ApplicableContent>}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +60,7 @@ public class Policy extends Entity implements Parsable {
         return this.backingStore.get("approvalRules");
     }
     /**
-     * Gets the approvals property value. Represents a set of quality updates policy approval types.
+     * Gets the approvals property value. The update content approvals associated with the policy.
      * @return a {@link java.util.List<PolicyApproval>}
      */
     @jakarta.annotation.Nullable
@@ -88,6 +98,7 @@ public class Policy extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicableCatalogs", (n) -> { this.setApplicableCatalogs(n.getCollectionOfObjectValues(ApplicableCatalog::createFromDiscriminatorValue)); });
         deserializerMap.put("applicableContent", (n) -> { this.setApplicableContent(n.getCollectionOfObjectValues(ApplicableContent::createFromDiscriminatorValue)); });
         deserializerMap.put("approvalRules", (n) -> { this.setApprovalRules(n.getCollectionOfObjectValues(ApprovalRule::createFromDiscriminatorValue)); });
         deserializerMap.put("approvals", (n) -> { this.setApprovals(n.getCollectionOfObjectValues(PolicyApproval::createFromDiscriminatorValue)); });
@@ -107,7 +118,7 @@ public class Policy extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the rings property value. Represents a set of deployment rings that contains update deployment settings.
+     * Gets the rings property value. The deployment rings that define targeting, deferral, and pause settings for the policy.
      * @return a {@link java.util.List<Ring>}
      */
     @jakarta.annotation.Nullable
@@ -121,6 +132,7 @@ public class Policy extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("applicableCatalogs", this.getApplicableCatalogs());
         writer.writeCollectionOfObjectValues("applicableContent", this.getApplicableContent());
         writer.writeCollectionOfObjectValues("approvalRules", this.getApprovalRules());
         writer.writeCollectionOfObjectValues("approvals", this.getApprovals());
@@ -131,7 +143,14 @@ public class Policy extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("rings", this.getRings());
     }
     /**
-     * Sets the applicableContent property value. Represents content applicable for offering to the related collection of devices.
+     * Sets the applicableCatalogs property value. The catalog entries that apply to devices targeted by the policy.
+     * @param value Value to set for the applicableCatalogs property.
+     */
+    public void setApplicableCatalogs(@jakarta.annotation.Nullable final java.util.List<ApplicableCatalog> value) {
+        this.backingStore.set("applicableCatalogs", value);
+    }
+    /**
+     * Sets the applicableContent property value. The existing applicable-content collection. For driver and feature update applicability, use applicableCatalogs.
      * @param value Value to set for the applicableContent property.
      */
     public void setApplicableContent(@jakarta.annotation.Nullable final java.util.List<ApplicableContent> value) {
@@ -145,7 +164,7 @@ public class Policy extends Entity implements Parsable {
         this.backingStore.set("approvalRules", value);
     }
     /**
-     * Sets the approvals property value. Represents a set of quality updates policy approval types.
+     * Sets the approvals property value. The update content approvals associated with the policy.
      * @param value Value to set for the approvals property.
      */
     public void setApprovals(@jakarta.annotation.Nullable final java.util.List<PolicyApproval> value) {
@@ -180,7 +199,7 @@ public class Policy extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the rings property value. Represents a set of deployment rings that contains update deployment settings.
+     * Sets the rings property value. The deployment rings that define targeting, deferral, and pause settings for the policy.
      * @param value Value to set for the rings property.
      */
     public void setRings(@jakarta.annotation.Nullable final java.util.List<Ring> value) {

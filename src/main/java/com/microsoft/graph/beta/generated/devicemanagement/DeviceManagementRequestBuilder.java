@@ -584,7 +584,10 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the deviceConfigurationUserStateSummaries property of the microsoft.graph.deviceManagement entity.
      * @return a {@link DeviceConfigurationUserStateSummariesRequestBuilder}
+     * @deprecated
+     * This API is deprecated and will stop returning data on July 7, 2026. Use GET /deviceManagement/deviceConfigurations(&amp;apos;{policyId}&amp;apos;)/userStatusOverview or POST /deviceManagement/reports/getDeviceConfigurationPolicyStatusSummary instead. as of 2026-04/Rv1MigrationDeprecation on 2026-04-03 and will be removed 2026-07-07
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DeviceConfigurationUserStateSummariesRequestBuilder deviceConfigurationUserStateSummaries() {
         return new DeviceConfigurationUserStateSummariesRequestBuilder(pathParameters, requestAdapter);

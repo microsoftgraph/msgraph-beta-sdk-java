@@ -69,12 +69,13 @@ public class RiskAlert implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("mitreTechniques", (n) -> { this.setMitreTechniques(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("providerAlertId", (n) -> { this.setProviderAlertId(n.getStringValue()); });
         deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(Severity::forValue)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -110,6 +111,14 @@ public class RiskAlert implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("severity");
     }
     /**
+     * Gets the source property value. The source property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSource() {
+        return this.backingStore.get("source");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -120,6 +129,7 @@ public class RiskAlert implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("providerAlertId", this.getProviderAlertId());
         writer.writeEnumValue("severity", this.getSeverity());
+        writer.writeStringValue("source", this.getSource());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -171,5 +181,12 @@ public class RiskAlert implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setSeverity(@jakarta.annotation.Nullable final Severity value) {
         this.backingStore.set("severity", value);
+    }
+    /**
+     * Sets the source property value. The source property
+     * @param value Value to set for the source property.
+     */
+    public void setSource(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("source", value);
     }
 }

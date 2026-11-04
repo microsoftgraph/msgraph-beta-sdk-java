@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.models.identitygovernance.AllExcludingGroupsSubj
 import com.microsoft.graph.beta.models.identitygovernance.AllExcludingSpecificObjectsSubjectSet;
 import com.microsoft.graph.beta.models.identitygovernance.GroupBasedSubjectSet;
 import com.microsoft.graph.beta.models.identitygovernance.RuleBasedSubjectSet;
+import com.microsoft.graph.beta.models.identitygovernance.SelectedAgentBuilderPlatformsSubjectSet;
 import com.microsoft.graph.beta.models.identitygovernance.SelectedObjectsSubjectSet;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -47,6 +48,7 @@ public class SubjectSet implements AdditionalDataHolder, BackedModel, Parsable {
                 case "#microsoft.graph.identityGovernance.allExcludingSpecificObjectsSubjectSet": return new AllExcludingSpecificObjectsSubjectSet();
                 case "#microsoft.graph.identityGovernance.groupBasedSubjectSet": return new GroupBasedSubjectSet();
                 case "#microsoft.graph.identityGovernance.ruleBasedSubjectSet": return new RuleBasedSubjectSet();
+                case "#microsoft.graph.identityGovernance.selectedAgentBuilderPlatformsSubjectSet": return new SelectedAgentBuilderPlatformsSubjectSet();
                 case "#microsoft.graph.identityGovernance.selectedObjectsSubjectSet": return new SelectedObjectsSubjectSet();
             }
         }

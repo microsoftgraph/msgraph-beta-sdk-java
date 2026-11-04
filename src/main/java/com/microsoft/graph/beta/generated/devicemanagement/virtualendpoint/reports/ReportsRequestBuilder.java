@@ -60,7 +60,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getCloudPcPerformanceReport method.
      * @return a {@link GetCloudPcPerformanceReportRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2024, this API (&amp;apos;getCloudPcPerformanceReport&amp;apos;) will be deprecated and no longer supported. Please use the retrieveCloudPcTenantMetricsReport API. as of 2024-09/getCloudPcPerformanceReport on 2024-09-10 and will be removed 2024-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetCloudPcPerformanceReportRequestBuilder getCloudPcPerformanceReport() {
         return new GetCloudPcPerformanceReportRequestBuilder(pathParameters, requestAdapter);
@@ -68,7 +71,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getCloudPcRecommendationReports method.
      * @return a {@link GetCloudPcRecommendationReportsRequestBuilder}
+     * @deprecated
+     * Starting from July 01, 2025, this API (&amp;apos;getCloudPcRecommendationReports&amp;apos;) will be deprecated and no longer supported. Please use the retrieveCloudPcRecommendationReports API. as of 2025-02/getCloudPcRecommendationReports on 2025-02-27 and will be removed 2025-07-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetCloudPcRecommendationReportsRequestBuilder getCloudPcRecommendationReports() {
         return new GetCloudPcRecommendationReportsRequestBuilder(pathParameters, requestAdapter);
@@ -76,7 +82,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getConnectionQualityReports method.
      * @return a {@link GetConnectionQualityReportsRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2024, this API (&amp;apos;getConnectionQualityReports&amp;apos;) will be deprecated and no longer supported. Please use the retrieveConnectionQualityReports API. as of 2024-09/getConnectionQualityReports on 2024-09-10 and will be removed 2024-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetConnectionQualityReportsRequestBuilder getConnectionQualityReports() {
         return new GetConnectionQualityReportsRequestBuilder(pathParameters, requestAdapter);
@@ -92,7 +101,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getFrontlineReport method.
      * @return a {@link GetFrontlineReportRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2024, this API (&amp;apos;getFrontlineReport&amp;apos;) will be deprecated and no longer supported. Please use the retrieveFrontlineReports API. as of 2024-09/getFrontlineReport on 2024-08-22 and will be removed 2024-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetFrontlineReportRequestBuilder getFrontlineReport() {
         return new GetFrontlineReportRequestBuilder(pathParameters, requestAdapter);
@@ -148,7 +160,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the retrieveCloudPcRecommendationReports method.
      * @return a {@link RetrieveCloudPcRecommendationReportsRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2025, this API (&amp;apos;cloudPcReports/retrieveCloudPcRecommendationReports&amp;apos;) will be deprecated and no longer supported. Please use the cloudPcReport/retrieveCloudPcRecommendationReports API. as of 2025-09/cloudPcReports/retrieveCloudPcRecommendationReports on 2025-09-01 and will be removed 2025-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RetrieveCloudPcRecommendationReportsRequestBuilder retrieveCloudPcRecommendationReports() {
         return new RetrieveCloudPcRecommendationReportsRequestBuilder(pathParameters, requestAdapter);

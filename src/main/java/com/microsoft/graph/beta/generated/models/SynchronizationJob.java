@@ -40,12 +40,21 @@ public class SynchronizationJob extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("bulkUpload", (n) -> { this.setBulkUpload(n.getObjectValue(BulkUpload::createFromDiscriminatorValue)); });
+        deserializerMap.put("objectConnections", (n) -> { this.setObjectConnections(n.getCollectionOfObjectValues(ObjectConnection::createFromDiscriminatorValue)); });
         deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(SynchronizationSchedule::createFromDiscriminatorValue)); });
         deserializerMap.put("schema", (n) -> { this.setSchema(n.getObjectValue(SynchronizationSchema::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getObjectValue(SynchronizationStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("synchronizationJobSettings", (n) -> { this.setSynchronizationJobSettings(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
         deserializerMap.put("templateId", (n) -> { this.setTemplateId(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the objectConnections property value. Connector data store linkage records contained by the job. During public preview, retrieve an individual connection using a known objectId, or delete it to clear its cached linkage. Collection listing isn&apos;t supported and returns 400 Bad Request.
+     * @return a {@link java.util.List<ObjectConnection>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ObjectConnection> getObjectConnections() {
+        return this.backingStore.get("objectConnections");
     }
     /**
      * Gets the schedule property value. Schedule used to run the job. Read-only.
@@ -95,6 +104,7 @@ public class SynchronizationJob extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("bulkUpload", this.getBulkUpload());
+        writer.writeCollectionOfObjectValues("objectConnections", this.getObjectConnections());
         writer.writeObjectValue("schedule", this.getSchedule());
         writer.writeObjectValue("schema", this.getSchema());
         writer.writeObjectValue("status", this.getStatus());
@@ -107,6 +117,13 @@ public class SynchronizationJob extends Entity implements Parsable {
      */
     public void setBulkUpload(@jakarta.annotation.Nullable final BulkUpload value) {
         this.backingStore.set("bulkUpload", value);
+    }
+    /**
+     * Sets the objectConnections property value. Connector data store linkage records contained by the job. During public preview, retrieve an individual connection using a known objectId, or delete it to clear its cached linkage. Collection listing isn&apos;t supported and returns 400 Bad Request.
+     * @param value Value to set for the objectConnections property.
+     */
+    public void setObjectConnections(@jakarta.annotation.Nullable final java.util.List<ObjectConnection> value) {
+        this.backingStore.set("objectConnections", value);
     }
     /**
      * Sets the schedule property value. Schedule used to run the job. Read-only.

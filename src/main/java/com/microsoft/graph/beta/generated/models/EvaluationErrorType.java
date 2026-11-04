@@ -7,18 +7,6 @@ import java.util.Objects;
 public enum EvaluationErrorType implements ValuedEnum {
     UnsupportedFile("unsupportedFile"),
     PasswordProtectedFile("passwordProtectedFile"),
-    FileTooLarge("fileTooLarge"),
-    ArchiveSizeTooLarge("archiveSizeTooLarge"),
-    TextExceedsMceThreshold("textExceedsMceThreshold"),
-    PartiallyScannedArchive("partiallyScannedArchive"),
-    PartialImageExtraction("partialImageExtraction"),
-    ImageOcrPartialResult("imageOcrPartialResult"),
-    OcrProcessingFailure("ocrProcessingFailure"),
-    OcrQuotaExhausted("ocrQuotaExhausted"),
-    ClassificationServiceError("classificationServiceError"),
-    SitExtractionFailure("sitExtractionFailure"),
-    TextExtractionFailure("textExtractionFailure"),
-    ArchiveTextExtractionError("archiveTextExtractionError"),
     MissingOrInvalidConfiguration("missingOrInvalidConfiguration"),
     AgentFailure("agentFailure"),
     EnforcementTimeout("enforcementTimeout"),
@@ -28,6 +16,11 @@ public enum EvaluationErrorType implements ValuedEnum {
     ServiceTimeout("serviceTimeout"),
     ServiceError("serviceError"),
     ServiceUnavailable("serviceUnavailable"),
+    ContentTooLarge("contentTooLarge"),
+    PartiallyScanned("partiallyScanned"),
+    Unscannable("unscannable"),
+    BillingNotSetup("billingNotSetup"),
+    AuthenticationOrAuthorizationFailed("authenticationOrAuthorizationFailed"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     EvaluationErrorType(final String value) {
@@ -41,18 +34,6 @@ public enum EvaluationErrorType implements ValuedEnum {
         switch(searchValue) {
             case "unsupportedFile": return UnsupportedFile;
             case "passwordProtectedFile": return PasswordProtectedFile;
-            case "fileTooLarge": return FileTooLarge;
-            case "archiveSizeTooLarge": return ArchiveSizeTooLarge;
-            case "textExceedsMceThreshold": return TextExceedsMceThreshold;
-            case "partiallyScannedArchive": return PartiallyScannedArchive;
-            case "partialImageExtraction": return PartialImageExtraction;
-            case "imageOcrPartialResult": return ImageOcrPartialResult;
-            case "ocrProcessingFailure": return OcrProcessingFailure;
-            case "ocrQuotaExhausted": return OcrQuotaExhausted;
-            case "classificationServiceError": return ClassificationServiceError;
-            case "sitExtractionFailure": return SitExtractionFailure;
-            case "textExtractionFailure": return TextExtractionFailure;
-            case "archiveTextExtractionError": return ArchiveTextExtractionError;
             case "missingOrInvalidConfiguration": return MissingOrInvalidConfiguration;
             case "agentFailure": return AgentFailure;
             case "enforcementTimeout": return EnforcementTimeout;
@@ -62,6 +43,11 @@ public enum EvaluationErrorType implements ValuedEnum {
             case "serviceTimeout": return ServiceTimeout;
             case "serviceError": return ServiceError;
             case "serviceUnavailable": return ServiceUnavailable;
+            case "contentTooLarge": return ContentTooLarge;
+            case "partiallyScanned": return PartiallyScanned;
+            case "unscannable": return Unscannable;
+            case "billingNotSetup": return BillingNotSetup;
+            case "authenticationOrAuthorizationFailed": return AuthenticationOrAuthorizationFailed;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

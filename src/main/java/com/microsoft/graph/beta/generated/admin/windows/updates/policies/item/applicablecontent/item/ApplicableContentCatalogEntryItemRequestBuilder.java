@@ -73,7 +73,7 @@ public class ApplicableContentCatalogEntryItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents content applicable for offering to the related collection of devices.
+     * The existing applicable-content collection. For driver and feature update applicability, use applicableCatalogs.
      * @return a {@link ApplicableContent}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +82,7 @@ public class ApplicableContentCatalogEntryItemRequestBuilder extends BaseRequest
         return get(null);
     }
     /**
-     * Represents content applicable for offering to the related collection of devices.
+     * The existing applicable-content collection. For driver and feature update applicability, use applicableCatalogs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApplicableContent}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -140,7 +140,7 @@ public class ApplicableContentCatalogEntryItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Represents content applicable for offering to the related collection of devices.
+     * The existing applicable-content collection. For driver and feature update applicability, use applicableCatalogs.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class ApplicableContentCatalogEntryItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Represents content applicable for offering to the related collection of devices.
+     * The existing applicable-content collection. For driver and feature update applicability, use applicableCatalogs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +200,7 @@ public class ApplicableContentCatalogEntryItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents content applicable for offering to the related collection of devices.
+     * The existing applicable-content collection. For driver and feature update applicability, use applicableCatalogs.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -25,10 +25,7 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the crossTenantMigrationJobs property of the microsoft.graph.migrationsRoot entity.
      * @return a {@link CrossTenantMigrationJobsRequestBuilder}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CrossTenantMigrationJobsRequestBuilder crossTenantMigrationJobs() {
         return new CrossTenantMigrationJobsRequestBuilder(pathParameters, requestAdapter);
@@ -53,11 +50,8 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the crossTenantMigrationJobs property of the microsoft.graph.migrationsRoot entity.
      * @param displayName Alternate key of crossTenantMigrationJob
      * @return a {@link CrossTenantMigrationJobsWithDisplayNameRequestBuilder}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public CrossTenantMigrationJobsWithDisplayNameRequestBuilder crossTenantMigrationJobsWithDisplayName(@jakarta.annotation.Nonnull final String displayName) {
         Objects.requireNonNull(displayName);
         return new CrossTenantMigrationJobsWithDisplayNameRequestBuilder(pathParameters, requestAdapter, displayName);
@@ -65,10 +59,7 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property migrations for solutions
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -76,10 +67,7 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property migrations for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -90,11 +78,8 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * Get migrations from solutions
      * @return a {@link MigrationsRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MigrationsRoot get() {
         return get(null);
     }
@@ -103,11 +88,8 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MigrationsRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MigrationsRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -119,11 +101,8 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link MigrationsRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MigrationsRoot patch(@jakarta.annotation.Nonnull final MigrationsRoot body) {
         return patch(body, null);
     }
@@ -133,11 +112,8 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MigrationsRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MigrationsRoot patch(@jakarta.annotation.Nonnull final MigrationsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -148,11 +124,8 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property migrations for solutions
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -160,11 +133,8 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property migrations for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -174,11 +144,8 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get migrations from solutions
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -186,11 +153,8 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * Get migrations from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -201,11 +165,8 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property migrations in solutions
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MigrationsRoot body) {
         return toPatchRequestInformation(body, null);
     }
@@ -214,11 +175,8 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MigrationsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -231,11 +189,8 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link MigrationsRequestBuilder}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public MigrationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new MigrationsRequestBuilder(rawUrl, requestAdapter);

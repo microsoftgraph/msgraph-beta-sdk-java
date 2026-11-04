@@ -37,7 +37,7 @@ public class RingItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/policies/{policy%2Did}/rings/{ring%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a ring object. You can use this method with the following child object type: qualityUpdateRing.
+     * Delete a ring object. You can use this method with the following child object types: driverUpdateRing, featureUpdateRing, and qualityUpdateRing.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-ring-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class RingItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Delete a ring object. You can use this method with the following child object type: qualityUpdateRing.
+     * Delete a ring object. You can use this method with the following child object types: driverUpdateRing, featureUpdateRing, and qualityUpdateRing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-ring-delete?view=graph-rest-beta">Find more info here</a>
@@ -57,7 +57,7 @@ public class RingItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of ring object. You can use this method with the following child object type: qualityUpdateRing.
+     * Read the properties and relationships of ring object. You can use this method with the following child object types: driverUpdateRing, featureUpdateRing, and qualityUpdateRing.
      * @return a {@link Ring}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-ring-get?view=graph-rest-beta">Find more info here</a>
@@ -67,7 +67,7 @@ public class RingItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of ring object. You can use this method with the following child object type: qualityUpdateRing.
+     * Read the properties and relationships of ring object. You can use this method with the following child object types: driverUpdateRing, featureUpdateRing, and qualityUpdateRing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Ring}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -81,7 +81,7 @@ public class RingItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Ring::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a ring object. You can use this method with the following child object type: qualityUpdateRing.
+     * Update the properties of a ring object. You can use this method with the following child object types: driverUpdateRing, featureUpdateRing, and qualityUpdateRing.
      * @param body The request body
      * @return a {@link Ring}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -92,7 +92,7 @@ public class RingItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a ring object. You can use this method with the following child object type: qualityUpdateRing.
+     * Update the properties of a ring object. You can use this method with the following child object types: driverUpdateRing, featureUpdateRing, and qualityUpdateRing.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Ring}
@@ -108,7 +108,7 @@ public class RingItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Ring::createFromDiscriminatorValue);
     }
     /**
-     * Delete a ring object. You can use this method with the following child object type: qualityUpdateRing.
+     * Delete a ring object. You can use this method with the following child object types: driverUpdateRing, featureUpdateRing, and qualityUpdateRing.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class RingItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a ring object. You can use this method with the following child object type: qualityUpdateRing.
+     * Delete a ring object. You can use this method with the following child object types: driverUpdateRing, featureUpdateRing, and qualityUpdateRing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +128,7 @@ public class RingItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of ring object. You can use this method with the following child object type: qualityUpdateRing.
+     * Read the properties and relationships of ring object. You can use this method with the following child object types: driverUpdateRing, featureUpdateRing, and qualityUpdateRing.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +136,7 @@ public class RingItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of ring object. You can use this method with the following child object type: qualityUpdateRing.
+     * Read the properties and relationships of ring object. You can use this method with the following child object types: driverUpdateRing, featureUpdateRing, and qualityUpdateRing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,7 +148,7 @@ public class RingItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a ring object. You can use this method with the following child object type: qualityUpdateRing.
+     * Update the properties of a ring object. You can use this method with the following child object types: driverUpdateRing, featureUpdateRing, and qualityUpdateRing.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +157,7 @@ public class RingItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a ring object. You can use this method with the following child object type: qualityUpdateRing.
+     * Update the properties of a ring object. You can use this method with the following child object types: driverUpdateRing, featureUpdateRing, and qualityUpdateRing.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +188,7 @@ public class RingItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of ring object. You can use this method with the following child object type: qualityUpdateRing.
+     * Read the properties and relationships of ring object. You can use this method with the following child object types: driverUpdateRing, featureUpdateRing, and qualityUpdateRing.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

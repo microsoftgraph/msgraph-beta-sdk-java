@@ -733,7 +733,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("identities");
     }
     /**
-     * Gets the identityGovernance property value. The identity governance settings for the user, including the approver delegate configuration. Nullable. Returned only on $select. Supports $expand.
+     * Gets the identityGovernance property value. The identity governance settings for the user. You can get or update the user&apos;s approver delegate through the approverDelegate property. Nullable. Returned only on $select. Supports $expand.
      * @return a {@link IdentityGovernanceUserSettings}
      */
     @jakarta.annotation.Nullable
@@ -2179,7 +2179,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("identities", value);
     }
     /**
-     * Sets the identityGovernance property value. The identity governance settings for the user, including the approver delegate configuration. Nullable. Returned only on $select. Supports $expand.
+     * Sets the identityGovernance property value. The identity governance settings for the user. You can get or update the user&apos;s approver delegate through the approverDelegate property. Nullable. Returned only on $select. Supports $expand.
      * @param value Value to set for the identityGovernance property.
      */
     public void setIdentityGovernance(@jakarta.annotation.Nullable final IdentityGovernanceUserSettings value) {

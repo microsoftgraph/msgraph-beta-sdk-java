@@ -36,7 +36,7 @@ public class ToolParticipant extends InteractionParticipant implements Parsable 
         return deserializerMap;
     }
     /**
-     * Gets the mcpServerId property value. The mcpServerId property
+     * Gets the mcpServerId property value. The stable identifier of the Model Context Protocol (MCP) server that hosts the tool. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class ToolParticipant extends InteractionParticipant implements Parsable 
         writer.writeStringValue("mcpServerId", this.getMcpServerId());
     }
     /**
-     * Sets the mcpServerId property value. The mcpServerId property
+     * Sets the mcpServerId property value. The stable identifier of the Model Context Protocol (MCP) server that hosts the tool. Optional.
      * @param value Value to set for the mcpServerId property.
      */
     public void setMcpServerId(@jakarta.annotation.Nullable final String value) {

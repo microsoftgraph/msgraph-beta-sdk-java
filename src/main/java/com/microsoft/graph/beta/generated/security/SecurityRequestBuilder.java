@@ -62,7 +62,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the alerts property of the microsoft.graph.security entity.
      * @return a {@link AlertsRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AlertsRequestBuilder alerts() {
         return new AlertsRequestBuilder(pathParameters, requestAdapter);
@@ -110,7 +113,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the cloudAppSecurityProfiles property of the microsoft.graph.security entity.
      * @return a {@link CloudAppSecurityProfilesRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CloudAppSecurityProfilesRequestBuilder cloudAppSecurityProfiles() {
         return new CloudAppSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
@@ -142,7 +148,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the domainSecurityProfiles property of the microsoft.graph.security entity.
      * @return a {@link DomainSecurityProfilesRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DomainSecurityProfilesRequestBuilder domainSecurityProfiles() {
         return new DomainSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
@@ -150,7 +159,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the fileSecurityProfiles property of the microsoft.graph.security entity.
      * @return a {@link FileSecurityProfilesRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public FileSecurityProfilesRequestBuilder fileSecurityProfiles() {
         return new FileSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
@@ -158,7 +170,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the hostSecurityProfiles property of the microsoft.graph.security entity.
      * @return a {@link HostSecurityProfilesRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public HostSecurityProfilesRequestBuilder hostSecurityProfiles() {
         return new HostSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
@@ -198,7 +213,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the ipSecurityProfiles property of the microsoft.graph.security entity.
      * @return a {@link IpSecurityProfilesRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public IpSecurityProfilesRequestBuilder ipSecurityProfiles() {
         return new IpSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
@@ -246,7 +264,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the providerTenantSettings property of the microsoft.graph.security entity.
      * @return a {@link ProviderTenantSettingsRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ProviderTenantSettingsRequestBuilder providerTenantSettings() {
         return new ProviderTenantSettingsRequestBuilder(pathParameters, requestAdapter);
@@ -278,7 +299,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the securityActions property of the microsoft.graph.security entity.
      * @return a {@link SecurityActionsRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SecurityActionsRequestBuilder securityActions() {
         return new SecurityActionsRequestBuilder(pathParameters, requestAdapter);
@@ -318,7 +342,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the tiIndicators property of the microsoft.graph.security entity.
      * @return a {@link TiIndicatorsRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TiIndicatorsRequestBuilder tiIndicators() {
         return new TiIndicatorsRequestBuilder(pathParameters, requestAdapter);
@@ -342,7 +369,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the userSecurityProfiles property of the microsoft.graph.security entity.
      * @return a {@link UserSecurityProfilesRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public UserSecurityProfilesRequestBuilder userSecurityProfiles() {
         return new UserSecurityProfilesRequestBuilder(pathParameters, requestAdapter);

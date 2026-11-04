@@ -26,7 +26,7 @@ public class PolicyLocationAgent extends PolicyLocationApplication implements Pa
         return new PolicyLocationAgent();
     }
     /**
-     * Gets the agentMetadata property value. The agentMetadata property
+     * Gets the agentMetadata property value. Metadata used for agent policy scoping and evaluation. Optional.
      * @return a {@link AgentMetadata}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class PolicyLocationAgent extends PolicyLocationApplication implements Pa
         writer.writeObjectValue("agentMetadata", this.getAgentMetadata());
     }
     /**
-     * Sets the agentMetadata property value. The agentMetadata property
+     * Sets the agentMetadata property value. Metadata used for agent policy scoping and evaluation. Optional.
      * @param value Value to set for the agentMetadata property.
      */
     public void setAgentMetadata(@jakarta.annotation.Nullable final AgentMetadata value) {

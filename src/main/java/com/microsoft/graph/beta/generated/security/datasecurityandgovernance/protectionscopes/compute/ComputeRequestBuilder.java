@@ -35,21 +35,23 @@ public class ComputeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/dataSecurityAndGovernance/protectionScopes/compute", rawUrl);
     }
     /**
-     * Invoke action compute
+     * Compute tenant-wide data protection policies and actions, including user, group, or agent policy scopes.
      * @param body The request body
      * @return a {@link ComputePostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantprotectionscopecontainer-compute?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ComputePostResponse post(@jakarta.annotation.Nonnull final ComputePostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action compute
+     * Compute tenant-wide data protection policies and actions, including user, group, or agent policy scopes.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ComputePostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantprotectionscopecontainer-compute?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ComputePostResponse post(@jakarta.annotation.Nonnull final ComputePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class ComputeRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ComputePostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action compute
+     * Compute tenant-wide data protection policies and actions, including user, group, or agent policy scopes.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -69,7 +71,7 @@ public class ComputeRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action compute
+     * Compute tenant-wide data protection policies and actions, including user, group, or agent policy scopes.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -105,7 +105,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the markAsJunk method.
      * @return a {@link MarkAsJunkRequestBuilder}
+     * @deprecated
+     * The MarkAsJunk API is deprecated and will stop working from Dec 30, 2025. Please use the ReportMessage API. as of 2022-09/Mark_As_Junk on 2025-04-25 and will be removed 2025-12-30
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MarkAsJunkRequestBuilder markAsJunk() {
         return new MarkAsJunkRequestBuilder(pathParameters, requestAdapter);
@@ -113,7 +116,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the markAsNotJunk method.
      * @return a {@link MarkAsNotJunkRequestBuilder}
+     * @deprecated
+     * The MarkAsNotJunk API is deprecated and will stop working from Dec 30, 2025. Please use the ReportMessage API. as of 2022-09/Mark_As_Not_Junk on 2025-04-25 and will be removed 2025-12-30
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MarkAsNotJunkRequestBuilder markAsNotJunk() {
         return new MarkAsNotJunkRequestBuilder(pathParameters, requestAdapter);

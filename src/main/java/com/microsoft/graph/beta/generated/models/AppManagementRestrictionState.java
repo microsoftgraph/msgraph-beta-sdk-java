@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum AppManagementRestrictionState implements ValuedEnum {
     Enabled("enabled"),
     Disabled("disabled"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Audit("audit");
     public final String value;
     AppManagementRestrictionState(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum AppManagementRestrictionState implements ValuedEnum {
             case "enabled": return Enabled;
             case "disabled": return Disabled;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "audit": return Audit;
             default: return null;
         }
     }

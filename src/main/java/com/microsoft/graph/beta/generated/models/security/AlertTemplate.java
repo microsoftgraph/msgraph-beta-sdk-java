@@ -88,16 +88,25 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("entityMappings");
     }
     /**
+     * Gets the eventGroupingKind property value. The eventGroupingKind property
+     * @return a {@link EventGroupingKind}
+     */
+    @jakarta.annotation.Nullable
+    public EventGroupingKind getEventGroupingKind() {
+        return this.backingStore.get("eventGroupingKind");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("category", (n) -> { this.setCategory(n.getStringValue()); });
         deserializerMap.put("customDetails", (n) -> { this.setCustomDetails(n.getObjectValue(AlertCustomDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("entityMappings", (n) -> { this.setEntityMappings(n.getObjectValue(EntityMappingConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("eventGroupingKind", (n) -> { this.setEventGroupingKind(n.getEnumValue(EventGroupingKind::forValue)); });
         deserializerMap.put("impactedAssets", (n) -> { this.setImpactedAssets(n.getCollectionOfObjectValues(ImpactedAsset::createFromDiscriminatorValue)); });
         deserializerMap.put("mitreTechniques", (n) -> { this.setMitreTechniques(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -173,6 +182,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
         writer.writeObjectValue("customDetails", this.getCustomDetails());
         writer.writeStringValue("description", this.getDescription());
         writer.writeObjectValue("entityMappings", this.getEntityMappings());
+        writer.writeEnumValue("eventGroupingKind", this.getEventGroupingKind());
         writer.writeCollectionOfObjectValues("impactedAssets", this.getImpactedAssets());
         writer.writeCollectionOfPrimitiveValues("mitreTechniques", this.getMitreTechniques());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -224,6 +234,13 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
      */
     public void setEntityMappings(@jakarta.annotation.Nullable final EntityMappingConfiguration value) {
         this.backingStore.set("entityMappings", value);
+    }
+    /**
+     * Sets the eventGroupingKind property value. The eventGroupingKind property
+     * @param value Value to set for the eventGroupingKind property.
+     */
+    public void setEventGroupingKind(@jakarta.annotation.Nullable final EventGroupingKind value) {
+        this.backingStore.set("eventGroupingKind", value);
     }
     /**
      * Sets the impactedAssets property value. Indicates the impacted assets for the alert triggered by the custom detection rule. Deprecated. Use entityMappings instead. This property will be removed from this resource on 2026-10-01.

@@ -33,7 +33,10 @@ public class CloudPcDeviceImageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the reupload method.
      * @return a {@link ReuploadRequestBuilder}
+     * @deprecated
+     * The reupload is deprecated and will not be supported starting June 25, 2026. Please use retryUpload instead. as of 2026-01/reupload on 2026-01-09 and will be removed 2026-06-25
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ReuploadRequestBuilder reupload() {
         return new ReuploadRequestBuilder(pathParameters, requestAdapter);

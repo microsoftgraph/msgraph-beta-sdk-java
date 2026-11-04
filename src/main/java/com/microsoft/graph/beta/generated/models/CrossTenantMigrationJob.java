@@ -130,7 +130,7 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         return this.backingStore.get("resourceType");
     }
     /**
-     * Gets the sourceTenantId property value. ID (GUID) of the tenant that content is migrated from.
+     * Gets the sourceTenantId property value. ID (GUID) of the source tenant for the content migration.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -146,7 +146,7 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the targetTenantId property value. ID of the tenant that content is migrated to. Read-only.
+     * Gets the targetTenantId property value. ID of the target tenant for the content migration. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -263,7 +263,7 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         this.backingStore.set("resourceType", value);
     }
     /**
-     * Sets the sourceTenantId property value. ID (GUID) of the tenant that content is migrated from.
+     * Sets the sourceTenantId property value. ID (GUID) of the source tenant for the content migration.
      * @param value Value to set for the sourceTenantId property.
      */
     public void setSourceTenantId(@jakarta.annotation.Nullable final String value) {
@@ -277,7 +277,7 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the targetTenantId property value. ID of the tenant that content is migrated to. Read-only.
+     * Sets the targetTenantId property value. ID of the target tenant for the content migration. Read-only.
      * @param value Value to set for the targetTenantId property.
      */
     public void setTargetTenantId(@jakarta.annotation.Nullable final String value) {

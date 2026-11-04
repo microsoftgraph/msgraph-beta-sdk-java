@@ -4,7 +4,6 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -45,9 +44,9 @@ public class RestoreTaskActivityLog extends ActivityLogBase implements Parsable 
         deserializerMap.put("destinationType", (n) -> { this.setDestinationType(n.getEnumValue(DestinationType::forValue)); });
         deserializerMap.put("restoreArtifactDetails", (n) -> { this.setRestoreArtifactDetails(n.getObjectValue(RestoreArtifactDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("restoreCompletionDateTime", (n) -> { this.setRestoreCompletionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("restoreJobType", (n) -> { this.setRestoreJobType(n.getEnumValue(RestoreJobType::forValue)); });
         deserializerMap.put("restoreSessionId", (n) -> { this.setRestoreSessionId(n.getStringValue()); });
         deserializerMap.put("restoreSessionStatus", (n) -> { this.setRestoreSessionStatus(n.getEnumValue(RestoreSessionStatus::forValue)); });
-        deserializerMap.put("tags", (n) -> { this.setTags(n.getEnumSetValue(RestorePointTags::forValue)); });
         return deserializerMap;
     }
     /**
@@ -67,6 +66,14 @@ public class RestoreTaskActivityLog extends ActivityLogBase implements Parsable 
         return this.backingStore.get("restoreCompletionDateTime");
     }
     /**
+     * Gets the restoreJobType property value. Indicates whether the restore job is standard, bulk, or granular. The possible values are: standard, bulk, unknownFutureValue, granular. Use the Prefer: include-unknown-enum-members request header to get the following value from this evolvable enum: granular.
+     * @return a {@link RestoreJobType}
+     */
+    @jakarta.annotation.Nullable
+    public RestoreJobType getRestoreJobType() {
+        return this.backingStore.get("restoreJobType");
+    }
+    /**
      * Gets the restoreSessionId property value. The unique identifier of the restore session associated with this activity log.
      * @return a {@link String}
      */
@@ -83,14 +90,6 @@ public class RestoreTaskActivityLog extends ActivityLogBase implements Parsable 
         return this.backingStore.get("restoreSessionStatus");
     }
     /**
-     * Gets the tags property value. The tags property
-     * @return a {@link EnumSet<RestorePointTags>}
-     */
-    @jakarta.annotation.Nullable
-    public EnumSet<RestorePointTags> getTags() {
-        return this.backingStore.get("tags");
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -100,9 +99,9 @@ public class RestoreTaskActivityLog extends ActivityLogBase implements Parsable 
         writer.writeEnumValue("destinationType", this.getDestinationType());
         writer.writeObjectValue("restoreArtifactDetails", this.getRestoreArtifactDetails());
         writer.writeOffsetDateTimeValue("restoreCompletionDateTime", this.getRestoreCompletionDateTime());
+        writer.writeEnumValue("restoreJobType", this.getRestoreJobType());
         writer.writeStringValue("restoreSessionId", this.getRestoreSessionId());
         writer.writeEnumValue("restoreSessionStatus", this.getRestoreSessionStatus());
-        writer.writeEnumSetValue("tags", this.getTags());
     }
     /**
      * Sets the destinationType property value. The destinationType property
@@ -126,6 +125,13 @@ public class RestoreTaskActivityLog extends ActivityLogBase implements Parsable 
         this.backingStore.set("restoreCompletionDateTime", value);
     }
     /**
+     * Sets the restoreJobType property value. Indicates whether the restore job is standard, bulk, or granular. The possible values are: standard, bulk, unknownFutureValue, granular. Use the Prefer: include-unknown-enum-members request header to get the following value from this evolvable enum: granular.
+     * @param value Value to set for the restoreJobType property.
+     */
+    public void setRestoreJobType(@jakarta.annotation.Nullable final RestoreJobType value) {
+        this.backingStore.set("restoreJobType", value);
+    }
+    /**
      * Sets the restoreSessionId property value. The unique identifier of the restore session associated with this activity log.
      * @param value Value to set for the restoreSessionId property.
      */
@@ -138,12 +144,5 @@ public class RestoreTaskActivityLog extends ActivityLogBase implements Parsable 
      */
     public void setRestoreSessionStatus(@jakarta.annotation.Nullable final RestoreSessionStatus value) {
         this.backingStore.set("restoreSessionStatus", value);
-    }
-    /**
-     * Sets the tags property value. The tags property
-     * @param value Value to set for the tags property.
-     */
-    public void setTags(@jakarta.annotation.Nullable final EnumSet<RestorePointTags> value) {
-        this.backingStore.set("tags", value);
     }
 }

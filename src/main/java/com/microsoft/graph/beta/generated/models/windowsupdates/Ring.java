@@ -28,6 +28,8 @@ public class Ring extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.windowsUpdates.driverUpdateRing": return new DriverUpdateRing();
+                case "#microsoft.graph.windowsUpdates.featureUpdateRing": return new FeatureUpdateRing();
                 case "#microsoft.graph.windowsUpdates.qualityUpdateRing": return new QualityUpdateRing();
             }
         }
@@ -42,7 +44,7 @@ public class Ring extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the deferralInDays property value. The quality update deferral period in days. The value must be between 0 and 30. Optional.
+     * Gets the deferralInDays property value. The update deferral period in days. The value must be between 0 and 30. Optional.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +101,7 @@ public class Ring extends Entity implements Parsable {
         return this.backingStore.get("includedGroupAssignment");
     }
     /**
-     * Gets the isPaused property value. The pause action for the quality update ring policy. Required.
+     * Gets the isPaused property value. The pause action for the update ring. Required.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -107,7 +109,7 @@ public class Ring extends Entity implements Parsable {
         return this.backingStore.get("isPaused");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The date and time whenthe ring was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Gets the lastModifiedDateTime property value. The date and time when the ring was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +140,7 @@ public class Ring extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the deferralInDays property value. The quality update deferral period in days. The value must be between 0 and 30. Optional.
+     * Sets the deferralInDays property value. The update deferral period in days. The value must be between 0 and 30. Optional.
      * @param value Value to set for the deferralInDays property.
      */
     public void setDeferralInDays(@jakarta.annotation.Nullable final Integer value) {
@@ -173,14 +175,14 @@ public class Ring extends Entity implements Parsable {
         this.backingStore.set("includedGroupAssignment", value);
     }
     /**
-     * Sets the isPaused property value. The pause action for the quality update ring policy. Required.
+     * Sets the isPaused property value. The pause action for the update ring. Required.
      * @param value Value to set for the isPaused property.
      */
     public void setIsPaused(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isPaused", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The date and time whenthe ring was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Sets the lastModifiedDateTime property value. The date and time when the ring was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

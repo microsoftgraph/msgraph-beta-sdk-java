@@ -36,6 +36,7 @@ public class ApprovalRule implements AdditionalDataHolder, BackedModel, Parsable
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.windowsUpdates.driverUpdateApprovalRule": return new DriverUpdateApprovalRule();
                 case "#microsoft.graph.windowsUpdates.qualityUpdateApprovalRule": return new QualityUpdateApprovalRule();
                 case "#microsoft.graph.windowsUpdates.recoveryApprovalRule": return new RecoveryApprovalRule();
             }

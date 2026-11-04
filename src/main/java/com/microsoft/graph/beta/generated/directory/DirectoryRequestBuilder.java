@@ -113,7 +113,10 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.directory entity.
      * @return a {@link FeatureRolloutPoliciesRequestBuilder}
+     * @deprecated
+     * Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies. as of 2021-01/DirectoryFeatureRolloutPolicies on 2021-03-05 and will be removed 2021-06-30
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public FeatureRolloutPoliciesRequestBuilder featureRolloutPolicies() {
         return new FeatureRolloutPoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -201,7 +204,10 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the remoteTenantGroups property of the microsoft.graph.directory entity.
      * @return a {@link RemoteTenantGroupsRequestBuilder}
+     * @deprecated
+     *  as of 2025-03/PrivatePreview:remoteTenantGroupsAPI on 2025-12-02 and will be removed 2028-12-07
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RemoteTenantGroupsRequestBuilder remoteTenantGroups() {
         return new RemoteTenantGroupsRequestBuilder(pathParameters, requestAdapter);

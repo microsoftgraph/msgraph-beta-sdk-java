@@ -1,0 +1,161 @@
+package com.microsoft.graph.beta.models;
+
+import com.microsoft.kiota.serialization.AdditionalDataHolder;
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+/**
+ * The supported range and default value for an agent sharing limit.
+ */
+@jakarta.annotation.Generated("com.microsoft.kiota")
+public class CopilotPolicySettingAgentSharingLimit implements AdditionalDataHolder, BackedModel, Parsable {
+    /**
+     * Stores model information.
+     */
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
+    /**
+     * Instantiates a new {@link CopilotPolicySettingAgentSharingLimit} and sets the default values.
+     */
+    public CopilotPolicySettingAgentSharingLimit() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        this.setAdditionalData(new HashMap<>());
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a {@link CopilotPolicySettingAgentSharingLimit}
+     */
+    @jakarta.annotation.Nonnull
+    public static CopilotPolicySettingAgentSharingLimit createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new CopilotPolicySettingAgentSharingLimit();
+    }
+    /**
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return a {@link Map<String, Object>}
+     */
+    @jakarta.annotation.Nonnull
+    public Map<String, Object> getAdditionalData() {
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a {@link BackingStore}
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
+    }
+    /**
+     * Gets the default property value. Default value.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDefault() {
+        return this.backingStore.get("default");
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+     */
+    @jakarta.annotation.Nonnull
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("default", (n) -> { this.setDefault(n.getStringValue()); });
+        deserializerMap.put("maxValue", (n) -> { this.setMaxValue(n.getStringValue()); });
+        deserializerMap.put("minValue", (n) -> { this.setMinValue(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the maxValue property value. Maximum supported value.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMaxValue() {
+        return this.backingStore.get("maxValue");
+    }
+    /**
+     * Gets the minValue property value. Minimum supported value.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMinValue() {
+        return this.backingStore.get("minValue");
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getOdataType() {
+        return this.backingStore.get("odataType");
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     */
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        writer.writeStringValue("default", this.getDefault());
+        writer.writeStringValue("maxValue", this.getMaxValue());
+        writer.writeStringValue("minValue", this.getMinValue());
+        writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
+     */
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
+    }
+    /**
+     * Sets the default property value. Default value.
+     * @param value Value to set for the default property.
+     */
+    public void setDefault(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("default", value);
+    }
+    /**
+     * Sets the maxValue property value. Maximum supported value.
+     * @param value Value to set for the maxValue property.
+     */
+    public void setMaxValue(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("maxValue", value);
+    }
+    /**
+     * Sets the minValue property value. Minimum supported value.
+     * @param value Value to set for the minValue property.
+     */
+    public void setMinValue(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("minValue", value);
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the @odata.type property.
+     */
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("odataType", value);
+    }
+}

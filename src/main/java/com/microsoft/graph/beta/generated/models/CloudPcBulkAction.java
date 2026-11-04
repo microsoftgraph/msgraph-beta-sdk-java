@@ -36,6 +36,7 @@ public class CloudPcBulkAction extends Entity implements Parsable {
                 case "#microsoft.graph.cloudPcBulkPowerOff": return new CloudPcBulkPowerOff();
                 case "#microsoft.graph.cloudPcBulkPowerOn": return new CloudPcBulkPowerOn();
                 case "#microsoft.graph.cloudPcBulkReinstallAgent": return new CloudPcBulkReinstallAgent();
+                case "#microsoft.graph.cloudPcBulkRelocate": return new CloudPcBulkRelocate();
                 case "#microsoft.graph.cloudPcBulkReprovision": return new CloudPcBulkReprovision();
                 case "#microsoft.graph.cloudPcBulkResize": return new CloudPcBulkResize();
                 case "#microsoft.graph.cloudPcBulkRestart": return new CloudPcBulkRestart();

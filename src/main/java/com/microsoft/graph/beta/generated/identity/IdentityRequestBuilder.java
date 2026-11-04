@@ -117,7 +117,10 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the signInIdentifiers property of the microsoft.graph.identityContainer entity.
      * @return a {@link SignInIdentifiersRequestBuilder}
+     * @deprecated
+     *  as of 2025-03/SignInWithAlias on 2025-03-26 and will be removed 2025-12-25
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SignInIdentifiersRequestBuilder signInIdentifiers() {
         return new SignInIdentifiersRequestBuilder(pathParameters, requestAdapter);
@@ -133,7 +136,10 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the userFlows property of the microsoft.graph.identityContainer entity.
      * @return a {@link UserFlowsRequestBuilder}
+     * @deprecated
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public UserFlowsRequestBuilder userFlows() {
         return new UserFlowsRequestBuilder(pathParameters, requestAdapter);

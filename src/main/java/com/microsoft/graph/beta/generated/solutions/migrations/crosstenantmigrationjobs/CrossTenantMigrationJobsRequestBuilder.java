@@ -26,10 +26,7 @@ public class CrossTenantMigrationJobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -38,11 +35,8 @@ public class CrossTenantMigrationJobsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the crossTenantMigrationJobs property of the microsoft.graph.migrationsRoot entity.
      * @param crossTenantMigrationJobId The unique identifier of crossTenantMigrationJob
      * @return a {@link CrossTenantMigrationJobItemRequestBuilder}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public CrossTenantMigrationJobItemRequestBuilder byCrossTenantMigrationJobId(@jakarta.annotation.Nonnull final String crossTenantMigrationJobId) {
         Objects.requireNonNull(crossTenantMigrationJobId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -66,29 +60,23 @@ public class CrossTenantMigrationJobsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/migrations/crossTenantMigrationJobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the crossTenantMigrationJob objects and their properties. By default 20 objects are returned. More can be retrieved through the @odata.nextLink url provided in the response.
+     * Get a list of the crossTenantMigrationJob objects and their properties. By default, 20 objects are returned. You can retrieve more objects by using the @odata.nextLink URL provided in the response.
      * @return a {@link CrossTenantMigrationJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      * @see <a href="https://learn.microsoft.com/graph/api/migrationsroot-list-crosstenantmigrationjobs?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CrossTenantMigrationJobCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the crossTenantMigrationJob objects and their properties. By default 20 objects are returned. More can be retrieved through the @odata.nextLink url provided in the response.
+     * Get a list of the crossTenantMigrationJob objects and their properties. By default, 20 objects are returned. You can retrieve more objects by using the @odata.nextLink URL provided in the response.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CrossTenantMigrationJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      * @see <a href="https://learn.microsoft.com/graph/api/migrationsroot-list-crosstenantmigrationjobs?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CrossTenantMigrationJobCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -96,31 +84,25 @@ public class CrossTenantMigrationJobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantMigrationJobCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new crossTenantMigrationJob. A job defines the migration batch but doesn&apos;t start validation or migration. After you create the job, call validate to verify tenant and resource configuration, then call migrate to begin the actual migration.
+     * Create a new crossTenantMigrationJob object. A job defines the migration batch but doesn&apos;t start validation or migration. After you create the job, call validate to verify tenant and resource configuration, then call migrate to begin the actual migration.
      * @param body The request body
      * @return a {@link CrossTenantMigrationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      * @see <a href="https://learn.microsoft.com/graph/api/migrationsroot-post-crosstenantmigrationjobs?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CrossTenantMigrationJob post(@jakarta.annotation.Nonnull final CrossTenantMigrationJob body) {
         return post(body, null);
     }
     /**
-     * Create a new crossTenantMigrationJob. A job defines the migration batch but doesn&apos;t start validation or migration. After you create the job, call validate to verify tenant and resource configuration, then call migrate to begin the actual migration.
+     * Create a new crossTenantMigrationJob object. A job defines the migration batch but doesn&apos;t start validation or migration. After you create the job, call validate to verify tenant and resource configuration, then call migrate to begin the actual migration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CrossTenantMigrationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      * @see <a href="https://learn.microsoft.com/graph/api/migrationsroot-post-crosstenantmigrationjobs?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CrossTenantMigrationJob post(@jakarta.annotation.Nonnull final CrossTenantMigrationJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -129,25 +111,19 @@ public class CrossTenantMigrationJobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantMigrationJob::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the crossTenantMigrationJob objects and their properties. By default 20 objects are returned. More can be retrieved through the @odata.nextLink url provided in the response.
+     * Get a list of the crossTenantMigrationJob objects and their properties. By default, 20 objects are returned. You can retrieve more objects by using the @odata.nextLink URL provided in the response.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the crossTenantMigrationJob objects and their properties. By default 20 objects are returned. More can be retrieved through the @odata.nextLink url provided in the response.
+     * Get a list of the crossTenantMigrationJob objects and their properties. By default, 20 objects are returned. You can retrieve more objects by using the @odata.nextLink URL provided in the response.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -155,27 +131,21 @@ public class CrossTenantMigrationJobsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new crossTenantMigrationJob. A job defines the migration batch but doesn&apos;t start validation or migration. After you create the job, call validate to verify tenant and resource configuration, then call migrate to begin the actual migration.
+     * Create a new crossTenantMigrationJob object. A job defines the migration batch but doesn&apos;t start validation or migration. After you create the job, call validate to verify tenant and resource configuration, then call migrate to begin the actual migration.
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CrossTenantMigrationJob body) {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new crossTenantMigrationJob. A job defines the migration batch but doesn&apos;t start validation or migration. After you create the job, call validate to verify tenant and resource configuration, then call migrate to begin the actual migration.
+     * Create a new crossTenantMigrationJob object. A job defines the migration batch but doesn&apos;t start validation or migration. After you create the job, call validate to verify tenant and resource configuration, then call migrate to begin the actual migration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CrossTenantMigrationJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -188,17 +158,14 @@ public class CrossTenantMigrationJobsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CrossTenantMigrationJobsRequestBuilder}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public CrossTenantMigrationJobsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new CrossTenantMigrationJobsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the crossTenantMigrationJob objects and their properties. By default 20 objects are returned. More can be retrieved through the @odata.nextLink url provided in the response.
+     * Get a list of the crossTenantMigrationJob objects and their properties. By default, 20 objects are returned. You can retrieve more objects by using the @odata.nextLink URL provided in the response.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

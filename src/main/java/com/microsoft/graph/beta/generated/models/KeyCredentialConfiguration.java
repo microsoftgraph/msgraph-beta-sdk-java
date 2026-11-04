@@ -122,7 +122,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
         return this.backingStore.get("restrictionType");
     }
     /**
-     * Gets the state property value. Indicates whether the restriction is evaluated. The possible values are: enabled, disabled, unknownFutureValue. If enabled, the restriction is evaluated. If disabled, the restriction isn&apos;t evaluated or enforced.
+     * Gets the state property value. Indicates whether the restriction is evaluated. The possible values are: enabled, disabled, audit, unknownFutureValue. If enabled, the restriction is evaluated and enforced. If disabled, the restriction isn&apos;t evaluated or enforced. If audit, the restriction is evaluated but not enforced.
      * @return a {@link AppManagementRestrictionState}
      */
     @jakarta.annotation.Nullable
@@ -202,7 +202,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
         this.backingStore.set("restrictionType", value);
     }
     /**
-     * Sets the state property value. Indicates whether the restriction is evaluated. The possible values are: enabled, disabled, unknownFutureValue. If enabled, the restriction is evaluated. If disabled, the restriction isn&apos;t evaluated or enforced.
+     * Sets the state property value. Indicates whether the restriction is evaluated. The possible values are: enabled, disabled, audit, unknownFutureValue. If enabled, the restriction is evaluated and enforced. If disabled, the restriction isn&apos;t evaluated or enforced. If audit, the restriction is evaluated but not enforced.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final AppManagementRestrictionState value) {
