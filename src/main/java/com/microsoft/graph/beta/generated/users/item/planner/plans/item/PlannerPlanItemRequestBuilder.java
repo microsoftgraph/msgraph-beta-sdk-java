@@ -73,7 +73,10 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the goals property of the microsoft.graph.plannerPlan entity.
      * @return a {@link GoalsRequestBuilder}
+     * @deprecated
+     * private preview elements are required to be marked as deprecated as of 2025-03/Tasks_And_Plans on 2025-03-26 and will be removed 2026-03-26
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GoalsRequestBuilder goals() {
         return new GoalsRequestBuilder(pathParameters, requestAdapter);

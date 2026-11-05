@@ -263,6 +263,7 @@ public class Group extends DirectoryObject implements Parsable {
         deserializerMap.put("isSubscribedByMail", (n) -> { this.setIsSubscribedByMail(n.getBooleanValue()); });
         deserializerMap.put("licenseProcessingState", (n) -> { this.setLicenseProcessingState(n.getObjectValue(LicenseProcessingState::createFromDiscriminatorValue)); });
         deserializerMap.put("mail", (n) -> { this.setMail(n.getStringValue()); });
+        deserializerMap.put("mailboxId", (n) -> { this.setMailboxId(n.getStringValue()); });
         deserializerMap.put("mailEnabled", (n) -> { this.setMailEnabled(n.getBooleanValue()); });
         deserializerMap.put("mailNickname", (n) -> { this.setMailNickname(n.getStringValue()); });
         deserializerMap.put("memberOf", (n) -> { this.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
@@ -416,6 +417,14 @@ public class Group extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public String getMail() {
         return this.backingStore.get("mail");
+    }
+    /**
+     * Gets the mailboxId property value. The identifier of the Exchange mailbox associated with a Microsoft 365 group. Treat this value as an opaque identifier and don&apos;t parse or validate its format. If the group mailbox isn&apos;t provisioned, this property returns 00000000-0000-0000-0000-000000000000. Requires $select to retrieve. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMailboxId() {
+        return this.backingStore.get("mailboxId");
     }
     /**
      * Gets the mailEnabled property value. Specifies whether the group is mail-enabled. Required. Returned by default. Supports $filter (eq, ne, not, and eq on null values).
@@ -845,6 +854,7 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeBooleanValue("isSubscribedByMail", this.getIsSubscribedByMail());
         writer.writeObjectValue("licenseProcessingState", this.getLicenseProcessingState());
         writer.writeStringValue("mail", this.getMail());
+        writer.writeStringValue("mailboxId", this.getMailboxId());
         writer.writeBooleanValue("mailEnabled", this.getMailEnabled());
         writer.writeStringValue("mailNickname", this.getMailNickname());
         writer.writeCollectionOfObjectValues("memberOf", this.getMemberOf());
@@ -1152,6 +1162,13 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public void setMail(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mail", value);
+    }
+    /**
+     * Sets the mailboxId property value. The identifier of the Exchange mailbox associated with a Microsoft 365 group. Treat this value as an opaque identifier and don&apos;t parse or validate its format. If the group mailbox isn&apos;t provisioned, this property returns 00000000-0000-0000-0000-000000000000. Requires $select to retrieve. Read-only.
+     * @param value Value to set for the mailboxId property.
+     */
+    public void setMailboxId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("mailboxId", value);
     }
     /**
      * Sets the mailEnabled property value. Specifies whether the group is mail-enabled. Required. Returned by default. Supports $filter (eq, ne, not, and eq on null values).

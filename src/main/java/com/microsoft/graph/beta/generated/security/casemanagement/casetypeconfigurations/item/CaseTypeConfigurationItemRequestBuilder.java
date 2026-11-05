@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.security.casemanagement.casetypeconfigurations.
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.security.casemanagement.CaseTypeConfiguration;
 import com.microsoft.graph.beta.security.casemanagement.casetypeconfigurations.item.customfields.CustomFieldsRequestBuilder;
+import com.microsoft.graph.beta.security.casemanagement.casetypeconfigurations.item.slapolicies.SlaPoliciesRequestBuilder;
 import com.microsoft.graph.beta.security.casemanagement.casetypeconfigurations.item.statuses.StatusesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -29,6 +30,14 @@ public class CaseTypeConfigurationItemRequestBuilder extends BaseRequestBuilder 
     @jakarta.annotation.Nonnull
     public CustomFieldsRequestBuilder customFields() {
         return new CustomFieldsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the slaPolicies property of the microsoft.graph.security.caseManagement.caseTypeConfiguration entity.
+     * @return a {@link SlaPoliciesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SlaPoliciesRequestBuilder slaPolicies() {
+        return new SlaPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the statuses property of the microsoft.graph.security.caseManagement.caseTypeConfiguration entity.

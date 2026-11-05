@@ -12,6 +12,7 @@ import com.microsoft.graph.beta.users.item.cloudpcs.item.getsupportedcloudpcremo
 import com.microsoft.graph.beta.users.item.cloudpcs.item.poweroff.PowerOffRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.poweron.PowerOnRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.reboot.RebootRequestBuilder;
+import com.microsoft.graph.beta.users.item.cloudpcs.item.relocate.RelocateRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.rename.RenameRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.reprovision.ReprovisionRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.resize.ResizeRequestBuilder;
@@ -79,7 +80,10 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getCloudPcLaunchInfo method.
      * @return a {@link GetCloudPcLaunchInfoRequestBuilder}
+     * @deprecated
+     * Starting from Oct 30, 2026, this API: getCloudPcLaunchInfo will be deprecated and no longer be supported. Please use the new API:retrieveCloudPcLaunchDetail to retrieve same details. as of 2025-09/cloudPcLaunchInfo on 2025-09-30 and will be removed 2026-10-30
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetCloudPcLaunchInfoRequestBuilder getCloudPcLaunchInfo() {
         return new GetCloudPcLaunchInfoRequestBuilder(pathParameters, requestAdapter);
@@ -123,6 +127,14 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RebootRequestBuilder reboot() {
         return new RebootRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the relocate method.
+     * @return a {@link RelocateRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RelocateRequestBuilder relocate() {
+        return new RelocateRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the rename method.

@@ -68,7 +68,7 @@ public class CrossTenantMigrationCancelResponse implements AdditionalDataHolder,
         return deserializerMap;
     }
     /**
-     * Gets the message property value. The customer facing description of the cancellation request
+     * Gets the message property value. The description of the cancellation request.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class CrossTenantMigrationCancelResponse implements AdditionalDataHolder,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the status property value. The cancellation request status
+     * Gets the status property value. The cancellation request status.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class CrossTenantMigrationCancelResponse implements AdditionalDataHolder,
         this.backingStore = value;
     }
     /**
-     * Sets the message property value. The customer facing description of the cancellation request
+     * Sets the message property value. The description of the cancellation request.
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {
@@ -132,7 +132,7 @@ public class CrossTenantMigrationCancelResponse implements AdditionalDataHolder,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the status property value. The cancellation request status
+     * Sets the status property value. The cancellation request status.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {

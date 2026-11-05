@@ -26,7 +26,7 @@ public class ProtectedApplicationMetadata extends IntegratedApplicationMetadata 
         return new ProtectedApplicationMetadata();
     }
     /**
-     * Gets the applicationLocation property value. The location of the application being protected. For Agent-to-Tool (A2T) scenarios, this represents the tool receiving the content. Required.
+     * Gets the applicationLocation property value. The location that identifies the protected application. For agent evaluation, use policyLocationAgent. Optional.
      * @return a {@link PolicyLocation}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class ProtectedApplicationMetadata extends IntegratedApplicationMetadata 
         writer.writeObjectValue("applicationLocation", this.getApplicationLocation());
     }
     /**
-     * Sets the applicationLocation property value. The location of the application being protected. For Agent-to-Tool (A2T) scenarios, this represents the tool receiving the content. Required.
+     * Sets the applicationLocation property value. The location that identifies the protected application. For agent evaluation, use policyLocationAgent. Optional.
      * @param value Value to set for the applicationLocation property.
      */
     public void setApplicationLocation(@jakarta.annotation.Nullable final PolicyLocation value) {

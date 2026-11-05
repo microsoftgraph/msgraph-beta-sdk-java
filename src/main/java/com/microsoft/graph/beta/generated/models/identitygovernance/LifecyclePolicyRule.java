@@ -43,8 +43,17 @@ public class LifecyclePolicyRule extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("gracePeriodInDays", (n) -> { this.setGracePeriodInDays(n.getIntegerValue()); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the gracePeriodInDays property value. The optional grace period, in days, that starts when the rule violation is first detected. The allowed range is 0 through 30. If omitted or set to null, the gracePeriodInDays value of the containing lifecycle policy applies. A value of 0 means no additional grace period. If multiple rules remain violated, the earliest rule grace-period expiry starts the policy action sequence; the policy-level grace period isn&apos;t added again.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getGracePeriodInDays() {
+        return this.backingStore.get("gracePeriodInDays");
     }
     /**
      * Gets the isEnabled property value. Indicates whether the rule is enabled and evaluated as part of its policy.
@@ -61,7 +70,15 @@ public class LifecyclePolicyRule extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeIntegerValue("gracePeriodInDays", this.getGracePeriodInDays());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
+    }
+    /**
+     * Sets the gracePeriodInDays property value. The optional grace period, in days, that starts when the rule violation is first detected. The allowed range is 0 through 30. If omitted or set to null, the gracePeriodInDays value of the containing lifecycle policy applies. A value of 0 means no additional grace period. If multiple rules remain violated, the earliest rule grace-period expiry starts the policy action sequence; the policy-level grace period isn&apos;t added again.
+     * @param value Value to set for the gracePeriodInDays property.
+     */
+    public void setGracePeriodInDays(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("gracePeriodInDays", value);
     }
     /**
      * Sets the isEnabled property value. Indicates whether the rule is enabled and evaluated as part of its policy.

@@ -1,4 +1,4 @@
-package com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessdestinationreportwithstartdatetimewithenddatetimeaiagentidaiagentidaiagentnameaiagentnameagenttypeidagenttypeidagentvirtualidagentvirtualid;
+package com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessdestinationreportwithstartdatetimewithenddatetimeaiagentidaiagentidaiagentnameaiagentnameagenttypeidagenttypeidagentvirtualidagentvirtualiddevicecategorydevicecategory;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -16,51 +16,51 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to call the destinationReport method.
+ * Provides operations to call the destinationReport method. Original name: MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdDeviceCategoryDeviceCategoryRequestBuilder
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdRequestBuilder extends BaseRequestBuilder {
+public class MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdDeviceCategoryDeviceCateg_6dfb0c44 extends BaseRequestBuilder {
     /**
-     * Instantiates a new {@link MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdRequestBuilder} and sets the default values.
+     * Instantiates a new {@link MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdDeviceCategoryDeviceCateg_6dfb0c44} and sets the default values.
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @param startDateTime Usage: startDateTime={startDateTime}
      */
-    public MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final OffsetDateTime endDateTime, @jakarta.annotation.Nullable final OffsetDateTime startDateTime) {
-        super(requestAdapter, "{+baseurl}/networkAccess/reports/microsoft.graph.networkaccess.destinationReport(startDateTime={startDateTime},endDateTime={endDateTime},aiAgentId='@aiAgentId',aiAgentName='@aiAgentName',agentTypeId='@agentTypeId',agentVirtualId='@agentVirtualId'){?%24count,%24filter,%24search,%24skip,%24top,agentTypeId*,agentVirtualId*,aiAgentId*,aiAgentName*}", pathParameters);
+    public MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdDeviceCategoryDeviceCateg_6dfb0c44(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final OffsetDateTime endDateTime, @jakarta.annotation.Nullable final OffsetDateTime startDateTime) {
+        super(requestAdapter, "{+baseurl}/networkAccess/reports/microsoft.graph.networkaccess.destinationReport(startDateTime={startDateTime},endDateTime={endDateTime},aiAgentId='@aiAgentId',aiAgentName='@aiAgentName',agentTypeId='@agentTypeId',agentVirtualId='@agentVirtualId',deviceCategory='@deviceCategory'){?%24count,%24filter,%24search,%24skip,%24top,agentTypeId*,agentVirtualId*,aiAgentId*,aiAgentName*,deviceCategory*}", pathParameters);
         this.pathParameters.put("endDateTime", endDateTime);
         this.pathParameters.put("startDateTime", startDateTime);
     }
     /**
-     * Instantiates a new {@link MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdRequestBuilder} and sets the default values.
+     * Instantiates a new {@link MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdDeviceCategoryDeviceCateg_6dfb0c44} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/reports/microsoft.graph.networkaccess.destinationReport(startDateTime={startDateTime},endDateTime={endDateTime},aiAgentId='@aiAgentId',aiAgentName='@aiAgentName',agentTypeId='@agentTypeId',agentVirtualId='@agentVirtualId'){?%24count,%24filter,%24search,%24skip,%24top,agentTypeId*,agentVirtualId*,aiAgentId*,aiAgentName*}", rawUrl);
+    public MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdDeviceCategoryDeviceCateg_6dfb0c44(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/networkAccess/reports/microsoft.graph.networkaccess.destinationReport(startDateTime={startDateTime},endDateTime={endDateTime},aiAgentId='@aiAgentId',aiAgentName='@aiAgentName',agentTypeId='@agentTypeId',agentVirtualId='@agentVirtualId',deviceCategory='@deviceCategory'){?%24count,%24filter,%24search,%24skip,%24top,agentTypeId*,agentVirtualId*,aiAgentId*,aiAgentName*,deviceCategory*}", rawUrl);
     }
     /**
      * Invoke function destinationReport
-     * @return a {@link DestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdGetResponse}
+     * @return a {@link DestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdDeviceCategoryDeviceCategoryGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public DestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdGetResponse get() {
+    public DestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdDeviceCategoryDeviceCategoryGetResponse get() {
         return get(null);
     }
     /**
      * Invoke function destinationReport
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link DestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdGetResponse}
+     * @return a {@link DestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdDeviceCategoryDeviceCategoryGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public DestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public DestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdDeviceCategoryDeviceCategoryGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, DestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, DestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdDeviceCategoryDeviceCategoryGetResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke function destinationReport
@@ -85,12 +85,12 @@ public class MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEn
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdRequestBuilder}
+     * @return a {@link MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdDeviceCategoryDeviceCateg_6dfb0c44}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdDeviceCategoryDeviceCateg_6dfb0c44 withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdRequestBuilder(rawUrl, requestAdapter);
+        return new MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeaiAgentIdAiAgentIdAiAgentNameAiAgentNameAgentTypeIdAgentTypeIdAgentVirtualIdAgentVirtualIdDeviceCategoryDeviceCateg_6dfb0c44(rawUrl, requestAdapter);
     }
     /**
      * Invoke function destinationReport
@@ -123,6 +123,11 @@ public class MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEn
         @jakarta.annotation.Nullable
         public Boolean count;
         /**
+         * Usage: deviceCategory=&apos;@deviceCategory&apos;
+         */
+        @jakarta.annotation.Nullable
+        public String deviceCategory;
+        /**
          * Filter items by property values
          */
         @jakarta.annotation.Nullable
@@ -154,6 +159,7 @@ public class MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEn
             allQueryParams.put("aiAgentId", aiAgentId);
             allQueryParams.put("aiAgentName", aiAgentName);
             allQueryParams.put("%24count", count);
+            allQueryParams.put("deviceCategory", deviceCategory);
             allQueryParams.put("%24filter", filter);
             allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);

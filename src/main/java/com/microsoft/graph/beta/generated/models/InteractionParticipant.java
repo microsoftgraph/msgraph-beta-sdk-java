@@ -84,7 +84,7 @@ public class InteractionParticipant implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. The identifier of the participant. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class InteractionParticipant implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. The identifier of the participant. Required.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

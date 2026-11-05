@@ -25,7 +25,7 @@ public class AppManagementAudit extends DirectoryAudit implements Parsable {
         return new AppManagementAudit();
     }
     /**
-     * Gets the appliedAppManagementPolicyRestrictions property value. The appliedAppManagementPolicyRestrictions property
+     * Gets the appliedAppManagementPolicyRestrictions property value. Details of the app management policy restrictions applied to the activity. Supports $filter (eq).
      * @return a {@link java.util.List<AppliedAppManagementPolicyRestriction>}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class AppManagementAudit extends DirectoryAudit implements Parsable {
         writer.writeCollectionOfObjectValues("appliedAppManagementPolicyRestrictions", this.getAppliedAppManagementPolicyRestrictions());
     }
     /**
-     * Sets the appliedAppManagementPolicyRestrictions property value. The appliedAppManagementPolicyRestrictions property
+     * Sets the appliedAppManagementPolicyRestrictions property value. Details of the app management policy restrictions applied to the activity. Supports $filter (eq).
      * @param value Value to set for the appliedAppManagementPolicyRestrictions property.
      */
     public void setAppliedAppManagementPolicyRestrictions(@jakarta.annotation.Nullable final java.util.List<AppliedAppManagementPolicyRestriction> value) {

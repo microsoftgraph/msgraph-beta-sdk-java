@@ -64,14 +64,6 @@ public class EvaluationErrorDetail implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("errorCategory");
     }
     /**
-     * Gets the errorMessage property value. The errorMessage property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getErrorMessage() {
-        return this.backingStore.get("errorMessage");
-    }
-    /**
      * Gets the errorType property value. The errorType property
      * @return a {@link EvaluationErrorType}
      */
@@ -85,9 +77,8 @@ public class EvaluationErrorDetail implements AdditionalDataHolder, BackedModel,
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("errorCategory", (n) -> { this.setErrorCategory(n.getEnumValue(EvaluationErrorCategory::forValue)); });
-        deserializerMap.put("errorMessage", (n) -> { this.setErrorMessage(n.getStringValue()); });
         deserializerMap.put("errorType", (n) -> { this.setErrorType(n.getEnumValue(EvaluationErrorType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
@@ -107,7 +98,6 @@ public class EvaluationErrorDetail implements AdditionalDataHolder, BackedModel,
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("errorCategory", this.getErrorCategory());
-        writer.writeStringValue("errorMessage", this.getErrorMessage());
         writer.writeEnumValue("errorType", this.getErrorType());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -133,13 +123,6 @@ public class EvaluationErrorDetail implements AdditionalDataHolder, BackedModel,
      */
     public void setErrorCategory(@jakarta.annotation.Nullable final EvaluationErrorCategory value) {
         this.backingStore.set("errorCategory", value);
-    }
-    /**
-     * Sets the errorMessage property value. The errorMessage property
-     * @param value Value to set for the errorMessage property.
-     */
-    public void setErrorMessage(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("errorMessage", value);
     }
     /**
      * Sets the errorType property value. The errorType property

@@ -99,7 +99,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the cancelProcessing method.
      * @return a {@link MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder}
+     * @deprecated
+     *  as of 2025-11/PrivatePreview:cancelWorkflows on 2025-10-28 and will be removed 2026-10-28
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder microsoftGraphIdentityGovernanceCancelProcessing() {
         return new MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder(pathParameters, requestAdapter);
@@ -123,7 +126,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the previewTaskFailures method.
      * @return a {@link MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder}
+     * @deprecated
+     *  as of 2025-01/PrivatePreview:organizationalUnit on 2025-08-12 and will be removed 2026-02-28
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder microsoftGraphIdentityGovernancePreviewTaskFailures() {
         return new MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder(pathParameters, requestAdapter);
@@ -131,7 +137,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the previewWorkflow method.
      * @return a {@link MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder}
+     * @deprecated
+     *  as of 2025-01/PrivatePreview:organizationalUnit on 2025-08-12 and will be removed 2026-02-28
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder microsoftGraphIdentityGovernancePreviewWorkflow() {
         return new MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder(pathParameters, requestAdapter);
@@ -147,7 +156,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the previewScope property of the microsoft.graph.identityGovernance.workflow entity.
      * @return a {@link PreviewScopeRequestBuilder}
+     * @deprecated
+     *  as of 2025-01/PrivatePreview:organizationalUnit on 2025-08-12 and will be removed 2026-02-28
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PreviewScopeRequestBuilder previewScope() {
         return new PreviewScopeRequestBuilder(pathParameters, requestAdapter);

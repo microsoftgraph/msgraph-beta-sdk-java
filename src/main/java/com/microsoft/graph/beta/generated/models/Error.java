@@ -56,7 +56,7 @@ public class Error implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
-     * Gets the code property value. The error code
+     * Gets the code property value. The error code.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class Error implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the message property value. The message for the error
+     * Gets the message property value. The message for the error.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class Error implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the code property value. The error code
+     * Sets the code property value. The error code.
      * @param value Value to set for the code property.
      */
     public void setCode(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("code", value);
     }
     /**
-     * Sets the message property value. The message for the error
+     * Sets the message property value. The message for the error.
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {

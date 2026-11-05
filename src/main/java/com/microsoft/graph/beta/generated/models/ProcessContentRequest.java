@@ -64,7 +64,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         return this.backingStore;
     }
     /**
-     * Gets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Use conversation metadata for content like prompts and responses and file metadata for files. For the ContentActivity API only, use content activity metadata for DLP enforcement results or evaluation incomplete activity metadata when policy evaluation couldn&apos;t be completed. The ContentActivity-specific types aren&apos;t supported by the processContent or processContentAsync APIs. Required.
+     * Gets the contentEntries property value. The content entries to process. Use processConversationMetadata for prompts and responses and processFileMetadata for files. For the ContentActivity API only, use contentActivityMetadata for DLP enforcement results or evaluationIncompleteActivityMetadata when policy evaluation couldn&apos;t be completed. The ContentActivity-specific types aren&apos;t supported by the processContent or processContentAsync APIs. Required.
      * @return a {@link java.util.List<ProcessContentMetadataBase>}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the protectedAppMetadata property value. Metadata about the protected application making the request. Required.
+     * Gets the protectedAppMetadata property value. Metadata about the protected application. For an agent request, applicationLocation must be a policyLocationAgent. Required for agent requests; otherwise optional.
      * @return a {@link ProtectedApplicationMetadata}
      */
     @jakarta.annotation.Nullable
@@ -175,7 +175,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Use conversation metadata for content like prompts and responses and file metadata for files. For the ContentActivity API only, use content activity metadata for DLP enforcement results or evaluation incomplete activity metadata when policy evaluation couldn&apos;t be completed. The ContentActivity-specific types aren&apos;t supported by the processContent or processContentAsync APIs. Required.
+     * Sets the contentEntries property value. The content entries to process. Use processConversationMetadata for prompts and responses and processFileMetadata for files. For the ContentActivity API only, use contentActivityMetadata for DLP enforcement results or evaluationIncompleteActivityMetadata when policy evaluation couldn&apos;t be completed. The ContentActivity-specific types aren&apos;t supported by the processContent or processContentAsync APIs. Required.
      * @param value Value to set for the contentEntries property.
      */
     public void setContentEntries(@jakarta.annotation.Nullable final java.util.List<ProcessContentMetadataBase> value) {
@@ -217,7 +217,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the protectedAppMetadata property value. Metadata about the protected application making the request. Required.
+     * Sets the protectedAppMetadata property value. Metadata about the protected application. For an agent request, applicationLocation must be a policyLocationAgent. Required for agent requests; otherwise optional.
      * @param value Value to set for the protectedAppMetadata property.
      */
     public void setProtectedAppMetadata(@jakarta.annotation.Nullable final ProtectedApplicationMetadata value) {

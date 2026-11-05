@@ -25,7 +25,7 @@ public class MigrationsRoot extends Entity implements Parsable {
         return new MigrationsRoot();
     }
     /**
-     * Gets the crossTenantMigrationJobs property value. Migration Jobs associated with this tenant.
+     * Gets the crossTenantMigrationJobs property value. Migration jobs associated with this tenant.
      * @return a {@link java.util.List<CrossTenantMigrationJob>}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class MigrationsRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("crossTenantMigrationJobs", this.getCrossTenantMigrationJobs());
     }
     /**
-     * Sets the crossTenantMigrationJobs property value. Migration Jobs associated with this tenant.
+     * Sets the crossTenantMigrationJobs property value. Migration jobs associated with this tenant.
      * @param value Value to set for the crossTenantMigrationJobs property.
      */
     public void setCrossTenantMigrationJobs(@jakarta.annotation.Nullable final java.util.List<CrossTenantMigrationJob> value) {

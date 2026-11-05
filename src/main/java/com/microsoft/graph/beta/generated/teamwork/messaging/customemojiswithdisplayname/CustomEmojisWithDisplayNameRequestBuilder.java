@@ -39,16 +39,18 @@ public class CustomEmojisWithDisplayNameRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/teamwork/messaging/customEmojis(displayName='{displayName}'){?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property customEmojis for teamwork
+     * Delete a custom emoji by display name from the teamwork messaging of the organization.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworkcustomemoji-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property customEmojis for teamwork
+     * Delete a custom emoji by display name from the teamwork messaging of the organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworkcustomemoji-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,19 +59,21 @@ public class CustomEmojisWithDisplayNameRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The collection of custom emojis available in organization messaging.
+     * Get a single custom emoji or the raw image content of a custom emoji by display name from the teamwork messaging of the organization.
      * @return a {@link TeamworkCustomEmoji}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworkcustomemoji-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamworkCustomEmoji get() {
         return get(null);
     }
     /**
-     * The collection of custom emojis available in organization messaging.
+     * Get a single custom emoji or the raw image content of a custom emoji by display name from the teamwork messaging of the organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamworkCustomEmoji}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworkcustomemoji-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamworkCustomEmoji get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,7 +108,7 @@ public class CustomEmojisWithDisplayNameRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, TeamworkCustomEmoji::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property customEmojis for teamwork
+     * Delete a custom emoji by display name from the teamwork messaging of the organization.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +116,7 @@ public class CustomEmojisWithDisplayNameRequestBuilder extends BaseRequestBuilde
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property customEmojis for teamwork
+     * Delete a custom emoji by display name from the teamwork messaging of the organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -124,7 +128,7 @@ public class CustomEmojisWithDisplayNameRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * The collection of custom emojis available in organization messaging.
+     * Get a single custom emoji or the raw image content of a custom emoji by display name from the teamwork messaging of the organization.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +136,7 @@ public class CustomEmojisWithDisplayNameRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of custom emojis available in organization messaging.
+     * Get a single custom emoji or the raw image content of a custom emoji by display name from the teamwork messaging of the organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -184,7 +188,7 @@ public class CustomEmojisWithDisplayNameRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of custom emojis available in organization messaging.
+     * Get a single custom emoji or the raw image content of a custom emoji by display name from the teamwork messaging of the organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

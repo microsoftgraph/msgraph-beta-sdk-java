@@ -47,7 +47,10 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the cancelPrintJob method.
      * @return a {@link CancelPrintJobRequestBuilder}
+     * @deprecated
+     * The cancelPrintJob API is deprecated and will stop returning data on July 31, 2023. Please use the cancel API instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CancelPrintJobRequestBuilder cancelPrintJob() {
         return new CancelPrintJobRequestBuilder(pathParameters, requestAdapter);
@@ -79,7 +82,10 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the startPrintJob method.
      * @return a {@link StartPrintJobRequestBuilder}
+     * @deprecated
+     * The startPrintJob API is deprecated and will stop returning data on July 31, 2023. Please use the start API instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public StartPrintJobRequestBuilder startPrintJob() {
         return new StartPrintJobRequestBuilder(pathParameters, requestAdapter);

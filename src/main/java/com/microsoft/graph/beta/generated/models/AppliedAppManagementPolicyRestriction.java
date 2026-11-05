@@ -98,7 +98,7 @@ public class AppliedAppManagementPolicyRestriction implements AdditionalDataHold
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the policyId property value. The policyId property
+     * Gets the policyId property value. The unique identifier of the policy that contains the restriction.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class AppliedAppManagementPolicyRestriction implements AdditionalDataHold
         return this.backingStore.get("restrictionState");
     }
     /**
-     * Gets the restrictionType property value. The restrictionType property
+     * Gets the restrictionType property value. The type of restriction applied to the activity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -199,7 +199,7 @@ public class AppliedAppManagementPolicyRestriction implements AdditionalDataHold
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the policyId property value. The policyId property
+     * Sets the policyId property value. The unique identifier of the policy that contains the restriction.
      * @param value Value to set for the policyId property.
      */
     public void setPolicyId(@jakarta.annotation.Nullable final String value) {
@@ -234,7 +234,7 @@ public class AppliedAppManagementPolicyRestriction implements AdditionalDataHold
         this.backingStore.set("restrictionState", value);
     }
     /**
-     * Sets the restrictionType property value. The restrictionType property
+     * Sets the restrictionType property value. The type of restriction applied to the activity.
      * @param value Value to set for the restrictionType property.
      */
     public void setRestrictionType(@jakarta.annotation.Nullable final String value) {

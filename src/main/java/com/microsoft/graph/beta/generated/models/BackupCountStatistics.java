@@ -141,7 +141,7 @@ public class BackupCountStatistics implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("total");
     }
     /**
-     * Gets the unprotectedCompleted property value. The count of artifacts that are no longer actively protected. These artifacts have historical restore points, but no new backups are being taken.
+     * Gets the unprotectedCompleted property value. The count of artifacts that are no longer actively protected. These artifacts have historical restore points, but no new backups are taken.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -255,7 +255,7 @@ public class BackupCountStatistics implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("total", value);
     }
     /**
-     * Sets the unprotectedCompleted property value. The count of artifacts that are no longer actively protected. These artifacts have historical restore points, but no new backups are being taken.
+     * Sets the unprotectedCompleted property value. The count of artifacts that are no longer actively protected. These artifacts have historical restore points, but no new backups are taken.
      * @param value Value to set for the unprotectedCompleted property.
      */
     public void setUnprotectedCompleted(@jakarta.annotation.Nullable final Integer value) {

@@ -11,7 +11,8 @@ public enum AuthenticationEventType implements ValuedEnum {
     AttributeCollectionStart("attributeCollectionStart"),
     AttributeCollectionSubmit("attributeCollectionSubmit"),
     EmailOtpSend("emailOtpSend"),
-    PasswordSubmit("passwordSubmit");
+    PasswordSubmit("passwordSubmit"),
+    PasswordUpdate("passwordUpdate");
     public final String value;
     AuthenticationEventType(final String value) {
         this.value = value;
@@ -29,6 +30,7 @@ public enum AuthenticationEventType implements ValuedEnum {
             case "attributeCollectionSubmit": return AttributeCollectionSubmit;
             case "emailOtpSend": return EmailOtpSend;
             case "passwordSubmit": return PasswordSubmit;
+            case "passwordUpdate": return PasswordUpdate;
             default: return null;
         }
     }

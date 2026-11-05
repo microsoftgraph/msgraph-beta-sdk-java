@@ -63,8 +63,9 @@ public class RuleSchedule implements AdditionalDataHolder, BackedModel, Parsable
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("frequency", (n) -> { this.setFrequency(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("lookback", (n) -> { this.setLookback(n.getPeriodAndDurationValue()); });
         deserializerMap.put("nextRunDateTime", (n) -> { this.setNextRunDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("period", (n) -> { this.setPeriod(n.getStringValue()); });
@@ -77,6 +78,14 @@ public class RuleSchedule implements AdditionalDataHolder, BackedModel, Parsable
     @jakarta.annotation.Nullable
     public PeriodAndDuration getFrequency() {
         return this.backingStore.get("frequency");
+    }
+    /**
+     * Gets the lookback property value. The lookback property
+     * @return a {@link PeriodAndDuration}
+     */
+    @jakarta.annotation.Nullable
+    public PeriodAndDuration getLookback() {
+        return this.backingStore.get("lookback");
     }
     /**
      * Gets the nextRunDateTime property value. Timestamp of the custom detection rule&apos;s next scheduled run. Deprecated. This property will be removed from this resource on 2026-10-01.
@@ -109,6 +118,7 @@ public class RuleSchedule implements AdditionalDataHolder, BackedModel, Parsable
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writePeriodAndDurationValue("frequency", this.getFrequency());
+        writer.writePeriodAndDurationValue("lookback", this.getLookback());
         writer.writeOffsetDateTimeValue("nextRunDateTime", this.getNextRunDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("period", this.getPeriod());
@@ -135,6 +145,13 @@ public class RuleSchedule implements AdditionalDataHolder, BackedModel, Parsable
      */
     public void setFrequency(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.backingStore.set("frequency", value);
+    }
+    /**
+     * Sets the lookback property value. The lookback property
+     * @param value Value to set for the lookback property.
+     */
+    public void setLookback(@jakarta.annotation.Nullable final PeriodAndDuration value) {
+        this.backingStore.set("lookback", value);
     }
     /**
      * Sets the nextRunDateTime property value. Timestamp of the custom detection rule&apos;s next scheduled run. Deprecated. This property will be removed from this resource on 2026-10-01.

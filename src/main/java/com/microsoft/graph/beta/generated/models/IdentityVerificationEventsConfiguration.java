@@ -67,7 +67,7 @@ public class IdentityVerificationEventsConfiguration implements AdditionalDataHo
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Indicates whether identity verification events and credential provenance information are collected and exposed for Verified ID verification across the tenant. The default value is false when this property is omitted from the configuration object.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class IdentityVerificationEventsConfiguration implements AdditionalDataHo
         this.backingStore = value;
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Indicates whether identity verification events and credential provenance information are collected and exposed for Verified ID verification across the tenant. The default value is false when this property is omitted from the configuration object.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {

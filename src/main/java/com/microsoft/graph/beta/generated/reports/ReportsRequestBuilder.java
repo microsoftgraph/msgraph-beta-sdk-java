@@ -50,6 +50,7 @@ import com.microsoft.graph.beta.reports.getmailboxusagestoragewithperiod.GetMail
 import com.microsoft.graph.beta.reports.getmicrosoft365copilotusageuserdetailwithperiodversionversion.GetMicrosoft365CopilotUsageUserDetailWithPeriodversionVersionRequestBuilder;
 import com.microsoft.graph.beta.reports.getmicrosoft365copilotusercountsummarywithperiodversionversion.GetMicrosoft365CopilotUserCountSummaryWithPeriodversionVersionRequestBuilder;
 import com.microsoft.graph.beta.reports.getmicrosoft365copilotusercounttrendwithperiodversionversion.GetMicrosoft365CopilotUserCountTrendWithPeriodversionVersionRequestBuilder;
+import com.microsoft.graph.beta.reports.getmicrosoft365emissions.GetMicrosoft365EmissionsRequestBuilder;
 import com.microsoft.graph.beta.reports.getoffice365activationcounts.GetOffice365ActivationCountsRequestBuilder;
 import com.microsoft.graph.beta.reports.getoffice365activationsusercounts.GetOffice365ActivationsUserCountsRequestBuilder;
 import com.microsoft.graph.beta.reports.getoffice365activationsuserdetail.GetOffice365ActivationsUserDetailRequestBuilder;
@@ -223,7 +224,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the credentialUserRegistrationDetails property of the microsoft.graph.reportRoot entity.
      * @return a {@link CredentialUserRegistrationDetailsRequestBuilder}
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CredentialUserRegistrationDetailsRequestBuilder credentialUserRegistrationDetails() {
         return new CredentialUserRegistrationDetailsRequestBuilder(pathParameters, requestAdapter);
@@ -255,7 +259,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the dailyPrintUsageSummariesByPrinter property of the microsoft.graph.reportRoot entity.
      * @return a {@link DailyPrintUsageSummariesByPrinterRequestBuilder}
+     * @deprecated
+     * The dailyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the dailyPrintUsageByPrinter navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DailyPrintUsageSummariesByPrinterRequestBuilder dailyPrintUsageSummariesByPrinter() {
         return new DailyPrintUsageSummariesByPrinterRequestBuilder(pathParameters, requestAdapter);
@@ -263,7 +270,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the dailyPrintUsageSummariesByUser property of the microsoft.graph.reportRoot entity.
      * @return a {@link DailyPrintUsageSummariesByUserRequestBuilder}
+     * @deprecated
+     * The dailyPrintUsageSummariesByUser navigation property is deprecated and will stop returning data on July 31, 2023. Please use the dailyPrintUsage navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DailyPrintUsageSummariesByUserRequestBuilder dailyPrintUsageSummariesByUser() {
         return new DailyPrintUsageSummariesByUserRequestBuilder(pathParameters, requestAdapter);
@@ -295,7 +305,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getAttackSimulationRepeatOffenders method.
      * @return a {@link GetAttackSimulationRepeatOffendersRequestBuilder}
+     * @deprecated
+     * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans on 2022-05-24 and will be removed 2022-08-20
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetAttackSimulationRepeatOffendersRequestBuilder getAttackSimulationRepeatOffenders() {
         return new GetAttackSimulationRepeatOffendersRequestBuilder(pathParameters, requestAdapter);
@@ -303,7 +316,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getAttackSimulationSimulationUserCoverage method.
      * @return a {@link GetAttackSimulationSimulationUserCoverageRequestBuilder}
+     * @deprecated
+     * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans on 2022-05-24 and will be removed 2022-08-20
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetAttackSimulationSimulationUserCoverageRequestBuilder getAttackSimulationSimulationUserCoverage() {
         return new GetAttackSimulationSimulationUserCoverageRequestBuilder(pathParameters, requestAdapter);
@@ -311,7 +327,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getAttackSimulationTrainingUserCoverage method.
      * @return a {@link GetAttackSimulationTrainingUserCoverageRequestBuilder}
+     * @deprecated
+     * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans on 2022-05-24 and will be removed 2022-08-20
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetAttackSimulationTrainingUserCoverageRequestBuilder getAttackSimulationTrainingUserCoverage() {
         return new GetAttackSimulationTrainingUserCoverageRequestBuilder(pathParameters, requestAdapter);
@@ -323,6 +342,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetCredentialUserRegistrationCountRequestBuilder getCredentialUserRegistrationCount() {
         return new GetCredentialUserRegistrationCountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getMicrosoft365Emissions method.
+     * @return a {@link GetMicrosoft365EmissionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetMicrosoft365EmissionsRequestBuilder getMicrosoft365Emissions() {
+        return new GetMicrosoft365EmissionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getOffice365ActivationCounts method.
@@ -415,7 +442,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the monthlyPrintUsageSummariesByPrinter property of the microsoft.graph.reportRoot entity.
      * @return a {@link MonthlyPrintUsageSummariesByPrinterRequestBuilder}
+     * @deprecated
+     * The monthlyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByPrinter navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MonthlyPrintUsageSummariesByPrinterRequestBuilder monthlyPrintUsageSummariesByPrinter() {
         return new MonthlyPrintUsageSummariesByPrinterRequestBuilder(pathParameters, requestAdapter);
@@ -423,7 +453,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the monthlyPrintUsageSummariesByUser property of the microsoft.graph.reportRoot entity.
      * @return a {@link MonthlyPrintUsageSummariesByUserRequestBuilder}
+     * @deprecated
+     * The monthlyPrintUsageSummariesByUser navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByUser navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MonthlyPrintUsageSummariesByUserRequestBuilder monthlyPrintUsageSummariesByUser() {
         return new MonthlyPrintUsageSummariesByUserRequestBuilder(pathParameters, requestAdapter);
@@ -471,7 +504,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the userCredentialUsageDetails property of the microsoft.graph.reportRoot entity.
      * @return a {@link UserCredentialUsageDetailsRequestBuilder}
+     * @deprecated
+     * The Reporting userCredentialUsageDetails API is deprecated and will stop returning data on June 30, 2025. Please use the new userEventsSummary API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public UserCredentialUsageDetailsRequestBuilder userCredentialUsageDetails() {
         return new UserCredentialUsageDetailsRequestBuilder(pathParameters, requestAdapter);

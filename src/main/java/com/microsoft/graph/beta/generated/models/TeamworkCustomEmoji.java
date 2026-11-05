@@ -8,12 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TeamworkCustomEmoji extends Entity implements Parsable {
+public class TeamworkCustomEmoji extends TeamworkHostedContent implements Parsable {
     /**
      * Instantiates a new {@link TeamworkCustomEmoji} and sets the default values.
      */
     public TeamworkCustomEmoji() {
         super();
+        this.setOdataType("#microsoft.graph.teamworkCustomEmoji");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -24,14 +25,6 @@ public class TeamworkCustomEmoji extends Entity implements Parsable {
     public static TeamworkCustomEmoji createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeamworkCustomEmoji();
-    }
-    /**
-     * Gets the contentBytes property value. The base64-encoded image content of the emoji. Supported formats include PNG and GIF.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getContentBytes() {
-        return this.backingStore.get("contentBytes");
     }
     /**
      * Gets the createdBy property value. The createdBy property
@@ -50,7 +43,7 @@ public class TeamworkCustomEmoji extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the displayName property value. The unique display name of the custom emoji. Key. Must be unique and must not conflict with existing emoji names.
+     * Gets the displayName property value. The unique display name of the custom emoji. This property is an alternate key and must not conflict with existing emoji names.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +57,6 @@ public class TeamworkCustomEmoji extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("contentBytes", (n) -> { this.setContentBytes(n.getStringValue()); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(CustomEmojiFromIdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -77,17 +69,9 @@ public class TeamworkCustomEmoji extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("contentBytes", this.getContentBytes());
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("displayName", this.getDisplayName());
-    }
-    /**
-     * Sets the contentBytes property value. The base64-encoded image content of the emoji. Supported formats include PNG and GIF.
-     * @param value Value to set for the contentBytes property.
-     */
-    public void setContentBytes(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("contentBytes", value);
     }
     /**
      * Sets the createdBy property value. The createdBy property
@@ -104,7 +88,7 @@ public class TeamworkCustomEmoji extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the displayName property value. The unique display name of the custom emoji. Key. Must be unique and must not conflict with existing emoji names.
+     * Sets the displayName property value. The unique display name of the custom emoji. This property is an alternate key and must not conflict with existing emoji names.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

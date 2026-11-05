@@ -28,7 +28,10 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the acquireAccessToken method.
      * @return a {@link AcquireAccessTokenRequestBuilder}
+     * @deprecated
+     * This action acquires an access token via Oauth Code Grant Flow. Code Grant will be completely deprecated so this action will be obsolete. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AcquireAccessTokenRequestBuilder acquireAccessToken() {
         return new AcquireAccessTokenRequestBuilder(pathParameters, requestAdapter);
@@ -52,7 +55,10 @@ public class SynchronizationRequestBuilder extends BaseRequestBuilder {
     /**
      * The secrets property
      * @return a {@link SecretsRequestBuilder}
+     * @deprecated
+     * Use connectivityParameters for oauth flows and scim endpoint connectivity. Use SynchronizationJobSettings for job-specific settings This property will be removed. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SecretsRequestBuilder secrets() {
         return new SecretsRequestBuilder(pathParameters, requestAdapter);

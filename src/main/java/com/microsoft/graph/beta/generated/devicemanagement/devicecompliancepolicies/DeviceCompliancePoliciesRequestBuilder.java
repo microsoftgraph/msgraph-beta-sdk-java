@@ -64,7 +64,10 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the refreshDeviceComplianceReportSummarization method.
      * @return a {@link RefreshDeviceComplianceReportSummarizationRequestBuilder}
+     * @deprecated
+     * This action is deprecated and will be removed on July 7, 2026. This API is obsolete and should be removed from client code; no replacement is needed as the current reporting architecture continuously aggregates compliance data. as of 2026-04/Rv1MigrationDeprecation on 2026-04-03 and will be removed 2026-07-07
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RefreshDeviceComplianceReportSummarizationRequestBuilder refreshDeviceComplianceReportSummarization() {
         return new RefreshDeviceComplianceReportSummarizationRequestBuilder(pathParameters, requestAdapter);

@@ -49,7 +49,10 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the decryptBuffer method.
      * @return a {@link DecryptBufferRequestBuilder}
+     * @deprecated
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DecryptBufferRequestBuilder decryptBuffer() {
         return new DecryptBufferRequestBuilder(pathParameters, requestAdapter);
@@ -57,7 +60,10 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the encryptBuffer method.
      * @return a {@link EncryptBufferRequestBuilder}
+     * @deprecated
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public EncryptBufferRequestBuilder encryptBuffer() {
         return new EncryptBufferRequestBuilder(pathParameters, requestAdapter);
@@ -65,7 +71,10 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the policy property of the microsoft.graph.informationProtection entity.
      * @return a {@link PolicyRequestBuilder}
+     * @deprecated
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PolicyRequestBuilder policy() {
         return new PolicyRequestBuilder(pathParameters, requestAdapter);
@@ -89,7 +98,10 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the signDigest method.
      * @return a {@link SignDigestRequestBuilder}
+     * @deprecated
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SignDigestRequestBuilder signDigest() {
         return new SignDigestRequestBuilder(pathParameters, requestAdapter);
@@ -105,7 +117,10 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the verifySignature method.
      * @return a {@link VerifySignatureRequestBuilder}
+     * @deprecated
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public VerifySignatureRequestBuilder verifySignature() {
         return new VerifySignatureRequestBuilder(pathParameters, requestAdapter);

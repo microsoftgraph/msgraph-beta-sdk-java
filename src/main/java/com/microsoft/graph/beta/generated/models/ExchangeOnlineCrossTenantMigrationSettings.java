@@ -76,7 +76,7 @@ public class ExchangeOnlineCrossTenantMigrationSettings implements AdditionalDat
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sourceEndpoint property value. Name of the Migration Endpoint in the source tenant
+     * Gets the sourceEndpoint property value. Name of the migration endpoint in the source tenant.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class ExchangeOnlineCrossTenantMigrationSettings implements AdditionalDat
         return this.backingStore.get("sourceEndpoint");
     }
     /**
-     * Gets the targetDeliveryDomain property value. Delivery domain on the target tenant
+     * Gets the targetDeliveryDomain property value. Delivery domain on the target tenant.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -125,14 +125,14 @@ public class ExchangeOnlineCrossTenantMigrationSettings implements AdditionalDat
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sourceEndpoint property value. Name of the Migration Endpoint in the source tenant
+     * Sets the sourceEndpoint property value. Name of the migration endpoint in the source tenant.
      * @param value Value to set for the sourceEndpoint property.
      */
     public void setSourceEndpoint(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("sourceEndpoint", value);
     }
     /**
-     * Sets the targetDeliveryDomain property value. Delivery domain on the target tenant
+     * Sets the targetDeliveryDomain property value. Delivery domain on the target tenant.
      * @param value Value to set for the targetDeliveryDomain property.
      */
     public void setTargetDeliveryDomain(@jakarta.annotation.Nullable final String value) {

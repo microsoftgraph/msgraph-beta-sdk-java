@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.applications.item.synchronization.jobs.item;
 
 import com.microsoft.graph.beta.applications.item.synchronization.jobs.item.bulkupload.BulkUploadRequestBuilder;
+import com.microsoft.graph.beta.applications.item.synchronization.jobs.item.objectconnections.ObjectConnectionsRequestBuilder;
 import com.microsoft.graph.beta.applications.item.synchronization.jobs.item.pause.PauseRequestBuilder;
 import com.microsoft.graph.beta.applications.item.synchronization.jobs.item.provisionondemand.ProvisionOnDemandRequestBuilder;
 import com.microsoft.graph.beta.applications.item.synchronization.jobs.item.restart.RestartRequestBuilder;
@@ -34,6 +35,14 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public BulkUploadRequestBuilder bulkUpload() {
         return new BulkUploadRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the objectConnections property of the microsoft.graph.synchronizationJob entity.
+     * @return a {@link ObjectConnectionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ObjectConnectionsRequestBuilder objectConnections() {
+        return new ObjectConnectionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the pause method.
@@ -78,7 +87,10 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the validateCredentials method.
      * @return a {@link ValidateCredentialsRequestBuilder}
+     * @deprecated
+     * Use validateConnectivity instead. This action will be removed. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ValidateCredentialsRequestBuilder validateCredentials() {
         return new ValidateCredentialsRequestBuilder(pathParameters, requestAdapter);

@@ -84,7 +84,7 @@ public class ActivityMetadata implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the participants property value. The participants property
+     * Gets the participants property value. The other parties in an agent interaction. Specify the concrete participant type by using the @odata.type property. Required when evaluationScope.type is agent; otherwise optional.
      * @return a {@link java.util.List<InteractionParticipant>}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class ActivityMetadata implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the participants property value. The participants property
+     * Sets the participants property value. The other parties in an agent interaction. Specify the concrete participant type by using the @odata.type property. Required when evaluationScope.type is agent; otherwise optional.
      * @param value Value to set for the participants property.
      */
     public void setParticipants(@jakarta.annotation.Nullable final java.util.List<InteractionParticipant> value) {

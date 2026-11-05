@@ -24,7 +24,10 @@ public class ComplianceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the ediscovery property of the microsoft.graph.compliance entity.
      * @return a {@link EdiscoveryRequestBuilder}
+     * @deprecated
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public EdiscoveryRequestBuilder ediscovery() {
         return new EdiscoveryRequestBuilder(pathParameters, requestAdapter);

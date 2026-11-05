@@ -53,7 +53,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accessPackageAssignmentPolicies property of the microsoft.graph.entitlementManagement entity.
      * @return a {@link AccessPackageAssignmentPoliciesRequestBuilder}
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AccessPackageAssignmentPoliciesRequestBuilder accessPackageAssignmentPolicies() {
         return new AccessPackageAssignmentPoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -61,7 +64,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accessPackageAssignmentRequests property of the microsoft.graph.entitlementManagement entity.
      * @return a {@link AccessPackageAssignmentRequestsRequestBuilder}
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AccessPackageAssignmentRequestsRequestBuilder accessPackageAssignmentRequests() {
         return new AccessPackageAssignmentRequestsRequestBuilder(pathParameters, requestAdapter);
@@ -85,7 +91,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accessPackageCatalogs property of the microsoft.graph.entitlementManagement entity.
      * @return a {@link AccessPackageCatalogsRequestBuilder}
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AccessPackageCatalogsRequestBuilder accessPackageCatalogs() {
         return new AccessPackageCatalogsRequestBuilder(pathParameters, requestAdapter);
@@ -141,7 +150,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the assignmentRequests property of the microsoft.graph.entitlementManagement entity.
      * @return a {@link AssignmentRequestsRequestBuilder}
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AssignmentRequestsRequestBuilder assignmentRequests() {
         return new AssignmentRequestsRequestBuilder(pathParameters, requestAdapter);
@@ -165,7 +177,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the controlConfigurations property of the microsoft.graph.entitlementManagement entity.
      * @return a {@link ControlConfigurationsRequestBuilder}
+     * @deprecated
+     * Controls configurations preview. as of PrivatePreview:ControlConfigurations on 2024-09-27 and will be removed 2025-09-27
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ControlConfigurationsRequestBuilder controlConfigurations() {
         return new ControlConfigurationsRequestBuilder(pathParameters, requestAdapter);

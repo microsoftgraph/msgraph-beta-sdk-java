@@ -48,7 +48,7 @@ public class AgentMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return value;
     }
     /**
-     * Gets the agentAdministrativeUnitId property value. The agentAdministrativeUnitId property
+     * Gets the agentAdministrativeUnitId property value. The identifier of the administrative unit associated with the agent. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class AgentMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("agentAdministrativeUnitId");
     }
     /**
-     * Gets the agentBlueprintId property value. The agentBlueprintId property
+     * Gets the agentBlueprintId property value. The identifier of the blueprint from which the agent was created. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class AgentMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("agentBlueprintId");
     }
     /**
-     * Gets the agentCategory property value. The agentCategory property
+     * Gets the agentCategory property value. The category of the agent, for example, Agents.Foundry.MicrosoftAzure, Agents.Copilot.Studio, or Agents.Local. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class AgentMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("agentCategory");
     }
     /**
-     * Gets the agentOwner property value. The agentOwner property
+     * Gets the agentOwner property value. The owner associated with the agent. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class AgentMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("agentOwner");
     }
     /**
-     * Gets the agentPublisher property value. The agentPublisher property
+     * Gets the agentPublisher property value. The publisher associated with the agent. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class AgentMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("agentPublisher");
     }
     /**
-     * Gets the altAgentIds property value. The altAgentIds property
+     * Gets the altAgentIds property value. Alternate identifiers that can identify the agent. Required when agentMetadata is provided. Use an empty collection ([]) when the agent has no alternate identifiers.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class AgentMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the isEntraAgentId property value. The isEntraAgentId property
+     * Gets the isEntraAgentId property value. Indicates whether the value property of the associated policyLocationAgent is a Microsoft Entra agent ID. Required when agentMetadata is provided.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -160,42 +160,42 @@ public class AgentMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the agentAdministrativeUnitId property value. The agentAdministrativeUnitId property
+     * Sets the agentAdministrativeUnitId property value. The identifier of the administrative unit associated with the agent. Optional.
      * @param value Value to set for the agentAdministrativeUnitId property.
      */
     public void setAgentAdministrativeUnitId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("agentAdministrativeUnitId", value);
     }
     /**
-     * Sets the agentBlueprintId property value. The agentBlueprintId property
+     * Sets the agentBlueprintId property value. The identifier of the blueprint from which the agent was created. Optional.
      * @param value Value to set for the agentBlueprintId property.
      */
     public void setAgentBlueprintId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("agentBlueprintId", value);
     }
     /**
-     * Sets the agentCategory property value. The agentCategory property
+     * Sets the agentCategory property value. The category of the agent, for example, Agents.Foundry.MicrosoftAzure, Agents.Copilot.Studio, or Agents.Local. Optional.
      * @param value Value to set for the agentCategory property.
      */
     public void setAgentCategory(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("agentCategory", value);
     }
     /**
-     * Sets the agentOwner property value. The agentOwner property
+     * Sets the agentOwner property value. The owner associated with the agent. Optional.
      * @param value Value to set for the agentOwner property.
      */
     public void setAgentOwner(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("agentOwner", value);
     }
     /**
-     * Sets the agentPublisher property value. The agentPublisher property
+     * Sets the agentPublisher property value. The publisher associated with the agent. Optional.
      * @param value Value to set for the agentPublisher property.
      */
     public void setAgentPublisher(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("agentPublisher", value);
     }
     /**
-     * Sets the altAgentIds property value. The altAgentIds property
+     * Sets the altAgentIds property value. Alternate identifiers that can identify the agent. Required when agentMetadata is provided. Use an empty collection ([]) when the agent has no alternate identifiers.
      * @param value Value to set for the altAgentIds property.
      */
     public void setAltAgentIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -210,7 +210,7 @@ public class AgentMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore = value;
     }
     /**
-     * Sets the isEntraAgentId property value. The isEntraAgentId property
+     * Sets the isEntraAgentId property value. Indicates whether the value property of the associated policyLocationAgent is a Microsoft Entra agent ID. Required when agentMetadata is provided.
      * @param value Value to set for the isEntraAgentId property.
      */
     public void setIsEntraAgentId(@jakarta.annotation.Nullable final Boolean value) {
