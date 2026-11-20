@@ -15,7 +15,9 @@ public enum AlertType implements ValuedEnum {
     InternetAppBlockedByPolicy("internetAppBlockedByPolicy"),
     PrivateAppBlockedByConnector("privateAppBlockedByConnector"),
     RemoteNetworkTunnelConnectivity("remoteNetworkTunnelConnectivity"),
-    RemoteNetworkBgpConnectivity("remoteNetworkBgpConnectivity");
+    RemoteNetworkBgpConnectivity("remoteNetworkBgpConnectivity"),
+    AgentIdAutonomousSignInFailure("agentIdAutonomousSignInFailure"),
+    AgentIdInteractiveSignInFailure("agentIdInteractiveSignInFailure");
     public final String value;
     AlertType(final String value) {
         this.value = value;
@@ -37,6 +39,8 @@ public enum AlertType implements ValuedEnum {
             case "privateAppBlockedByConnector": return PrivateAppBlockedByConnector;
             case "remoteNetworkTunnelConnectivity": return RemoteNetworkTunnelConnectivity;
             case "remoteNetworkBgpConnectivity": return RemoteNetworkBgpConnectivity;
+            case "agentIdAutonomousSignInFailure": return AgentIdAutonomousSignInFailure;
+            case "agentIdInteractiveSignInFailure": return AgentIdInteractiveSignInFailure;
             default: return null;
         }
     }

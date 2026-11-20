@@ -188,11 +188,14 @@ public class Application extends DirectoryObject implements Parsable {
         deserializerMap.put("federatedIdentityCredentials", (n) -> { this.setFederatedIdentityCredentials(n.getCollectionOfObjectValues(FederatedIdentityCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("groupMembershipClaims", (n) -> { this.setGroupMembershipClaims(n.getStringValue()); });
         deserializerMap.put("homeRealmDiscoveryPolicies", (n) -> { this.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("identifierUriConfiguration", (n) -> { this.setIdentifierUriConfiguration(n.getObjectValue(ApplicationIdentifierUriConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("identifierUris", (n) -> { this.setIdentifierUris(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("idJag", (n) -> { this.setIdJag(n.getObjectValue(IdJagApplicationConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("info", (n) -> { this.setInfo(n.getObjectValue(InformationalUrl::createFromDiscriminatorValue)); });
         deserializerMap.put("isDeviceOnlyAuthSupported", (n) -> { this.setIsDeviceOnlyAuthSupported(n.getBooleanValue()); });
         deserializerMap.put("isDisabled", (n) -> { this.setIsDisabled(n.getBooleanValue()); });
         deserializerMap.put("isFallbackPublicClient", (n) -> { this.setIsFallbackPublicClient(n.getBooleanValue()); });
+        deserializerMap.put("isHardDeleteProtectionEnabled", (n) -> { this.setIsHardDeleteProtectionEnabled(n.getBooleanValue()); });
         deserializerMap.put("keyCredentials", (n) -> { this.setKeyCredentials(n.getCollectionOfObjectValues(KeyCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("logo", (n) -> { this.setLogo(n.getByteArrayValue()); });
         deserializerMap.put("managerApplications", (n) -> { this.setManagerApplications(n.getCollectionOfPrimitiveValues(UUID.class)); });
@@ -241,12 +244,28 @@ public class Application extends DirectoryObject implements Parsable {
         return this.backingStore.get("homeRealmDiscoveryPolicies");
     }
     /**
+     * Gets the identifierUriConfiguration property value. The identifierUriConfiguration property
+     * @return a {@link ApplicationIdentifierUriConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public ApplicationIdentifierUriConfiguration getIdentifierUriConfiguration() {
+        return this.backingStore.get("identifierUriConfiguration");
+    }
+    /**
      * Gets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you reference in your API&apos;s code, and it must be globally unique across Microsoft Entra ID. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIdentifierUris() {
         return this.backingStore.get("identifierUris");
+    }
+    /**
+     * Gets the idJag property value. The idJag property
+     * @return a {@link IdJagApplicationConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public IdJagApplicationConfiguration getIdJag() {
+        return this.backingStore.get("idJag");
     }
     /**
      * Gets the info property value. Basic profile information of the application, such as it&apos;s marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
@@ -279,6 +298,14 @@ public class Application extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsFallbackPublicClient() {
         return this.backingStore.get("isFallbackPublicClient");
+    }
+    /**
+     * Gets the isHardDeleteProtectionEnabled property value. Indicates whether hard deletion protection is enabled for the application. When true, permanent deletion is blocked for seven days after soft deletion. The application can still be soft deleted and restored. Once enabled, protection can&apos;t be disabled or set to null. Enable protection on an existing application by using Update application; enabling it during creation isn&apos;t supported. Setting this property to true requires the Microsoft Entra Backup Administrator role. Nullable. Requires $select to retrieve. Supports $filter (eq).
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsHardDeleteProtectionEnabled() {
+        return this.backingStore.get("isHardDeleteProtectionEnabled");
     }
     /**
      * Gets the keyCredentials property value. The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le).
@@ -537,11 +564,14 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("federatedIdentityCredentials", this.getFederatedIdentityCredentials());
         writer.writeStringValue("groupMembershipClaims", this.getGroupMembershipClaims());
         writer.writeCollectionOfObjectValues("homeRealmDiscoveryPolicies", this.getHomeRealmDiscoveryPolicies());
+        writer.writeObjectValue("identifierUriConfiguration", this.getIdentifierUriConfiguration());
         writer.writeCollectionOfPrimitiveValues("identifierUris", this.getIdentifierUris());
+        writer.writeObjectValue("idJag", this.getIdJag());
         writer.writeObjectValue("info", this.getInfo());
         writer.writeBooleanValue("isDeviceOnlyAuthSupported", this.getIsDeviceOnlyAuthSupported());
         writer.writeBooleanValue("isDisabled", this.getIsDisabled());
         writer.writeBooleanValue("isFallbackPublicClient", this.getIsFallbackPublicClient());
+        writer.writeBooleanValue("isHardDeleteProtectionEnabled", this.getIsHardDeleteProtectionEnabled());
         writer.writeCollectionOfObjectValues("keyCredentials", this.getKeyCredentials());
         writer.writeByteArrayValue("logo", this.getLogo());
         writer.writeCollectionOfPrimitiveValues("managerApplications", this.getManagerApplications());
@@ -699,11 +729,25 @@ public class Application extends DirectoryObject implements Parsable {
         this.backingStore.set("homeRealmDiscoveryPolicies", value);
     }
     /**
+     * Sets the identifierUriConfiguration property value. The identifierUriConfiguration property
+     * @param value Value to set for the identifierUriConfiguration property.
+     */
+    public void setIdentifierUriConfiguration(@jakarta.annotation.Nullable final ApplicationIdentifierUriConfiguration value) {
+        this.backingStore.set("identifierUriConfiguration", value);
+    }
+    /**
      * Sets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you reference in your API&apos;s code, and it must be globally unique across Microsoft Entra ID. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
      * @param value Value to set for the identifierUris property.
      */
     public void setIdentifierUris(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("identifierUris", value);
+    }
+    /**
+     * Sets the idJag property value. The idJag property
+     * @param value Value to set for the idJag property.
+     */
+    public void setIdJag(@jakarta.annotation.Nullable final IdJagApplicationConfiguration value) {
+        this.backingStore.set("idJag", value);
     }
     /**
      * Sets the info property value. Basic profile information of the application, such as it&apos;s marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
@@ -732,6 +776,13 @@ public class Application extends DirectoryObject implements Parsable {
      */
     public void setIsFallbackPublicClient(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isFallbackPublicClient", value);
+    }
+    /**
+     * Sets the isHardDeleteProtectionEnabled property value. Indicates whether hard deletion protection is enabled for the application. When true, permanent deletion is blocked for seven days after soft deletion. The application can still be soft deleted and restored. Once enabled, protection can&apos;t be disabled or set to null. Enable protection on an existing application by using Update application; enabling it during creation isn&apos;t supported. Setting this property to true requires the Microsoft Entra Backup Administrator role. Nullable. Requires $select to retrieve. Supports $filter (eq).
+     * @param value Value to set for the isHardDeleteProtectionEnabled property.
+     */
+    public void setIsHardDeleteProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isHardDeleteProtectionEnabled", value);
     }
     /**
      * Sets the keyCredentials property value. The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le).

@@ -8,7 +8,8 @@ public enum ChannelMembershipType implements ValuedEnum {
     Standard("standard"),
     Private("private"),
     UnknownFutureValue("unknownFutureValue"),
-    Shared("shared");
+    Shared("shared"),
+    UnTyped("unTyped");
     public final String value;
     ChannelMembershipType(final String value) {
         this.value = value;
@@ -23,6 +24,7 @@ public enum ChannelMembershipType implements ValuedEnum {
             case "private": return Private;
             case "unknownFutureValue": return UnknownFutureValue;
             case "shared": return Shared;
+            case "unTyped": return UnTyped;
             default: return null;
         }
     }

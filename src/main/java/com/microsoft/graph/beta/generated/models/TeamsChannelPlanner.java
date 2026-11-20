@@ -44,7 +44,7 @@ public class TeamsChannelPlanner extends Entity implements Parsable {
         return this.backingStore.get("plans");
     }
     /**
-     * Gets the plans_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 plans owned by the Teams channel. Currently, only shared channels are supported.
+     * Gets the plans_v2 property value. Read-only. Nullable. The collection of plans in the Planner Unified plans Graph API owned by the Teams channel. Currently, only shared channels are supported.
      * @return a {@link java.util.List<Plan>}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class TeamsChannelPlanner extends Entity implements Parsable {
         this.backingStore.set("plans", value);
     }
     /**
-     * Sets the plans_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 plans owned by the Teams channel. Currently, only shared channels are supported.
+     * Sets the plans_v2 property value. Read-only. Nullable. The collection of plans in the Planner Unified plans Graph API owned by the Teams channel. Currently, only shared channels are supported.
      * @param value Value to set for the plans_v2 property.
      */
     public void setPlansV2(@jakarta.annotation.Nullable final java.util.List<Plan> value) {

@@ -50,7 +50,7 @@ public class ContentLink extends PlannerDelta implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the extensions property value. Custom extension field values set on the entity. Supports $select.
+     * Gets the extensions property value. Custom extension field values set at creation. Can&apos;t be changed afterward. Supports $select.
      * @return a {@link ExtensionFieldCollection}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class ContentLink extends PlannerDelta implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the linkType property value. Type of content the link points to. The possible values are: documentReference, webReference, unknownFutureValue.
+     * Gets the linkType property value. Type of content the link points to. Required at creation and immutable afterward. The possible values are: documentReference, webReference, unknownFutureValue.
      * @return a {@link ContentLinkType}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class ContentLink extends PlannerDelta implements Parsable {
         return this.backingStore.get("linkType");
     }
     /**
-     * Gets the webUrl property value. URL the link points to.
+     * Gets the webUrl property value. URL the link points to. Required at creation and immutable afterward.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -142,7 +142,7 @@ public class ContentLink extends PlannerDelta implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the extensions property value. Custom extension field values set on the entity. Supports $select.
+     * Sets the extensions property value. Custom extension field values set at creation. Can&apos;t be changed afterward. Supports $select.
      * @param value Value to set for the extensions property.
      */
     public void setExtensions(@jakarta.annotation.Nullable final ExtensionFieldCollection value) {
@@ -163,14 +163,14 @@ public class ContentLink extends PlannerDelta implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the linkType property value. Type of content the link points to. The possible values are: documentReference, webReference, unknownFutureValue.
+     * Sets the linkType property value. Type of content the link points to. Required at creation and immutable afterward. The possible values are: documentReference, webReference, unknownFutureValue.
      * @param value Value to set for the linkType property.
      */
     public void setLinkType(@jakarta.annotation.Nullable final ContentLinkType value) {
         this.backingStore.set("linkType", value);
     }
     /**
-     * Sets the webUrl property value. URL the link points to.
+     * Sets the webUrl property value. URL the link points to. Required at creation and immutable afterward.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

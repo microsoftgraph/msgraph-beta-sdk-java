@@ -270,7 +270,7 @@ public class Organization extends DirectoryObject implements Parsable {
         return this.backingStore.get("provisionedPlans");
     }
     /**
-     * Gets the resourceQuotas property value. The resourceQuotas property
+     * Gets the resourceQuotas property value. The quota configurations for resource types in the organization. Each resourceType value must be unique in the collection. The maxPercentage value represents the maximum percentage of directorySizeQuota.total that the resource type can consume, from 0 to 100. A value of 0 blocks creation of new resources of that type.
      * @return a {@link java.util.List<ResourceQuota>}
      */
     @jakarta.annotation.Nullable
@@ -559,7 +559,7 @@ public class Organization extends DirectoryObject implements Parsable {
         this.backingStore.set("provisionedPlans", value);
     }
     /**
-     * Sets the resourceQuotas property value. The resourceQuotas property
+     * Sets the resourceQuotas property value. The quota configurations for resource types in the organization. Each resourceType value must be unique in the collection. The maxPercentage value represents the maximum percentage of directorySizeQuota.total that the resource type can consume, from 0 to 100. A value of 0 blocks creation of new resources of that type.
      * @param value Value to set for the resourceQuotas property.
      */
     public void setResourceQuotas(@jakarta.annotation.Nullable final java.util.List<ResourceQuota> value) {

@@ -60,19 +60,21 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/plans_v2/{plan%2Did}/buckets{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of buckets in the plan. Read-only. Nullable.
+     * Get a list of the bucket objects and their properties.
      * @return a {@link BucketCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plan-list-buckets?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BucketCollectionResponse get() {
         return get(null);
     }
     /**
-     * The collection of buckets in the plan. Read-only. Nullable.
+     * Get a list of the bucket objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BucketCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plan-list-buckets?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BucketCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BucketCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to buckets for planner
+     * Create a new bucket object.
      * @param body The request body
      * @return a {@link Bucket}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plan-post-buckets?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Bucket post(@jakarta.annotation.Nonnull final Bucket body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to buckets for planner
+     * Create a new bucket object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Bucket}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plan-post-buckets?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Bucket post(@jakarta.annotation.Nonnull final Bucket body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Bucket::createFromDiscriminatorValue);
     }
     /**
-     * The collection of buckets in the plan. Read-only. Nullable.
+     * Get a list of the bucket objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of buckets in the plan. Read-only. Nullable.
+     * Get a list of the bucket objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to buckets for planner
+     * Create a new bucket object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to buckets for planner
+     * Create a new bucket object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class BucketsRequestBuilder extends BaseRequestBuilder {
         return new BucketsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of buckets in the plan. Read-only. Nullable.
+     * Get a list of the bucket objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

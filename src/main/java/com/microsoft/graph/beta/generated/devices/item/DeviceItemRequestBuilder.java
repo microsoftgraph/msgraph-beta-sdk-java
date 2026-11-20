@@ -154,7 +154,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/devices/{device%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a registered device.
+     * Delete a registered device. When deleted, the device is moved to the deleted items container and is available for recovery for up to 30 days. After 30 days, the device is permanently deleted.- To learn more, see deletedItems.- For more information about soft deletion behavior for devices, see Device soft delete overview (preview).
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/device-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -162,7 +162,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Delete a registered device.
+     * Delete a registered device. When deleted, the device is moved to the deleted items container and is available for recovery for up to 30 days. After 30 days, the device is permanently deleted.- To learn more, see deletedItems.- For more information about soft deletion behavior for devices, see Device soft delete overview (preview).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/device-delete?view=graph-rest-beta">Find more info here</a>
@@ -225,7 +225,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Device::createFromDiscriminatorValue);
     }
     /**
-     * Delete a registered device.
+     * Delete a registered device. When deleted, the device is moved to the deleted items container and is available for recovery for up to 30 days. After 30 days, the device is permanently deleted.- To learn more, see deletedItems.- For more information about soft deletion behavior for devices, see Device soft delete overview (preview).
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -233,7 +233,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a registered device.
+     * Delete a registered device. When deleted, the device is moved to the deleted items container and is available for recovery for up to 30 days. After 30 days, the device is permanently deleted.- To learn more, see deletedItems.- For more information about soft deletion behavior for devices, see Device soft delete overview (preview).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

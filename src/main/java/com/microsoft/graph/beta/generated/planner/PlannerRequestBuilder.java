@@ -127,23 +127,21 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Planner::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a planner object.
+     * Update planner
      * @param body The request body
      * @return a {@link Planner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/planner-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Planner patch(@jakarta.annotation.Nonnull final Planner body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a planner object.
+     * Update planner
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Planner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/planner-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Planner patch(@jakarta.annotation.Nonnull final Planner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -174,7 +172,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a planner object.
+     * Update planner
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -183,7 +181,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a planner object.
+     * Update planner
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

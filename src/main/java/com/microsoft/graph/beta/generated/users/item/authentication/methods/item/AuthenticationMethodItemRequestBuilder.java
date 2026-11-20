@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.users.item.authentication.methods.item;
 
 import com.microsoft.graph.beta.models.AuthenticationMethod;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
+import com.microsoft.graph.beta.users.item.authentication.methods.item.attestprovenance.AttestProvenanceRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.methods.item.disablesmssignin.DisableSmsSignInRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.methods.item.enablesmssignin.EnableSmsSignInRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.methods.item.resetpassword.ResetPasswordRequestBuilder;
@@ -23,6 +24,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the attestProvenance method.
+     * @return a {@link AttestProvenanceRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AttestProvenanceRequestBuilder attestProvenance() {
+        return new AttestProvenanceRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the disableSmsSignIn method.
      * @return a {@link DisableSmsSignInRequestBuilder}

@@ -122,7 +122,7 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, ExchangeProtectionPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update an Exchange protection policy. This method adds a mailboxprotectionunit to or removes it from the protection policy.
+     * Update an Exchange protection policy. This method updates retention settings or adds a mailboxProtectionUnit to or removes it from the protection policy.
      * @param body The request body
      * @return a {@link ExchangeProtectionPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -133,7 +133,7 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
         return patch(body, null);
     }
     /**
-     * Update an Exchange protection policy. This method adds a mailboxprotectionunit to or removes it from the protection policy.
+     * Update an Exchange protection policy. This method updates retention settings or adds a mailboxProtectionUnit to or removes it from the protection policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExchangeProtectionPolicy}
@@ -189,7 +189,7 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Update an Exchange protection policy. This method adds a mailboxprotectionunit to or removes it from the protection policy.
+     * Update an Exchange protection policy. This method updates retention settings or adds a mailboxProtectionUnit to or removes it from the protection policy.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -198,7 +198,7 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an Exchange protection policy. This method adds a mailboxprotectionunit to or removes it from the protection policy.
+     * Update an Exchange protection policy. This method updates retention settings or adds a mailboxProtectionUnit to or removes it from the protection policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

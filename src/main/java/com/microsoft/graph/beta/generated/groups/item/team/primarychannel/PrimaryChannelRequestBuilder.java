@@ -15,6 +15,7 @@ import com.microsoft.graph.beta.groups.item.team.primarychannel.removeemail.Remo
 import com.microsoft.graph.beta.groups.item.team.primarychannel.sharedwithteams.SharedWithTeamsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.primarychannel.startmigration.StartMigrationRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.primarychannel.tabs.TabsRequestBuilder;
+import com.microsoft.graph.beta.groups.item.team.primarychannel.tags.TagsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.primarychannel.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.graph.beta.models.Channel;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -155,6 +156,14 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TabsRequestBuilder tabs() {
         return new TabsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tags property of the microsoft.graph.channel entity.
+     * @return a {@link TagsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TagsRequestBuilder tags() {
+        return new TagsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the unarchive method.

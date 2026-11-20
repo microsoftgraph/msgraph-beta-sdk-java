@@ -55,7 +55,7 @@ public class UserAssignmentItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The collection of user assignments on the task. Read-only. Nullable.
+     * User assignments on the task. Can be supplied when creating a task by using a deep insert. Nullable.
      * @return a {@link UserAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class UserAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The collection of user assignments on the task. Read-only. Nullable.
+     * User assignments on the task. Can be supplied when creating a task by using a deep insert. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class UserAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of user assignments on the task. Read-only. Nullable.
+     * User assignments on the task. Can be supplied when creating a task by using a deep insert. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class UserAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of user assignments on the task. Read-only. Nullable.
+     * User assignments on the task. Can be supplied when creating a task by using a deep insert. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class UserAssignmentItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of user assignments on the task. Read-only. Nullable.
+     * User assignments on the task. Can be supplied when creating a task by using a deep insert. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

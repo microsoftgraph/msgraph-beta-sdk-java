@@ -22,6 +22,13 @@ public class TeamworkTag extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public static TeamworkTag createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.teamworkChannelTag": return new TeamworkChannelTag();
+            }
+        }
         return new TeamworkTag();
     }
     /**
@@ -72,7 +79,7 @@ public class TeamworkTag extends Entity implements Parsable {
         return this.backingStore.get("members");
     }
     /**
-     * Gets the tagType property value. The type of tag. Default is standard.
+     * Gets the tagType property value. The type of tag. The possible values are: standard, unknownFutureValue. The default value is standard.
      * @return a {@link TeamworkTagType}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +137,7 @@ public class TeamworkTag extends Entity implements Parsable {
         this.backingStore.set("members", value);
     }
     /**
-     * Sets the tagType property value. The type of tag. Default is standard.
+     * Sets the tagType property value. The type of tag. The possible values are: standard, unknownFutureValue. The default value is standard.
      * @param value Value to set for the tagType property.
      */
     public void setTagType(@jakarta.annotation.Nullable final TeamworkTagType value) {

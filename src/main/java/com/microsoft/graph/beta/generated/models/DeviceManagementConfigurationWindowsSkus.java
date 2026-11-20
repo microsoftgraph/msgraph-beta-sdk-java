@@ -34,7 +34,13 @@ public enum DeviceManagementConfigurationWindowsSkus implements ValuedEnum {
     /** Indicates the Device Management Configuration Windows SKU is &apos;windowsMultiSession&apos;  */
     WindowsMultiSession("windowsMultiSession"),
     /** Indicates the Device Management Configuration Windows SKU is &apos;surfaceHub&apos;  */
-    SurfaceHub("surfaceHub");
+    SurfaceHub("surfaceHub"),
+    /** Indicates that the setting is applicable to the Windows CPC SKU family. Existing public beta member. */
+    WindowsCPC("windowsCPC"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue"),
+    /** Indicates that the setting is applicable to the Windows Server SKU family. Use the Prefer: include-unknown-enum-members request header to receive this value. */
+    WindowsServer("windowsServer");
     public final String value;
     DeviceManagementConfigurationWindowsSkus(final String value) {
         this.value = value;
@@ -60,6 +66,9 @@ public enum DeviceManagementConfigurationWindowsSkus implements ValuedEnum {
             case "holographicForBusiness": return HolographicForBusiness;
             case "windowsMultiSession": return WindowsMultiSession;
             case "surfaceHub": return SurfaceHub;
+            case "windowsCPC": return WindowsCPC;
+            case "unknownFutureValue": return UnknownFutureValue;
+            case "windowsServer": return WindowsServer;
             default: return null;
         }
     }

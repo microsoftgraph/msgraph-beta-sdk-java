@@ -25,7 +25,7 @@ public class TeamworkTagMember extends Entity implements Parsable {
         return new TeamworkTagMember();
     }
     /**
-     * Gets the displayName property value. The member&apos;s display name.
+     * Gets the displayName property value. The member&apos;s display name. For channel-owned tags, the value can be null if the user can&apos;t be resolved.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class TeamworkTagMember extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the tenantId property value. The ID of the tenant that the tag member is a part of.
+     * Gets the tenantId property value. The ID of the tenant that the tag member is a part of. For channel-owned tags, this is the request tenant, not a separately resolved home tenant.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,14 +72,14 @@ public class TeamworkTagMember extends Entity implements Parsable {
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the displayName property value. The member&apos;s display name.
+     * Sets the displayName property value. The member&apos;s display name. For channel-owned tags, the value can be null if the user can&apos;t be resolved.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the tenantId property value. The ID of the tenant that the tag member is a part of.
+     * Sets the tenantId property value. The ID of the tenant that the tag member is a part of. For channel-owned tags, this is the request tenant, not a separately resolved home tenant.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

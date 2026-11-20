@@ -59,19 +59,21 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/plans_v2/{plan%2Did}/tasks{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of tasks in the plan. Read-only. Nullable.
+     * Get a list of the task objects and their properties.
      * @return a {@link TaskCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plan-list-tasks?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TaskCollectionResponse get() {
         return get(null);
     }
     /**
-     * The collection of tasks in the plan. Read-only. Nullable.
+     * Get a list of the task objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TaskCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plan-list-tasks?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TaskCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TaskCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * The collection of tasks in the plan. Read-only. Nullable.
+     * Get a list of the task objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of tasks in the plan. Read-only. Nullable.
+     * Get a list of the task objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return new TasksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of tasks in the plan. Read-only. Nullable.
+     * Get a list of the task objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

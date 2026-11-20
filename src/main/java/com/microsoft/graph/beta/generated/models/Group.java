@@ -259,6 +259,7 @@ public class Group extends DirectoryObject implements Parsable {
         deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("isAssignableToRole", (n) -> { this.setIsAssignableToRole(n.getBooleanValue()); });
         deserializerMap.put("isFavorite", (n) -> { this.setIsFavorite(n.getBooleanValue()); });
+        deserializerMap.put("isHardDeleteProtectionEnabled", (n) -> { this.setIsHardDeleteProtectionEnabled(n.getBooleanValue()); });
         deserializerMap.put("isManagementRestricted", (n) -> { this.setIsManagementRestricted(n.getBooleanValue()); });
         deserializerMap.put("isSubscribedByMail", (n) -> { this.setIsSubscribedByMail(n.getBooleanValue()); });
         deserializerMap.put("licenseProcessingState", (n) -> { this.setLicenseProcessingState(n.getObjectValue(LicenseProcessingState::createFromDiscriminatorValue)); });
@@ -385,6 +386,14 @@ public class Group extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsFavorite() {
         return this.backingStore.get("isFavorite");
+    }
+    /**
+     * Gets the isHardDeleteProtectionEnabled property value. Indicates whether hard deletion protection is enabled for the group. Supported for cloud-only groups. When true, permanent deletion is blocked for seven days after soft deletion. The group can still be soft deleted and restored. Once enabled, protection can&apos;t be disabled or set to null. Enable protection on an existing group by using Update group; enabling it during creation isn&apos;t supported. Setting this property to true requires the Microsoft Entra Backup Administrator role. Nullable. Requires $select to retrieve. Supports $filter (eq).
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsHardDeleteProtectionEnabled() {
+        return this.backingStore.get("isHardDeleteProtectionEnabled");
     }
     /**
      * Gets the isManagementRestricted property value. Indicates whether the group is a member of a restricted management administrative unit. If not set, the default value is null and the default behavior is false. Read-only.  To manage a group member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit.
@@ -850,6 +859,7 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeBooleanValue("isAssignableToRole", this.getIsAssignableToRole());
         writer.writeBooleanValue("isFavorite", this.getIsFavorite());
+        writer.writeBooleanValue("isHardDeleteProtectionEnabled", this.getIsHardDeleteProtectionEnabled());
         writer.writeBooleanValue("isManagementRestricted", this.getIsManagementRestricted());
         writer.writeBooleanValue("isSubscribedByMail", this.getIsSubscribedByMail());
         writer.writeObjectValue("licenseProcessingState", this.getLicenseProcessingState());
@@ -1134,6 +1144,13 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public void setIsFavorite(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isFavorite", value);
+    }
+    /**
+     * Sets the isHardDeleteProtectionEnabled property value. Indicates whether hard deletion protection is enabled for the group. Supported for cloud-only groups. When true, permanent deletion is blocked for seven days after soft deletion. The group can still be soft deleted and restored. Once enabled, protection can&apos;t be disabled or set to null. Enable protection on an existing group by using Update group; enabling it during creation isn&apos;t supported. Setting this property to true requires the Microsoft Entra Backup Administrator role. Nullable. Requires $select to retrieve. Supports $filter (eq).
+     * @param value Value to set for the isHardDeleteProtectionEnabled property.
+     */
+    public void setIsHardDeleteProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isHardDeleteProtectionEnabled", value);
     }
     /**
      * Sets the isManagementRestricted property value. Indicates whether the group is a member of a restricted management administrative unit. If not set, the default value is null and the default behavior is false. Read-only.  To manage a group member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit.

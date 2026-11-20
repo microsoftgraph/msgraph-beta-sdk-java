@@ -18,7 +18,8 @@ public enum CloudPcRemoteActionName implements ValuedEnum {
     CreateSnapshot("createSnapshot"),
     PowerOn("powerOn"),
     PowerOff("powerOff"),
-    MoveRegion("moveRegion");
+    MoveRegion("moveRegion"),
+    SetDeviceName("setDeviceName");
     public final String value;
     CloudPcRemoteActionName(final String value) {
         this.value = value;
@@ -43,6 +44,7 @@ public enum CloudPcRemoteActionName implements ValuedEnum {
             case "powerOn": return PowerOn;
             case "powerOff": return PowerOff;
             case "moveRegion": return MoveRegion;
+            case "setDeviceName": return SetDeviceName;
             default: return null;
         }
     }
