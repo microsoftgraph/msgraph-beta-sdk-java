@@ -69,6 +69,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
         deserializerMap.put("deletedItems", (n) -> { this.setDeletedItems(n.getObjectValue(CaPoliciesDeletableRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("namedLocations", (n) -> { this.setNamedLocations(n.getCollectionOfObjectValues(NamedLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("policies", (n) -> { this.setPolicies(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(ConditionalAccessSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("templates", (n) -> { this.setTemplates(n.getCollectionOfObjectValues(ConditionalAccessTemplate::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -87,6 +88,14 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessPolicy> getPolicies() {
         return this.backingStore.get("policies");
+    }
+    /**
+     * Gets the settings property value. The tenant-wide Conditional Access settings, including user-action exclusions.
+     * @return a {@link ConditionalAccessSettings}
+     */
+    @jakarta.annotation.Nullable
+    public ConditionalAccessSettings getSettings() {
+        return this.backingStore.get("settings");
     }
     /**
      * Gets the templates property value. Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
@@ -109,6 +118,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
         writer.writeObjectValue("deletedItems", this.getDeletedItems());
         writer.writeCollectionOfObjectValues("namedLocations", this.getNamedLocations());
         writer.writeCollectionOfObjectValues("policies", this.getPolicies());
+        writer.writeObjectValue("settings", this.getSettings());
         writer.writeCollectionOfObjectValues("templates", this.getTemplates());
     }
     /**
@@ -152,6 +162,13 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      */
     public void setPolicies(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {
         this.backingStore.set("policies", value);
+    }
+    /**
+     * Sets the settings property value. The tenant-wide Conditional Access settings, including user-action exclusions.
+     * @param value Value to set for the settings property.
+     */
+    public void setSettings(@jakarta.annotation.Nullable final ConditionalAccessSettings value) {
+        this.backingStore.set("settings", value);
     }
     /**
      * Sets the templates property value. Read-only. Nullable. Returns a collection of the specified Conditional Access templates.

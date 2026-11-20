@@ -37,7 +37,10 @@ public class RefreshDeviceComplianceReportSummarizationRequestBuilder extends Ba
     /**
      * Invoke action refreshDeviceComplianceReportSummarization
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This action is deprecated and will be removed on July 7, 2026. This API is obsolete and should be removed from client code; no replacement is needed as the current reporting architecture continuously aggregates compliance data. as of 2026-04/Rv1MigrationDeprecation on 2026-04-03 and will be removed 2026-07-07
      */
+    @Deprecated
     public void post() {
         post(null);
     }
@@ -45,7 +48,10 @@ public class RefreshDeviceComplianceReportSummarizationRequestBuilder extends Ba
      * Invoke action refreshDeviceComplianceReportSummarization
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This action is deprecated and will be removed on July 7, 2026. This API is obsolete and should be removed from client code; no replacement is needed as the current reporting architecture continuously aggregates compliance data. as of 2026-04/Rv1MigrationDeprecation on 2026-04-03 and will be removed 2026-07-07
      */
+    @Deprecated
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -55,8 +61,11 @@ public class RefreshDeviceComplianceReportSummarizationRequestBuilder extends Ba
     /**
      * Invoke action refreshDeviceComplianceReportSummarization
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This action is deprecated and will be removed on July 7, 2026. This API is obsolete and should be removed from client code; no replacement is needed as the current reporting architecture continuously aggregates compliance data. as of 2026-04/Rv1MigrationDeprecation on 2026-04-03 and will be removed 2026-07-07
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation() {
         return toPostRequestInformation(null);
     }
@@ -64,8 +73,11 @@ public class RefreshDeviceComplianceReportSummarizationRequestBuilder extends Ba
      * Invoke action refreshDeviceComplianceReportSummarization
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This action is deprecated and will be removed on July 7, 2026. This API is obsolete and should be removed from client code; no replacement is needed as the current reporting architecture continuously aggregates compliance data. as of 2026-04/Rv1MigrationDeprecation on 2026-04-03 and will be removed 2026-07-07
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
@@ -76,8 +88,11 @@ public class RefreshDeviceComplianceReportSummarizationRequestBuilder extends Ba
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link RefreshDeviceComplianceReportSummarizationRequestBuilder}
+     * @deprecated
+     * This action is deprecated and will be removed on July 7, 2026. This API is obsolete and should be removed from client code; no replacement is needed as the current reporting architecture continuously aggregates compliance data. as of 2026-04/Rv1MigrationDeprecation on 2026-04-03 and will be removed 2026-07-07
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RefreshDeviceComplianceReportSummarizationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new RefreshDeviceComplianceReportSummarizationRequestBuilder(rawUrl, requestAdapter);

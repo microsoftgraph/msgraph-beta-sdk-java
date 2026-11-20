@@ -2,6 +2,8 @@ package com.microsoft.graph.beta.security.cases.ediscoverycases.item.legalholds.
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.security.EdiscoveryHoldPolicy;
+import com.microsoft.graph.beta.security.cases.ediscoverycases.item.legalholds.item.microsoftgraphsecuritydisablepolicy.MicrosoftGraphSecurityDisablePolicyRequestBuilder;
+import com.microsoft.graph.beta.security.cases.ediscoverycases.item.legalholds.item.microsoftgraphsecurityenablepolicy.MicrosoftGraphSecurityEnablePolicyRequestBuilder;
 import com.microsoft.graph.beta.security.cases.ediscoverycases.item.legalholds.item.microsoftgraphsecurityretrypolicy.MicrosoftGraphSecurityRetryPolicyRequestBuilder;
 import com.microsoft.graph.beta.security.cases.ediscoverycases.item.legalholds.item.sitesources.SiteSourcesRequestBuilder;
 import com.microsoft.graph.beta.security.cases.ediscoverycases.item.legalholds.item.usersources.UserSourcesRequestBuilder;
@@ -23,6 +25,22 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryHoldPolicyItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the disablePolicy method.
+     * @return a {@link MicrosoftGraphSecurityDisablePolicyRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityDisablePolicyRequestBuilder microsoftGraphSecurityDisablePolicy() {
+        return new MicrosoftGraphSecurityDisablePolicyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the enablePolicy method.
+     * @return a {@link MicrosoftGraphSecurityEnablePolicyRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityEnablePolicyRequestBuilder microsoftGraphSecurityEnablePolicy() {
+        return new MicrosoftGraphSecurityEnablePolicyRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the retryPolicy method.
      * @return a {@link MicrosoftGraphSecurityRetryPolicyRequestBuilder}

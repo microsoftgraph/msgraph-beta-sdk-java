@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenter
 import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenterprisesettings.approveapps.ApproveAppsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenterprisesettings.completesignup.CompleteSignupRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenterprisesettings.creategoogleplaywebtoken.CreateGooglePlayWebTokenRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenterprisesettings.createzerotouchwebtoken.CreateZeroTouchWebTokenRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenterprisesettings.requestenterpriseupgradeurl.RequestEnterpriseUpgradeUrlRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenterprisesettings.requestsignupurl.RequestSignupUrlRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenterprisesettings.retrievestorelayout.RetrieveStoreLayoutRequestBuilder;
@@ -62,6 +63,14 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
     @jakarta.annotation.Nonnull
     public CreateGooglePlayWebTokenRequestBuilder createGooglePlayWebToken() {
         return new CreateGooglePlayWebTokenRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the createZeroTouchWebToken method.
+     * @return a {@link CreateZeroTouchWebTokenRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CreateZeroTouchWebTokenRequestBuilder createZeroTouchWebToken() {
+        return new CreateZeroTouchWebTokenRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the requestEnterpriseUpgradeUrl method.

@@ -33,7 +33,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
         return this.backingStore.get("appId");
     }
     /**
-     * Gets the applicationAuthenticationClientSignInActivity property value. The sign-in activity of the application in a app-only authentication flow (app-to-app tokens) where the application acts like a client.
+     * Gets the applicationAuthenticationClientSignInActivity property value. The sign-in activity reported as app-only authentication where the application acts as a client. Subject to the preview classification limitation described above.
      * @return a {@link SignInActivity}
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
         return this.backingStore.get("applicationAuthenticationClientSignInActivity");
     }
     /**
-     * Gets the applicationAuthenticationResourceSignInActivity property value. The sign-in activity of the application in a app-only authentication flow (app-to-app tokens) where the application acts like a resource.
+     * Gets the applicationAuthenticationResourceSignInActivity property value. The sign-in activity reported as app-only authentication where the application acts as a resource. Subject to the preview classification limitation described above.
      * @return a {@link SignInActivity}
      */
     @jakarta.annotation.Nullable
@@ -109,14 +109,14 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
         this.backingStore.set("appId", value);
     }
     /**
-     * Sets the applicationAuthenticationClientSignInActivity property value. The sign-in activity of the application in a app-only authentication flow (app-to-app tokens) where the application acts like a client.
+     * Sets the applicationAuthenticationClientSignInActivity property value. The sign-in activity reported as app-only authentication where the application acts as a client. Subject to the preview classification limitation described above.
      * @param value Value to set for the applicationAuthenticationClientSignInActivity property.
      */
     public void setApplicationAuthenticationClientSignInActivity(@jakarta.annotation.Nullable final SignInActivity value) {
         this.backingStore.set("applicationAuthenticationClientSignInActivity", value);
     }
     /**
-     * Sets the applicationAuthenticationResourceSignInActivity property value. The sign-in activity of the application in a app-only authentication flow (app-to-app tokens) where the application acts like a resource.
+     * Sets the applicationAuthenticationResourceSignInActivity property value. The sign-in activity reported as app-only authentication where the application acts as a resource. Subject to the preview classification limitation described above.
      * @param value Value to set for the applicationAuthenticationResourceSignInActivity property.
      */
     public void setApplicationAuthenticationResourceSignInActivity(@jakarta.annotation.Nullable final SignInActivity value) {

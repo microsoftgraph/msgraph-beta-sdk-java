@@ -36,6 +36,7 @@ import com.microsoft.graph.beta.users.item.devicemanagementtroubleshootingevents
 import com.microsoft.graph.beta.users.item.devices.DevicesRequestBuilder;
 import com.microsoft.graph.beta.users.item.deviceswithdeviceid.DevicesWithDeviceIdRequestBuilder;
 import com.microsoft.graph.beta.users.item.directreports.DirectReportsRequestBuilder;
+import com.microsoft.graph.beta.users.item.distributionlists.DistributionListsRequestBuilder;
 import com.microsoft.graph.beta.users.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.beta.users.item.drives.DrivesRequestBuilder;
 import com.microsoft.graph.beta.users.item.employeeexperience.EmployeeExperienceRequestBuilder;
@@ -60,6 +61,7 @@ import com.microsoft.graph.beta.users.item.getmanageddeviceswithfailedorpendinga
 import com.microsoft.graph.beta.users.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.beta.users.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.beta.users.item.getpasswordsinglesignoncredentials.GetPasswordSingleSignOnCredentialsRequestBuilder;
+import com.microsoft.graph.beta.users.item.identityverificationstatus.IdentityVerificationStatusRequestBuilder;
 import com.microsoft.graph.beta.users.item.inferenceclassification.InferenceClassificationRequestBuilder;
 import com.microsoft.graph.beta.users.item.informationprotection.InformationProtectionRequestBuilder;
 import com.microsoft.graph.beta.users.item.insights.InsightsRequestBuilder;
@@ -69,6 +71,7 @@ import com.microsoft.graph.beta.users.item.ismanagedappuserblocked.IsManagedAppU
 import com.microsoft.graph.beta.users.item.joinedgroups.JoinedGroupsRequestBuilder;
 import com.microsoft.graph.beta.users.item.joinedteams.JoinedTeamsRequestBuilder;
 import com.microsoft.graph.beta.users.item.licensedetails.LicenseDetailsRequestBuilder;
+import com.microsoft.graph.beta.users.item.lifecycle.LifecycleRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailboxsettings.MailboxSettingsRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.MailFoldersRequestBuilder;
 import com.microsoft.graph.beta.users.item.managedapplogcollectionrequests.ManagedAppLogCollectionRequestsRequestBuilder;
@@ -77,6 +80,9 @@ import com.microsoft.graph.beta.users.item.manageddevices.ManagedDevicesRequestB
 import com.microsoft.graph.beta.users.item.manager.ManagerRequestBuilder;
 import com.microsoft.graph.beta.users.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.beta.users.item.messages.MessagesRequestBuilder;
+import com.microsoft.graph.beta.users.item.microsoftgraphidentitygovernanceaddselfassponsor.MicrosoftGraphIdentityGovernanceAddSelfAsSponsorRequestBuilder;
+import com.microsoft.graph.beta.users.item.microsoftgraphidentitygovernanceattest.MicrosoftGraphIdentityGovernanceAttestRequestBuilder;
+import com.microsoft.graph.beta.users.item.microsoftgraphidentitygovernanceremoveselfassponsor.MicrosoftGraphIdentityGovernanceRemoveSelfAsSponsorRequestBuilder;
 import com.microsoft.graph.beta.users.item.mobileappintentandstates.MobileAppIntentAndStatesRequestBuilder;
 import com.microsoft.graph.beta.users.item.mobileapptroubleshootingevents.MobileAppTroubleshootingEventsRequestBuilder;
 import com.microsoft.graph.beta.users.item.notifications.NotificationsRequestBuilder;
@@ -110,6 +116,7 @@ import com.microsoft.graph.beta.users.item.sendmail.SendMailRequestBuilder;
 import com.microsoft.graph.beta.users.item.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.graph.beta.users.item.settings.SettingsRequestBuilder;
 import com.microsoft.graph.beta.users.item.solutions.SolutionsRequestBuilder;
+import com.microsoft.graph.beta.users.item.sponsorof.SponsorOfRequestBuilder;
 import com.microsoft.graph.beta.users.item.sponsors.SponsorsRequestBuilder;
 import com.microsoft.graph.beta.users.item.teamwork.TeamworkRequestBuilder;
 import com.microsoft.graph.beta.users.item.todo.TodoRequestBuilder;
@@ -399,6 +406,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new DirectReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the distributionLists property of the microsoft.graph.user entity.
+     * @return a {@link DistributionListsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DistributionListsRequestBuilder distributionLists() {
+        return new DistributionListsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the drive property of the microsoft.graph.user entity.
      * @return a {@link DriveRequestBuilder}
      */
@@ -575,6 +590,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new GetPasswordSingleSignOnCredentialsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the identityVerificationStatus property of the microsoft.graph.user entity.
+     * @return a {@link IdentityVerificationStatusRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public IdentityVerificationStatusRequestBuilder identityVerificationStatus() {
+        return new IdentityVerificationStatusRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the inferenceClassification property of the microsoft.graph.user entity.
      * @return a {@link InferenceClassificationRequestBuilder}
      */
@@ -647,6 +670,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new LicenseDetailsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the lifecycle property of the microsoft.graph.user entity.
+     * @return a {@link LifecycleRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public LifecycleRequestBuilder lifecycle() {
+        return new LifecycleRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * The mailboxSettings property
      * @return a {@link MailboxSettingsRequestBuilder}
      */
@@ -711,6 +742,30 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the addSelfAsSponsor method.
+     * @return a {@link MicrosoftGraphIdentityGovernanceAddSelfAsSponsorRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphIdentityGovernanceAddSelfAsSponsorRequestBuilder microsoftGraphIdentityGovernanceAddSelfAsSponsor() {
+        return new MicrosoftGraphIdentityGovernanceAddSelfAsSponsorRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the attest method.
+     * @return a {@link MicrosoftGraphIdentityGovernanceAttestRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphIdentityGovernanceAttestRequestBuilder microsoftGraphIdentityGovernanceAttest() {
+        return new MicrosoftGraphIdentityGovernanceAttestRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the removeSelfAsSponsor method.
+     * @return a {@link MicrosoftGraphIdentityGovernanceRemoveSelfAsSponsorRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphIdentityGovernanceRemoveSelfAsSponsorRequestBuilder microsoftGraphIdentityGovernanceRemoveSelfAsSponsor() {
+        return new MicrosoftGraphIdentityGovernanceRemoveSelfAsSponsorRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the mobileAppIntentAndStates property of the microsoft.graph.user entity.
      * @return a {@link MobileAppIntentAndStatesRequestBuilder}
      */
@@ -729,7 +784,10 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the notifications property of the microsoft.graph.user entity.
      * @return a {@link NotificationsRequestBuilder}
+     * @deprecated
+     * The Graph Notification API is deprecated and will stop returning data on March 20, 2023. as of 2023-03/Notification_Deprecation on 2023-03-09 and will be removed 2023-03-20
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public NotificationsRequestBuilder notifications() {
         return new NotificationsRequestBuilder(pathParameters, requestAdapter);
@@ -959,6 +1017,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new SolutionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the sponsorOf property of the microsoft.graph.user entity.
+     * @return a {@link SponsorOfRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SponsorOfRequestBuilder sponsorOf() {
+        return new SponsorOfRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the sponsors property of the microsoft.graph.user entity.
      * @return a {@link SponsorsRequestBuilder}
      */
@@ -1183,7 +1249,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new OnlineMeetingsWithJoinWebUrlRequestBuilder(pathParameters, requestAdapter, joinWebUrl);
     }
     /**
-     * Update the properties of a user or agentUser object.
+     * Update the properties of a user. To use this API to update an agentUser, specify an @odata.type property with a value of #microsoft.graph.agentUser in the request body.
      * @param body The request body
      * @return a {@link User}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -1194,7 +1260,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a user or agentUser object.
+     * Update the properties of a user. To use this API to update an agentUser, specify an @odata.type property with a value of #microsoft.graph.agentUser in the request body.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link User}
@@ -1262,7 +1328,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a user or agentUser object.
+     * Update the properties of a user. To use this API to update an agentUser, specify an @odata.type property with a value of #microsoft.graph.agentUser in the request body.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -1271,7 +1337,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a user or agentUser object.
+     * Update the properties of a user. To use this API to update an agentUser, specify an @odata.type property with a value of #microsoft.graph.agentUser in the request body.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

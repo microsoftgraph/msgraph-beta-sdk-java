@@ -15,7 +15,10 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The mailboxSettings property
      * @return a {@link MailboxSettingsRequestBuilder}
+     * @deprecated
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MailboxSettingsRequestBuilder mailboxSettings() {
         return new MailboxSettingsRequestBuilder(pathParameters, requestAdapter);
@@ -23,7 +26,10 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of print entities.
      * @return a {@link RefRequestBuilder}
+     * @deprecated
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
@@ -31,7 +37,10 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The serviceProvisioningErrors property
      * @return a {@link ServiceProvisioningErrorsRequestBuilder}
+     * @deprecated
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
         return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);

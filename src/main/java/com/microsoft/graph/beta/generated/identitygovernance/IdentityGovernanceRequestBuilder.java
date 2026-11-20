@@ -50,7 +50,10 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the catalogs property of the microsoft.graph.identityGovernance entity.
      * @return a {@link CatalogsRequestBuilder}
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CatalogsRequestBuilder catalogs() {
         return new CatalogsRequestBuilder(pathParameters, requestAdapter);

@@ -84,7 +84,7 @@ public class CloudPcRegionGroupConfiguration implements AdditionalDataHolder, Ba
         return this.backingStore.get("regionGroup");
     }
     /**
-     * Gets the regions property value. The regions property
+     * Gets the regions property value. The list of region names within the region group. The default value is automatic.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class CloudPcRegionGroupConfiguration implements AdditionalDataHolder, Ba
         this.backingStore.set("regionGroup", value);
     }
     /**
-     * Sets the regions property value. The regions property
+     * Sets the regions property value. The list of region names within the region group. The default value is automatic.
      * @param value Value to set for the regions property.
      */
     public void setRegions(@jakarta.annotation.Nullable final java.util.List<String> value) {

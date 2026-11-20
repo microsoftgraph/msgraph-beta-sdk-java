@@ -23,6 +23,7 @@ public class CanSignUpGetResponse implements AdditionalDataHolder, BackedModel, 
     public CanSignUpGetResponse() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setValue(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

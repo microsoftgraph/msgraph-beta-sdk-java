@@ -122,7 +122,7 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, SharePointProtectionPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update a SharePoint protection policy. This method adds a siteprotectionunit to or removes it from the protection policy.
+     * Update a SharePoint protection policy. This method updates retention settings or adds a siteProtectionUnit to or removes it from the protection policy.
      * @param body The request body
      * @return a {@link SharePointProtectionPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -133,7 +133,7 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
         return patch(body, null);
     }
     /**
-     * Update a SharePoint protection policy. This method adds a siteprotectionunit to or removes it from the protection policy.
+     * Update a SharePoint protection policy. This method updates retention settings or adds a siteProtectionUnit to or removes it from the protection policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointProtectionPolicy}
@@ -189,7 +189,7 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Update a SharePoint protection policy. This method adds a siteprotectionunit to or removes it from the protection policy.
+     * Update a SharePoint protection policy. This method updates retention settings or adds a siteProtectionUnit to or removes it from the protection policy.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -198,7 +198,7 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update a SharePoint protection policy. This method adds a siteprotectionunit to or removes it from the protection policy.
+     * Update a SharePoint protection policy. This method updates retention settings or adds a siteProtectionUnit to or removes it from the protection policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

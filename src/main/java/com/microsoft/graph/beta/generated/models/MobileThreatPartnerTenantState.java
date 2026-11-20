@@ -20,6 +20,8 @@ public enum MobileThreatPartnerTenantState implements ValuedEnum {
     NotSetUp("notSetUp"),
     /** Indicates that the partner connector is in an error state. This can occur when the connector has a non-zero error code set due to an internal error in processing. Please see https://go.microsoft.com/fwlink/?linkid=2239039 for more information on connector states. */
     Error("error"),
+    /** Indicates that the partner connector catalog entry exists but the tenant has never configured it. */
+    NeverConfigured("neverConfigured"),
     /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
@@ -38,6 +40,7 @@ public enum MobileThreatPartnerTenantState implements ValuedEnum {
             case "unresponsive": return Unresponsive;
             case "notSetUp": return NotSetUp;
             case "error": return Error;
+            case "neverConfigured": return NeverConfigured;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

@@ -56,7 +56,7 @@ public class UpdateManagementEnrollment implements AdditionalDataHolder, BackedM
         return this.backingStore;
     }
     /**
-     * Gets the driver property value. The driver property
+     * Gets the driver property value. Information about the enrollment state of the device in driver update management.
      * @return a {@link UpdateCategoryEnrollmentInformation}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class UpdateManagementEnrollment implements AdditionalDataHolder, BackedM
         return this.backingStore.get("driver");
     }
     /**
-     * Gets the feature property value. The feature property
+     * Gets the feature property value. Information about the enrollment state of the device in feature update management.
      * @return a {@link UpdateCategoryEnrollmentInformation}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class UpdateManagementEnrollment implements AdditionalDataHolder, BackedM
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the quality property value. The quality property
+     * Gets the quality property value. Information about the enrollment state of the device in quality update management.
      * @return a {@link UpdateCategoryEnrollmentInformation}
      */
     @jakarta.annotation.Nullable
@@ -128,14 +128,14 @@ public class UpdateManagementEnrollment implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the driver property value. The driver property
+     * Sets the driver property value. Information about the enrollment state of the device in driver update management.
      * @param value Value to set for the driver property.
      */
     public void setDriver(@jakarta.annotation.Nullable final UpdateCategoryEnrollmentInformation value) {
         this.backingStore.set("driver", value);
     }
     /**
-     * Sets the feature property value. The feature property
+     * Sets the feature property value. Information about the enrollment state of the device in feature update management.
      * @param value Value to set for the feature property.
      */
     public void setFeature(@jakarta.annotation.Nullable final UpdateCategoryEnrollmentInformation value) {
@@ -149,7 +149,7 @@ public class UpdateManagementEnrollment implements AdditionalDataHolder, BackedM
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the quality property value. The quality property
+     * Sets the quality property value. Information about the enrollment state of the device in quality update management.
      * @param value Value to set for the quality property.
      */
     public void setQuality(@jakarta.annotation.Nullable final UpdateCategoryEnrollmentInformation value) {

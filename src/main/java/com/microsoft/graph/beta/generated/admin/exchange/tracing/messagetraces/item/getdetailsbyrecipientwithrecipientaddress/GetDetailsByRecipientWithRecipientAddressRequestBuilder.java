@@ -41,12 +41,9 @@ public class GetDetailsByRecipientWithRecipientAddressRequestBuilder extends Bas
      * Get a list of exchangeMessageTraceDetail objects filtered on the recipient.
      * @return a {@link GetDetailsByRecipientWithRecipientAddressGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      * @see <a href="https://learn.microsoft.com/graph/api/exchangemessagetrace-getdetailsbyrecipient?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public GetDetailsByRecipientWithRecipientAddressGetResponse get() {
         return get(null);
     }
@@ -55,12 +52,9 @@ public class GetDetailsByRecipientWithRecipientAddressRequestBuilder extends Bas
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetDetailsByRecipientWithRecipientAddressGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      * @see <a href="https://learn.microsoft.com/graph/api/exchangemessagetrace-getdetailsbyrecipient?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public GetDetailsByRecipientWithRecipientAddressGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -70,11 +64,8 @@ public class GetDetailsByRecipientWithRecipientAddressRequestBuilder extends Bas
     /**
      * Get a list of exchangeMessageTraceDetail objects filtered on the recipient.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -82,11 +73,8 @@ public class GetDetailsByRecipientWithRecipientAddressRequestBuilder extends Bas
      * Get a list of exchangeMessageTraceDetail objects filtered on the recipient.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -97,11 +85,8 @@ public class GetDetailsByRecipientWithRecipientAddressRequestBuilder extends Bas
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link GetDetailsByRecipientWithRecipientAddressRequestBuilder}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public GetDetailsByRecipientWithRecipientAddressRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new GetDetailsByRecipientWithRecipientAddressRequestBuilder(rawUrl, requestAdapter);

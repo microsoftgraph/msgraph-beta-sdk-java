@@ -26,7 +26,7 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
         return new AzureADDevice();
     }
     /**
-     * Gets the enrollment property value. The enrollment property
+     * Gets the enrollment property value. Specifies the update management enrollment for the device. Read-only. Returned by default.
      * @return a {@link UpdateManagementEnrollment}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
         return this.backingStore.get("enrollment");
     }
     /**
-     * Gets the errors property value. Specifies any errors that prevent the device from being enrolled in update management or receving deployed content. Read-only. Returned by default.
+     * Gets the errors property value. Specifies any errors that prevent the device from being enrolled in update management or receiving deployed content. Read-only. Returned by default.
      * @return a {@link java.util.List<UpdatableAssetError>}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
         writer.writeCollectionOfObjectValues("errors", this.getErrors());
     }
     /**
-     * Sets the enrollment property value. The enrollment property
+     * Sets the enrollment property value. Specifies the update management enrollment for the device. Read-only. Returned by default.
      * @param value Value to set for the enrollment property.
      */
     public void setEnrollment(@jakarta.annotation.Nullable final UpdateManagementEnrollment value) {
         this.backingStore.set("enrollment", value);
     }
     /**
-     * Sets the errors property value. Specifies any errors that prevent the device from being enrolled in update management or receving deployed content. Read-only. Returned by default.
+     * Sets the errors property value. Specifies any errors that prevent the device from being enrolled in update management or receiving deployed content. Read-only. Returned by default.
      * @param value Value to set for the errors property.
      */
     public void setErrors(@jakarta.annotation.Nullable final java.util.List<UpdatableAssetError> value) {

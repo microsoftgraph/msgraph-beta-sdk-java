@@ -80,15 +80,24 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
         return this.backingStore.get("credentialsWithUsageVerify");
     }
     /**
+     * Gets the enforcementScope property value. The enforcementScope property
+     * @return a {@link ServicePrincipalLockScope}
+     */
+    @jakarta.annotation.Nullable
+    public ServicePrincipalLockScope getEnforcementScope() {
+        return this.backingStore.get("enforcementScope");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("allProperties", (n) -> { this.setAllProperties(n.getBooleanValue()); });
         deserializerMap.put("credentialsWithUsageSign", (n) -> { this.setCredentialsWithUsageSign(n.getBooleanValue()); });
         deserializerMap.put("credentialsWithUsageVerify", (n) -> { this.setCredentialsWithUsageVerify(n.getBooleanValue()); });
+        deserializerMap.put("enforcementScope", (n) -> { this.setEnforcementScope(n.getEnumValue(ServicePrincipalLockScope::forValue)); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("tokenEncryptionKeyId", (n) -> { this.setTokenEncryptionKeyId(n.getBooleanValue()); });
@@ -127,6 +136,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
         writer.writeBooleanValue("allProperties", this.getAllProperties());
         writer.writeBooleanValue("credentialsWithUsageSign", this.getCredentialsWithUsageSign());
         writer.writeBooleanValue("credentialsWithUsageVerify", this.getCredentialsWithUsageVerify());
+        writer.writeEnumValue("enforcementScope", this.getEnforcementScope());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("tokenEncryptionKeyId", this.getTokenEncryptionKeyId());
@@ -167,6 +177,13 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      */
     public void setCredentialsWithUsageVerify(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("credentialsWithUsageVerify", value);
+    }
+    /**
+     * Sets the enforcementScope property value. The enforcementScope property
+     * @param value Value to set for the enforcementScope property.
+     */
+    public void setEnforcementScope(@jakarta.annotation.Nullable final ServicePrincipalLockScope value) {
+        this.backingStore.set("enforcementScope", value);
     }
     /**
      * Sets the isEnabled property value. Enables or disables service principal lock configuration. To allow the sensitive properties to be updated, update this property to false to disable the lock on the service principal.

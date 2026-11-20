@@ -69,7 +69,7 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, BackedMod
         return deserializerMap;
     }
     /**
-     * Gets the length property value. The length property
+     * Gets the length property value. The length of the evidence text.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("length");
     }
     /**
-     * Gets the match property value. The match property
+     * Gets the match property value. The matched evidence text.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the offset property value. The offset property
+     * Gets the offset property value. The start position of the evidence text.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -128,14 +128,14 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, BackedMod
         this.backingStore = value;
     }
     /**
-     * Sets the length property value. The length property
+     * Sets the length property value. The length of the evidence text.
      * @param value Value to set for the length property.
      */
     public void setLength(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("length", value);
     }
     /**
-     * Sets the match property value. The match property
+     * Sets the match property value. The matched evidence text.
      * @param value Value to set for the match property.
      */
     public void setMatch(@jakarta.annotation.Nullable final String value) {
@@ -149,7 +149,7 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, BackedMod
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the offset property value. The offset property
+     * Sets the offset property value. The start position of the evidence text.
      * @param value Value to set for the offset property.
      */
     public void setOffset(@jakarta.annotation.Nullable final Integer value) {

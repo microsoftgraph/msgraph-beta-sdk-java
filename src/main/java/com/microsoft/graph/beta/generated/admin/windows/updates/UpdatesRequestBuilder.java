@@ -1,11 +1,13 @@
 package com.microsoft.graph.beta.admin.windows.updates;
 
 import com.microsoft.graph.beta.admin.windows.updates.catalog.CatalogRequestBuilder;
+import com.microsoft.graph.beta.admin.windows.updates.data.DataRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.deploymentaudiences.DeploymentAudiencesRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.deployments.DeploymentsRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.policies.PoliciesRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.products.ProductsRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.resourceconnections.ResourceConnectionsRequestBuilder;
+import com.microsoft.graph.beta.admin.windows.updates.tenantsettings.TenantSettingsRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.updatableassets.UpdatableAssetsRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.updatepolicies.UpdatePoliciesRequestBuilder;
 import com.microsoft.graph.beta.models.AdminWindowsUpdates;
@@ -35,6 +37,14 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CatalogRequestBuilder catalog() {
         return new CatalogRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the data property of the microsoft.graph.adminWindowsUpdates entity.
+     * @return a {@link DataRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DataRequestBuilder data() {
+        return new DataRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the deploymentAudiences property of the microsoft.graph.adminWindowsUpdates entity.
@@ -75,6 +85,14 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ResourceConnectionsRequestBuilder resourceConnections() {
         return new ResourceConnectionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tenantSettings property of the microsoft.graph.adminWindowsUpdates entity.
+     * @return a {@link TenantSettingsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TenantSettingsRequestBuilder tenantSettings() {
+        return new TenantSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the updatableAssets property of the microsoft.graph.adminWindowsUpdates entity.

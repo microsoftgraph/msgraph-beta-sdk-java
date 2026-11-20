@@ -55,7 +55,7 @@ public class DriveExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get driveExclusionUnits from solutions
+     * The list of drive exclusion units in the tenant.
      * @return a {@link DriveExclusionUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class DriveExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get driveExclusionUnits from solutions
+     * The list of drive exclusion units in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveExclusionUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class DriveExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get driveExclusionUnits from solutions
+     * The list of drive exclusion units in the tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class DriveExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get driveExclusionUnits from solutions
+     * The list of drive exclusion units in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class DriveExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get driveExclusionUnits from solutions
+     * The list of drive exclusion units in the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

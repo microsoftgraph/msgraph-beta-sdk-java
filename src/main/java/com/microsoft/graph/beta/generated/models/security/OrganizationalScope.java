@@ -56,12 +56,21 @@ public class OrganizationalScope implements AdditionalDataHolder, BackedModel, P
         return this.backingStore;
     }
     /**
+     * Gets the deviceGroups property value. List of device groups to which the custom detection rule applies.
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getDeviceGroups() {
+        return this.backingStore.get("deviceGroups");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("deviceGroups", (n) -> { this.setDeviceGroups(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("scopeNames", (n) -> { this.setScopeNames(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("scopeType", (n) -> { this.setScopeType(n.getEnumValue(ScopeType::forValue)); });
@@ -76,7 +85,7 @@ public class OrganizationalScope implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the scopeNames property value. List of groups to which the custom detection rule applies.
+     * Gets the scopeNames property value. List of groups to which the custom detection rule applies. Deprecated. Use deviceGroups instead. This property will be removed from this resource on October 1, 2026.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -97,6 +106,7 @@ public class OrganizationalScope implements AdditionalDataHolder, BackedModel, P
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeCollectionOfPrimitiveValues("deviceGroups", this.getDeviceGroups());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("scopeNames", this.getScopeNames());
         writer.writeEnumValue("scopeType", this.getScopeType());
@@ -118,6 +128,13 @@ public class OrganizationalScope implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
+     * Sets the deviceGroups property value. List of device groups to which the custom detection rule applies.
+     * @param value Value to set for the deviceGroups property.
+     */
+    public void setDeviceGroups(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("deviceGroups", value);
+    }
+    /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
@@ -125,7 +142,7 @@ public class OrganizationalScope implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the scopeNames property value. List of groups to which the custom detection rule applies.
+     * Sets the scopeNames property value. List of groups to which the custom detection rule applies. Deprecated. Use deviceGroups instead. This property will be removed from this resource on October 1, 2026.
      * @param value Value to set for the scopeNames property.
      */
     public void setScopeNames(@jakarta.annotation.Nullable final java.util.List<String> value) {

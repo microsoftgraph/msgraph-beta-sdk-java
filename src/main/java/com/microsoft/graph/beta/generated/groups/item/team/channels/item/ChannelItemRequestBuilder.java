@@ -6,6 +6,7 @@ import com.microsoft.graph.beta.groups.item.team.channels.item.completemigration
 import com.microsoft.graph.beta.groups.item.team.channels.item.doesuserhaveaccessuseriduseridtenantidtenantiduserprincipalnameuserprincipalname.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.channels.item.enabledapps.EnabledAppsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.channels.item.filesfolder.FilesFolderRequestBuilder;
+import com.microsoft.graph.beta.groups.item.team.channels.item.joinedusers.JoinedUsersRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.channels.item.members.MembersRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.channels.item.messages.MessagesRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.channels.item.planner.PlannerRequestBuilder;
@@ -14,6 +15,7 @@ import com.microsoft.graph.beta.groups.item.team.channels.item.removeemail.Remov
 import com.microsoft.graph.beta.groups.item.team.channels.item.sharedwithteams.SharedWithTeamsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.channels.item.startmigration.StartMigrationRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.channels.item.tabs.TabsRequestBuilder;
+import com.microsoft.graph.beta.groups.item.team.channels.item.tags.TagsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.channels.item.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.graph.beta.models.Channel;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -84,6 +86,14 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
         return new FilesFolderRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the joinedUsers property of the microsoft.graph.channel entity.
+     * @return a {@link JoinedUsersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public JoinedUsersRequestBuilder joinedUsers() {
+        return new JoinedUsersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the members property of the microsoft.graph.channel entity.
      * @return a {@link MembersRequestBuilder}
      */
@@ -146,6 +156,14 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TabsRequestBuilder tabs() {
         return new TabsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tags property of the microsoft.graph.channel entity.
+     * @return a {@link TagsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TagsRequestBuilder tags() {
+        return new TagsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the unarchive method.

@@ -6,6 +6,7 @@ import com.microsoft.graph.beta.reports.appcredentialsigninactivities.AppCredent
 import com.microsoft.graph.beta.reports.applicationsignindetailedsummary.ApplicationSignInDetailedSummaryRequestBuilder;
 import com.microsoft.graph.beta.reports.authenticationmethods.AuthenticationMethodsRequestBuilder;
 import com.microsoft.graph.beta.reports.azureadpremiumlicenseinsight.AzureADPremiumLicenseInsightRequestBuilder;
+import com.microsoft.graph.beta.reports.correlations.CorrelationsRequestBuilder;
 import com.microsoft.graph.beta.reports.credentialuserregistrationdetails.CredentialUserRegistrationDetailsRequestBuilder;
 import com.microsoft.graph.beta.reports.dailyprintusage.DailyPrintUsageRequestBuilder;
 import com.microsoft.graph.beta.reports.dailyprintusagebyprinter.DailyPrintUsageByPrinterRequestBuilder;
@@ -46,9 +47,10 @@ import com.microsoft.graph.beta.reports.getmailboxusagedetailwithperiod.GetMailb
 import com.microsoft.graph.beta.reports.getmailboxusagemailboxcountswithperiod.GetMailboxUsageMailboxCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getmailboxusagequotastatusmailboxcountswithperiod.GetMailboxUsageQuotaStatusMailboxCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getmailboxusagestoragewithperiod.GetMailboxUsageStorageWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getmicrosoft365copilotusageuserdetailwithperiod.GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getmicrosoft365copilotusercountsummarywithperiod.GetMicrosoft365CopilotUserCountSummaryWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getmicrosoft365copilotusercounttrendwithperiod.GetMicrosoft365CopilotUserCountTrendWithPeriodRequestBuilder;
+import com.microsoft.graph.beta.reports.getmicrosoft365copilotusageuserdetailwithperiodversionversion.GetMicrosoft365CopilotUsageUserDetailWithPeriodversionVersionRequestBuilder;
+import com.microsoft.graph.beta.reports.getmicrosoft365copilotusercountsummarywithperiodversionversion.GetMicrosoft365CopilotUserCountSummaryWithPeriodversionVersionRequestBuilder;
+import com.microsoft.graph.beta.reports.getmicrosoft365copilotusercounttrendwithperiodversionversion.GetMicrosoft365CopilotUserCountTrendWithPeriodversionVersionRequestBuilder;
+import com.microsoft.graph.beta.reports.getmicrosoft365emissions.GetMicrosoft365EmissionsRequestBuilder;
 import com.microsoft.graph.beta.reports.getoffice365activationcounts.GetOffice365ActivationCountsRequestBuilder;
 import com.microsoft.graph.beta.reports.getoffice365activationsusercounts.GetOffice365ActivationsUserCountsRequestBuilder;
 import com.microsoft.graph.beta.reports.getoffice365activationsuserdetail.GetOffice365ActivationsUserDetailRequestBuilder;
@@ -78,6 +80,10 @@ import com.microsoft.graph.beta.reports.getsharepointactivitypageswithperiod.Get
 import com.microsoft.graph.beta.reports.getsharepointactivityusercountswithperiod.GetSharePointActivityUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getsharepointactivityuserdetailwithdate.GetSharePointActivityUserDetailWithDateRequestBuilder;
 import com.microsoft.graph.beta.reports.getsharepointactivityuserdetailwithperiod.GetSharePointActivityUserDetailWithPeriodRequestBuilder;
+import com.microsoft.graph.beta.reports.getsharepointapiusagewithdatereporttypereporttype.GetSharePointApiUsageWithDatereportTypeReportTypeRequestBuilder;
+import com.microsoft.graph.beta.reports.getsharepointapiusagewithdatewithappidreporttypereporttype.GetSharePointApiUsageWithDateWithAppIdreportTypeReportTypeRequestBuilder;
+import com.microsoft.graph.beta.reports.getsharepointapiusagewithperiodreporttypereporttype.GetSharePointApiUsageWithPeriodreportTypeReportTypeRequestBuilder;
+import com.microsoft.graph.beta.reports.getsharepointapiusagewithperiodwithappidreporttypereporttype.GetSharePointApiUsageWithPeriodWithAppIdreportTypeReportTypeRequestBuilder;
 import com.microsoft.graph.beta.reports.getsharepointsiteusagedetailwithdate.GetSharePointSiteUsageDetailWithDateRequestBuilder;
 import com.microsoft.graph.beta.reports.getsharepointsiteusagedetailwithperiod.GetSharePointSiteUsageDetailWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getsharepointsiteusagefilecountswithperiod.GetSharePointSiteUsageFileCountsWithPeriodRequestBuilder;
@@ -135,6 +141,7 @@ import com.microsoft.graph.beta.reports.getyammergroupsactivitydetailwithdate.Ge
 import com.microsoft.graph.beta.reports.getyammergroupsactivitydetailwithperiod.GetYammerGroupsActivityDetailWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getyammergroupsactivitygroupcountswithperiod.GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.healthmonitoring.HealthMonitoringRequestBuilder;
+import com.microsoft.graph.beta.reports.identityanalytics.IdentityAnalyticsRequestBuilder;
 import com.microsoft.graph.beta.reports.manageddeviceenrollmentabandonmentdetailswithskipwithtopwithfilterwithskiptoken.ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder;
 import com.microsoft.graph.beta.reports.manageddeviceenrollmentabandonmentsummarywithskipwithtopwithfilterwithskiptoken.ManagedDeviceEnrollmentAbandonmentSummaryWithSkipWithTopWithFilterWithSkipTokenRequestBuilder;
 import com.microsoft.graph.beta.reports.manageddeviceenrollmentfailuredetails.ManagedDeviceEnrollmentFailureDetailsRequestBuilder;
@@ -142,6 +149,7 @@ import com.microsoft.graph.beta.reports.manageddeviceenrollmentfailuredetailswit
 import com.microsoft.graph.beta.reports.manageddeviceenrollmentfailuretrends.ManagedDeviceEnrollmentFailureTrendsRequestBuilder;
 import com.microsoft.graph.beta.reports.manageddeviceenrollmenttopfailures.ManagedDeviceEnrollmentTopFailuresRequestBuilder;
 import com.microsoft.graph.beta.reports.manageddeviceenrollmenttopfailureswithperiod.ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder;
+import com.microsoft.graph.beta.reports.microsoftappsfilestoragecontainerusagesummary.MicrosoftAppsFileStorageContainerUsageSummaryRequestBuilder;
 import com.microsoft.graph.beta.reports.monthlyprintusagebyprinter.MonthlyPrintUsageByPrinterRequestBuilder;
 import com.microsoft.graph.beta.reports.monthlyprintusagebyuser.MonthlyPrintUsageByUserRequestBuilder;
 import com.microsoft.graph.beta.reports.monthlyprintusagesummariesbyprinter.MonthlyPrintUsageSummariesByPrinterRequestBuilder;
@@ -206,9 +214,20 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return new AzureADPremiumLicenseInsightRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the correlations property of the microsoft.graph.reportRoot entity.
+     * @return a {@link CorrelationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CorrelationsRequestBuilder correlations() {
+        return new CorrelationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the credentialUserRegistrationDetails property of the microsoft.graph.reportRoot entity.
      * @return a {@link CredentialUserRegistrationDetailsRequestBuilder}
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CredentialUserRegistrationDetailsRequestBuilder credentialUserRegistrationDetails() {
         return new CredentialUserRegistrationDetailsRequestBuilder(pathParameters, requestAdapter);
@@ -240,7 +259,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the dailyPrintUsageSummariesByPrinter property of the microsoft.graph.reportRoot entity.
      * @return a {@link DailyPrintUsageSummariesByPrinterRequestBuilder}
+     * @deprecated
+     * The dailyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the dailyPrintUsageByPrinter navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DailyPrintUsageSummariesByPrinterRequestBuilder dailyPrintUsageSummariesByPrinter() {
         return new DailyPrintUsageSummariesByPrinterRequestBuilder(pathParameters, requestAdapter);
@@ -248,7 +270,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the dailyPrintUsageSummariesByUser property of the microsoft.graph.reportRoot entity.
      * @return a {@link DailyPrintUsageSummariesByUserRequestBuilder}
+     * @deprecated
+     * The dailyPrintUsageSummariesByUser navigation property is deprecated and will stop returning data on July 31, 2023. Please use the dailyPrintUsage navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DailyPrintUsageSummariesByUserRequestBuilder dailyPrintUsageSummariesByUser() {
         return new DailyPrintUsageSummariesByUserRequestBuilder(pathParameters, requestAdapter);
@@ -280,7 +305,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getAttackSimulationRepeatOffenders method.
      * @return a {@link GetAttackSimulationRepeatOffendersRequestBuilder}
+     * @deprecated
+     * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans on 2022-05-24 and will be removed 2022-08-20
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetAttackSimulationRepeatOffendersRequestBuilder getAttackSimulationRepeatOffenders() {
         return new GetAttackSimulationRepeatOffendersRequestBuilder(pathParameters, requestAdapter);
@@ -288,7 +316,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getAttackSimulationSimulationUserCoverage method.
      * @return a {@link GetAttackSimulationSimulationUserCoverageRequestBuilder}
+     * @deprecated
+     * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans on 2022-05-24 and will be removed 2022-08-20
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetAttackSimulationSimulationUserCoverageRequestBuilder getAttackSimulationSimulationUserCoverage() {
         return new GetAttackSimulationSimulationUserCoverageRequestBuilder(pathParameters, requestAdapter);
@@ -296,7 +327,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getAttackSimulationTrainingUserCoverage method.
      * @return a {@link GetAttackSimulationTrainingUserCoverageRequestBuilder}
+     * @deprecated
+     * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans on 2022-05-24 and will be removed 2022-08-20
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetAttackSimulationTrainingUserCoverageRequestBuilder getAttackSimulationTrainingUserCoverage() {
         return new GetAttackSimulationTrainingUserCoverageRequestBuilder(pathParameters, requestAdapter);
@@ -308,6 +342,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetCredentialUserRegistrationCountRequestBuilder getCredentialUserRegistrationCount() {
         return new GetCredentialUserRegistrationCountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getMicrosoft365Emissions method.
+     * @return a {@link GetMicrosoft365EmissionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetMicrosoft365EmissionsRequestBuilder getMicrosoft365Emissions() {
+        return new GetMicrosoft365EmissionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getOffice365ActivationCounts method.
@@ -342,6 +384,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return new HealthMonitoringRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the identityAnalytics property of the microsoft.graph.reportRoot entity.
+     * @return a {@link IdentityAnalyticsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public IdentityAnalyticsRequestBuilder identityAnalytics() {
+        return new IdentityAnalyticsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the managedDeviceEnrollmentFailureDetails method.
      * @return a {@link ManagedDeviceEnrollmentFailureDetailsRequestBuilder}
      */
@@ -366,6 +416,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return new ManagedDeviceEnrollmentTopFailuresRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the microsoftAppsFileStorageContainerUsageSummary property of the microsoft.graph.reportRoot entity.
+     * @return a {@link MicrosoftAppsFileStorageContainerUsageSummaryRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftAppsFileStorageContainerUsageSummaryRequestBuilder microsoftAppsFileStorageContainerUsageSummary() {
+        return new MicrosoftAppsFileStorageContainerUsageSummaryRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the monthlyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
      * @return a {@link MonthlyPrintUsageByPrinterRequestBuilder}
      */
@@ -384,7 +442,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the monthlyPrintUsageSummariesByPrinter property of the microsoft.graph.reportRoot entity.
      * @return a {@link MonthlyPrintUsageSummariesByPrinterRequestBuilder}
+     * @deprecated
+     * The monthlyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByPrinter navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MonthlyPrintUsageSummariesByPrinterRequestBuilder monthlyPrintUsageSummariesByPrinter() {
         return new MonthlyPrintUsageSummariesByPrinterRequestBuilder(pathParameters, requestAdapter);
@@ -392,7 +453,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the monthlyPrintUsageSummariesByUser property of the microsoft.graph.reportRoot entity.
      * @return a {@link MonthlyPrintUsageSummariesByUserRequestBuilder}
+     * @deprecated
+     * The monthlyPrintUsageSummariesByUser navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByUser navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MonthlyPrintUsageSummariesByUserRequestBuilder monthlyPrintUsageSummariesByUser() {
         return new MonthlyPrintUsageSummariesByUserRequestBuilder(pathParameters, requestAdapter);
@@ -440,7 +504,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the userCredentialUsageDetails property of the microsoft.graph.reportRoot entity.
      * @return a {@link UserCredentialUsageDetailsRequestBuilder}
+     * @deprecated
+     * The Reporting userCredentialUsageDetails API is deprecated and will stop returning data on June 30, 2025. Please use the new userEventsSummary API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public UserCredentialUsageDetailsRequestBuilder userCredentialUsageDetails() {
         return new UserCredentialUsageDetailsRequestBuilder(pathParameters, requestAdapter);
@@ -768,32 +835,32 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getMicrosoft365CopilotUsageUserDetail method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder}
+     * @return a {@link GetMicrosoft365CopilotUsageUserDetailWithPeriodversionVersionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder getMicrosoft365CopilotUsageUserDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetMicrosoft365CopilotUsageUserDetailWithPeriodversionVersionRequestBuilder getMicrosoft365CopilotUsageUserDetailWithPeriodversionVersion(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetMicrosoft365CopilotUsageUserDetailWithPeriodversionVersionRequestBuilder(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getMicrosoft365CopilotUserCountSummary method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetMicrosoft365CopilotUserCountSummaryWithPeriodRequestBuilder}
+     * @return a {@link GetMicrosoft365CopilotUserCountSummaryWithPeriodversionVersionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public GetMicrosoft365CopilotUserCountSummaryWithPeriodRequestBuilder getMicrosoft365CopilotUserCountSummaryWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetMicrosoft365CopilotUserCountSummaryWithPeriodversionVersionRequestBuilder getMicrosoft365CopilotUserCountSummaryWithPeriodversionVersion(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetMicrosoft365CopilotUserCountSummaryWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetMicrosoft365CopilotUserCountSummaryWithPeriodversionVersionRequestBuilder(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getMicrosoft365CopilotUserCountTrend method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetMicrosoft365CopilotUserCountTrendWithPeriodRequestBuilder}
+     * @return a {@link GetMicrosoft365CopilotUserCountTrendWithPeriodversionVersionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public GetMicrosoft365CopilotUserCountTrendWithPeriodRequestBuilder getMicrosoft365CopilotUserCountTrendWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetMicrosoft365CopilotUserCountTrendWithPeriodversionVersionRequestBuilder getMicrosoft365CopilotUserCountTrendWithPeriodversionVersion(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetMicrosoft365CopilotUserCountTrendWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetMicrosoft365CopilotUserCountTrendWithPeriodversionVersionRequestBuilder(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getOffice365ActiveUserCounts method.
@@ -1058,6 +1125,50 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     public GetSharePointActivityUserDetailWithPeriodRequestBuilder getSharePointActivityUserDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
         return new GetSharePointActivityUserDetailWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+    }
+    /**
+     * Provides operations to call the getSharePointApiUsage method.
+     * @param date Usage: date={date}
+     * @return a {@link GetSharePointApiUsageWithDatereportTypeReportTypeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetSharePointApiUsageWithDatereportTypeReportTypeRequestBuilder getSharePointApiUsageWithDatereportTypeReportType(@jakarta.annotation.Nonnull final OffsetDateTime date) {
+        Objects.requireNonNull(date);
+        return new GetSharePointApiUsageWithDatereportTypeReportTypeRequestBuilder(pathParameters, requestAdapter, date);
+    }
+    /**
+     * Provides operations to call the getSharePointApiUsage method.
+     * @param appId Usage: appId=&apos;{appId}&apos;
+     * @param date Usage: date={date}
+     * @return a {@link GetSharePointApiUsageWithDateWithAppIdreportTypeReportTypeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetSharePointApiUsageWithDateWithAppIdreportTypeReportTypeRequestBuilder getSharePointApiUsageWithDateWithAppIdreportTypeReportType(@jakarta.annotation.Nonnull final String appId, @jakarta.annotation.Nonnull final OffsetDateTime date) {
+        Objects.requireNonNull(appId);
+        Objects.requireNonNull(date);
+        return new GetSharePointApiUsageWithDateWithAppIdreportTypeReportTypeRequestBuilder(pathParameters, requestAdapter, appId, date);
+    }
+    /**
+     * Provides operations to call the getSharePointApiUsage method.
+     * @param period Usage: period=&apos;{period}&apos;
+     * @return a {@link GetSharePointApiUsageWithPeriodreportTypeReportTypeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetSharePointApiUsageWithPeriodreportTypeReportTypeRequestBuilder getSharePointApiUsageWithPeriodreportTypeReportType(@jakarta.annotation.Nonnull final String period) {
+        Objects.requireNonNull(period);
+        return new GetSharePointApiUsageWithPeriodreportTypeReportTypeRequestBuilder(pathParameters, requestAdapter, period);
+    }
+    /**
+     * Provides operations to call the getSharePointApiUsage method.
+     * @param appId Usage: appId=&apos;{appId}&apos;
+     * @param period Usage: period=&apos;{period}&apos;
+     * @return a {@link GetSharePointApiUsageWithPeriodWithAppIdreportTypeReportTypeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetSharePointApiUsageWithPeriodWithAppIdreportTypeReportTypeRequestBuilder getSharePointApiUsageWithPeriodWithAppIdreportTypeReportType(@jakarta.annotation.Nonnull final String appId, @jakarta.annotation.Nonnull final String period) {
+        Objects.requireNonNull(appId);
+        Objects.requireNonNull(period);
+        return new GetSharePointApiUsageWithPeriodWithAppIdreportTypeReportTypeRequestBuilder(pathParameters, requestAdapter, appId, period);
     }
     /**
      * Provides operations to call the getSharePointSiteUsageDetail method.

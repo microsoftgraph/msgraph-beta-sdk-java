@@ -25,6 +25,8 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, BackedMode
     public RedirectPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setMaskCallee(false);
+        this.setMaskCaller(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

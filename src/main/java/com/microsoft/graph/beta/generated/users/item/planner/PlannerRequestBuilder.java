@@ -5,9 +5,11 @@ import com.microsoft.graph.beta.models.PlannerUser;
 import com.microsoft.graph.beta.users.item.planner.all.AllRequestBuilder;
 import com.microsoft.graph.beta.users.item.planner.favoriteplans.FavoritePlansRequestBuilder;
 import com.microsoft.graph.beta.users.item.planner.mydaytasks.MyDayTasksRequestBuilder;
+import com.microsoft.graph.beta.users.item.planner.plans_v2.PlansV2RequestBuilder;
 import com.microsoft.graph.beta.users.item.planner.plans.PlansRequestBuilder;
 import com.microsoft.graph.beta.users.item.planner.recentplans.RecentPlansRequestBuilder;
 import com.microsoft.graph.beta.users.item.planner.rosterplans.RosterPlansRequestBuilder;
+import com.microsoft.graph.beta.users.item.planner.tasks_v2.TasksV2RequestBuilder;
 import com.microsoft.graph.beta.users.item.planner.tasks.TasksRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -60,6 +62,14 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return new PlansRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the plans_v2 property of the microsoft.graph.plannerUser entity.
+     * @return a {@link PlansV2RequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PlansV2RequestBuilder plansV2() {
+        return new PlansV2RequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the recentPlans property of the microsoft.graph.plannerUser entity.
      * @return a {@link RecentPlansRequestBuilder}
      */
@@ -82,6 +92,14 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TasksRequestBuilder tasks() {
         return new TasksRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tasks_v2 property of the microsoft.graph.plannerUser entity.
+     * @return a {@link TasksV2RequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TasksV2RequestBuilder tasksV2() {
+        return new TasksV2RequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link PlannerRequestBuilder} and sets the default values.

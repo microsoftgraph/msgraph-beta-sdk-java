@@ -85,7 +85,7 @@ public class TeamsAppInstallationScopeInfo implements AdditionalDataHolder, Back
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the scope property value. The scope property
+     * Gets the scope property value. The scope in which the Teams app is installed. The possible values are: team, groupChat, personal, unknownFutureValue.
      * @return a {@link EnumSet<TeamsAppInstallationScopes>}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class TeamsAppInstallationScopeInfo implements AdditionalDataHolder, Back
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the scope property value. The scope property
+     * Sets the scope property value. The scope in which the Teams app is installed. The possible values are: team, groupChat, personal, unknownFutureValue.
      * @param value Value to set for the scope property.
      */
     public void setScope(@jakarta.annotation.Nullable final EnumSet<TeamsAppInstallationScopes> value) {

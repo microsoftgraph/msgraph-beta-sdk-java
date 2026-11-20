@@ -5,6 +5,76 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.67.0](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.66.0...v6.67.0) (2026-11-20)
+
+
+### Features
+
+* **generation:** update request builders and models ([#1440](https://github.com/microsoftgraph/msgraph-beta-sdk-java/issues/1440)) ([9e760e7](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/9e760e78c46816ccb496fc355acfc89cb52e8e56))
+
+## [6.66.0](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.65.0...v6.66.0) (2026-11-05)
+
+
+### Features
+
+* **generation:** update request builders and models ([89db97f](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/89db97f630a290bc8867f3e5964ffdade13bbffd))
+
+## [6.65.0](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.64.0...v6.65.0) (2026-10-22)
+
+
+### Features
+
+* **generation:** update request builders and models ([9d531c4](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/9d531c430dff4c62b35d1bd6a4240ec36e5b8ce3))
+* **generation:** update request builders and models ([#1405](https://github.com/microsoftgraph/msgraph-beta-sdk-java/issues/1405)) ([caef848](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/caef84818ef40998233c6ae6ff42c69ca53bb609))
+
+## [6.64.0](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.63.0...v6.64.0) (2026-09-17)
+
+
+### Features
+
+* **generation:** update request builders and models ([a82db16](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/a82db1650d42116885fee404e8af966f36ad7a1b))
+
+## [6.63.0](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.62.0...v6.63.0) (2026-09-02)
+
+
+### Features
+
+* **generation:** update request builders and models ([e044016](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/e0440161af281b980a9aa50b5c8870cc8b4f2595))
+* **generation:** update request builders and models ([#1384](https://github.com/microsoftgraph/msgraph-beta-sdk-java/issues/1384)) ([01a8cbd](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/01a8cbd7c0e7d17c0f1f3f9e6052e5a4857b4335))
+
+## [6.62.0](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.61.0...v6.62.0) (2026-08-05)
+
+
+### Features
+
+* **generation:** update request builders and models ([9ed08f8](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/9ed08f834919ed37c3d81f89d99a5654b49fcbcb))
+
+## [6.61.0](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.60.1...v6.61.0) (2026-07-22)
+
+
+### Features
+
+* **generation:** update request builders and models ([89fae7d](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/89fae7d31450c4fdc32056ecc2d3fbd545149ed5))
+
+
+### Bug Fixes
+
+* correct malformed YAML in ci-build.yml Configure Maven settings step ([#1368](https://github.com/microsoftgraph/msgraph-beta-sdk-java/issues/1368)) ([6c08d0d](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/6c08d0d7a35d03bcbd5a7580b58aa7b0870c2e7a))
+
+## [6.60.1](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.60.0...v6.60.1) (2026-07-13)
+
+
+### Bug Fixes
+
+* Merge pull request [#1366](https://github.com/microsoftgraph/msgraph-beta-sdk-java/issues/1366) from microsoftgraph/ci/update-deployment-approver ([f4cdb4a](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/f4cdb4af453f71aa4a2b4e41974d9a10a2e78f9a))
+
+## [6.60.0](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.59.0...v6.60.0) (2026-07-10)
+
+
+### Features
+
+* **generation:** update request builders and models ([e1b272e](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/e1b272ebef5a3556a45b326c9ea665e53a53141b))
+
 ## [6.59.0](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.58.0...v6.59.0) (2026-05-05)
 
 

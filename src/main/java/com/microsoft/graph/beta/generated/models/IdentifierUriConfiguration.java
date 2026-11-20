@@ -84,7 +84,7 @@ public class IdentifierUriConfiguration implements AdditionalDataHolder, BackedM
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the uriAdditionWithoutUniqueTenantIdentifier property value. Block new identifier URIs for applications, unless they contain a unique tenant identifier like the tenant ID, appId (client ID), or verified domain. For example, api://{tenatId}/string, api://{appId}/string, {scheme}://string/{tenantId}, {scheme}://string/{appId}, https://{verified-domain.com}/path, {scheme}://{subdomain}.{verified-domain.com}/path.
+     * Gets the uriAdditionWithoutUniqueTenantIdentifier property value. Block new identifier URIs for applications, unless they contain a unique tenant identifier like the tenant ID, appId (client ID), or verified domain. For example, api://{tenantId}/string, api://{appId}/string, {scheme}://string/{tenantId}, {scheme}://string/{appId}, https://{verified-domain.com}/path, {scheme}://{subdomain}.{verified-domain.com}/path.
      * @return a {@link IdentifierUriRestriction}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class IdentifierUriConfiguration implements AdditionalDataHolder, BackedM
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the uriAdditionWithoutUniqueTenantIdentifier property value. Block new identifier URIs for applications, unless they contain a unique tenant identifier like the tenant ID, appId (client ID), or verified domain. For example, api://{tenatId}/string, api://{appId}/string, {scheme}://string/{tenantId}, {scheme}://string/{appId}, https://{verified-domain.com}/path, {scheme}://{subdomain}.{verified-domain.com}/path.
+     * Sets the uriAdditionWithoutUniqueTenantIdentifier property value. Block new identifier URIs for applications, unless they contain a unique tenant identifier like the tenant ID, appId (client ID), or verified domain. For example, api://{tenantId}/string, api://{appId}/string, {scheme}://string/{tenantId}, {scheme}://string/{appId}, https://{verified-domain.com}/path, {scheme}://{subdomain}.{verified-domain.com}/path.
      * @param value Value to set for the uriAdditionWithoutUniqueTenantIdentifier property.
      */
     public void setUriAdditionWithoutUniqueTenantIdentifier(@jakarta.annotation.Nullable final IdentifierUriRestriction value) {

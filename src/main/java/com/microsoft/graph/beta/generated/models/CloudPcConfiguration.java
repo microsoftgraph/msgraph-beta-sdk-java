@@ -70,7 +70,7 @@ public class CloudPcConfiguration implements AdditionalDataHolder, BackedModel, 
         return deserializerMap;
     }
     /**
-     * Gets the imageDisplayName property value. The imageDisplayName property
+     * Gets the imageDisplayName property value. The display name of the image. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class CloudPcConfiguration implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("imageDisplayName");
     }
     /**
-     * Gets the imageId property value. The imageId property
+     * Gets the imageId property value. The unique identifier of the operating system image used for provisioning new Cloud PCs. The format for a gallery type image is: {publisherNameofferNameskuName}.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class CloudPcConfiguration implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the osLocale property value. The osLocale property
+     * Gets the osLocale property value. The operating system locale for the Cloud PC.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,14 +138,14 @@ public class CloudPcConfiguration implements AdditionalDataHolder, BackedModel, 
         this.backingStore = value;
     }
     /**
-     * Sets the imageDisplayName property value. The imageDisplayName property
+     * Sets the imageDisplayName property value. The display name of the image. Read-only.
      * @param value Value to set for the imageDisplayName property.
      */
     public void setImageDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("imageDisplayName", value);
     }
     /**
-     * Sets the imageId property value. The imageId property
+     * Sets the imageId property value. The unique identifier of the operating system image used for provisioning new Cloud PCs. The format for a gallery type image is: {publisherNameofferNameskuName}.
      * @param value Value to set for the imageId property.
      */
     public void setImageId(@jakarta.annotation.Nullable final String value) {
@@ -166,7 +166,7 @@ public class CloudPcConfiguration implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the osLocale property value. The osLocale property
+     * Sets the osLocale property value. The operating system locale for the Cloud PC.
      * @param value Value to set for the osLocale property.
      */
     public void setOsLocale(@jakarta.annotation.Nullable final String value) {

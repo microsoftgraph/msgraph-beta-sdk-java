@@ -32,8 +32,17 @@ public class VerifiableCredentialsAuthenticationMethodConfiguration extends Auth
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("identityVerificationEventsConfiguration", (n) -> { this.setIdentityVerificationEventsConfiguration(n.getObjectValue(IdentityVerificationEventsConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(VerifiableCredentialAuthenticationMethodTarget::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the identityVerificationEventsConfiguration property value. The optional tenant-level configuration that controls whether identity verification events and credential provenance information are collected and exposed for Verified ID verification. This setting isn&apos;t scoped to individual Verified ID profiles. If no configuration is stored or the stored value is null, event collection and exposure are disabled. Omitting this property from a PATCH request leaves its existing value unchanged.
+     * @return a {@link IdentityVerificationEventsConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public IdentityVerificationEventsConfiguration getIdentityVerificationEventsConfiguration() {
+        return this.backingStore.get("identityVerificationEventsConfiguration");
     }
     /**
      * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
@@ -50,7 +59,15 @@ public class VerifiableCredentialsAuthenticationMethodConfiguration extends Auth
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("identityVerificationEventsConfiguration", this.getIdentityVerificationEventsConfiguration());
         writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
+    }
+    /**
+     * Sets the identityVerificationEventsConfiguration property value. The optional tenant-level configuration that controls whether identity verification events and credential provenance information are collected and exposed for Verified ID verification. This setting isn&apos;t scoped to individual Verified ID profiles. If no configuration is stored or the stored value is null, event collection and exposure are disabled. Omitting this property from a PATCH request leaves its existing value unchanged.
+     * @param value Value to set for the identityVerificationEventsConfiguration property.
+     */
+    public void setIdentityVerificationEventsConfiguration(@jakarta.annotation.Nullable final IdentityVerificationEventsConfiguration value) {
+        this.backingStore.set("identityVerificationEventsConfiguration", value);
     }
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.

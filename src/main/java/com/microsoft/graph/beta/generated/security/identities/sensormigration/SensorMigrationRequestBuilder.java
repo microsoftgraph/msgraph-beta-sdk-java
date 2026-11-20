@@ -69,19 +69,21 @@ public class SensorMigrationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/identities/sensorMigration{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get sensorMigration from security
+     * Get a list of the sensorMigration objects and their properties.
      * @return a {@link SensorMigrationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-identitycontainer-list-sensormigration?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SensorMigrationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get sensorMigration from security
+     * Get a list of the sensorMigration objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SensorMigrationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-identitycontainer-list-sensormigration?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SensorMigrationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -116,7 +118,7 @@ public class SensorMigrationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SensorMigration::createFromDiscriminatorValue);
     }
     /**
-     * Get sensorMigration from security
+     * Get a list of the sensorMigration objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +126,7 @@ public class SensorMigrationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get sensorMigration from security
+     * Get a list of the sensorMigration objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -170,7 +172,7 @@ public class SensorMigrationRequestBuilder extends BaseRequestBuilder {
         return new SensorMigrationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get sensorMigration from security
+     * Get a list of the sensorMigration objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

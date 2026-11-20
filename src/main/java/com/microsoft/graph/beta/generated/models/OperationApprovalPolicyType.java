@@ -25,7 +25,9 @@ public enum OperationApprovalPolicyType implements ValuedEnum {
     /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue"),
     /** Indicates that the configured policy type is for Tenant Configuration operations. */
-    TenantConfiguration("tenantConfiguration");
+    TenantConfiguration("tenantConfiguration"),
+    /** Indicates that the configured policy type is for a Device Deprovision Action. */
+    DeviceDeprovision("deviceDeprovision");
     public final String value;
     OperationApprovalPolicyType(final String value) {
         this.value = value;
@@ -45,6 +47,7 @@ public enum OperationApprovalPolicyType implements ValuedEnum {
             case "role": return Role;
             case "unknownFutureValue": return UnknownFutureValue;
             case "tenantConfiguration": return TenantConfiguration;
+            case "deviceDeprovision": return DeviceDeprovision;
             default: return null;
         }
     }

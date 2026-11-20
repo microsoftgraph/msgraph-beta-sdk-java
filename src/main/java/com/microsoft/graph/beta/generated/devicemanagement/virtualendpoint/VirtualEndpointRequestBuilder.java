@@ -113,7 +113,10 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the externalPartnerSettings property of the microsoft.graph.virtualEndpoint entity.
      * @return a {@link ExternalPartnerSettingsRequestBuilder}
+     * @deprecated
+     * The cloudPcExternalPartnerSetting is deprecated and will not be supported starting March 31, 2026. This entity will not be included in the API response. Please use externalPartners instead. as of 2025-02/cloudPcExternalPartnerSetting on 2025-02-18 and will be removed 2026-03-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ExternalPartnerSettingsRequestBuilder externalPartnerSettings() {
         return new ExternalPartnerSettingsRequestBuilder(pathParameters, requestAdapter);

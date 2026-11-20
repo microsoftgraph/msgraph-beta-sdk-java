@@ -78,11 +78,12 @@ public class ChatMessageReaction implements AdditionalDataHolder, BackedModel, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("reactionContentUrl", (n) -> { this.setReactionContentUrl(n.getStringValue()); });
+        deserializerMap.put("reactionId", (n) -> { this.setReactionId(n.getStringValue()); });
         deserializerMap.put("reactionType", (n) -> { this.setReactionType(n.getStringValue()); });
         deserializerMap.put("user", (n) -> { this.setUser(n.getObjectValue(ChatMessageReactionIdentitySet::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -102,6 +103,14 @@ public class ChatMessageReaction implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nullable
     public String getReactionContentUrl() {
         return this.backingStore.get("reactionContentUrl");
+    }
+    /**
+     * Gets the reactionId property value. The service-issued identifier for a custom emoji reaction. The identifier is scoped to the tenant.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getReactionId() {
+        return this.backingStore.get("reactionId");
     }
     /**
      * Gets the reactionType property value. The reaction type. Supported values include Unicode characters, custom, and some backward-compatible reaction types, such as like, angry, sad, laugh, heart, and surprised.
@@ -129,6 +138,7 @@ public class ChatMessageReaction implements AdditionalDataHolder, BackedModel, P
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("reactionContentUrl", this.getReactionContentUrl());
+        writer.writeStringValue("reactionId", this.getReactionId());
         writer.writeStringValue("reactionType", this.getReactionType());
         writer.writeObjectValue("user", this.getUser());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -175,6 +185,13 @@ public class ChatMessageReaction implements AdditionalDataHolder, BackedModel, P
      */
     public void setReactionContentUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("reactionContentUrl", value);
+    }
+    /**
+     * Sets the reactionId property value. The service-issued identifier for a custom emoji reaction. The identifier is scoped to the tenant.
+     * @param value Value to set for the reactionId property.
+     */
+    public void setReactionId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("reactionId", value);
     }
     /**
      * Sets the reactionType property value. The reaction type. Supported values include Unicode characters, custom, and some backward-compatible reaction types, such as like, angry, sad, laugh, heart, and surprised.

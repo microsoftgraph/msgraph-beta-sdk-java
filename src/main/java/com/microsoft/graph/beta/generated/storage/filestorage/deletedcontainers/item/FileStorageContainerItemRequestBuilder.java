@@ -14,6 +14,7 @@ import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.provi
 import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.recyclebin.RecycleBinRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.sharepointgroups.SharePointGroupsRequestBuilder;
+import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.transferprincipalownership.TransferPrincipalOwnershipRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.unlock.UnlockRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -129,6 +130,14 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SharePointGroupsRequestBuilder sharePointGroups() {
         return new SharePointGroupsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the transferPrincipalOwnership method.
+     * @return a {@link TransferPrincipalOwnershipRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TransferPrincipalOwnershipRequestBuilder transferPrincipalOwnership() {
+        return new TransferPrincipalOwnershipRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the unarchive method.

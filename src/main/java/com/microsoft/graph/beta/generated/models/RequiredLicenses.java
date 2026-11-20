@@ -12,7 +12,8 @@ public enum RequiredLicenses implements ValuedEnum {
     MicrosoftEntraIdGovernance("microsoftEntraIdGovernance"),
     MicrosoftEntraWorkloadId("microsoftEntraWorkloadId"),
     UnknownFutureValue("unknownFutureValue"),
-    Aatp("aatp");
+    Aatp("aatp"),
+    MicrosoftEntraSuite("microsoftEntraSuite");
     public final String value;
     RequiredLicenses(final String value) {
         this.value = value;
@@ -31,6 +32,7 @@ public enum RequiredLicenses implements ValuedEnum {
             case "microsoftEntraWorkloadId": return MicrosoftEntraWorkloadId;
             case "unknownFutureValue": return UnknownFutureValue;
             case "aatp": return Aatp;
+            case "microsoftEntraSuite": return MicrosoftEntraSuite;
             default: return null;
         }
     }

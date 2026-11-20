@@ -27,10 +27,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Provides operations to manage the appScope property of the microsoft.graph.unifiedRoleAssignment entity.
      * @return a {@link AppScopeRequestBuilder}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AppScopeRequestBuilder appScope() {
         return new AppScopeRequestBuilder(pathParameters, requestAdapter);
@@ -38,10 +35,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Provides operations to manage the directoryScope property of the microsoft.graph.unifiedRoleAssignment entity.
      * @return a {@link DirectoryScopeRequestBuilder}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DirectoryScopeRequestBuilder directoryScope() {
         return new DirectoryScopeRequestBuilder(pathParameters, requestAdapter);
@@ -49,10 +43,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Provides operations to manage the principal property of the microsoft.graph.unifiedRoleAssignment entity.
      * @return a {@link PrincipalRequestBuilder}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PrincipalRequestBuilder principal() {
         return new PrincipalRequestBuilder(pathParameters, requestAdapter);
@@ -60,10 +51,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Provides operations to manage the roleDefinition property of the microsoft.graph.unifiedRoleAssignment entity.
      * @return a {@link RoleDefinitionRequestBuilder}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RoleDefinitionRequestBuilder roleDefinition() {
         return new RoleDefinitionRequestBuilder(pathParameters, requestAdapter);
@@ -87,10 +75,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Delete navigation property transitiveRoleAssignments for roleManagement
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -98,10 +83,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
      * Delete navigation property transitiveRoleAssignments for roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -112,11 +94,8 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
      * Resource to grant access to users or groups that are transitive.
      * @return a {@link UnifiedRoleAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UnifiedRoleAssignment get() {
         return get(null);
     }
@@ -125,11 +104,8 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UnifiedRoleAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -141,11 +117,8 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
      * @param body The request body
      * @return a {@link UnifiedRoleAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UnifiedRoleAssignment patch(@jakarta.annotation.Nonnull final UnifiedRoleAssignment body) {
         return patch(body, null);
     }
@@ -155,11 +128,8 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UnifiedRoleAssignment patch(@jakarta.annotation.Nonnull final UnifiedRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -170,11 +140,8 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Delete navigation property transitiveRoleAssignments for roleManagement
      * @return a {@link RequestInformation}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -182,11 +149,8 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
      * Delete navigation property transitiveRoleAssignments for roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -196,11 +160,8 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Resource to grant access to users or groups that are transitive.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -208,11 +169,8 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
      * Resource to grant access to users or groups that are transitive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -223,11 +181,8 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property transitiveRoleAssignments in roleManagement
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleAssignment body) {
         return toPatchRequestInformation(body, null);
     }
@@ -236,11 +191,8 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -253,11 +205,8 @@ public class UnifiedRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link UnifiedRoleAssignmentItemRequestBuilder}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public UnifiedRoleAssignmentItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new UnifiedRoleAssignmentItemRequestBuilder(rawUrl, requestAdapter);

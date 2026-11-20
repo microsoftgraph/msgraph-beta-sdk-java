@@ -21,3 +21,16 @@ pipelines:
           lastModifiedDate: 2025-09-11
         spotbugs:
           lastModifiedDate: 2025-09-11
+  689:
+    retail:
+      source:
+        credscan:
+          lastModifiedDate: 2026-07-09
+        policheck:
+          lastModifiedDate: 2026-07-09
+        eslint:
+          lastModifiedDate: 2026-07-09
+        armory:
+          lastModifiedDate: 2026-07-09
+        accessibilityinsights:
+          lastModifiedDate: 2026-07-09

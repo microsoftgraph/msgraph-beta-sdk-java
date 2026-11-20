@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.admin.exchange.mailboxes.item.folders;
 import com.microsoft.graph.beta.admin.exchange.mailboxes.item.folders.count.CountRequestBuilder;
 import com.microsoft.graph.beta.admin.exchange.mailboxes.item.folders.delta.DeltaRequestBuilder;
 import com.microsoft.graph.beta.admin.exchange.mailboxes.item.folders.item.MailboxFolderItemRequestBuilder;
+import com.microsoft.graph.beta.models.MailboxFolder;
 import com.microsoft.graph.beta.models.MailboxFolderCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -26,10 +27,7 @@ public class FoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -37,10 +35,7 @@ public class FoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the delta method.
      * @return a {@link DeltaRequestBuilder}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
@@ -49,11 +44,8 @@ public class FoldersRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the folders property of the microsoft.graph.mailbox entity.
      * @param mailboxFolderId The unique identifier of mailboxFolder
      * @return a {@link MailboxFolderItemRequestBuilder}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public MailboxFolderItemRequestBuilder byMailboxFolderId(@jakarta.annotation.Nonnull final String mailboxFolderId) {
         Objects.requireNonNull(mailboxFolderId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -77,29 +69,23 @@ public class FoldersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/exchange/mailboxes/{mailbox%2Did}/folders{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get all the mailboxFolder objects in the specified mailbox, including any search folders.
+     * Get all the mailboxFolder objects in the specified mailbox, including any search folders. By default, hidden folders aren&apos;t returned. To include them, specify includeHiddenFolders=true.
      * @return a {@link MailboxFolderCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      * @see <a href="https://learn.microsoft.com/graph/api/mailbox-list-folders?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MailboxFolderCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get all the mailboxFolder objects in the specified mailbox, including any search folders.
+     * Get all the mailboxFolder objects in the specified mailbox, including any search folders. By default, hidden folders aren&apos;t returned. To include them, specify includeHiddenFolders=true.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxFolderCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      * @see <a href="https://learn.microsoft.com/graph/api/mailbox-list-folders?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MailboxFolderCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -107,25 +93,46 @@ public class FoldersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxFolderCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get all the mailboxFolder objects in the specified mailbox, including any search folders.
+     * Create a new mailboxFolder or child mailboxFolder in a user&apos;s mailbox.
+     * @param body The request body
+     * @return a {@link MailboxFolder}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailbox-post-folders?view=graph-rest-beta">Find more info here</a>
+     */
+    @jakarta.annotation.Nullable
+    public MailboxFolder post(@jakarta.annotation.Nonnull final MailboxFolder body) {
+        return post(body, null);
+    }
+    /**
+     * Create a new mailboxFolder or child mailboxFolder in a user&apos;s mailbox.
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a {@link MailboxFolder}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailbox-post-folders?view=graph-rest-beta">Find more info here</a>
+     */
+    @jakarta.annotation.Nullable
+    public MailboxFolder post(@jakarta.annotation.Nonnull final MailboxFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, MailboxFolder::createFromDiscriminatorValue);
+    }
+    /**
+     * Get all the mailboxFolder objects in the specified mailbox, including any search folders. By default, hidden folders aren&apos;t returned. To include them, specify includeHiddenFolders=true.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Get all the mailboxFolder objects in the specified mailbox, including any search folders.
+     * Get all the mailboxFolder objects in the specified mailbox, including any search folders. By default, hidden folders aren&apos;t returned. To include them, specify includeHiddenFolders=true.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -133,20 +140,41 @@ public class FoldersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Create a new mailboxFolder or child mailboxFolder in a user&apos;s mailbox.
+     * @param body The request body
+     * @return a {@link RequestInformation}
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MailboxFolder body) {
+        return toPostRequestInformation(body, null);
+    }
+    /**
+     * Create a new mailboxFolder or child mailboxFolder in a user&apos;s mailbox.
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a {@link RequestInformation}
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MailboxFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        return requestInfo;
+    }
+    /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link FoldersRequestBuilder}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public FoldersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new FoldersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get all the mailboxFolder objects in the specified mailbox, including any search folders.
+     * Get all the mailboxFolder objects in the specified mailbox, including any search folders. By default, hidden folders aren&apos;t returned. To include them, specify includeHiddenFolders=true.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -218,5 +246,11 @@ public class FoldersRequestBuilder extends BaseRequestBuilder {
          */
         @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public class PostRequestConfiguration extends BaseRequestConfiguration {
     }
 }

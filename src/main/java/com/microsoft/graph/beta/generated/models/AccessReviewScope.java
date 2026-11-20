@@ -37,6 +37,7 @@ public class AccessReviewScope implements AdditionalDataHolder, BackedModel, Par
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.accessReviewAccessPackageAssignmentPolicyScope": return new AccessReviewAccessPackageAssignmentPolicyScope();
+                case "#microsoft.graph.accessReviewCatalogScope": return new AccessReviewCatalogScope();
                 case "#microsoft.graph.accessReviewInactiveUsersQueryScope": return new AccessReviewInactiveUsersQueryScope();
                 case "#microsoft.graph.accessReviewPrincipalScope": return new AccessReviewPrincipalScope();
                 case "#microsoft.graph.accessReviewQueryScope": return new AccessReviewQueryScope();

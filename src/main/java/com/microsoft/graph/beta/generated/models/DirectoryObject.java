@@ -70,6 +70,7 @@ public class DirectoryObject extends Entity implements Parsable {
                 case "#microsoft.graph.permissionGrantPolicy": return new PermissionGrantPolicy();
                 case "#microsoft.graph.permissionGrantPreApprovalPolicy": return new PermissionGrantPreApprovalPolicy();
                 case "#microsoft.graph.policyBase": return new PolicyBase();
+                case "#microsoft.graph.remoteTenantGroup": return new RemoteTenantGroup();
                 case "#microsoft.graph.resourceSpecificPermissionGrant": return new ResourceSpecificPermissionGrant();
                 case "#microsoft.graph.servicePrincipal": return new ServicePrincipal();
                 case "#microsoft.graph.servicePrincipalCreationPolicy": return new ServicePrincipalCreationPolicy();

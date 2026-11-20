@@ -54,7 +54,10 @@ public class PrintRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the printerShares property of the microsoft.graph.print entity.
      * @return a {@link PrinterSharesRequestBuilder}
+     * @deprecated
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PrinterSharesRequestBuilder printerShares() {
         return new PrinterSharesRequestBuilder(pathParameters, requestAdapter);

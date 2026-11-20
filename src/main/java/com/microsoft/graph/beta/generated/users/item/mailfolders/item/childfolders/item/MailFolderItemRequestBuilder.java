@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item;
 import com.microsoft.graph.beta.models.MailFolder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.copy.CopyRequestBuilder;
+import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.importmime.ImportMimeRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.messagerules.MessageRulesRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.messages.MessagesRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.move.MoveRequestBuilder;
@@ -37,6 +38,14 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         return new CopyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the importMime method.
+     * @return a {@link ImportMimeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ImportMimeRequestBuilder importMime() {
+        return new ImportMimeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the messageRules property of the microsoft.graph.mailFolder entity.
      * @return a {@link MessageRulesRequestBuilder}
      */
@@ -63,7 +72,10 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the operations property of the microsoft.graph.mailFolder entity.
      * @return a {@link OperationsRequestBuilder}
+     * @deprecated
+     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
@@ -79,7 +91,10 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the updateAllMessagesReadState method.
      * @return a {@link UpdateAllMessagesReadStateRequestBuilder}
+     * @deprecated
+     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public UpdateAllMessagesReadStateRequestBuilder updateAllMessagesReadState() {
         return new UpdateAllMessagesReadStateRequestBuilder(pathParameters, requestAdapter);

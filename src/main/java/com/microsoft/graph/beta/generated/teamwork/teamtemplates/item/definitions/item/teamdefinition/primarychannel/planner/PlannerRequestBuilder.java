@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.te
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.TeamsChannelPlanner;
+import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.planner.plans_v2.PlansV2RequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.planner.plans.PlansRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -28,6 +29,14 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PlansRequestBuilder plans() {
         return new PlansRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the plans_v2 property of the microsoft.graph.teamsChannelPlanner entity.
+     * @return a {@link PlansV2RequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PlansV2RequestBuilder plansV2() {
+        return new PlansV2RequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link PlannerRequestBuilder} and sets the default values.

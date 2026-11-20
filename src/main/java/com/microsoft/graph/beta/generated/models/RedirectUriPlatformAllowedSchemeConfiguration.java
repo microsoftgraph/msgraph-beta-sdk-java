@@ -48,7 +48,7 @@ public class RedirectUriPlatformAllowedSchemeConfiguration implements Additional
         return value;
     }
     /**
-     * Gets the allowedSchemes property value. The allowedSchemes property
+     * Gets the allowedSchemes property value. Collection of URI schemes that are allowed for this specific platform. Schemes refer to URI schemes as defined in RFC 3986 3.1. The value &apos;*&apos; can be used to allow any scheme for this platform.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class RedirectUriPlatformAllowedSchemeConfiguration implements Additional
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the allowedSchemes property value. The allowedSchemes property
+     * Sets the allowedSchemes property value. Collection of URI schemes that are allowed for this specific platform. Schemes refer to URI schemes as defined in RFC 3986 3.1. The value &apos;*&apos; can be used to allow any scheme for this platform.
      * @param value Value to set for the allowedSchemes property.
      */
     public void setAllowedSchemes(@jakarta.annotation.Nullable final java.util.List<String> value) {

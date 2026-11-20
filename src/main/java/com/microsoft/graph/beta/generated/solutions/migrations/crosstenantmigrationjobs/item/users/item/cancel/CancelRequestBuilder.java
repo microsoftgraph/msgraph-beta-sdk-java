@@ -36,29 +36,23 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/migrations/crossTenantMigrationJobs/{crossTenantMigrationJob%2Did}/users/{crossTenantMigrationTask%2Did}/cancel", rawUrl);
     }
     /**
-     * Cancel a specific crossTenantMigrationTask for a User within a CrossTenantMigrationJob.  If the User migration can&apos;t be canceled or is in a terminal state, a 409 CONFLICT response code is returned, and the migration continues.
+     * Cancel a specific crossTenantMigrationTask for a user in a crossTenantMigrationJob. If the user migration can&apos;t be canceled or is in a terminal state, a 409 Conflict response code is returned, and the migration continues.
      * @return a {@link CrossTenantMigrationCancelResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantmigrationtask-cancel?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CrossTenantMigrationCancelResponse post() {
         return post(null);
     }
     /**
-     * Cancel a specific crossTenantMigrationTask for a User within a CrossTenantMigrationJob.  If the User migration can&apos;t be canceled or is in a terminal state, a 409 CONFLICT response code is returned, and the migration continues.
+     * Cancel a specific crossTenantMigrationTask for a user in a crossTenantMigrationJob. If the user migration can&apos;t be canceled or is in a terminal state, a 409 Conflict response code is returned, and the migration continues.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CrossTenantMigrationCancelResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantmigrationtask-cancel?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CrossTenantMigrationCancelResponse post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -66,25 +60,19 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantMigrationCancelResponse::createFromDiscriminatorValue);
     }
     /**
-     * Cancel a specific crossTenantMigrationTask for a User within a CrossTenantMigrationJob.  If the User migration can&apos;t be canceled or is in a terminal state, a 409 CONFLICT response code is returned, and the migration continues.
+     * Cancel a specific crossTenantMigrationTask for a user in a crossTenantMigrationJob. If the user migration can&apos;t be canceled or is in a terminal state, a 409 Conflict response code is returned, and the migration continues.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation() {
         return toPostRequestInformation(null);
     }
     /**
-     * Cancel a specific crossTenantMigrationTask for a User within a CrossTenantMigrationJob.  If the User migration can&apos;t be canceled or is in a terminal state, a 409 CONFLICT response code is returned, and the migration continues.
+     * Cancel a specific crossTenantMigrationTask for a user in a crossTenantMigrationJob. If the user migration can&apos;t be canceled or is in a terminal state, a 409 Conflict response code is returned, and the migration continues.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
@@ -95,11 +83,8 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CancelRequestBuilder}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public CancelRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new CancelRequestBuilder(rawUrl, requestAdapter);

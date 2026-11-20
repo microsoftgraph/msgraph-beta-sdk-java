@@ -38,6 +38,7 @@ public class DlpActionInfo implements AdditionalDataHolder, BackedModel, Parsabl
             switch (mappingValue) {
                 case "#microsoft.graph.blockAccessAction": return new BlockAccessAction();
                 case "#microsoft.graph.notifyUserAction": return new NotifyUserAction();
+                case "#microsoft.graph.policyTipAction": return new PolicyTipAction();
                 case "#microsoft.graph.restrictAccessAction": return new RestrictAccessAction();
                 case "#microsoft.graph.restrictAccessActionBase": return new RestrictAccessActionBase();
             }

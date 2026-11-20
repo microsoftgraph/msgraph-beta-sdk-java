@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.admin.windows.updates.policies.item;
 
+import com.microsoft.graph.beta.admin.windows.updates.policies.item.applicablecatalogs.ApplicableCatalogsRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.policies.item.applicablecontent.ApplicableContentRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.policies.item.approvals.ApprovalsRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.policies.item.rings.RingsRequestBuilder;
@@ -23,6 +24,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PolicyItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the applicableCatalogs property of the microsoft.graph.windowsUpdates.policy entity.
+     * @return a {@link ApplicableCatalogsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ApplicableCatalogsRequestBuilder applicableCatalogs() {
+        return new ApplicableCatalogsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the applicableContent property of the microsoft.graph.windowsUpdates.policy entity.
      * @return a {@link ApplicableContentRequestBuilder}
@@ -64,7 +73,7 @@ public class PolicyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/policies/{policy%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a Windows update policy object. You can use this method with the following child object type: qualityUpdatePolicy.
+     * Delete a Windows update policy object. You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-policy-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -72,7 +81,7 @@ public class PolicyItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Delete a Windows update policy object. You can use this method with the following child object type: qualityUpdatePolicy.
+     * Delete a Windows update policy object. You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-policy-delete?view=graph-rest-beta">Find more info here</a>
@@ -84,7 +93,7 @@ public class PolicyItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a policy object. You can use this method with the following child object type: qualityUpdatePolicy.
+     * Read the properties and relationships of a policy object. You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @return a {@link Policy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-policy-get?view=graph-rest-beta">Find more info here</a>
@@ -94,7 +103,7 @@ public class PolicyItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a policy object. You can use this method with the following child object type: qualityUpdatePolicy.
+     * Read the properties and relationships of a policy object. You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Policy}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -108,7 +117,7 @@ public class PolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Policy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a policy object. You can use this method with the following child object type: qualityUpdatePolicy.
+     * Update the properties of a policy object. You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @param body The request body
      * @return a {@link Policy}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -119,7 +128,7 @@ public class PolicyItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a policy object. You can use this method with the following child object type: qualityUpdatePolicy.
+     * Update the properties of a policy object. You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Policy}
@@ -135,7 +144,7 @@ public class PolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Policy::createFromDiscriminatorValue);
     }
     /**
-     * Delete a Windows update policy object. You can use this method with the following child object type: qualityUpdatePolicy.
+     * Delete a Windows update policy object. You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -143,7 +152,7 @@ public class PolicyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a Windows update policy object. You can use this method with the following child object type: qualityUpdatePolicy.
+     * Delete a Windows update policy object. You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -155,7 +164,7 @@ public class PolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a policy object. You can use this method with the following child object type: qualityUpdatePolicy.
+     * Read the properties and relationships of a policy object. You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -163,7 +172,7 @@ public class PolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a policy object. You can use this method with the following child object type: qualityUpdatePolicy.
+     * Read the properties and relationships of a policy object. You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -175,7 +184,7 @@ public class PolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a policy object. You can use this method with the following child object type: qualityUpdatePolicy.
+     * Update the properties of a policy object. You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -184,7 +193,7 @@ public class PolicyItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a policy object. You can use this method with the following child object type: qualityUpdatePolicy.
+     * Update the properties of a policy object. You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -215,7 +224,7 @@ public class PolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a policy object. You can use this method with the following child object type: qualityUpdatePolicy.
+     * Read the properties and relationships of a policy object. You can use this method with the following child object types: driverUpdatePolicy, featureUpdatePolicy, and qualityUpdatePolicy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

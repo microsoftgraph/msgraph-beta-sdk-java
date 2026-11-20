@@ -86,7 +86,7 @@ public class CloudPcCloudAppDetail implements AdditionalDataHolder, BackedModel,
         return deserializerMap;
     }
     /**
-     * Gets the filePath property value. Specifies the path to the executable file for the application within the OS of the hosting Cloud PC. The value should be an absolute path to a Windows or Universal app. For example, C:/app.exe or shell:AppsFolder/appname!App. Read-only.
+     * Gets the filePath property value. Specifies the path to the executable file for the application within the OS of the hosting Cloud PC. The value should be an absolute path to a Windows or Universal app. For example, C:/app.exe or shell:AppsFolder/appname!App.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class CloudPcCloudAppDetail implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("commandLineArguments", value);
     }
     /**
-     * Sets the filePath property value. Specifies the path to the executable file for the application within the OS of the hosting Cloud PC. The value should be an absolute path to a Windows or Universal app. For example, C:/app.exe or shell:AppsFolder/appname!App. Read-only.
+     * Sets the filePath property value. Specifies the path to the executable file for the application within the OS of the hosting Cloud PC. The value should be an absolute path to a Windows or Universal app. For example, C:/app.exe or shell:AppsFolder/appname!App.
      * @param value Value to set for the filePath property.
      */
     public void setFilePath(@jakarta.annotation.Nullable final String value) {

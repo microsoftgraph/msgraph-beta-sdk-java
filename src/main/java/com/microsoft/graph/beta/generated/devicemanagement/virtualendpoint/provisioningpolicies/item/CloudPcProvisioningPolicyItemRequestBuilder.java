@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpol
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.AssignmentsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.retrievepolicyapplyactionresult.RetrievePolicyApplyActionResultRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.retrievepolicyapplyschedule.RetrievePolicyApplyScheduleRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.retrievepolicyupdatestatusresult.RetrievePolicyUpdateStatusResultRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.retry.RetryRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.schedulepolicyapplytask.SchedulePolicyApplyTaskRequestBuilder;
 import com.microsoft.graph.beta.models.CloudPcProvisioningPolicy;
@@ -66,6 +67,14 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
     @jakarta.annotation.Nonnull
     public RetrievePolicyApplyScheduleRequestBuilder retrievePolicyApplySchedule() {
         return new RetrievePolicyApplyScheduleRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrievePolicyUpdateStatusResult method.
+     * @return a {@link RetrievePolicyUpdateStatusResultRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrievePolicyUpdateStatusResultRequestBuilder retrievePolicyUpdateStatusResult() {
+        return new RetrievePolicyUpdateStatusResultRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retry method.

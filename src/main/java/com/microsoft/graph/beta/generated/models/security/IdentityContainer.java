@@ -74,7 +74,7 @@ public class IdentityContainer extends Entity implements Parsable {
         return this.backingStore.get("sensorCandidates");
     }
     /**
-     * Gets the sensorMigration property value. The sensorMigration property
+     * Gets the sensorMigration property value. Represents Microsoft Defender for Identity sensors that can be migrated to the unified security portal.
      * @return a {@link java.util.List<SensorMigration>}
      */
     @jakarta.annotation.Nullable
@@ -141,7 +141,7 @@ public class IdentityContainer extends Entity implements Parsable {
         this.backingStore.set("sensorCandidates", value);
     }
     /**
-     * Sets the sensorMigration property value. The sensorMigration property
+     * Sets the sensorMigration property value. Represents Microsoft Defender for Identity sensors that can be migrated to the unified security portal.
      * @param value Value to set for the sensorMigration property.
      */
     public void setSensorMigration(@jakarta.annotation.Nullable final java.util.List<SensorMigration> value) {

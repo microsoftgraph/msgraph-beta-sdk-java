@@ -37,16 +37,18 @@ public class CloudPcPoolAssignmentItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPcPools/{cloudPcPool%2Did}/assignments/{cloudPcPoolAssignment%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Delete a cloudPcPoolAssignment object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcpoolassignment-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Delete a cloudPcPoolAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcpoolassignment-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class CloudPcPoolAssignmentItemRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get assignments from deviceManagement
+     * Read the properties of a cloudPcPoolAssignment object.
      * @return a {@link CloudPcPoolAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcpoolassignment-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcPoolAssignment get() {
         return get(null);
     }
     /**
-     * Get assignments from deviceManagement
+     * Read the properties of a cloudPcPoolAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcPoolAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcpoolassignment-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcPoolAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,7 +106,7 @@ public class CloudPcPoolAssignmentItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcPoolAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Delete a cloudPcPoolAssignment object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +114,7 @@ public class CloudPcPoolAssignmentItemRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Delete a cloudPcPoolAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +126,7 @@ public class CloudPcPoolAssignmentItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Get assignments from deviceManagement
+     * Read the properties of a cloudPcPoolAssignment object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class CloudPcPoolAssignmentItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Get assignments from deviceManagement
+     * Read the properties of a cloudPcPoolAssignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +186,7 @@ public class CloudPcPoolAssignmentItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get assignments from deviceManagement
+     * Read the properties of a cloudPcPoolAssignment object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

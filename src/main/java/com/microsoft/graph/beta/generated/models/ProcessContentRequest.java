@@ -64,12 +64,20 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         return this.backingStore;
     }
     /**
-     * Gets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Use conversation metadata for content like prompts and responses and file metadata for files. Required.
+     * Gets the contentEntries property value. The content entries to process. Use processConversationMetadata for prompts and responses and processFileMetadata for files. For the ContentActivity API only, use contentActivityMetadata for DLP enforcement results or evaluationIncompleteActivityMetadata when policy evaluation couldn&apos;t be completed. The ContentActivity-specific types aren&apos;t supported by the processContent or processContentAsync APIs. Required.
      * @return a {@link java.util.List<ProcessContentMetadataBase>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProcessContentMetadataBase> getContentEntries() {
         return this.backingStore.get("contentEntries");
+    }
+    /**
+     * Gets the contextMetadata property value. The contextMetadata property
+     * @return a {@link ContextMetadata}
+     */
+    @jakarta.annotation.Nullable
+    public ContextMetadata getContextMetadata() {
+        return this.backingStore.get("contextMetadata");
     }
     /**
      * Gets the deviceMetadata property value. The deviceMetadata property
@@ -80,15 +88,25 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("deviceMetadata");
     }
     /**
+     * Gets the evaluationScope property value. Specifies the evaluation context for the request. Optional generally; required for the tenant-scoped processContent action, where type must be agent. When omitted from other actions, the request uses the default tenant evaluation context.
+     * @return a {@link EvaluationScope}
+     */
+    @jakarta.annotation.Nullable
+    public EvaluationScope getEvaluationScope() {
+        return this.backingStore.get("evaluationScope");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("activityMetadata", (n) -> { this.setActivityMetadata(n.getObjectValue(ActivityMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("contentEntries", (n) -> { this.setContentEntries(n.getCollectionOfObjectValues(ProcessContentMetadataBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("contextMetadata", (n) -> { this.setContextMetadata(n.getObjectValue(ContextMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceMetadata", (n) -> { this.setDeviceMetadata(n.getObjectValue(DeviceMetadata::createFromDiscriminatorValue)); });
+        deserializerMap.put("evaluationScope", (n) -> { this.setEvaluationScope(n.getObjectValue(EvaluationScope::createFromDiscriminatorValue)); });
         deserializerMap.put("integratedAppMetadata", (n) -> { this.setIntegratedAppMetadata(n.getObjectValue(IntegratedApplicationMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("protectedAppMetadata", (n) -> { this.setProtectedAppMetadata(n.getObjectValue(ProtectedApplicationMetadata::createFromDiscriminatorValue)); });
@@ -111,7 +129,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the protectedAppMetadata property value. Metadata about the protected application making the request. Required.
+     * Gets the protectedAppMetadata property value. Metadata about the protected application. For an agent request, applicationLocation must be a policyLocationAgent. Required for agent requests; otherwise optional.
      * @return a {@link ProtectedApplicationMetadata}
      */
     @jakarta.annotation.Nullable
@@ -126,7 +144,9 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         Objects.requireNonNull(writer);
         writer.writeObjectValue("activityMetadata", this.getActivityMetadata());
         writer.writeCollectionOfObjectValues("contentEntries", this.getContentEntries());
+        writer.writeObjectValue("contextMetadata", this.getContextMetadata());
         writer.writeObjectValue("deviceMetadata", this.getDeviceMetadata());
+        writer.writeObjectValue("evaluationScope", this.getEvaluationScope());
         writer.writeObjectValue("integratedAppMetadata", this.getIntegratedAppMetadata());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("protectedAppMetadata", this.getProtectedAppMetadata());
@@ -155,11 +175,18 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Use conversation metadata for content like prompts and responses and file metadata for files. Required.
+     * Sets the contentEntries property value. The content entries to process. Use processConversationMetadata for prompts and responses and processFileMetadata for files. For the ContentActivity API only, use contentActivityMetadata for DLP enforcement results or evaluationIncompleteActivityMetadata when policy evaluation couldn&apos;t be completed. The ContentActivity-specific types aren&apos;t supported by the processContent or processContentAsync APIs. Required.
      * @param value Value to set for the contentEntries property.
      */
     public void setContentEntries(@jakarta.annotation.Nullable final java.util.List<ProcessContentMetadataBase> value) {
         this.backingStore.set("contentEntries", value);
+    }
+    /**
+     * Sets the contextMetadata property value. The contextMetadata property
+     * @param value Value to set for the contextMetadata property.
+     */
+    public void setContextMetadata(@jakarta.annotation.Nullable final ContextMetadata value) {
+        this.backingStore.set("contextMetadata", value);
     }
     /**
      * Sets the deviceMetadata property value. The deviceMetadata property
@@ -167,6 +194,13 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
      */
     public void setDeviceMetadata(@jakarta.annotation.Nullable final DeviceMetadata value) {
         this.backingStore.set("deviceMetadata", value);
+    }
+    /**
+     * Sets the evaluationScope property value. Specifies the evaluation context for the request. Optional generally; required for the tenant-scoped processContent action, where type must be agent. When omitted from other actions, the request uses the default tenant evaluation context.
+     * @param value Value to set for the evaluationScope property.
+     */
+    public void setEvaluationScope(@jakarta.annotation.Nullable final EvaluationScope value) {
+        this.backingStore.set("evaluationScope", value);
     }
     /**
      * Sets the integratedAppMetadata property value. The integratedAppMetadata property
@@ -183,7 +217,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the protectedAppMetadata property value. Metadata about the protected application making the request. Required.
+     * Sets the protectedAppMetadata property value. Metadata about the protected application. For an agent request, applicationLocation must be a policyLocationAgent. Required for agent requests; otherwise optional.
      * @param value Value to set for the protectedAppMetadata property.
      */
     public void setProtectedAppMetadata(@jakarta.annotation.Nullable final ProtectedApplicationMetadata value) {

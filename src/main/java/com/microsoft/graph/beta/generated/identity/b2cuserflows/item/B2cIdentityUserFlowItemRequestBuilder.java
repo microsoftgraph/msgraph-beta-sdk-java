@@ -27,7 +27,10 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the identityProviders property of the microsoft.graph.b2cIdentityUserFlow entity.
      * @return a {@link IdentityProvidersRequestBuilder}
+     * @deprecated
+     * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider on 2021-08-24 and will be removed 2023-03-15
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public IdentityProvidersRequestBuilder identityProviders() {
         return new IdentityProvidersRequestBuilder(pathParameters, requestAdapter);

@@ -35,7 +35,7 @@ public class CloudPcAgentPoolSessionUsage implements AdditionalDataHolder, Backe
         return new CloudPcAgentPoolSessionUsage();
     }
     /**
-     * Gets the activeSessionsCount property value. The activeSessionsCount property
+     * Gets the activeSessionsCount property value. The number of active sessions in the pool. Read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class CloudPcAgentPoolSessionUsage implements AdditionalDataHolder, Backe
         return value;
     }
     /**
-     * Gets the availableSessionsCount property value. The availableSessionsCount property
+     * Gets the availableSessionsCount property value. The number of available sessions in the pool. Read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class CloudPcAgentPoolSessionUsage implements AdditionalDataHolder, Backe
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the activeSessionsCount property value. The activeSessionsCount property
+     * Sets the activeSessionsCount property value. The number of active sessions in the pool. Read-only.
      * @param value Value to set for the activeSessionsCount property.
      */
     public void setActiveSessionsCount(@jakarta.annotation.Nullable final Integer value) {
@@ -117,7 +117,7 @@ public class CloudPcAgentPoolSessionUsage implements AdditionalDataHolder, Backe
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the availableSessionsCount property value. The availableSessionsCount property
+     * Sets the availableSessionsCount property value. The number of available sessions in the pool. Read-only.
      * @param value Value to set for the availableSessionsCount property.
      */
     public void setAvailableSessionsCount(@jakarta.annotation.Nullable final Integer value) {

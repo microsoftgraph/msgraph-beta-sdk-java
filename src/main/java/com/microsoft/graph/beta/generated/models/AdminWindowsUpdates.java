@@ -6,7 +6,9 @@ import com.microsoft.graph.beta.models.windowsupdates.DeploymentAudience;
 import com.microsoft.graph.beta.models.windowsupdates.Policy;
 import com.microsoft.graph.beta.models.windowsupdates.Product;
 import com.microsoft.graph.beta.models.windowsupdates.ResourceConnection;
+import com.microsoft.graph.beta.models.windowsupdates.TenantSetting;
 import com.microsoft.graph.beta.models.windowsupdates.UpdatableAsset;
+import com.microsoft.graph.beta.models.windowsupdates.UpdateData;
 import com.microsoft.graph.beta.models.windowsupdates.UpdatePolicy;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -41,6 +43,14 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
         return this.backingStore.get("catalog");
     }
     /**
+     * Gets the data property value. Read-only Windows Autopatch device, policy assignment, applicability, and driver reporting data.
+     * @return a {@link UpdateData}
+     */
+    @jakarta.annotation.Nullable
+    public UpdateData getData() {
+        return this.backingStore.get("data");
+    }
+    /**
      * Gets the deploymentAudiences property value. The set of updatableAsset resources to which a deployment can apply.
      * @return a {@link java.util.List<DeploymentAudience>}
      */
@@ -64,11 +74,13 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("catalog", (n) -> { this.setCatalog(n.getObjectValue(Catalog::createFromDiscriminatorValue)); });
+        deserializerMap.put("data", (n) -> { this.setData(n.getObjectValue(UpdateData::createFromDiscriminatorValue)); });
         deserializerMap.put("deploymentAudiences", (n) -> { this.setDeploymentAudiences(n.getCollectionOfObjectValues(DeploymentAudience::createFromDiscriminatorValue)); });
         deserializerMap.put("deployments", (n) -> { this.setDeployments(n.getCollectionOfObjectValues(Deployment::createFromDiscriminatorValue)); });
         deserializerMap.put("policies", (n) -> { this.setPolicies(n.getCollectionOfObjectValues(Policy::createFromDiscriminatorValue)); });
         deserializerMap.put("products", (n) -> { this.setProducts(n.getCollectionOfObjectValues(Product::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceConnections", (n) -> { this.setResourceConnections(n.getCollectionOfObjectValues(ResourceConnection::createFromDiscriminatorValue)); });
+        deserializerMap.put("tenantSettings", (n) -> { this.setTenantSettings(n.getObjectValue(TenantSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("updatableAssets", (n) -> { this.setUpdatableAssets(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
         deserializerMap.put("updatePolicies", (n) -> { this.setUpdatePolicies(n.getCollectionOfObjectValues(UpdatePolicy::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -98,6 +110,14 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
         return this.backingStore.get("resourceConnections");
     }
     /**
+     * Gets the tenantSettings property value. The Windows Autopatch settings for the current tenant.
+     * @return a {@link TenantSetting}
+     */
+    @jakarta.annotation.Nullable
+    public TenantSetting getTenantSettings() {
+        return this.backingStore.get("tenantSettings");
+    }
+    /**
      * Gets the updatableAssets property value. Assets registered with Windows Autopatch that can receive updates.
      * @return a {@link java.util.List<UpdatableAsset>}
      */
@@ -121,11 +141,13 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("catalog", this.getCatalog());
+        writer.writeObjectValue("data", this.getData());
         writer.writeCollectionOfObjectValues("deploymentAudiences", this.getDeploymentAudiences());
         writer.writeCollectionOfObjectValues("deployments", this.getDeployments());
         writer.writeCollectionOfObjectValues("policies", this.getPolicies());
         writer.writeCollectionOfObjectValues("products", this.getProducts());
         writer.writeCollectionOfObjectValues("resourceConnections", this.getResourceConnections());
+        writer.writeObjectValue("tenantSettings", this.getTenantSettings());
         writer.writeCollectionOfObjectValues("updatableAssets", this.getUpdatableAssets());
         writer.writeCollectionOfObjectValues("updatePolicies", this.getUpdatePolicies());
     }
@@ -135,6 +157,13 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
      */
     public void setCatalog(@jakarta.annotation.Nullable final Catalog value) {
         this.backingStore.set("catalog", value);
+    }
+    /**
+     * Sets the data property value. Read-only Windows Autopatch device, policy assignment, applicability, and driver reporting data.
+     * @param value Value to set for the data property.
+     */
+    public void setData(@jakarta.annotation.Nullable final UpdateData value) {
+        this.backingStore.set("data", value);
     }
     /**
      * Sets the deploymentAudiences property value. The set of updatableAsset resources to which a deployment can apply.
@@ -170,6 +199,13 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
      */
     public void setResourceConnections(@jakarta.annotation.Nullable final java.util.List<ResourceConnection> value) {
         this.backingStore.set("resourceConnections", value);
+    }
+    /**
+     * Sets the tenantSettings property value. The Windows Autopatch settings for the current tenant.
+     * @param value Value to set for the tenantSettings property.
+     */
+    public void setTenantSettings(@jakarta.annotation.Nullable final TenantSetting value) {
+        this.backingStore.set("tenantSettings", value);
     }
     /**
      * Sets the updatableAssets property value. Assets registered with Windows Autopatch that can receive updates.

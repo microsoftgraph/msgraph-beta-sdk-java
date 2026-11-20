@@ -38,7 +38,7 @@ public class DynamicRuleActivityLog extends ActivityLogBase implements Parsable 
         return deserializerMap;
     }
     /**
-     * Gets the policyId property value. The policyId property
+     * Gets the policyId property value. The unique identifier of the protection policy associated with the activity log.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class DynamicRuleActivityLog extends ActivityLogBase implements Parsable 
         return this.backingStore.get("policyId");
     }
     /**
-     * Gets the policyName property value. The policyName property
+     * Gets the policyName property value. Name of the protection policy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class DynamicRuleActivityLog extends ActivityLogBase implements Parsable 
         return this.backingStore.get("policyName");
     }
     /**
-     * Gets the protectionUnitDetails property value. The protectionUnitDetails property
+     * Gets the protectionUnitDetails property value. Contains Protection unit counts information.
      * @return a {@link ProtectionUnitDetails}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class DynamicRuleActivityLog extends ActivityLogBase implements Parsable 
         writer.writeObjectValue("protectionUnitDetails", this.getProtectionUnitDetails());
     }
     /**
-     * Sets the policyId property value. The policyId property
+     * Sets the policyId property value. The unique identifier of the protection policy associated with the activity log.
      * @param value Value to set for the policyId property.
      */
     public void setPolicyId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("policyId", value);
     }
     /**
-     * Sets the policyName property value. The policyName property
+     * Sets the policyName property value. Name of the protection policy.
      * @param value Value to set for the policyName property.
      */
     public void setPolicyName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("policyName", value);
     }
     /**
-     * Sets the protectionUnitDetails property value. The protectionUnitDetails property
+     * Sets the protectionUnitDetails property value. Contains Protection unit counts information.
      * @param value Value to set for the protectionUnitDetails property.
      */
     public void setProtectionUnitDetails(@jakarta.annotation.Nullable final ProtectionUnitDetails value) {

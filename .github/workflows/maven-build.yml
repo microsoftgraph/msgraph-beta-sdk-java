@@ -1,0 +1,75 @@
+name: Maven Build
+
+on:
+  push:
+    branches: [main, support/5.x.x]
+  pull_request:
+    branches: [main, support/5.x.x]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-latest-java:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up JDK
+        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5.7.0
+        with:
+          java-version: 21
+          distribution: 'temurin'
+          cache: maven
+      - name: Move generated sources to correct package
+        run: .\scripts\copyFilesOnBuild.ps1 -inputPath '.\src\main\java\com\microsoft\graph\beta\generated'
+        shell: pwsh
+      - name: Build with Maven
+        run: ./mvnw verify --no-transfer-progress
+      - name: Upload Unit Test Results
+        if: ${{ always() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: UnitTests
+          path: |
+            target/surefire-reports/**
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: drop
+          path: |
+            target/*.jar
+            pom.xml
+            mvnw
+            mvnw.cmd
+            .mvn/**
+            scripts/**
+
+  build-java-8:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up JDK
+        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5.7.0
+        with:
+          java-version: 8
+          distribution: 'temurin'
+          cache: maven
+      - name: Move generated sources to correct package
+        run: .\scripts\copyFilesOnBuild.ps1 -inputPath '.\src\main\java\com\microsoft\graph\beta\generated'
+        shell: pwsh
+      - name: Build with Java 8
+        run: ./mvnw compile --no-transfer-progress
+
+  build:
+    needs: [build-latest-java, build-java-8]
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    steps:
+      - name: Determine build status
+        run: |
+          if [ "${{ needs.build-latest-java.result }}" == "success" ] && [ "${{ needs.build-java-8.result }}" == "success" ]; then
+            exit 0
+          else
+            exit 1
+          fi

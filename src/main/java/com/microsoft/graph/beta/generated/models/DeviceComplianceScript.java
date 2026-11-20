@@ -99,6 +99,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("enforceSignatureCheck", (n) -> { this.setEnforceSignatureCheck(n.getBooleanValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(DeviceComplianceScriptPlatformType::forValue)); });
         deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
         deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("runAs32Bit", (n) -> { this.setRunAs32Bit(n.getBooleanValue()); });
@@ -114,6 +115,14 @@ public class DeviceComplianceScript extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.backingStore.get("lastModifiedDateTime");
+    }
+    /**
+     * Gets the platform property value. Indicates the device platform on which the device compliance script will be executed. Possible values are: windows10AndLater (default), linux. The default value is windows10AndLater.
+     * @return a {@link DeviceComplianceScriptPlatformType}
+     */
+    @jakarta.annotation.Nullable
+    public DeviceComplianceScriptPlatformType getPlatform() {
+        return this.backingStore.get("platform");
     }
     /**
      * Gets the publisher property value. Name of the device compliance script publisher
@@ -176,6 +185,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("deviceRunStates", this.getDeviceRunStates());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeBooleanValue("enforceSignatureCheck", this.getEnforceSignatureCheck());
+        writer.writeEnumValue("platform", this.getPlatform());
         writer.writeStringValue("publisher", this.getPublisher());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
         writer.writeBooleanValue("runAs32Bit", this.getRunAs32Bit());
@@ -238,6 +248,13 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
+    }
+    /**
+     * Sets the platform property value. Indicates the device platform on which the device compliance script will be executed. Possible values are: windows10AndLater (default), linux. The default value is windows10AndLater.
+     * @param value Value to set for the platform property.
+     */
+    public void setPlatform(@jakarta.annotation.Nullable final DeviceComplianceScriptPlatformType value) {
+        this.backingStore.set("platform", value);
     }
     /**
      * Sets the publisher property value. Name of the device compliance script publisher

@@ -36,7 +36,7 @@ public class CloudPcAgentPoolUserAssignment extends CloudPcPoolAssignment implem
         return deserializerMap;
     }
     /**
-     * Gets the userPrincipalId property value. The userPrincipalId property
+     * Gets the userPrincipalId property value. The unique identifier of the user principal.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class CloudPcAgentPoolUserAssignment extends CloudPcPoolAssignment implem
         writer.writeStringValue("userPrincipalId", this.getUserPrincipalId());
     }
     /**
-     * Sets the userPrincipalId property value. The userPrincipalId property
+     * Sets the userPrincipalId property value. The unique identifier of the user principal.
      * @param value Value to set for the userPrincipalId property.
      */
     public void setUserPrincipalId(@jakarta.annotation.Nullable final String value) {

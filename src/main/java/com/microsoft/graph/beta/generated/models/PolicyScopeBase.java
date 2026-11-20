@@ -86,13 +86,23 @@ public class PolicyScopeBase implements AdditionalDataHolder, BackedModel, Parsa
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("activities", (n) -> { this.setActivities(n.getEnumSetValue(UserActivityTypes::forValue)); });
         deserializerMap.put("executionMode", (n) -> { this.setExecutionMode(n.getEnumValue(ExecutionMode::forValue)); });
+        deserializerMap.put("locationExclusions", (n) -> { this.setLocationExclusions(n.getCollectionOfObjectValues(PolicyLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("locations", (n) -> { this.setLocations(n.getCollectionOfObjectValues(PolicyLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("policyActions", (n) -> { this.setPolicyActions(n.getCollectionOfObjectValues(DlpActionInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("policyConfiguration", (n) -> { this.setPolicyConfiguration(n.getObjectValue(PolicyConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the locationExclusions property value. Locations excluded from the policy scope. When specified, the effective scope is the set of locations in locations minus the locations in locationExclusions. Required.
+     * @return a {@link java.util.List<PolicyLocation>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PolicyLocation> getLocationExclusions() {
+        return this.backingStore.get("locationExclusions");
     }
     /**
      * Gets the locations property value. The locations (like domains or URLs) to be protected. Required.
@@ -119,6 +129,14 @@ public class PolicyScopeBase implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("policyActions");
     }
     /**
+     * Gets the policyConfiguration property value. The effective configuration for policy evaluation scenarios. This property can be omitted or null when no configuration is available or applicable.
+     * @return a {@link PolicyConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public PolicyConfiguration getPolicyConfiguration() {
+        return this.backingStore.get("policyConfiguration");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -126,9 +144,11 @@ public class PolicyScopeBase implements AdditionalDataHolder, BackedModel, Parsa
         Objects.requireNonNull(writer);
         writer.writeEnumSetValue("activities", this.getActivities());
         writer.writeEnumValue("executionMode", this.getExecutionMode());
+        writer.writeCollectionOfObjectValues("locationExclusions", this.getLocationExclusions());
         writer.writeCollectionOfObjectValues("locations", this.getLocations());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("policyActions", this.getPolicyActions());
+        writer.writeObjectValue("policyConfiguration", this.getPolicyConfiguration());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -161,6 +181,13 @@ public class PolicyScopeBase implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("executionMode", value);
     }
     /**
+     * Sets the locationExclusions property value. Locations excluded from the policy scope. When specified, the effective scope is the set of locations in locations minus the locations in locationExclusions. Required.
+     * @param value Value to set for the locationExclusions property.
+     */
+    public void setLocationExclusions(@jakarta.annotation.Nullable final java.util.List<PolicyLocation> value) {
+        this.backingStore.set("locationExclusions", value);
+    }
+    /**
      * Sets the locations property value. The locations (like domains or URLs) to be protected. Required.
      * @param value Value to set for the locations property.
      */
@@ -180,5 +207,12 @@ public class PolicyScopeBase implements AdditionalDataHolder, BackedModel, Parsa
      */
     public void setPolicyActions(@jakarta.annotation.Nullable final java.util.List<DlpActionInfo> value) {
         this.backingStore.set("policyActions", value);
+    }
+    /**
+     * Sets the policyConfiguration property value. The effective configuration for policy evaluation scenarios. This property can be omitted or null when no configuration is available or applicable.
+     * @param value Value to set for the policyConfiguration property.
+     */
+    public void setPolicyConfiguration(@jakarta.annotation.Nullable final PolicyConfiguration value) {
+        this.backingStore.set("policyConfiguration", value);
     }
 }

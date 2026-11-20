@@ -36,7 +36,7 @@ public class TeamTeamsAppInstallationScopeInfo extends TeamsAppInstallationScope
         return deserializerMap;
     }
     /**
-     * Gets the teamId property value. The teamId property
+     * Gets the teamId property value. The ID of the team where the Teams app is installed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class TeamTeamsAppInstallationScopeInfo extends TeamsAppInstallationScope
         writer.writeStringValue("teamId", this.getTeamId());
     }
     /**
-     * Sets the teamId property value. The teamId property
+     * Sets the teamId property value. The ID of the team where the Teams app is installed.
      * @param value Value to set for the teamId property.
      */
     public void setTeamId(@jakarta.annotation.Nullable final String value) {

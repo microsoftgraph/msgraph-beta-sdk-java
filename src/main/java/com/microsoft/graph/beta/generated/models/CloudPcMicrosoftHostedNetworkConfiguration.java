@@ -45,7 +45,7 @@ public class CloudPcMicrosoftHostedNetworkConfiguration extends CloudPcNetworkCo
         return this.backingStore.get("geographicLocationType");
     }
     /**
-     * Gets the regionGroups property value. The regionGroups property
+     * Gets the regionGroups property value. The region group configurations for the network.
      * @return a {@link java.util.List<CloudPcRegionGroupConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class CloudPcMicrosoftHostedNetworkConfiguration extends CloudPcNetworkCo
         this.backingStore.set("geographicLocationType", value);
     }
     /**
-     * Sets the regionGroups property value. The regionGroups property
+     * Sets the regionGroups property value. The region group configurations for the network.
      * @param value Value to set for the regionGroups property.
      */
     public void setRegionGroups(@jakarta.annotation.Nullable final java.util.List<CloudPcRegionGroupConfiguration> value) {

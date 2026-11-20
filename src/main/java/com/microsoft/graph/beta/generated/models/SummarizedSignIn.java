@@ -83,11 +83,13 @@ public class SummarizedSignIn extends Entity implements Parsable {
         deserializerMap.put("managedServiceIdentity", (n) -> { this.setManagedServiceIdentity(n.getObjectValue(ManagedIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceDisplayName", (n) -> { this.setResourceDisplayName(n.getStringValue()); });
         deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
+        deserializerMap.put("rootActorId", (n) -> { this.setRootActorId(n.getStringValue()); });
         deserializerMap.put("servicePrincipalId", (n) -> { this.setServicePrincipalId(n.getStringValue()); });
         deserializerMap.put("servicePrincipalName", (n) -> { this.setServicePrincipalName(n.getStringValue()); });
         deserializerMap.put("signInCount", (n) -> { this.setSignInCount(n.getLongValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getObjectValue(SignInStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("tokenIssuerType", (n) -> { this.setTokenIssuerType(n.getEnumValue(TokenIssuerType::forValue)); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -132,6 +134,14 @@ public class SummarizedSignIn extends Entity implements Parsable {
         return this.backingStore.get("resourceId");
     }
     /**
+     * Gets the rootActorId property value. The rootActorId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getRootActorId() {
+        return this.backingStore.get("rootActorId");
+    }
+    /**
      * Gets the servicePrincipalId property value. The application identifier of the specific service principal instance of the application identifier used for sign-in. This field is populated when you&apos;re signing in using an application and is different than the appId property. Supports $filter (eq).
      * @return a {@link String}
      */
@@ -172,6 +182,14 @@ public class SummarizedSignIn extends Entity implements Parsable {
         return this.backingStore.get("tenantId");
     }
     /**
+     * Gets the tokenIssuerType property value. The tokenIssuerType property
+     * @return a {@link TokenIssuerType}
+     */
+    @jakarta.annotation.Nullable
+    public TokenIssuerType getTokenIssuerType() {
+        return this.backingStore.get("tokenIssuerType");
+    }
+    /**
      * Gets the userPrincipalName property value. User principal name of the user that initiated the sign-in. This value is always in lowercase. For guest users whose values in the user object typically contain #EXT# before the domain part, this property stores the value in both lowercase and the &apos;true&apos; format. For example, while the user object stores AdeleVance_fabrikam.com#EXT#@contoso.com, the sign-in logs store adelevance@fabrikam.com. Supports $filter (eq).
      * @return a {@link String}
      */
@@ -196,11 +214,13 @@ public class SummarizedSignIn extends Entity implements Parsable {
         writer.writeObjectValue("managedServiceIdentity", this.getManagedServiceIdentity());
         writer.writeStringValue("resourceDisplayName", this.getResourceDisplayName());
         writer.writeStringValue("resourceId", this.getResourceId());
+        writer.writeStringValue("rootActorId", this.getRootActorId());
         writer.writeStringValue("servicePrincipalId", this.getServicePrincipalId());
         writer.writeStringValue("servicePrincipalName", this.getServicePrincipalName());
         writer.writeLongValue("signInCount", this.getSignInCount());
         writer.writeObjectValue("status", this.getStatus());
         writer.writeStringValue("tenantId", this.getTenantId());
+        writer.writeEnumValue("tokenIssuerType", this.getTokenIssuerType());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
@@ -274,6 +294,13 @@ public class SummarizedSignIn extends Entity implements Parsable {
         this.backingStore.set("resourceId", value);
     }
     /**
+     * Sets the rootActorId property value. The rootActorId property
+     * @param value Value to set for the rootActorId property.
+     */
+    public void setRootActorId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("rootActorId", value);
+    }
+    /**
      * Sets the servicePrincipalId property value. The application identifier of the specific service principal instance of the application identifier used for sign-in. This field is populated when you&apos;re signing in using an application and is different than the appId property. Supports $filter (eq).
      * @param value Value to set for the servicePrincipalId property.
      */
@@ -307,6 +334,13 @@ public class SummarizedSignIn extends Entity implements Parsable {
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("tenantId", value);
+    }
+    /**
+     * Sets the tokenIssuerType property value. The tokenIssuerType property
+     * @param value Value to set for the tokenIssuerType property.
+     */
+    public void setTokenIssuerType(@jakarta.annotation.Nullable final TokenIssuerType value) {
+        this.backingStore.set("tokenIssuerType", value);
     }
     /**
      * Sets the userPrincipalName property value. User principal name of the user that initiated the sign-in. This value is always in lowercase. For guest users whose values in the user object typically contain #EXT# before the domain part, this property stores the value in both lowercase and the &apos;true&apos; format. For example, while the user object stores AdeleVance_fabrikam.com#EXT#@contoso.com, the sign-in logs store adelevance@fabrikam.com. Supports $filter (eq).

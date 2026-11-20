@@ -33,6 +33,7 @@ public class CopilotPolicySetting extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("policyId", (n) -> { this.setPolicyId(n.getStringValue()); });
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
+        deserializerMap.put("valueObject", (n) -> { this.setValueObject(n.getObjectValue(CopilotPolicySettingValueObject::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -52,6 +53,14 @@ public class CopilotPolicySetting extends Entity implements Parsable {
         return this.backingStore.get("value");
     }
     /**
+     * Gets the valueObject property value. The native JSON representation of a complex setting, or null for scalar settings.
+     * @return a {@link CopilotPolicySettingValueObject}
+     */
+    @jakarta.annotation.Nullable
+    public CopilotPolicySettingValueObject getValueObject() {
+        return this.backingStore.get("valueObject");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -60,6 +69,7 @@ public class CopilotPolicySetting extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("policyId", this.getPolicyId());
         writer.writeStringValue("value", this.getValue());
+        writer.writeObjectValue("valueObject", this.getValueObject());
     }
     /**
      * Sets the policyId property value. The policyId property
@@ -74,5 +84,12 @@ public class CopilotPolicySetting extends Entity implements Parsable {
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("value", value);
+    }
+    /**
+     * Sets the valueObject property value. The native JSON representation of a complex setting, or null for scalar settings.
+     * @param value Value to set for the valueObject property.
+     */
+    public void setValueObject(@jakarta.annotation.Nullable final CopilotPolicySettingValueObject value) {
+        this.backingStore.set("valueObject", value);
     }
 }

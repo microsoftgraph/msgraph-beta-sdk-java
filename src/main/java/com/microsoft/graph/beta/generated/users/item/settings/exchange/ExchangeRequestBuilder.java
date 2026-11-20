@@ -40,12 +40,9 @@ public class ExchangeRequestBuilder extends BaseRequestBuilder {
      * Get a list of Exchange mailboxes that belong to a user. Currently, the mailbox types supported are the user&apos;s primary mailbox and shared mailboxes. To learn how to get a list of users in a tenant, see List users.
      * @return a {@link ExchangeSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      * @see <a href="https://learn.microsoft.com/graph/api/usersettings-list-exchange?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ExchangeSettings get() {
         return get(null);
     }
@@ -54,12 +51,9 @@ public class ExchangeRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExchangeSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      * @see <a href="https://learn.microsoft.com/graph/api/usersettings-list-exchange?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ExchangeSettings get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -69,11 +63,8 @@ public class ExchangeRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of Exchange mailboxes that belong to a user. Currently, the mailbox types supported are the user&apos;s primary mailbox and shared mailboxes. To learn how to get a list of users in a tenant, see List users.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -81,11 +72,8 @@ public class ExchangeRequestBuilder extends BaseRequestBuilder {
      * Get a list of Exchange mailboxes that belong to a user. Currently, the mailbox types supported are the user&apos;s primary mailbox and shared mailboxes. To learn how to get a list of users in a tenant, see List users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -96,11 +84,8 @@ public class ExchangeRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ExchangeRequestBuilder}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public ExchangeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ExchangeRequestBuilder(rawUrl, requestAdapter);

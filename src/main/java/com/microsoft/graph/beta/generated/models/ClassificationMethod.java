@@ -8,7 +8,10 @@ public enum ClassificationMethod implements ValuedEnum {
     PatternMatch("patternMatch"),
     ExactDataMatch("exactDataMatch"),
     Fingerprint("fingerprint"),
-    MachineLearning("machineLearning");
+    MachineLearning("machineLearning"),
+    PrivacyDataMatch("privacyDataMatch"),
+    AiPowered("aiPowered"),
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     ClassificationMethod(final String value) {
         this.value = value;
@@ -23,6 +26,9 @@ public enum ClassificationMethod implements ValuedEnum {
             case "exactDataMatch": return ExactDataMatch;
             case "fingerprint": return Fingerprint;
             case "machineLearning": return MachineLearning;
+            case "privacyDataMatch": return PrivacyDataMatch;
+            case "aiPowered": return AiPowered;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

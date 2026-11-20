@@ -26,10 +26,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the createImportSession method.
      * @return a {@link CreateImportSessionRequestBuilder}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CreateImportSessionRequestBuilder createImportSession() {
         return new CreateImportSessionRequestBuilder(pathParameters, requestAdapter);
@@ -37,10 +34,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the exportItems method.
      * @return a {@link ExportItemsRequestBuilder}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ExportItemsRequestBuilder exportItems() {
         return new ExportItemsRequestBuilder(pathParameters, requestAdapter);
@@ -48,10 +42,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the folders property of the microsoft.graph.mailbox entity.
      * @return a {@link FoldersRequestBuilder}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public FoldersRequestBuilder folders() {
         return new FoldersRequestBuilder(pathParameters, requestAdapter);
@@ -75,10 +66,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property mailboxes for admin
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -86,10 +74,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property mailboxes for admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -100,11 +85,8 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * Represents a user&apos;s mailboxes.
      * @return a {@link Mailbox}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public Mailbox get() {
         return get(null);
     }
@@ -113,11 +95,8 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Mailbox}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public Mailbox get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -129,11 +108,8 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link Mailbox}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public Mailbox patch(@jakarta.annotation.Nonnull final Mailbox body) {
         return patch(body, null);
     }
@@ -143,11 +119,8 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Mailbox}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public Mailbox patch(@jakarta.annotation.Nonnull final Mailbox body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -158,11 +131,8 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property mailboxes for admin
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -170,11 +140,8 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property mailboxes for admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -184,11 +151,8 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents a user&apos;s mailboxes.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -196,11 +160,8 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * Represents a user&apos;s mailboxes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -211,11 +172,8 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property mailboxes in admin
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Mailbox body) {
         return toPatchRequestInformation(body, null);
     }
@@ -224,11 +182,8 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Mailbox body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -241,11 +196,8 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link MailboxItemRequestBuilder}
-     * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public MailboxItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new MailboxItemRequestBuilder(rawUrl, requestAdapter);

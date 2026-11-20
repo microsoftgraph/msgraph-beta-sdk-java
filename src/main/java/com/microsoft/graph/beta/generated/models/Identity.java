@@ -38,6 +38,7 @@ public class Identity implements AdditionalDataHolder, BackedModel, Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.applicationIdentity": return new ApplicationIdentity();
                 case "#microsoft.graph.auditUserIdentity": return new AuditUserIdentity();
                 case "#microsoft.graph.azureCommunicationServicesUserIdentity": return new AzureCommunicationServicesUserIdentity();
                 case "#microsoft.graph.callRecords.userIdentity": return new UserIdentity();
@@ -47,6 +48,7 @@ public class Identity implements AdditionalDataHolder, BackedModel, Parsable {
                 case "#microsoft.graph.communicationsGuestIdentity": return new CommunicationsGuestIdentity();
                 case "#microsoft.graph.communicationsPhoneIdentity": return new CommunicationsPhoneIdentity();
                 case "#microsoft.graph.communicationsUserIdentity": return new CommunicationsUserIdentity();
+                case "#microsoft.graph.copilotPackageRequestPrincipal": return new CopilotPackageRequestPrincipal();
                 case "#microsoft.graph.emailIdentity": return new EmailIdentity();
                 case "#microsoft.graph.groupIdentity": return new GroupIdentity();
                 case "#microsoft.graph.initiator": return new Initiator();

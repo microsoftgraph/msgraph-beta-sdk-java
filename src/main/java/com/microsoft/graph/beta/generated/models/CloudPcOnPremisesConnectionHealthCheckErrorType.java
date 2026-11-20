@@ -64,6 +64,14 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
     PermissionCheckNoWindows365NetworkInterfaceContributorRole("permissionCheckNoWindows365NetworkInterfaceContributorRole"),
     PermissionCheckTransientServiceError("permissionCheckTransientServiceError"),
     PermissionCheckUnknownError("permissionCheckUnknownError"),
+    KeyVaultSecretCheckAccessDenied("keyVaultSecretCheckAccessDenied"),
+    KeyVaultSecretCheckVaultNotReachable("keyVaultSecretCheckVaultNotReachable"),
+    KeyVaultSecretCheckNotFound("keyVaultSecretCheckNotFound"),
+    KeyVaultSecretCheckDisabled("keyVaultSecretCheckDisabled"),
+    KeyVaultSecretCheckExpired("keyVaultSecretCheckExpired"),
+    KeyVaultSecretCheckEmptyValue("keyVaultSecretCheckEmptyValue"),
+    KeyVaultSecretCheckTransientServiceError("keyVaultSecretCheckTransientServiceError"),
+    KeyVaultSecretCheckUnknownError("keyVaultSecretCheckUnknownError"),
     UdpConnectivityCheckStunUrlNotAllowListed("udpConnectivityCheckStunUrlNotAllowListed"),
     UdpConnectivityCheckTurnUrlNotAllowListed("udpConnectivityCheckTurnUrlNotAllowListed"),
     UdpConnectivityCheckUrlsNotAllowListed("udpConnectivityCheckUrlsNotAllowListed"),
@@ -144,6 +152,14 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
             case "permissionCheckNoWindows365NetworkInterfaceContributorRole": return PermissionCheckNoWindows365NetworkInterfaceContributorRole;
             case "permissionCheckTransientServiceError": return PermissionCheckTransientServiceError;
             case "permissionCheckUnknownError": return PermissionCheckUnknownError;
+            case "keyVaultSecretCheckAccessDenied": return KeyVaultSecretCheckAccessDenied;
+            case "keyVaultSecretCheckVaultNotReachable": return KeyVaultSecretCheckVaultNotReachable;
+            case "keyVaultSecretCheckNotFound": return KeyVaultSecretCheckNotFound;
+            case "keyVaultSecretCheckDisabled": return KeyVaultSecretCheckDisabled;
+            case "keyVaultSecretCheckExpired": return KeyVaultSecretCheckExpired;
+            case "keyVaultSecretCheckEmptyValue": return KeyVaultSecretCheckEmptyValue;
+            case "keyVaultSecretCheckTransientServiceError": return KeyVaultSecretCheckTransientServiceError;
+            case "keyVaultSecretCheckUnknownError": return KeyVaultSecretCheckUnknownError;
             case "udpConnectivityCheckStunUrlNotAllowListed": return UdpConnectivityCheckStunUrlNotAllowListed;
             case "udpConnectivityCheckTurnUrlNotAllowListed": return UdpConnectivityCheckTurnUrlNotAllowListed;
             case "udpConnectivityCheckUrlsNotAllowListed": return UdpConnectivityCheckUrlsNotAllowListed;

@@ -75,6 +75,14 @@ public class FileStorageContainer extends Entity implements Parsable {
         return this.backingStore.get("customProperties");
     }
     /**
+     * Gets the dataLocationCode property value. The geographic location of the data for multi-geo tenants. This property is only returned when explicitly selected by using $select. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDataLocationCode() {
+        return this.backingStore.get("dataLocationCode");
+    }
+    /**
      * Gets the description property value. Provides a user-visible description of the fileStorageContainer. Read-write.
      * @return a {@link String}
      */
@@ -119,6 +127,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         deserializerMap.put("containerTypeId", (n) -> { this.setContainerTypeId(n.getUUIDValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("customProperties", (n) -> { this.setCustomProperties(n.getObjectValue(FileStorageContainerCustomPropertyDictionary::createFromDiscriminatorValue)); });
+        deserializerMap.put("dataLocationCode", (n) -> { this.setDataLocationCode(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("drive", (n) -> { this.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
@@ -246,6 +255,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         writer.writeUUIDValue("containerTypeId", this.getContainerTypeId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("customProperties", this.getCustomProperties());
+        writer.writeStringValue("dataLocationCode", this.getDataLocationCode());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("drive", this.getDrive());
@@ -304,6 +314,13 @@ public class FileStorageContainer extends Entity implements Parsable {
      */
     public void setCustomProperties(@jakarta.annotation.Nullable final FileStorageContainerCustomPropertyDictionary value) {
         this.backingStore.set("customProperties", value);
+    }
+    /**
+     * Sets the dataLocationCode property value. The geographic location of the data for multi-geo tenants. This property is only returned when explicitly selected by using $select. Read-only.
+     * @param value Value to set for the dataLocationCode property.
+     */
+    public void setDataLocationCode(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("dataLocationCode", value);
     }
     /**
      * Sets the description property value. Provides a user-visible description of the fileStorageContainer. Read-write.

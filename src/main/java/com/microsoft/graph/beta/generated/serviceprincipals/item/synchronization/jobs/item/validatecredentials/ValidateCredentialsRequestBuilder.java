@@ -35,7 +35,7 @@ public class ValidateCredentialsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/jobs/{synchronizationJob%2Did}/validateCredentials", rawUrl);
     }
     /**
-     * Validate that the credentials are valid in the tenant.
+     * Validate that the credentials are valid in the tenant for a synchronizationJob.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -47,7 +47,7 @@ public class ValidateCredentialsRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Validate that the credentials are valid in the tenant.
+     * Validate that the credentials are valid in the tenant for a synchronizationJob.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -64,7 +64,7 @@ public class ValidateCredentialsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Validate that the credentials are valid in the tenant.
+     * Validate that the credentials are valid in the tenant for a synchronizationJob.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -76,7 +76,7 @@ public class ValidateCredentialsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Validate that the credentials are valid in the tenant.
+     * Validate that the credentials are valid in the tenant for a synchronizationJob.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

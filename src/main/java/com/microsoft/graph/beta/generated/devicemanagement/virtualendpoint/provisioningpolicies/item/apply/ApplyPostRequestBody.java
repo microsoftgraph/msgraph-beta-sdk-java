@@ -25,6 +25,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, 
     public ApplyPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setIsForceUserLogoffEnabled(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,10 +64,19 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("isForceUserLogoffEnabled", (n) -> { this.setIsForceUserLogoffEnabled(n.getBooleanValue()); });
         deserializerMap.put("policySettings", (n) -> { this.setPolicySettings(n.getEnumSetValue(CloudPcPolicySettingType::forValue)); });
         deserializerMap.put("reservePercentage", (n) -> { this.setReservePercentage(n.getIntegerValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isForceUserLogoffEnabled property value. The isForceUserLogoffEnabled property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsForceUserLogoffEnabled() {
+        return this.backingStore.get("isForceUserLogoffEnabled");
     }
     /**
      * Gets the policySettings property value. The policySettings property
@@ -90,6 +100,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, 
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeBooleanValue("isForceUserLogoffEnabled", this.getIsForceUserLogoffEnabled());
         writer.writeEnumSetValue("policySettings", this.getPolicySettings());
         writer.writeIntegerValue("reservePercentage", this.getReservePercentage());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -108,6 +119,13 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, 
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the isForceUserLogoffEnabled property value. The isForceUserLogoffEnabled property
+     * @param value Value to set for the isForceUserLogoffEnabled property.
+     */
+    public void setIsForceUserLogoffEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isForceUserLogoffEnabled", value);
     }
     /**
      * Sets the policySettings property value. The policySettings property

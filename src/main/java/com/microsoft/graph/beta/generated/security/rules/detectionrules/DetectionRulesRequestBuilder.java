@@ -60,21 +60,21 @@ public class DetectionRulesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/rules/detectionRules{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of custom detection rules.With custom detections, you can proactively monitor for and respond to various events and system states, including suspected breach activity and misconfigured assets in their organization network.Custom detection rules, which are written in Kusto query language (KQL), automatically trigger alerts and response actions once there are events matching their KQL queries.
+     * Get a list of detectionRule objects and their properties.
      * @return a {@link DetectionRuleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-detectionrule-list?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-rulesroot-list-detectionrules?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DetectionRuleCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of custom detection rules.With custom detections, you can proactively monitor for and respond to various events and system states, including suspected breach activity and misconfigured assets in their organization network.Custom detection rules, which are written in Kusto query language (KQL), automatically trigger alerts and response actions once there are events matching their KQL queries.
+     * Get a list of detectionRule objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DetectionRuleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-detectionrule-list?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-rulesroot-list-detectionrules?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DetectionRuleCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,21 +84,23 @@ public class DetectionRulesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DetectionRuleCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to detectionRules for security
+     * Create a new detectionRule object.
      * @param body The request body
      * @return a {@link DetectionRule}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-rulesroot-post-detectionrules?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DetectionRule post(@jakarta.annotation.Nonnull final DetectionRule body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to detectionRules for security
+     * Create a new detectionRule object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DetectionRule}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-rulesroot-post-detectionrules?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DetectionRule post(@jakarta.annotation.Nonnull final DetectionRule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -109,7 +111,7 @@ public class DetectionRulesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DetectionRule::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of custom detection rules.With custom detections, you can proactively monitor for and respond to various events and system states, including suspected breach activity and misconfigured assets in their organization network.Custom detection rules, which are written in Kusto query language (KQL), automatically trigger alerts and response actions once there are events matching their KQL queries.
+     * Get a list of detectionRule objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +119,7 @@ public class DetectionRulesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of custom detection rules.With custom detections, you can proactively monitor for and respond to various events and system states, including suspected breach activity and misconfigured assets in their organization network.Custom detection rules, which are written in Kusto query language (KQL), automatically trigger alerts and response actions once there are events matching their KQL queries.
+     * Get a list of detectionRule objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -129,7 +131,7 @@ public class DetectionRulesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to detectionRules for security
+     * Create a new detectionRule object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -138,7 +140,7 @@ public class DetectionRulesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to detectionRules for security
+     * Create a new detectionRule object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -163,7 +165,7 @@ public class DetectionRulesRequestBuilder extends BaseRequestBuilder {
         return new DetectionRulesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of custom detection rules.With custom detections, you can proactively monitor for and respond to various events and system states, including suspected breach activity and misconfigured assets in their organization network.Custom detection rules, which are written in Kusto query language (KQL), automatically trigger alerts and response actions once there are events matching their KQL queries.
+     * Get a list of detectionRule objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

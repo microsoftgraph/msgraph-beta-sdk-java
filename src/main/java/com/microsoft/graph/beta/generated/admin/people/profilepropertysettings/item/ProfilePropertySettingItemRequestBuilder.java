@@ -37,7 +37,7 @@ public class ProfilePropertySettingItemRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/admin/people/profilePropertySettings/{profilePropertySetting%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a profilePropertySetting object.
+     * Delete a profilePropertySetting object. You shouldn&apos;t delete a profilePropertySetting that includes a source precedence configuration. Instead, patch it to a default state that contains only the Microsoft Entra ID source reference. This delete operation is supported but fails unless the prioritizedSourceUrls property contains only the Entra ID source reference.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/profilepropertysetting-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class ProfilePropertySettingItemRequestBuilder extends BaseRequestBuilder
         delete(null);
     }
     /**
-     * Delete a profilePropertySetting object.
+     * Delete a profilePropertySetting object. You shouldn&apos;t delete a profilePropertySetting that includes a source precedence configuration. Instead, patch it to a default state that contains only the Microsoft Entra ID source reference. This delete operation is supported but fails unless the prioritizedSourceUrls property contains only the Entra ID source reference.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/profilepropertysetting-delete?view=graph-rest-beta">Find more info here</a>
@@ -108,7 +108,7 @@ public class ProfilePropertySettingItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, ProfilePropertySetting::createFromDiscriminatorValue);
     }
     /**
-     * Delete a profilePropertySetting object.
+     * Delete a profilePropertySetting object. You shouldn&apos;t delete a profilePropertySetting that includes a source precedence configuration. Instead, patch it to a default state that contains only the Microsoft Entra ID source reference. This delete operation is supported but fails unless the prioritizedSourceUrls property contains only the Entra ID source reference.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ProfilePropertySettingItemRequestBuilder extends BaseRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a profilePropertySetting object.
+     * Delete a profilePropertySetting object. You shouldn&apos;t delete a profilePropertySetting that includes a source precedence configuration. Instead, patch it to a default state that contains only the Microsoft Entra ID source reference. This delete operation is supported but fails unless the prioritizedSourceUrls property contains only the Entra ID source reference.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

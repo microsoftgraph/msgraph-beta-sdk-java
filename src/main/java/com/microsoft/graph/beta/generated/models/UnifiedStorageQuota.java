@@ -33,6 +33,14 @@ public class UnifiedStorageQuota extends Entity implements Parsable {
         return this.backingStore.get("deleted");
     }
     /**
+     * Gets the familyMembersUsage property value. The familyMembersUsage property
+     * @return a {@link java.util.List<FamilyMemberStorageQuota>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<FamilyMemberStorageQuota> getFamilyMembersUsage() {
+        return this.backingStore.get("familyMembersUsage");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -40,6 +48,8 @@ public class UnifiedStorageQuota extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deleted", (n) -> { this.setDeleted(n.getLongValue()); });
+        deserializerMap.put("familyMembersUsage", (n) -> { this.setFamilyMembersUsage(n.getCollectionOfObjectValues(FamilyMemberStorageQuota::createFromDiscriminatorValue)); });
+        deserializerMap.put("isPooledStorageEnabled", (n) -> { this.setIsPooledStorageEnabled(n.getBooleanValue()); });
         deserializerMap.put("manageWebUrl", (n) -> { this.setManageWebUrl(n.getStringValue()); });
         deserializerMap.put("remaining", (n) -> { this.setRemaining(n.getLongValue()); });
         deserializerMap.put("services", (n) -> { this.setServices(n.getCollectionOfObjectValues(ServiceStorageQuotaBreakdown::createFromDiscriminatorValue)); });
@@ -47,6 +57,14 @@ public class UnifiedStorageQuota extends Entity implements Parsable {
         deserializerMap.put("total", (n) -> { this.setTotal(n.getLongValue()); });
         deserializerMap.put("used", (n) -> { this.setUsed(n.getLongValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isPooledStorageEnabled property value. The isPooledStorageEnabled property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsPooledStorageEnabled() {
+        return this.backingStore.get("isPooledStorageEnabled");
     }
     /**
      * Gets the manageWebUrl property value. A URL that can be used in a browser to manage the breakdown. Read-only.
@@ -104,6 +122,8 @@ public class UnifiedStorageQuota extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeLongValue("deleted", this.getDeleted());
+        writer.writeCollectionOfObjectValues("familyMembersUsage", this.getFamilyMembersUsage());
+        writer.writeBooleanValue("isPooledStorageEnabled", this.getIsPooledStorageEnabled());
         writer.writeStringValue("manageWebUrl", this.getManageWebUrl());
         writer.writeLongValue("remaining", this.getRemaining());
         writer.writeCollectionOfObjectValues("services", this.getServices());
@@ -117,6 +137,20 @@ public class UnifiedStorageQuota extends Entity implements Parsable {
      */
     public void setDeleted(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("deleted", value);
+    }
+    /**
+     * Sets the familyMembersUsage property value. The familyMembersUsage property
+     * @param value Value to set for the familyMembersUsage property.
+     */
+    public void setFamilyMembersUsage(@jakarta.annotation.Nullable final java.util.List<FamilyMemberStorageQuota> value) {
+        this.backingStore.set("familyMembersUsage", value);
+    }
+    /**
+     * Sets the isPooledStorageEnabled property value. The isPooledStorageEnabled property
+     * @param value Value to set for the isPooledStorageEnabled property.
+     */
+    public void setIsPooledStorageEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isPooledStorageEnabled", value);
     }
     /**
      * Sets the manageWebUrl property value. A URL that can be used in a browser to manage the breakdown. Read-only.

@@ -37,16 +37,18 @@ public class DetectionRuleItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/rules/detectionRules/{detectionRule%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property detectionRules for security
+     * Delete a detectionRule object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-rulesroot-delete-detectionrules?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property detectionRules for security
+     * Delete a detectionRule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-rulesroot-delete-detectionrules?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,7 +57,7 @@ public class DetectionRuleItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get detectionRules from security
+     * The custom detection rules configured for the tenant.
      * @return a {@link DetectionRule}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +66,7 @@ public class DetectionRuleItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get detectionRules from security
+     * The custom detection rules configured for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DetectionRule}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -102,7 +104,7 @@ public class DetectionRuleItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DetectionRule::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property detectionRules for security
+     * Delete a detectionRule object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +112,7 @@ public class DetectionRuleItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property detectionRules for security
+     * Delete a detectionRule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +124,7 @@ public class DetectionRuleItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get detectionRules from security
+     * The custom detection rules configured for the tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class DetectionRuleItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get detectionRules from security
+     * The custom detection rules configured for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class DetectionRuleItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get detectionRules from security
+     * The custom detection rules configured for the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

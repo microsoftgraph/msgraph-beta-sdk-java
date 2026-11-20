@@ -64,7 +64,7 @@ public class ProtectionScopesRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Container for actions related to computing tenant-wide data protection scopes.
+     * The container for actions related to computing tenant-wide data protection scopes.
      * @return a {@link TenantProtectionScopeContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class ProtectionScopesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Container for actions related to computing tenant-wide data protection scopes.
+     * The container for actions related to computing tenant-wide data protection scopes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantProtectionScopeContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class ProtectionScopesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Container for actions related to computing tenant-wide data protection scopes.
+     * The container for actions related to computing tenant-wide data protection scopes.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class ProtectionScopesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Container for actions related to computing tenant-wide data protection scopes.
+     * The container for actions related to computing tenant-wide data protection scopes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class ProtectionScopesRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Container for actions related to computing tenant-wide data protection scopes.
+     * The container for actions related to computing tenant-wide data protection scopes.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

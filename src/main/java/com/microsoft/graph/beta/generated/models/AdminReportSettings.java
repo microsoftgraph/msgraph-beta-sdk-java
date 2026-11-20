@@ -40,7 +40,16 @@ public class AdminReportSettings extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayConcealedNames", (n) -> { this.setDisplayConcealedNames(n.getBooleanValue()); });
+        deserializerMap.put("sharePoint", (n) -> { this.setSharePoint(n.getObjectValue(SharePointReportSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the sharePoint property value. A container for SharePoint-specific report settings. Access the SharePoint API usage report metrics through the operations defined on the sharePointReportSettings resource type.
+     * @return a {@link SharePointReportSettings}
+     */
+    @jakarta.annotation.Nullable
+    public SharePointReportSettings getSharePoint() {
+        return this.backingStore.get("sharePoint");
     }
     /**
      * Serializes information the current object
@@ -50,6 +59,7 @@ public class AdminReportSettings extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("displayConcealedNames", this.getDisplayConcealedNames());
+        writer.writeObjectValue("sharePoint", this.getSharePoint());
     }
     /**
      * Sets the displayConcealedNames property value. If set to true, all reports conceal user information such as usernames, groups, and sites. If false, all reports show identifiable information. This property represents a setting in the Microsoft 365 admin center. Required.
@@ -57,5 +67,12 @@ public class AdminReportSettings extends Entity implements Parsable {
      */
     public void setDisplayConcealedNames(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("displayConcealedNames", value);
+    }
+    /**
+     * Sets the sharePoint property value. A container for SharePoint-specific report settings. Access the SharePoint API usage report metrics through the operations defined on the sharePointReportSettings resource type.
+     * @param value Value to set for the sharePoint property.
+     */
+    public void setSharePoint(@jakarta.annotation.Nullable final SharePointReportSettings value) {
+        this.backingStore.set("sharePoint", value);
     }
 }

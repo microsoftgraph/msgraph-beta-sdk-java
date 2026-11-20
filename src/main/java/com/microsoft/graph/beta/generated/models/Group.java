@@ -8,9 +8,6 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/**
- * Represents a Microsoft Entra group.
- */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Group extends DirectoryObject implements Parsable {
     /**
@@ -63,7 +60,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("appRoleAssignments");
     }
     /**
-     * Gets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Requires $select to retrieve. This property can be updated only in delegated scenarios where the caller requires both the Microsoft Graph permission and a supported administrator role.
+     * Gets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group or a cloud security group. Requires a Microsoft Entra ID P1 license. Requires $select to retrieve. This property can be specified during group creation or update. However, for cloud security groups, it&apos;s immutable once set. This property can be updated only in delegated scenarios where the caller requires both the Microsoft Graph permission and a supported administrator role. To learn more about managing this property for Microsoft 365 vs. cloud security groups, see Key differences from Microsoft 365 group labeling.
      * @return a {@link java.util.List<AssignedLabel>}
      */
     @jakarta.annotation.Nullable
@@ -159,6 +156,14 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("description");
     }
     /**
+     * Gets the disableNesting property value. Indicates whether other groups can be added as members of this group. The default value is false. When set to true, other groups can&apos;t be added as members. You can set this property only for security groups that have isAssignableToRole set to false. The property is read-only for Microsoft 365 groups and groups that have isAssignableToRole set to true. Not nullable. Requires $select to retrieve. Supports $filter (eq). The least privileged permission to read or write this property is Group-NestingSupport.ReadWrite.All.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getDisableNesting() {
+        return this.backingStore.get("disableNesting");
+    }
+    /**
      * Gets the displayName property value. The display name for the group. Required. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      * @return a {@link String}
      */
@@ -237,6 +242,7 @@ public class Group extends DirectoryObject implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("createdOnBehalfOf", (n) -> { this.setCreatedOnBehalfOf(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("disableNesting", (n) -> { this.setDisableNesting(n.getBooleanValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("drive", (n) -> { this.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
         deserializerMap.put("drives", (n) -> { this.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
@@ -253,10 +259,12 @@ public class Group extends DirectoryObject implements Parsable {
         deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("isAssignableToRole", (n) -> { this.setIsAssignableToRole(n.getBooleanValue()); });
         deserializerMap.put("isFavorite", (n) -> { this.setIsFavorite(n.getBooleanValue()); });
+        deserializerMap.put("isHardDeleteProtectionEnabled", (n) -> { this.setIsHardDeleteProtectionEnabled(n.getBooleanValue()); });
         deserializerMap.put("isManagementRestricted", (n) -> { this.setIsManagementRestricted(n.getBooleanValue()); });
         deserializerMap.put("isSubscribedByMail", (n) -> { this.setIsSubscribedByMail(n.getBooleanValue()); });
         deserializerMap.put("licenseProcessingState", (n) -> { this.setLicenseProcessingState(n.getObjectValue(LicenseProcessingState::createFromDiscriminatorValue)); });
         deserializerMap.put("mail", (n) -> { this.setMail(n.getStringValue()); });
+        deserializerMap.put("mailboxId", (n) -> { this.setMailboxId(n.getStringValue()); });
         deserializerMap.put("mailEnabled", (n) -> { this.setMailEnabled(n.getBooleanValue()); });
         deserializerMap.put("mailNickname", (n) -> { this.setMailNickname(n.getStringValue()); });
         deserializerMap.put("memberOf", (n) -> { this.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
@@ -380,6 +388,14 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("isFavorite");
     }
     /**
+     * Gets the isHardDeleteProtectionEnabled property value. Indicates whether hard deletion protection is enabled for the group. Supported for cloud-only groups. When true, permanent deletion is blocked for seven days after soft deletion. The group can still be soft deleted and restored. Once enabled, protection can&apos;t be disabled or set to null. Enable protection on an existing group by using Update group; enabling it during creation isn&apos;t supported. Setting this property to true requires the Microsoft Entra Backup Administrator role. Nullable. Requires $select to retrieve. Supports $filter (eq).
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsHardDeleteProtectionEnabled() {
+        return this.backingStore.get("isHardDeleteProtectionEnabled");
+    }
+    /**
      * Gets the isManagementRestricted property value. Indicates whether the group is a member of a restricted management administrative unit. If not set, the default value is null and the default behavior is false. Read-only.  To manage a group member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit.
      * @return a {@link Boolean}
      */
@@ -410,6 +426,14 @@ public class Group extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public String getMail() {
         return this.backingStore.get("mail");
+    }
+    /**
+     * Gets the mailboxId property value. The identifier of the Exchange mailbox associated with a Microsoft 365 group. Treat this value as an opaque identifier and don&apos;t parse or validate its format. If the group mailbox isn&apos;t provisioned, this property returns 00000000-0000-0000-0000-000000000000. Requires $select to retrieve. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMailboxId() {
+        return this.backingStore.get("mailboxId");
     }
     /**
      * Gets the mailEnabled property value. Specifies whether the group is mail-enabled. Required. Returned by default. Supports $filter (eq, ne, not, and eq on null values).
@@ -818,6 +842,7 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("createdOnBehalfOf", this.getCreatedOnBehalfOf());
         writer.writeStringValue("description", this.getDescription());
+        writer.writeBooleanValue("disableNesting", this.getDisableNesting());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("drive", this.getDrive());
         writer.writeCollectionOfObjectValues("drives", this.getDrives());
@@ -834,10 +859,12 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeBooleanValue("isAssignableToRole", this.getIsAssignableToRole());
         writer.writeBooleanValue("isFavorite", this.getIsFavorite());
+        writer.writeBooleanValue("isHardDeleteProtectionEnabled", this.getIsHardDeleteProtectionEnabled());
         writer.writeBooleanValue("isManagementRestricted", this.getIsManagementRestricted());
         writer.writeBooleanValue("isSubscribedByMail", this.getIsSubscribedByMail());
         writer.writeObjectValue("licenseProcessingState", this.getLicenseProcessingState());
         writer.writeStringValue("mail", this.getMail());
+        writer.writeStringValue("mailboxId", this.getMailboxId());
         writer.writeBooleanValue("mailEnabled", this.getMailEnabled());
         writer.writeStringValue("mailNickname", this.getMailNickname());
         writer.writeCollectionOfObjectValues("memberOf", this.getMemberOf());
@@ -916,7 +943,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("appRoleAssignments", value);
     }
     /**
-     * Sets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Requires $select to retrieve. This property can be updated only in delegated scenarios where the caller requires both the Microsoft Graph permission and a supported administrator role.
+     * Sets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group or a cloud security group. Requires a Microsoft Entra ID P1 license. Requires $select to retrieve. This property can be specified during group creation or update. However, for cloud security groups, it&apos;s immutable once set. This property can be updated only in delegated scenarios where the caller requires both the Microsoft Graph permission and a supported administrator role. To learn more about managing this property for Microsoft 365 vs. cloud security groups, see Key differences from Microsoft 365 group labeling.
      * @param value Value to set for the assignedLabels property.
      */
     public void setAssignedLabels(@jakarta.annotation.Nullable final java.util.List<AssignedLabel> value) {
@@ -998,6 +1025,13 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
+    }
+    /**
+     * Sets the disableNesting property value. Indicates whether other groups can be added as members of this group. The default value is false. When set to true, other groups can&apos;t be added as members. You can set this property only for security groups that have isAssignableToRole set to false. The property is read-only for Microsoft 365 groups and groups that have isAssignableToRole set to true. Not nullable. Requires $select to retrieve. Supports $filter (eq). The least privileged permission to read or write this property is Group-NestingSupport.ReadWrite.All.
+     * @param value Value to set for the disableNesting property.
+     */
+    public void setDisableNesting(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("disableNesting", value);
     }
     /**
      * Sets the displayName property value. The display name for the group. Required. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
@@ -1112,6 +1146,13 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("isFavorite", value);
     }
     /**
+     * Sets the isHardDeleteProtectionEnabled property value. Indicates whether hard deletion protection is enabled for the group. Supported for cloud-only groups. When true, permanent deletion is blocked for seven days after soft deletion. The group can still be soft deleted and restored. Once enabled, protection can&apos;t be disabled or set to null. Enable protection on an existing group by using Update group; enabling it during creation isn&apos;t supported. Setting this property to true requires the Microsoft Entra Backup Administrator role. Nullable. Requires $select to retrieve. Supports $filter (eq).
+     * @param value Value to set for the isHardDeleteProtectionEnabled property.
+     */
+    public void setIsHardDeleteProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isHardDeleteProtectionEnabled", value);
+    }
+    /**
      * Sets the isManagementRestricted property value. Indicates whether the group is a member of a restricted management administrative unit. If not set, the default value is null and the default behavior is false. Read-only.  To manage a group member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit.
      * @param value Value to set for the isManagementRestricted property.
      */
@@ -1138,6 +1179,13 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public void setMail(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mail", value);
+    }
+    /**
+     * Sets the mailboxId property value. The identifier of the Exchange mailbox associated with a Microsoft 365 group. Treat this value as an opaque identifier and don&apos;t parse or validate its format. If the group mailbox isn&apos;t provisioned, this property returns 00000000-0000-0000-0000-000000000000. Requires $select to retrieve. Read-only.
+     * @param value Value to set for the mailboxId property.
+     */
+    public void setMailboxId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("mailboxId", value);
     }
     /**
      * Sets the mailEnabled property value. Specifies whether the group is mail-enabled. Required. Returned by default. Supports $filter (eq, ne, not, and eq on null values).

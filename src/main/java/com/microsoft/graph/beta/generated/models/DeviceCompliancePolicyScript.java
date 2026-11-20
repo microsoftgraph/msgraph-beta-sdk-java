@@ -69,10 +69,11 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Backe
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("deviceComplianceScriptId", (n) -> { this.setDeviceComplianceScriptId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("rulesContent", (n) -> { this.setRulesContent(n.getByteArrayValue()); });
+        deserializerMap.put("runIntervalInMinutes", (n) -> { this.setRunIntervalInMinutes(n.getIntegerValue()); });
         return deserializerMap;
     }
     /**
@@ -92,6 +93,14 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Backe
         return this.backingStore.get("rulesContent");
     }
     /**
+     * Gets the runIntervalInMinutes property value. Indicates the interval, in minutes, at which the custom compliance script is evaluated on the device. Allowed range from 1 to 480. Nullable.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getRunIntervalInMinutes() {
+        return this.backingStore.get("runIntervalInMinutes");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -100,6 +109,7 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Backe
         writer.writeStringValue("deviceComplianceScriptId", this.getDeviceComplianceScriptId());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeByteArrayValue("rulesContent", this.getRulesContent());
+        writer.writeIntegerValue("runIntervalInMinutes", this.getRunIntervalInMinutes());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -137,5 +147,12 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Backe
      */
     public void setRulesContent(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("rulesContent", value);
+    }
+    /**
+     * Sets the runIntervalInMinutes property value. Indicates the interval, in minutes, at which the custom compliance script is evaluated on the device. Allowed range from 1 to 480. Nullable.
+     * @param value Value to set for the runIntervalInMinutes property.
+     */
+    public void setRunIntervalInMinutes(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("runIntervalInMinutes", value);
     }
 }

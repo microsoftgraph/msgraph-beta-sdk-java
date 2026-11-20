@@ -28,6 +28,7 @@ public class AccessReviewResourceScope extends AccessReviewScope implements Pars
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.accessReviewAccessPackageAssignmentPolicyScope": return new AccessReviewAccessPackageAssignmentPolicyScope();
+                case "#microsoft.graph.accessReviewCatalogScope": return new AccessReviewCatalogScope();
             }
         }
         return new AccessReviewResourceScope();

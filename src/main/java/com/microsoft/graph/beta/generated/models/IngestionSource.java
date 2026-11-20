@@ -14,7 +14,7 @@ public enum IngestionSource implements ValuedEnum {
     Custom("custom"),
     /** Indicates the category is ingested through system ingestion process */
     BuiltIn("builtIn"),
-    /** Evolvable enumeration sentinel value. Do not use. */
+    /** Unknown future enum value */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     IngestionSource(final String value) {

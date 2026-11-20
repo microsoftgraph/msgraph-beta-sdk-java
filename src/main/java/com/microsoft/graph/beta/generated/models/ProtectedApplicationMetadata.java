@@ -26,7 +26,7 @@ public class ProtectedApplicationMetadata extends IntegratedApplicationMetadata 
         return new ProtectedApplicationMetadata();
     }
     /**
-     * Gets the applicationLocation property value. The client (application) ID of the Microsoft Entra application. Required.
+     * Gets the applicationLocation property value. The location that identifies the protected application. For agent evaluation, use policyLocationAgent. Optional.
      * @return a {@link PolicyLocation}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class ProtectedApplicationMetadata extends IntegratedApplicationMetadata 
         writer.writeObjectValue("applicationLocation", this.getApplicationLocation());
     }
     /**
-     * Sets the applicationLocation property value. The client (application) ID of the Microsoft Entra application. Required.
+     * Sets the applicationLocation property value. The location that identifies the protected application. For agent evaluation, use policyLocationAgent. Optional.
      * @param value Value to set for the applicationLocation property.
      */
     public void setApplicationLocation(@jakarta.annotation.Nullable final PolicyLocation value) {

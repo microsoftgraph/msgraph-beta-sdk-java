@@ -15,6 +15,7 @@ import com.microsoft.graph.beta.users.item.authentication.phonemethods.PhoneMeth
 import com.microsoft.graph.beta.users.item.authentication.platformcredentialmethods.PlatformCredentialMethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.qrcodepinmethod.QrCodePinMethodRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.requirements.RequirementsRequestBuilder;
+import com.microsoft.graph.beta.users.item.authentication.resourceaccountkeyauthenticationmethods.ResourceAccountKeyAuthenticationMethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.signinpreferences.SignInPreferencesRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.softwareoathmethods.SoftwareOathMethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.temporaryaccesspassmethods.TemporaryAccessPassMethodsRequestBuilder;
@@ -140,6 +141,14 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequirementsRequestBuilder requirements() {
         return new RequirementsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the resourceAccountKeyAuthenticationMethods property of the microsoft.graph.authentication entity.
+     * @return a {@link ResourceAccountKeyAuthenticationMethodsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ResourceAccountKeyAuthenticationMethodsRequestBuilder resourceAccountKeyAuthenticationMethods() {
+        return new ResourceAccountKeyAuthenticationMethodsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * The signInPreferences property

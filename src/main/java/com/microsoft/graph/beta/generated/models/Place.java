@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -62,6 +63,14 @@ public class Place extends Entity implements Parsable {
         return this.backingStore.get("children");
     }
     /**
+     * Gets the customProperties property value. Custom properties for the place. Each property has a string key and a string value. Nullable.
+     * @return a {@link StringDictionary}
+     */
+    @jakarta.annotation.Nullable
+    public StringDictionary getCustomProperties() {
+        return this.backingStore.get("customProperties");
+    }
+    /**
      * Gets the displayName property value. The name that is associated with the place.
      * @return a {@link String}
      */
@@ -79,12 +88,15 @@ public class Place extends Entity implements Parsable {
         deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
         deserializerMap.put("checkIns", (n) -> { this.setCheckIns(n.getCollectionOfObjectValues(CheckInClaim::createFromDiscriminatorValue)); });
         deserializerMap.put("children", (n) -> { this.setChildren(n.getCollectionOfObjectValues(Place::createFromDiscriminatorValue)); });
+        deserializerMap.put("customProperties", (n) -> { this.setCustomProperties(n.getObjectValue(StringDictionary::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("geoCoordinates", (n) -> { this.setGeoCoordinates(n.getObjectValue(OutlookGeoCoordinates::createFromDiscriminatorValue)); });
         deserializerMap.put("isWheelChairAccessible", (n) -> { this.setIsWheelChairAccessible(n.getBooleanValue()); });
         deserializerMap.put("label", (n) -> { this.setLabel(n.getStringValue()); });
+        deserializerMap.put("lastUpdatedTime", (n) -> { this.setLastUpdatedTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("parentId", (n) -> { this.setParentId(n.getStringValue()); });
         deserializerMap.put("phone", (n) -> { this.setPhone(n.getStringValue()); });
+        deserializerMap.put("placeId", (n) -> { this.setPlaceId(n.getStringValue()); });
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
@@ -113,6 +125,14 @@ public class Place extends Entity implements Parsable {
         return this.backingStore.get("label");
     }
     /**
+     * Gets the lastUpdatedTime property value. The date and time when the place was last updated. The timestamp is in ISO 8601 format and is always in UTC. Read-only. Nullable.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastUpdatedTime() {
+        return this.backingStore.get("lastUpdatedTime");
+    }
+    /**
      * Gets the parentId property value. The ID of a parent place.
      * @return a {@link String}
      */
@@ -127,6 +147,14 @@ public class Place extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getPhone() {
         return this.backingStore.get("phone");
+    }
+    /**
+     * Gets the placeId property value. A stable service-level identifier for the place object used by Places workloads.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPlaceId() {
+        return this.backingStore.get("placeId");
     }
     /**
      * Gets the tags property value. Custom tags that are associated with the place for categorization or filtering.
@@ -146,12 +174,14 @@ public class Place extends Entity implements Parsable {
         writer.writeObjectValue("address", this.getAddress());
         writer.writeCollectionOfObjectValues("checkIns", this.getCheckIns());
         writer.writeCollectionOfObjectValues("children", this.getChildren());
+        writer.writeObjectValue("customProperties", this.getCustomProperties());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("geoCoordinates", this.getGeoCoordinates());
         writer.writeBooleanValue("isWheelChairAccessible", this.getIsWheelChairAccessible());
         writer.writeStringValue("label", this.getLabel());
         writer.writeStringValue("parentId", this.getParentId());
         writer.writeStringValue("phone", this.getPhone());
+        writer.writeStringValue("placeId", this.getPlaceId());
         writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
     }
     /**
@@ -174,6 +204,13 @@ public class Place extends Entity implements Parsable {
      */
     public void setChildren(@jakarta.annotation.Nullable final java.util.List<Place> value) {
         this.backingStore.set("children", value);
+    }
+    /**
+     * Sets the customProperties property value. Custom properties for the place. Each property has a string key and a string value. Nullable.
+     * @param value Value to set for the customProperties property.
+     */
+    public void setCustomProperties(@jakarta.annotation.Nullable final StringDictionary value) {
+        this.backingStore.set("customProperties", value);
     }
     /**
      * Sets the displayName property value. The name that is associated with the place.
@@ -204,6 +241,13 @@ public class Place extends Entity implements Parsable {
         this.backingStore.set("label", value);
     }
     /**
+     * Sets the lastUpdatedTime property value. The date and time when the place was last updated. The timestamp is in ISO 8601 format and is always in UTC. Read-only. Nullable.
+     * @param value Value to set for the lastUpdatedTime property.
+     */
+    public void setLastUpdatedTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastUpdatedTime", value);
+    }
+    /**
      * Sets the parentId property value. The ID of a parent place.
      * @param value Value to set for the parentId property.
      */
@@ -216,6 +260,13 @@ public class Place extends Entity implements Parsable {
      */
     public void setPhone(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("phone", value);
+    }
+    /**
+     * Sets the placeId property value. A stable service-level identifier for the place object used by Places workloads.
+     * @param value Value to set for the placeId property.
+     */
+    public void setPlaceId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("placeId", value);
     }
     /**
      * Sets the tags property value. Custom tags that are associated with the place for categorization or filtering.

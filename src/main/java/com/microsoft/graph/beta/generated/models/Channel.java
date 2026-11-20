@@ -34,12 +34,20 @@ public class Channel extends Entity implements Parsable {
         return this.backingStore.get("allMembers");
     }
     /**
-     * Gets the createdDateTime property value. Read only. Timestamp at which the channel was created.
+     * Gets the createdDateTime property value. Read-only. Timestamp at which the channel was created.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.backingStore.get("createdDateTime");
+    }
+    /**
+     * Gets the deletedDateTime property value. The deletedDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getDeletedDateTime() {
+        return this.backingStore.get("deletedDateTime");
     }
     /**
      * Gets the description property value. Optional textual description for the channel.
@@ -82,6 +90,7 @@ public class Channel extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allMembers", (n) -> { this.setAllMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deletedDateTime", (n) -> { this.setDeletedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
@@ -89,6 +98,7 @@ public class Channel extends Entity implements Parsable {
         deserializerMap.put("filesFolder", (n) -> { this.setFilesFolder(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
         deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("isFavoriteByDefault", (n) -> { this.setIsFavoriteByDefault(n.getBooleanValue()); });
+        deserializerMap.put("joinedUsers", (n) -> { this.setJoinedUsers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
         deserializerMap.put("layoutType", (n) -> { this.setLayoutType(n.getEnumValue(ChannelLayoutType::forValue)); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
         deserializerMap.put("membershipType", (n) -> { this.setMembershipType(n.getEnumValue(ChannelMembershipType::forValue)); });
@@ -100,6 +110,7 @@ public class Channel extends Entity implements Parsable {
         deserializerMap.put("sharedWithTeams", (n) -> { this.setSharedWithTeams(n.getCollectionOfObjectValues(SharedWithChannelTeamInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("summary", (n) -> { this.setSummary(n.getObjectValue(ChannelSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("tabs", (n) -> { this.setTabs(n.getCollectionOfObjectValues(TeamsTab::createFromDiscriminatorValue)); });
+        deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfObjectValues(TeamworkChannelTag::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
         return deserializerMap;
@@ -127,6 +138,14 @@ public class Channel extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsFavoriteByDefault() {
         return this.backingStore.get("isFavoriteByDefault");
+    }
+    /**
+     * Gets the joinedUsers property value. The joinedUsers property
+     * @return a {@link java.util.List<ConversationMember>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ConversationMember> getJoinedUsers() {
+        return this.backingStore.get("joinedUsers");
     }
     /**
      * Gets the layoutType property value. The layout type of the channel. It can be set during creation and updated later. The possible values are: post, chat, unknownFutureValue. The default value is post. Channels with the post layout use a traditional postreply conversation format, and channels with the chat layout provide a chatlike threading experience similar to group chats.
@@ -217,6 +236,14 @@ public class Channel extends Entity implements Parsable {
         return this.backingStore.get("tabs");
     }
     /**
+     * Gets the tags property value. The tags owned by the channel.
+     * @return a {@link java.util.List<TeamworkChannelTag>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<TeamworkChannelTag> getTags() {
+        return this.backingStore.get("tags");
+    }
+    /**
      * Gets the tenantId property value. The ID of the Microsoft Entra tenant.
      * @return a {@link String}
      */
@@ -241,6 +268,7 @@ public class Channel extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("allMembers", this.getAllMembers());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeOffsetDateTimeValue("deletedDateTime", this.getDeletedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("email", this.getEmail());
@@ -248,6 +276,7 @@ public class Channel extends Entity implements Parsable {
         writer.writeObjectValue("filesFolder", this.getFilesFolder());
         writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeBooleanValue("isFavoriteByDefault", this.getIsFavoriteByDefault());
+        writer.writeCollectionOfObjectValues("joinedUsers", this.getJoinedUsers());
         writer.writeEnumValue("layoutType", this.getLayoutType());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
         writer.writeEnumValue("membershipType", this.getMembershipType());
@@ -259,6 +288,7 @@ public class Channel extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("sharedWithTeams", this.getSharedWithTeams());
         writer.writeObjectValue("summary", this.getSummary());
         writer.writeCollectionOfObjectValues("tabs", this.getTabs());
+        writer.writeCollectionOfObjectValues("tags", this.getTags());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
@@ -270,11 +300,18 @@ public class Channel extends Entity implements Parsable {
         this.backingStore.set("allMembers", value);
     }
     /**
-     * Sets the createdDateTime property value. Read only. Timestamp at which the channel was created.
+     * Sets the createdDateTime property value. Read-only. Timestamp at which the channel was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
+    }
+    /**
+     * Sets the deletedDateTime property value. The deletedDateTime property
+     * @param value Value to set for the deletedDateTime property.
+     */
+    public void setDeletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("deletedDateTime", value);
     }
     /**
      * Sets the description property value. Optional textual description for the channel.
@@ -324,6 +361,13 @@ public class Channel extends Entity implements Parsable {
      */
     public void setIsFavoriteByDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isFavoriteByDefault", value);
+    }
+    /**
+     * Sets the joinedUsers property value. The joinedUsers property
+     * @param value Value to set for the joinedUsers property.
+     */
+    public void setJoinedUsers(@jakarta.annotation.Nullable final java.util.List<ConversationMember> value) {
+        this.backingStore.set("joinedUsers", value);
     }
     /**
      * Sets the layoutType property value. The layout type of the channel. It can be set during creation and updated later. The possible values are: post, chat, unknownFutureValue. The default value is post. Channels with the post layout use a traditional postreply conversation format, and channels with the chat layout provide a chatlike threading experience similar to group chats.
@@ -401,6 +445,13 @@ public class Channel extends Entity implements Parsable {
      */
     public void setTabs(@jakarta.annotation.Nullable final java.util.List<TeamsTab> value) {
         this.backingStore.set("tabs", value);
+    }
+    /**
+     * Sets the tags property value. The tags owned by the channel.
+     * @param value Value to set for the tags property.
+     */
+    public void setTags(@jakarta.annotation.Nullable final java.util.List<TeamworkChannelTag> value) {
+        this.backingStore.set("tags", value);
     }
     /**
      * Sets the tenantId property value. The ID of the Microsoft Entra tenant.

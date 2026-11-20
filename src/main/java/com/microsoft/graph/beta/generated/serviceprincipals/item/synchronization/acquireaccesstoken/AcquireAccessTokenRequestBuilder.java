@@ -35,7 +35,7 @@ public class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/synchronization/acquireAccessToken", rawUrl);
     }
     /**
-     * Acquire an OAuth Access token to authorize the Microsoft Entra provisioning service to provision users into an application.
+     * Acquire an OAuth access token from the synchronization resource to authorize the Microsoft Entra provisioning service to provision users into an application.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -47,7 +47,7 @@ public class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Acquire an OAuth Access token to authorize the Microsoft Entra provisioning service to provision users into an application.
+     * Acquire an OAuth access token from the synchronization resource to authorize the Microsoft Entra provisioning service to provision users into an application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -64,7 +64,7 @@ public class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Acquire an OAuth Access token to authorize the Microsoft Entra provisioning service to provision users into an application.
+     * Acquire an OAuth access token from the synchronization resource to authorize the Microsoft Entra provisioning service to provision users into an application.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -76,7 +76,7 @@ public class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Acquire an OAuth Access token to authorize the Microsoft Entra provisioning service to provision users into an application.
+     * Acquire an OAuth access token from the synchronization resource to authorize the Microsoft Entra provisioning service to provision users into an application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

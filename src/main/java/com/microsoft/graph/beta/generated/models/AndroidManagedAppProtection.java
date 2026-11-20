@@ -85,6 +85,14 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this.backingStore.get("appActionIfAndroidSafetyNetDeviceAttestationFailed");
     }
     /**
+     * Gets the appActionIfDeveloperOptionsEnabled property value. Defines a managed app behavior, either warn, block, or wipe, if Developer Options are enabled on the Android device. If the admin does not set this action, the default is null, which indicates this setting is not configured.
+     * @return a {@link ManagedAppRemediationAction}
+     */
+    @jakarta.annotation.Nullable
+    public ManagedAppRemediationAction getAppActionIfDeveloperOptionsEnabled() {
+        return this.backingStore.get("appActionIfDeveloperOptionsEnabled");
+    }
+    /**
      * Gets the appActionIfDeviceLockNotSet property value. An admin initiated action to be applied on a managed app.
      * @return a {@link ManagedAppRemediationAction}
      */
@@ -258,6 +266,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         deserializerMap.put("appActionIfAndroidDeviceModelNotAllowed", (n) -> { this.setAppActionIfAndroidDeviceModelNotAllowed(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
         deserializerMap.put("appActionIfAndroidSafetyNetAppsVerificationFailed", (n) -> { this.setAppActionIfAndroidSafetyNetAppsVerificationFailed(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
         deserializerMap.put("appActionIfAndroidSafetyNetDeviceAttestationFailed", (n) -> { this.setAppActionIfAndroidSafetyNetDeviceAttestationFailed(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
+        deserializerMap.put("appActionIfDeveloperOptionsEnabled", (n) -> { this.setAppActionIfDeveloperOptionsEnabled(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
         deserializerMap.put("appActionIfDeviceLockNotSet", (n) -> { this.setAppActionIfDeviceLockNotSet(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
         deserializerMap.put("appActionIfDevicePasscodeComplexityLessThanHigh", (n) -> { this.setAppActionIfDevicePasscodeComplexityLessThanHigh(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
         deserializerMap.put("appActionIfDevicePasscodeComplexityLessThanLow", (n) -> { this.setAppActionIfDevicePasscodeComplexityLessThanLow(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
@@ -456,6 +465,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         writer.writeEnumValue("appActionIfAndroidDeviceModelNotAllowed", this.getAppActionIfAndroidDeviceModelNotAllowed());
         writer.writeEnumValue("appActionIfAndroidSafetyNetAppsVerificationFailed", this.getAppActionIfAndroidSafetyNetAppsVerificationFailed());
         writer.writeEnumValue("appActionIfAndroidSafetyNetDeviceAttestationFailed", this.getAppActionIfAndroidSafetyNetDeviceAttestationFailed());
+        writer.writeEnumValue("appActionIfDeveloperOptionsEnabled", this.getAppActionIfDeveloperOptionsEnabled());
         writer.writeEnumValue("appActionIfDeviceLockNotSet", this.getAppActionIfDeviceLockNotSet());
         writer.writeEnumValue("appActionIfDevicePasscodeComplexityLessThanHigh", this.getAppActionIfDevicePasscodeComplexityLessThanHigh());
         writer.writeEnumValue("appActionIfDevicePasscodeComplexityLessThanLow", this.getAppActionIfDevicePasscodeComplexityLessThanLow());
@@ -543,6 +553,13 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      */
     public void setAppActionIfAndroidSafetyNetDeviceAttestationFailed(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
         this.backingStore.set("appActionIfAndroidSafetyNetDeviceAttestationFailed", value);
+    }
+    /**
+     * Sets the appActionIfDeveloperOptionsEnabled property value. Defines a managed app behavior, either warn, block, or wipe, if Developer Options are enabled on the Android device. If the admin does not set this action, the default is null, which indicates this setting is not configured.
+     * @param value Value to set for the appActionIfDeveloperOptionsEnabled property.
+     */
+    public void setAppActionIfDeveloperOptionsEnabled(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
+        this.backingStore.set("appActionIfDeveloperOptionsEnabled", value);
     }
     /**
      * Sets the appActionIfDeviceLockNotSet property value. An admin initiated action to be applied on a managed app.

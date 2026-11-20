@@ -37,6 +37,7 @@ public class AuthenticationMethod extends Entity implements Parsable {
                 case "#microsoft.graph.phoneAuthenticationMethod": return new PhoneAuthenticationMethod();
                 case "#microsoft.graph.platformCredentialAuthenticationMethod": return new PlatformCredentialAuthenticationMethod();
                 case "#microsoft.graph.qrCodePinAuthenticationMethod": return new QrCodePinAuthenticationMethod();
+                case "#microsoft.graph.resourceAccountKeyAuthenticationMethod": return new ResourceAccountKeyAuthenticationMethod();
                 case "#microsoft.graph.softwareOathAuthenticationMethod": return new SoftwareOathAuthenticationMethod();
                 case "#microsoft.graph.temporaryAccessPassAuthenticationMethod": return new TemporaryAccessPassAuthenticationMethod();
                 case "#microsoft.graph.windowsHelloForBusinessAuthenticationMethod": return new WindowsHelloForBusinessAuthenticationMethod();
@@ -61,6 +62,7 @@ public class AuthenticationMethod extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastUsedDateTime", (n) -> { this.setLastUsedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("provenance", (n) -> { this.setProvenance(n.getObjectValue(CredentialProvenance::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -72,6 +74,14 @@ public class AuthenticationMethod extends Entity implements Parsable {
         return this.backingStore.get("lastUsedDateTime");
     }
     /**
+     * Gets the provenance property value. The provenance and trust classification of the authentication method. Supports administrative attestation. Returned for FIDO2 authentication methods; null for method types that don&apos;t support provenance.
+     * @return a {@link CredentialProvenance}
+     */
+    @jakarta.annotation.Nullable
+    public CredentialProvenance getProvenance() {
+        return this.backingStore.get("provenance");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -80,6 +90,7 @@ public class AuthenticationMethod extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeOffsetDateTimeValue("lastUsedDateTime", this.getLastUsedDateTime());
+        writer.writeObjectValue("provenance", this.getProvenance());
     }
     /**
      * Sets the createdDateTime property value. The date and time the authentication method was registered to the user. Read-only. Optional. This optional value is null if the authentication method doesn&apos;t populate it. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -94,5 +105,12 @@ public class AuthenticationMethod extends Entity implements Parsable {
      */
     public void setLastUsedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastUsedDateTime", value);
+    }
+    /**
+     * Sets the provenance property value. The provenance and trust classification of the authentication method. Supports administrative attestation. Returned for FIDO2 authentication methods; null for method types that don&apos;t support provenance.
+     * @param value Value to set for the provenance property.
+     */
+    public void setProvenance(@jakarta.annotation.Nullable final CredentialProvenance value) {
+        this.backingStore.set("provenance", value);
     }
 }

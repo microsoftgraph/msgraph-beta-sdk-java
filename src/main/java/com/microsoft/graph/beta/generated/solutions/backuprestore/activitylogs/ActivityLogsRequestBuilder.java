@@ -60,19 +60,21 @@ public class ActivityLogsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/activityLogs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get activityLogs from solutions
+     * Get a list of activityLogBase objects and their properties.
      * @return a {@link ActivityLogBaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/backuprestoreroot-list-activitylogs?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ActivityLogBaseCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get activityLogs from solutions
+     * Get a list of activityLogBase objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ActivityLogBaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/backuprestoreroot-list-activitylogs?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ActivityLogBaseCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class ActivityLogsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ActivityLogBase::createFromDiscriminatorValue);
     }
     /**
-     * Get activityLogs from solutions
+     * Get a list of activityLogBase objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class ActivityLogsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get activityLogs from solutions
+     * Get a list of activityLogBase objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class ActivityLogsRequestBuilder extends BaseRequestBuilder {
         return new ActivityLogsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get activityLogs from solutions
+     * Get a list of activityLogBase objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

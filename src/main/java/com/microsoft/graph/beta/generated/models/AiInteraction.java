@@ -43,10 +43,10 @@ public class AiInteraction extends Entity implements Parsable {
     }
     /**
      * Gets the body property value. The body property
-     * @return a {@link ItemBody}
+     * @return a {@link ChatMessageBody}
      */
     @jakarta.annotation.Nullable
-    public ItemBody getBody() {
+    public ChatMessageBody getBody() {
         return this.backingStore.get("body");
     }
     /**
@@ -90,7 +90,7 @@ public class AiInteraction extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appClass", (n) -> { this.setAppClass(n.getStringValue()); });
         deserializerMap.put("attachments", (n) -> { this.setAttachments(n.getCollectionOfObjectValues(AiInteractionAttachment::createFromDiscriminatorValue)); });
-        deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ChatMessageBody::createFromDiscriminatorValue)); });
         deserializerMap.put("contexts", (n) -> { this.setContexts(n.getCollectionOfObjectValues(AiInteractionContext::createFromDiscriminatorValue)); });
         deserializerMap.put("conversationType", (n) -> { this.setConversationType(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -200,7 +200,7 @@ public class AiInteraction extends Entity implements Parsable {
      * Sets the body property value. The body property
      * @param value Value to set for the body property.
      */
-    public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
+    public void setBody(@jakarta.annotation.Nullable final ChatMessageBody value) {
         this.backingStore.set("body", value);
     }
     /**

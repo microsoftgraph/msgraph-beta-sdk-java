@@ -49,11 +49,20 @@ public class CloudPcPolicyScheduledApplyActionDetail extends Entity implements P
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("cronScheduleExpression", (n) -> { this.setCronScheduleExpression(n.getStringValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getStringValue()); });
+        deserializerMap.put("isForceUserLogoffEnabled", (n) -> { this.setIsForceUserLogoffEnabled(n.getBooleanValue()); });
         deserializerMap.put("nextRunDateTime", (n) -> { this.setNextRunDateTime(n.getStringValue()); });
         deserializerMap.put("reservePercentage", (n) -> { this.setReservePercentage(n.getIntegerValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getStringValue()); });
         deserializerMap.put("timezone", (n) -> { this.setTimezone(n.getEnumValue(CloudPcPolicyTimezone::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isForceUserLogoffEnabled property value. Indicates whether active Cloud PC sessions are forcibly signed out when reprovisioning begins. When true, connected users are immediately signed out and reprovisioning starts right away; reservePercentage must be set to 0 when this property is true, otherwise the request fails. When false, reprovisioning waits until the user disconnects. The default value is false. Optional. Frontline shared only.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsForceUserLogoffEnabled() {
+        return this.backingStore.get("isForceUserLogoffEnabled");
     }
     /**
      * Gets the nextRunDateTime property value. Indicates IT Admins can see when the next automatic regular apply is executed. It needs to be coordinated with timezone, for example, &apos;2025-01-01 00:00:00&apos; with &apos;China Standard Time&apos; means the next task executes at Jan 01 2025 00:00:00 GMT+0800 (China Standard Time). Read-Only.
@@ -96,6 +105,7 @@ public class CloudPcPolicyScheduledApplyActionDetail extends Entity implements P
         super.serialize(writer);
         writer.writeStringValue("cronScheduleExpression", this.getCronScheduleExpression());
         writer.writeStringValue("endDateTime", this.getEndDateTime());
+        writer.writeBooleanValue("isForceUserLogoffEnabled", this.getIsForceUserLogoffEnabled());
         writer.writeStringValue("nextRunDateTime", this.getNextRunDateTime());
         writer.writeIntegerValue("reservePercentage", this.getReservePercentage());
         writer.writeStringValue("startDateTime", this.getStartDateTime());
@@ -114,6 +124,13 @@ public class CloudPcPolicyScheduledApplyActionDetail extends Entity implements P
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("endDateTime", value);
+    }
+    /**
+     * Sets the isForceUserLogoffEnabled property value. Indicates whether active Cloud PC sessions are forcibly signed out when reprovisioning begins. When true, connected users are immediately signed out and reprovisioning starts right away; reservePercentage must be set to 0 when this property is true, otherwise the request fails. When false, reprovisioning waits until the user disconnects. The default value is false. Optional. Frontline shared only.
+     * @param value Value to set for the isForceUserLogoffEnabled property.
+     */
+    public void setIsForceUserLogoffEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isForceUserLogoffEnabled", value);
     }
     /**
      * Sets the nextRunDateTime property value. Indicates IT Admins can see when the next automatic regular apply is executed. It needs to be coordinated with timezone, for example, &apos;2025-01-01 00:00:00&apos; with &apos;China Standard Time&apos; means the next task executes at Jan 01 2025 00:00:00 GMT+0800 (China Standard Time). Read-Only.

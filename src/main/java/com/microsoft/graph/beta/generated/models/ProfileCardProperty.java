@@ -53,7 +53,7 @@ public class ProfileCardProperty extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isVisible property value. The isVisible property
+     * Gets the isVisible property value. Indicates whether the given directory property should be shown on a users profile card.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class ProfileCardProperty extends Entity implements Parsable {
         this.backingStore.set("directoryPropertyName", value);
     }
     /**
-     * Sets the isVisible property value. The isVisible property
+     * Sets the isVisible property value. Indicates whether the given directory property should be shown on a users profile card.
      * @param value Value to set for the isVisible property.
      */
     public void setIsVisible(@jakarta.annotation.Nullable final Boolean value) {

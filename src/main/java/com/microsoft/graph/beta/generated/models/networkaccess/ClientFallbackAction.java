@@ -7,6 +7,7 @@ import java.util.Objects;
 public enum ClientFallbackAction implements ValuedEnum {
     Bypass("bypass"),
     Block("block"),
+    Default("default"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     ClientFallbackAction(final String value) {
@@ -20,6 +21,7 @@ public enum ClientFallbackAction implements ValuedEnum {
         switch(searchValue) {
             case "bypass": return Bypass;
             case "block": return Block;
+            case "default": return Default;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

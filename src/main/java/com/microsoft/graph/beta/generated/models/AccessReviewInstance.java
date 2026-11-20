@@ -50,6 +50,14 @@ public class AccessReviewInstance extends Entity implements Parsable {
         return this.backingStore.get("definition");
     }
     /**
+     * Gets the delegatedBy property value. The identities of users who delegated this review instance to the current reviewer. Null if the instance wasn&apos;t delegated. Only returned via filterByCurrentUser when explicitly requested via $select. Read-only.
+     * @return a {@link java.util.List<UserIdentity>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<UserIdentity> getDelegatedBy() {
+        return this.backingStore.get("delegatedBy");
+    }
+    /**
      * Gets the endDateTime property value. DateTime when review instance is scheduled to end. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $select. Read-only.
      * @return a {@link OffsetDateTime}
      */
@@ -83,6 +91,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
         deserializerMap.put("contactedReviewers", (n) -> { this.setContactedReviewers(n.getCollectionOfObjectValues(AccessReviewReviewer::createFromDiscriminatorValue)); });
         deserializerMap.put("decisions", (n) -> { this.setDecisions(n.getCollectionOfObjectValues(AccessReviewInstanceDecisionItem::createFromDiscriminatorValue)); });
         deserializerMap.put("definition", (n) -> { this.setDefinition(n.getObjectValue(AccessReviewScheduleDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("delegatedBy", (n) -> { this.setDelegatedBy(n.getCollectionOfObjectValues(UserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("errors", (n) -> { this.setErrors(n.getCollectionOfObjectValues(AccessReviewError::createFromDiscriminatorValue)); });
         deserializerMap.put("fallbackReviewers", (n) -> { this.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
@@ -143,6 +152,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("contactedReviewers", this.getContactedReviewers());
         writer.writeCollectionOfObjectValues("decisions", this.getDecisions());
         writer.writeObjectValue("definition", this.getDefinition());
+        writer.writeCollectionOfObjectValues("delegatedBy", this.getDelegatedBy());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeCollectionOfObjectValues("errors", this.getErrors());
         writer.writeCollectionOfObjectValues("fallbackReviewers", this.getFallbackReviewers());
@@ -172,6 +182,13 @@ public class AccessReviewInstance extends Entity implements Parsable {
      */
     public void setDefinition(@jakarta.annotation.Nullable final AccessReviewScheduleDefinition value) {
         this.backingStore.set("definition", value);
+    }
+    /**
+     * Sets the delegatedBy property value. The identities of users who delegated this review instance to the current reviewer. Null if the instance wasn&apos;t delegated. Only returned via filterByCurrentUser when explicitly requested via $select. Read-only.
+     * @param value Value to set for the delegatedBy property.
+     */
+    public void setDelegatedBy(@jakarta.annotation.Nullable final java.util.List<UserIdentity> value) {
+        this.backingStore.set("delegatedBy", value);
     }
     /**
      * Sets the endDateTime property value. DateTime when review instance is scheduled to end. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $select. Read-only.

@@ -15,7 +15,9 @@ public enum AospDeviceOwnerWiFiSecurityType implements ValuedEnum {
     /** WPA-Personal/WPA2-Personal. */
     WpaPersonal("wpaPersonal"),
     /** WPA-Enterprise/WPA2-Enterprise. Must use AOSPDeviceOwnerEnterpriseWifiConfiguration type to configure enterprise options. */
-    WpaEnterprise("wpaEnterprise");
+    WpaEnterprise("wpaEnterprise"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     AospDeviceOwnerWiFiSecurityType(final String value) {
         this.value = value;
@@ -30,6 +32,7 @@ public enum AospDeviceOwnerWiFiSecurityType implements ValuedEnum {
             case "wep": return Wep;
             case "wpaPersonal": return WpaPersonal;
             case "wpaEnterprise": return WpaEnterprise;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

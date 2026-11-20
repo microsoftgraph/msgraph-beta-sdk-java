@@ -26,7 +26,7 @@ public class CrossTenantMigrationTask extends Entity implements Parsable {
         return new CrossTenantMigrationTask();
     }
     /**
-     * Gets the currentStatus property value. Most recent status of this migration task
+     * Gets the currentStatus property value. Most recent status of this migration task.
      * @return a {@link java.util.List<CrossTenantMigrationServiceStatusDetails>}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class CrossTenantMigrationTask extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastUpdatedDateTime property value. Time the task was last updated
+     * Gets the lastUpdatedDateTime property value. Date and time when the task was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class CrossTenantMigrationTask extends Entity implements Parsable {
         return this.backingStore.get("lastUpdatedDateTime");
     }
     /**
-     * Gets the taskType property value. Type of migration task. Only Users are supported at this time.
+     * Gets the taskType property value. Type of migration task. Currently, only Users is supported.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class CrossTenantMigrationTask extends Entity implements Parsable {
         writer.writeStringValue("taskType", this.getTaskType());
     }
     /**
-     * Sets the currentStatus property value. Most recent status of this migration task
+     * Sets the currentStatus property value. Most recent status of this migration task.
      * @param value Value to set for the currentStatus property.
      */
     public void setCurrentStatus(@jakarta.annotation.Nullable final java.util.List<CrossTenantMigrationServiceStatusDetails> value) {
         this.backingStore.set("currentStatus", value);
     }
     /**
-     * Sets the lastUpdatedDateTime property value. Time the task was last updated
+     * Sets the lastUpdatedDateTime property value. Date and time when the task was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastUpdatedDateTime", value);
     }
     /**
-     * Sets the taskType property value. Type of migration task. Only Users are supported at this time.
+     * Sets the taskType property value. Type of migration task. Currently, only Users is supported.
      * @param value Value to set for the taskType property.
      */
     public void setTaskType(@jakarta.annotation.Nullable final String value) {

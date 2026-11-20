@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.users.item.manageddevices.item.activatedeviceesim.ActivateDeviceEsimRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.assignmentfilterevaluationstatusdetails.AssignmentFilterEvaluationStatusDetailsRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.bypassactivationlock.BypassActivationLockRequestBuilder;
+import com.microsoft.graph.beta.users.item.manageddevices.item.cancelenhancedlogcollection.CancelEnhancedLogCollectionRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.changeassignments.ChangeAssignmentsRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.cleanwindowsdevice.CleanWindowsDeviceRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.createdevicelogcollectionrequest.CreateDeviceLogCollectionRequestRequestBuilder;
@@ -21,6 +22,7 @@ import com.microsoft.graph.beta.users.item.manageddevices.item.enablelostmode.En
 import com.microsoft.graph.beta.users.item.manageddevices.item.enrollnowaction.EnrollNowActionRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.getfilevaultkey.GetFileVaultKeyRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.getnoncompliantsettings.GetNonCompliantSettingsRequestBuilder;
+import com.microsoft.graph.beta.users.item.manageddevices.item.getsyncstatus.GetSyncStatusRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.initiatedeviceattestation.InitiateDeviceAttestationRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.initiatemobiledevicemanagementkeyrecovery.InitiateMobileDeviceManagementKeyRecoveryRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.initiateondemandproactiveremediation.InitiateOnDemandProactiveRemediationRequestBuilder;
@@ -35,6 +37,7 @@ import com.microsoft.graph.beta.users.item.manageddevices.item.rebootnow.RebootN
 import com.microsoft.graph.beta.users.item.manageddevices.item.recoverpasscode.RecoverPasscodeRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.reenable.ReenableRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.remotelock.RemoteLockRequestBuilder;
+import com.microsoft.graph.beta.users.item.manageddevices.item.removedeviceesim.RemoveDeviceEsimRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.removedevicefirmwareconfigurationinterfacemanagement.RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.requestremoteassistance.RequestRemoteAssistanceRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.resetpasscode.ResetPasscodeRequestBuilder;
@@ -55,6 +58,7 @@ import com.microsoft.graph.beta.users.item.manageddevices.item.shutdown.ShutDown
 import com.microsoft.graph.beta.users.item.manageddevices.item.suspendmanagedhomescreen.SuspendManagedHomeScreenRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.syncdevice.SyncDeviceRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.triggerconfigurationmanageraction.TriggerConfigurationManagerActionRequestBuilder;
+import com.microsoft.graph.beta.users.item.manageddevices.item.triggerenhancedlogcollection.TriggerEnhancedLogCollectionRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.updatewindowsdeviceaccount.UpdateWindowsDeviceAccountRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.users.UsersRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.windowsdefenderscan.WindowsDefenderScanRequestBuilder;
@@ -102,6 +106,14 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public BypassActivationLockRequestBuilder bypassActivationLock() {
         return new BypassActivationLockRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the cancelEnhancedLogCollection method.
+     * @return a {@link CancelEnhancedLogCollectionRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CancelEnhancedLogCollectionRequestBuilder cancelEnhancedLogCollection() {
+        return new CancelEnhancedLogCollectionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the changeAssignments method.
@@ -232,6 +244,14 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return new GetNonCompliantSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the getSyncStatus method.
+     * @return a {@link GetSyncStatusRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetSyncStatusRequestBuilder getSyncStatus() {
+        return new GetSyncStatusRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the initiateDeviceAttestation method.
      * @return a {@link InitiateDeviceAttestationRequestBuilder}
      */
@@ -344,6 +364,14 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return new RemoteLockRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the removeDeviceEsim method.
+     * @return a {@link RemoveDeviceEsimRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RemoveDeviceEsimRequestBuilder removeDeviceEsim() {
+        return new RemoveDeviceEsimRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the removeDeviceFirmwareConfigurationInterfaceManagement method.
      * @return a {@link RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder}
      */
@@ -450,7 +478,10 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the securityBaselineStates property of the microsoft.graph.managedDevice entity.
      * @return a {@link SecurityBaselineStatesRequestBuilder}
+     * @deprecated
+     * This API is deprecated and will stop returning data on July 7, 2026. Use POST /deviceManagement/reports/getConfigurationSettingsReport instead. as of 2026-04/Rv1MigrationDeprecation on 2026-04-03 and will be removed 2026-07-07
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SecurityBaselineStatesRequestBuilder securityBaselineStates() {
         return new SecurityBaselineStatesRequestBuilder(pathParameters, requestAdapter);
@@ -502,6 +533,14 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TriggerConfigurationManagerActionRequestBuilder triggerConfigurationManagerAction() {
         return new TriggerConfigurationManagerActionRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the triggerEnhancedLogCollection method.
+     * @return a {@link TriggerEnhancedLogCollectionRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TriggerEnhancedLogCollectionRequestBuilder triggerEnhancedLogCollection() {
+        return new TriggerEnhancedLogCollectionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the updateWindowsDeviceAccount method.

@@ -32,7 +32,10 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accessPackageAssignmentPolicies property of the microsoft.graph.accessPackage entity.
      * @return a {@link AccessPackageAssignmentPoliciesRequestBuilder}
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AccessPackageAssignmentPoliciesRequestBuilder accessPackageAssignmentPolicies() {
         return new AccessPackageAssignmentPoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -40,7 +43,10 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accessPackageCatalog property of the microsoft.graph.accessPackage entity.
      * @return a {@link AccessPackageCatalogRequestBuilder}
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AccessPackageCatalogRequestBuilder accessPackageCatalog() {
         return new AccessPackageCatalogRequestBuilder(pathParameters, requestAdapter);

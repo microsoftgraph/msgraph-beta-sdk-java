@@ -26,6 +26,7 @@ public class RemediatePostRequestBody implements AdditionalDataHolder, BackedMod
     public RemediatePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setRemediateSendersCopy(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

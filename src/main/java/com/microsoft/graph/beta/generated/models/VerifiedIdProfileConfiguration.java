@@ -35,7 +35,7 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
         return new VerifiedIdProfileConfiguration();
     }
     /**
-     * Gets the acceptedIssuer property value. Trusted Verified ID issuer.
+     * Gets the acceptedIssuer property value. Trusted Verified ID issuer. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
         return this.backingStore;
     }
     /**
-     * Gets the claimBindings property value. Claim bindings from Verified ID to source attributes.
+     * Gets the claimBindings property value. Claim bindings from Verified ID to source attributes. Required.
      * @return a {@link java.util.List<ClaimBinding>}
      */
     @jakarta.annotation.Nullable
@@ -93,14 +93,32 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("acceptedIssuer", (n) -> { this.setAcceptedIssuer(n.getStringValue()); });
         deserializerMap.put("claimBindings", (n) -> { this.setClaimBindings(n.getCollectionOfObjectValues(ClaimBinding::createFromDiscriminatorValue)); });
         deserializerMap.put("claimBindingSource", (n) -> { this.setClaimBindingSource(n.getEnumValue(ClaimBindingSource::forValue)); });
         deserializerMap.put("claimValidation", (n) -> { this.setClaimValidation(n.getObjectValue(ClaimValidation::createFromDiscriminatorValue)); });
+        deserializerMap.put("manifestUrl", (n) -> { this.setManifestUrl(n.getStringValue()); });
+        deserializerMap.put("methodType", (n) -> { this.setMethodType(n.getEnumValue(VerifiedIdMethodType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the manifestUrl property value. The URL where the credential issuer&apos;s manifest can be found. The manifest defines the credential schema and issuer details. Optional.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getManifestUrl() {
+        return this.backingStore.get("manifestUrl");
+    }
+    /**
+     * Gets the methodType property value. The methodType property
+     * @return a {@link VerifiedIdMethodType}
+     */
+    @jakarta.annotation.Nullable
+    public VerifiedIdMethodType getMethodType() {
+        return this.backingStore.get("methodType");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -111,7 +129,7 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the type property value. Verified ID type.
+     * Gets the type property value. Verified ID type. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,12 +146,14 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
         writer.writeCollectionOfObjectValues("claimBindings", this.getClaimBindings());
         writer.writeEnumValue("claimBindingSource", this.getClaimBindingSource());
         writer.writeObjectValue("claimValidation", this.getClaimValidation());
+        writer.writeStringValue("manifestUrl", this.getManifestUrl());
+        writer.writeEnumValue("methodType", this.getMethodType());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the acceptedIssuer property value. Trusted Verified ID issuer.
+     * Sets the acceptedIssuer property value. Trusted Verified ID issuer. Required.
      * @param value Value to set for the acceptedIssuer property.
      */
     public void setAcceptedIssuer(@jakarta.annotation.Nullable final String value) {
@@ -155,7 +175,7 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
         this.backingStore = value;
     }
     /**
-     * Sets the claimBindings property value. Claim bindings from Verified ID to source attributes.
+     * Sets the claimBindings property value. Claim bindings from Verified ID to source attributes. Required.
      * @param value Value to set for the claimBindings property.
      */
     public void setClaimBindings(@jakarta.annotation.Nullable final java.util.List<ClaimBinding> value) {
@@ -176,6 +196,20 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
         this.backingStore.set("claimValidation", value);
     }
     /**
+     * Sets the manifestUrl property value. The URL where the credential issuer&apos;s manifest can be found. The manifest defines the credential schema and issuer details. Optional.
+     * @param value Value to set for the manifestUrl property.
+     */
+    public void setManifestUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("manifestUrl", value);
+    }
+    /**
+     * Sets the methodType property value. The methodType property
+     * @param value Value to set for the methodType property.
+     */
+    public void setMethodType(@jakarta.annotation.Nullable final VerifiedIdMethodType value) {
+        this.backingStore.set("methodType", value);
+    }
+    /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
@@ -183,7 +217,7 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the type property value. Verified ID type.
+     * Sets the type property value. Verified ID type. Required.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

@@ -26,7 +26,7 @@ public class AccessDriftReport extends Entity implements Parsable {
         return new AccessDriftReport();
     }
     /**
-     * Gets the downloadUri property value. The downloadUri property
+     * Gets the downloadUri property value. The time-limited SAS URI for downloading the report file. This property is populated only in the response of the generateDownloadUri action.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class AccessDriftReport extends Entity implements Parsable {
         return this.backingStore.get("downloadUri");
     }
     /**
-     * Gets the expiresAt property value. The expiresAt property
+     * Gets the expiresAt property value. The date and time when the download URI expires. This property is populated only in the response of the generateDownloadUri action.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,6 @@ public class AccessDriftReport extends Entity implements Parsable {
         deserializerMap.put("downloadUri", (n) -> { this.setDownloadUri(n.getStringValue()); });
         deserializerMap.put("expiresAt", (n) -> { this.setExpiresAt(n.getOffsetDateTimeValue()); });
         deserializerMap.put("resourceType", (n) -> { this.setResourceType(n.getEnumValue(AccessDriftReportResourceType::forValue)); });
-        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -63,34 +62,23 @@ public class AccessDriftReport extends Entity implements Parsable {
         return this.backingStore.get("resourceType");
     }
     /**
-     * Gets the tenantId property value. The tenantId property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getTenantId() {
-        return this.backingStore.get("tenantId");
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("downloadUri", this.getDownloadUri());
-        writer.writeOffsetDateTimeValue("expiresAt", this.getExpiresAt());
         writer.writeEnumValue("resourceType", this.getResourceType());
-        writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the downloadUri property value. The downloadUri property
+     * Sets the downloadUri property value. The time-limited SAS URI for downloading the report file. This property is populated only in the response of the generateDownloadUri action.
      * @param value Value to set for the downloadUri property.
      */
     public void setDownloadUri(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("downloadUri", value);
     }
     /**
-     * Sets the expiresAt property value. The expiresAt property
+     * Sets the expiresAt property value. The date and time when the download URI expires. This property is populated only in the response of the generateDownloadUri action.
      * @param value Value to set for the expiresAt property.
      */
     public void setExpiresAt(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -102,12 +90,5 @@ public class AccessDriftReport extends Entity implements Parsable {
      */
     public void setResourceType(@jakarta.annotation.Nullable final AccessDriftReportResourceType value) {
         this.backingStore.set("resourceType", value);
-    }
-    /**
-     * Sets the tenantId property value. The tenantId property
-     * @param value Value to set for the tenantId property.
-     */
-    public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("tenantId", value);
     }
 }

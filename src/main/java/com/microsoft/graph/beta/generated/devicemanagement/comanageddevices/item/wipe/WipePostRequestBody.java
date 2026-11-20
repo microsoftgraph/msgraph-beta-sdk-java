@@ -24,6 +24,10 @@ public class WipePostRequestBody implements AdditionalDataHolder, BackedModel, P
     public WipePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setKeepEnrollmentData(false);
+        this.setKeepUserData(false);
+        this.setPersistEsimDataPlan(false);
+        this.setUseProtectedWipe(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

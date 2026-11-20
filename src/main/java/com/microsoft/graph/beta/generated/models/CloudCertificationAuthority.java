@@ -197,6 +197,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("eTag", (n) -> { this.setETag(n.getStringValue()); });
         deserializerMap.put("extendedKeyUsages", (n) -> { this.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
+        deserializerMap.put("geographicRegion", (n) -> { this.setGeographicRegion(n.getStringValue()); });
         deserializerMap.put("issuerCommonName", (n) -> { this.setIssuerCommonName(n.getStringValue()); });
         deserializerMap.put("keyPlatform", (n) -> { this.setKeyPlatform(n.getEnumValue(CloudCertificationAuthorityKeyPlatformType::forValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -217,6 +218,14 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         deserializerMap.put("versionNumber", (n) -> { this.setVersionNumber(n.getIntegerValue()); });
         deserializerMap.put("versions", (n) -> { this.setVersions(n.getCollectionOfObjectValues(CloudCertificationAuthorityVersion::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the geographicRegion property value. The geographic region where a cloud certification authority (CA) is hosted. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getGeographicRegion() {
+        return this.backingStore.get("geographicRegion");
     }
     /**
      * Gets the issuerCommonName property value. The issuerCommonName property
@@ -395,6 +404,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("eTag", this.getETag());
         writer.writeCollectionOfObjectValues("extendedKeyUsages", this.getExtendedKeyUsages());
+        writer.writeStringValue("geographicRegion", this.getGeographicRegion());
         writer.writeStringValue("issuerCommonName", this.getIssuerCommonName());
         writer.writeEnumValue("keyPlatform", this.getKeyPlatform());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
@@ -540,6 +550,13 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
      */
     public void setExtendedKeyUsages(@jakarta.annotation.Nullable final java.util.List<ExtendedKeyUsage> value) {
         this.backingStore.set("extendedKeyUsages", value);
+    }
+    /**
+     * Sets the geographicRegion property value. The geographic region where a cloud certification authority (CA) is hosted. Read-only.
+     * @param value Value to set for the geographicRegion property.
+     */
+    public void setGeographicRegion(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("geographicRegion", value);
     }
     /**
      * Sets the issuerCommonName property value. The issuerCommonName property

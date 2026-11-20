@@ -56,7 +56,7 @@ public class RedirectUriWildcardExcludeFormats implements AdditionalDataHolder, 
         return this.backingStore;
     }
     /**
-     * Gets the excludeWildcardsInPath property value. The excludeWildcardsInPath property
+     * Gets the excludeWildcardsInPath property value. When true, blocks the use of wildcards in the path portion of redirect URIs. When false, allows wildcards in paths.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class RedirectUriWildcardExcludeFormats implements AdditionalDataHolder, 
         return this.backingStore.get("excludeWildcardsInPath");
     }
     /**
-     * Gets the excludeWildcardsInPathWithDomains property value. The excludeWildcardsInPathWithDomains property
+     * Gets the excludeWildcardsInPathWithDomains property value. Collection of domain names where wildcards in the path portion of redirect URIs are blocked. Accepts only valid host names (no wildcards) as defined in RFC 3986 3.2.2. For example, login.microsoft.com or contoso.com.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class RedirectUriWildcardExcludeFormats implements AdditionalDataHolder, 
         this.backingStore = value;
     }
     /**
-     * Sets the excludeWildcardsInPath property value. The excludeWildcardsInPath property
+     * Sets the excludeWildcardsInPath property value. When true, blocks the use of wildcards in the path portion of redirect URIs. When false, allows wildcards in paths.
      * @param value Value to set for the excludeWildcardsInPath property.
      */
     public void setExcludeWildcardsInPath(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("excludeWildcardsInPath", value);
     }
     /**
-     * Sets the excludeWildcardsInPathWithDomains property value. The excludeWildcardsInPathWithDomains property
+     * Sets the excludeWildcardsInPathWithDomains property value. Collection of domain names where wildcards in the path portion of redirect URIs are blocked. Accepts only valid host names (no wildcards) as defined in RFC 3986 3.2.2. For example, login.microsoft.com or contoso.com.
      * @param value Value to set for the excludeWildcardsInPathWithDomains property.
      */
     public void setExcludeWildcardsInPathWithDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {

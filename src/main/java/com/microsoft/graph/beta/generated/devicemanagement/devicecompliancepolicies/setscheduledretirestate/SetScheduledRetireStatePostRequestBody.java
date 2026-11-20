@@ -24,6 +24,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
     public SetScheduledRetireStatePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setScopedToAllDevices(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

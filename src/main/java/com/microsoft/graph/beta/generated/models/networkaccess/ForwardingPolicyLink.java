@@ -36,7 +36,7 @@ public class ForwardingPolicyLink extends PolicyLink implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the priority property value. The priority property
+     * Gets the priority property value. Priority of the policy within the forwarding profile.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class ForwardingPolicyLink extends PolicyLink implements Parsable {
         writer.writeLongValue("priority", this.getPriority());
     }
     /**
-     * Sets the priority property value. The priority property
+     * Sets the priority property value. Priority of the policy within the forwarding profile.
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Long value) {

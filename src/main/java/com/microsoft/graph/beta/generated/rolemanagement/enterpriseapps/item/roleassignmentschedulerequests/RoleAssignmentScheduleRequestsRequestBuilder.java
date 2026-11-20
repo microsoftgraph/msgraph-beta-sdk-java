@@ -27,10 +27,7 @@ public class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBui
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -39,11 +36,8 @@ public class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBui
      * Provides operations to manage the roleAssignmentScheduleRequests property of the microsoft.graph.rbacApplication entity.
      * @param unifiedRoleAssignmentScheduleRequestId The unique identifier of unifiedRoleAssignmentScheduleRequest
      * @return a {@link UnifiedRoleAssignmentScheduleRequestItemRequestBuilder}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public UnifiedRoleAssignmentScheduleRequestItemRequestBuilder byUnifiedRoleAssignmentScheduleRequestId(@jakarta.annotation.Nonnull final String unifiedRoleAssignmentScheduleRequestId) {
         Objects.requireNonNull(unifiedRoleAssignmentScheduleRequestId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -70,11 +64,8 @@ public class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBui
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on=&apos;{on}&apos;
      * @return a {@link FilterByCurrentUserWithOnRequestBuilder}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
         Objects.requireNonNull(on);
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
@@ -83,11 +74,8 @@ public class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBui
      * Get roleAssignmentScheduleRequests from roleManagement
      * @return a {@link UnifiedRoleAssignmentScheduleRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UnifiedRoleAssignmentScheduleRequestCollectionResponse get() {
         return get(null);
     }
@@ -96,11 +84,8 @@ public class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleAssignmentScheduleRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UnifiedRoleAssignmentScheduleRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -112,11 +97,8 @@ public class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBui
      * @param body The request body
      * @return a {@link UnifiedRoleAssignmentScheduleRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UnifiedRoleAssignmentScheduleRequest post(@jakarta.annotation.Nonnull final UnifiedRoleAssignmentScheduleRequest body) {
         return post(body, null);
     }
@@ -126,11 +108,8 @@ public class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleAssignmentScheduleRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UnifiedRoleAssignmentScheduleRequest post(@jakarta.annotation.Nonnull final UnifiedRoleAssignmentScheduleRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -141,11 +120,8 @@ public class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBui
     /**
      * Get roleAssignmentScheduleRequests from roleManagement
      * @return a {@link RequestInformation}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -153,11 +129,8 @@ public class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBui
      * Get roleAssignmentScheduleRequests from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -168,11 +141,8 @@ public class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBui
      * Create new navigation property to roleAssignmentScheduleRequests for roleManagement
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleAssignmentScheduleRequest body) {
         return toPostRequestInformation(body, null);
     }
@@ -181,11 +151,8 @@ public class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBui
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleAssignmentScheduleRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -198,11 +165,8 @@ public class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBui
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link RoleAssignmentScheduleRequestsRequestBuilder}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RoleAssignmentScheduleRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new RoleAssignmentScheduleRequestsRequestBuilder(rawUrl, requestAdapter);

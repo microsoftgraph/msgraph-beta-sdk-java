@@ -13,7 +13,10 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of directory entities.
      * @return a {@link RefRequestBuilder}
+     * @deprecated
+     * Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies. as of 2021-01/DirectoryFeatureRolloutPolicies on 2021-03-05 and will be removed 2021-06-30
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);

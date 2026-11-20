@@ -43,7 +43,7 @@ public class CloudPcRemoteActionCapability implements AdditionalDataHolder, Back
         return this.backingStore.get("actionCapability");
     }
     /**
-     * Gets the actionName property value. The name of the supported Cloud PC remote action. The possible values are: unknown, restart, rename, restore, resize, reprovision, troubleShoot, changeUserAccountType, placeUnderReview. Default value is unknown.
+     * Gets the actionName property value. The name of the supported Cloud PC remote action. The possible values are: unknown, restart, rename, restore, resize, reprovision, troubleShoot, changeUserAccountType, placeUnderReview, unknownFutureValue, setDeviceName. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: setDeviceName. The default value is unknown.
      * @return a {@link CloudPcRemoteActionName}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class CloudPcRemoteActionCapability implements AdditionalDataHolder, Back
         this.backingStore.set("actionCapability", value);
     }
     /**
-     * Sets the actionName property value. The name of the supported Cloud PC remote action. The possible values are: unknown, restart, rename, restore, resize, reprovision, troubleShoot, changeUserAccountType, placeUnderReview. Default value is unknown.
+     * Sets the actionName property value. The name of the supported Cloud PC remote action. The possible values are: unknown, restart, rename, restore, resize, reprovision, troubleShoot, changeUserAccountType, placeUnderReview, unknownFutureValue, setDeviceName. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: setDeviceName. The default value is unknown.
      * @param value Value to set for the actionName property.
      */
     public void setActionName(@jakarta.annotation.Nullable final CloudPcRemoteActionName value) {

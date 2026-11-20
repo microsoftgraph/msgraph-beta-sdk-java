@@ -43,6 +43,14 @@ public class UsageRight extends Entity implements Parsable {
         return this.backingStore.get("assignments");
     }
     /**
+     * Gets the externalServiceIdentifier property value. The externalServiceIdentifier property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getExternalServiceIdentifier() {
+        return this.backingStore.get("externalServiceIdentifier");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -51,6 +59,7 @@ public class UsageRight extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allotments", (n) -> { this.setAllotments(n.getCollectionOfObjectValues(Allotment::createFromDiscriminatorValue)); });
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(Assignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalServiceIdentifier", (n) -> { this.setExternalServiceIdentifier(n.getStringValue()); });
         deserializerMap.put("services", (n) -> { this.setServices(n.getCollectionOfObjectValues(Service::createFromDiscriminatorValue)); });
         deserializerMap.put("skuId", (n) -> { this.setSkuId(n.getUUIDValue()); });
         deserializerMap.put("skuPartNumber", (n) -> { this.setSkuPartNumber(n.getStringValue()); });
@@ -89,6 +98,7 @@ public class UsageRight extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("allotments", this.getAllotments());
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
+        writer.writeStringValue("externalServiceIdentifier", this.getExternalServiceIdentifier());
         writer.writeCollectionOfObjectValues("services", this.getServices());
         writer.writeUUIDValue("skuId", this.getSkuId());
         writer.writeStringValue("skuPartNumber", this.getSkuPartNumber());
@@ -106,6 +116,13 @@ public class UsageRight extends Entity implements Parsable {
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<Assignment> value) {
         this.backingStore.set("assignments", value);
+    }
+    /**
+     * Sets the externalServiceIdentifier property value. The externalServiceIdentifier property
+     * @param value Value to set for the externalServiceIdentifier property.
+     */
+    public void setExternalServiceIdentifier(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("externalServiceIdentifier", value);
     }
     /**
      * Sets the services property value. Information about the services associated with the usageRight. Not nullable. Read-only. Supports $filter on the planId property.

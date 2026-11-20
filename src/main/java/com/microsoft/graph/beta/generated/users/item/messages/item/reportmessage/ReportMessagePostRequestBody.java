@@ -24,6 +24,7 @@ public class ReportMessagePostRequestBody implements AdditionalDataHolder, Backe
     public ReportMessagePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setIsMessageMoveRequested(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

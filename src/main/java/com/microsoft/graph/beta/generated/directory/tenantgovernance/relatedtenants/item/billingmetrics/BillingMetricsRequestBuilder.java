@@ -1,7 +1,7 @@
 package com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.item.billingmetrics;
 
+import com.microsoft.graph.beta.models.BillingMetrics;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.tenantgovernanceservices.BillingMetrics;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the billingMetrics property of the microsoft.graph.tenantGovernanceServices.relatedTenant entity.
+ * Provides operations to manage the billingMetrics property of the microsoft.graph.relatedTenant entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BillingMetricsRequestBuilder extends BaseRequestBuilder {

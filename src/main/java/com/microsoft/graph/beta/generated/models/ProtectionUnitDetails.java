@@ -35,7 +35,7 @@ public class ProtectionUnitDetails implements AdditionalDataHolder, BackedModel,
         return new ProtectionUnitDetails();
     }
     /**
-     * Gets the addedCount property value. The addedCount property
+     * Gets the addedCount property value. The number of protection units that were successfully added to the backup policy.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class ProtectionUnitDetails implements AdditionalDataHolder, BackedModel,
         return this.backingStore;
     }
     /**
-     * Gets the backupConfigurationType property value. The backupConfigurationType property
+     * Gets the backupConfigurationType property value. The type of backup configuration applied to the protection units.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class ProtectionUnitDetails implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("backupConfigurationType");
     }
     /**
-     * Gets the failedCount property value. The failedCount property
+     * Gets the failedCount property value. The number of protection unit operations that failed during processing.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class ProtectionUnitDetails implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the removedCount property value. The removedCount property
+     * Gets the removedCount property value. The number of protection units that were successfully removed from the backup policy.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class ProtectionUnitDetails implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("removedCount");
     }
     /**
-     * Gets the requestedToAddCount property value. The requestedToAddCount property
+     * Gets the requestedToAddCount property value. The number of protection units that were requested to be added to the backup policy.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class ProtectionUnitDetails implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("requestedToAddCount");
     }
     /**
-     * Gets the requestedToRemoveCount property value. The requestedToRemoveCount property
+     * Gets the requestedToRemoveCount property value. The number of protection units that were requested to be removed from the backup policy.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -143,7 +143,7 @@ public class ProtectionUnitDetails implements AdditionalDataHolder, BackedModel,
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the addedCount property value. The addedCount property
+     * Sets the addedCount property value. The number of protection units that were successfully added to the backup policy.
      * @param value Value to set for the addedCount property.
      */
     public void setAddedCount(@jakarta.annotation.Nullable final Integer value) {
@@ -165,14 +165,14 @@ public class ProtectionUnitDetails implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the backupConfigurationType property value. The backupConfigurationType property
+     * Sets the backupConfigurationType property value. The type of backup configuration applied to the protection units.
      * @param value Value to set for the backupConfigurationType property.
      */
     public void setBackupConfigurationType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("backupConfigurationType", value);
     }
     /**
-     * Sets the failedCount property value. The failedCount property
+     * Sets the failedCount property value. The number of protection unit operations that failed during processing.
      * @param value Value to set for the failedCount property.
      */
     public void setFailedCount(@jakarta.annotation.Nullable final Integer value) {
@@ -186,21 +186,21 @@ public class ProtectionUnitDetails implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the removedCount property value. The removedCount property
+     * Sets the removedCount property value. The number of protection units that were successfully removed from the backup policy.
      * @param value Value to set for the removedCount property.
      */
     public void setRemovedCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("removedCount", value);
     }
     /**
-     * Sets the requestedToAddCount property value. The requestedToAddCount property
+     * Sets the requestedToAddCount property value. The number of protection units that were requested to be added to the backup policy.
      * @param value Value to set for the requestedToAddCount property.
      */
     public void setRequestedToAddCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("requestedToAddCount", value);
     }
     /**
-     * Sets the requestedToRemoveCount property value. The requestedToRemoveCount property
+     * Sets the requestedToRemoveCount property value. The number of protection units that were requested to be removed from the backup policy.
      * @param value Value to set for the requestedToRemoveCount property.
      */
     public void setRequestedToRemoveCount(@jakarta.annotation.Nullable final Integer value) {

@@ -194,6 +194,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         deserializerMap.put("creationSource", (n) -> { this.setCreationSource(n.getObjectValue(PlannerTaskCreation::createFromDiscriminatorValue)); });
         deserializerMap.put("details", (n) -> { this.setDetails(n.getObjectValue(PlannerTaskDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("dueDateTime", (n) -> { this.setDueDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("goalIds", (n) -> { this.setGoalIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("hasChat", (n) -> { this.setHasChat(n.getBooleanValue()); });
         deserializerMap.put("hasDescription", (n) -> { this.setHasDescription(n.getBooleanValue()); });
         deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
@@ -214,6 +215,14 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the goalIds property value. Read-only. The IDs of the goals associated with the task.
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getGoalIds() {
+        return this.backingStore.get("goalIds");
     }
     /**
      * Gets the hasChat property value. Read-only. This value is true if the task has chat messages associated with it. Otherwise, false.
@@ -256,7 +265,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("isOnMyDayLastModifiedDate");
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. Read-only. User ID by which this is last modified.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -264,7 +273,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("lastModifiedBy");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Read-only. Date and time at which this is last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -391,6 +400,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         writer.writeObjectValue("creationSource", this.getCreationSource());
         writer.writeObjectValue("details", this.getDetails());
         writer.writeOffsetDateTimeValue("dueDateTime", this.getDueDateTime());
+        writer.writeCollectionOfPrimitiveValues("goalIds", this.getGoalIds());
         writer.writeBooleanValue("hasChat", this.getHasChat());
         writer.writeBooleanValue("hasDescription", this.getHasDescription());
         writer.writeBooleanValue("isArchived", this.getIsArchived());
@@ -531,6 +541,13 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("dueDateTime", value);
     }
     /**
+     * Sets the goalIds property value. Read-only. The IDs of the goals associated with the task.
+     * @param value Value to set for the goalIds property.
+     */
+    public void setGoalIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("goalIds", value);
+    }
+    /**
      * Sets the hasChat property value. Read-only. This value is true if the task has chat messages associated with it. Otherwise, false.
      * @param value Value to set for the hasChat property.
      */
@@ -566,14 +583,14 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("isOnMyDayLastModifiedDate", value);
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. Read-only. User ID by which this is last modified.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("lastModifiedBy", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Read-only. Date and time at which this is last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

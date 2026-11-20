@@ -72,12 +72,21 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Backe
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("deviceRestartBehavior", (n) -> { this.setDeviceRestartBehavior(n.getEnumValue(Win32LobAppRestartBehavior::forValue)); });
+        deserializerMap.put("inUseBehavior", (n) -> { this.setInUseBehavior(n.getEnumValue(Win32LobAppInUseActionType::forValue)); });
         deserializerMap.put("maxRunTimeInMinutes", (n) -> { this.setMaxRunTimeInMinutes(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("runAsAccount", (n) -> { this.setRunAsAccount(n.getEnumValue(RunAsAccountType::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the inUseBehavior property value. Indicates whether app-in-use detection is enabled before app enforcement, and if enabled, the action to take when the app is detected to be in-use. Null indicates the feature is not enabled. Possible values are: `notEnabled`, `fail`, `terminateWithoutUserInteraction`, `terminateWithUserInteraction`.
+     * @return a {@link Win32LobAppInUseActionType}
+     */
+    @jakarta.annotation.Nullable
+    public Win32LobAppInUseActionType getInUseBehavior() {
+        return this.backingStore.get("inUseBehavior");
     }
     /**
      * Gets the maxRunTimeInMinutes property value. The number of minutes the system will wait for install program to finish. Default value is 60 minutes.
@@ -110,6 +119,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Backe
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("deviceRestartBehavior", this.getDeviceRestartBehavior());
+        writer.writeEnumValue("inUseBehavior", this.getInUseBehavior());
         writer.writeIntegerValue("maxRunTimeInMinutes", this.getMaxRunTimeInMinutes());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("runAsAccount", this.getRunAsAccount());
@@ -136,6 +146,13 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Backe
      */
     public void setDeviceRestartBehavior(@jakarta.annotation.Nullable final Win32LobAppRestartBehavior value) {
         this.backingStore.set("deviceRestartBehavior", value);
+    }
+    /**
+     * Sets the inUseBehavior property value. Indicates whether app-in-use detection is enabled before app enforcement, and if enabled, the action to take when the app is detected to be in-use. Null indicates the feature is not enabled. Possible values are: `notEnabled`, `fail`, `terminateWithoutUserInteraction`, `terminateWithUserInteraction`.
+     * @param value Value to set for the inUseBehavior property.
+     */
+    public void setInUseBehavior(@jakarta.annotation.Nullable final Win32LobAppInUseActionType value) {
+        this.backingStore.set("inUseBehavior", value);
     }
     /**
      * Sets the maxRunTimeInMinutes property value. The number of minutes the system will wait for install program to finish. Default value is 60 minutes.

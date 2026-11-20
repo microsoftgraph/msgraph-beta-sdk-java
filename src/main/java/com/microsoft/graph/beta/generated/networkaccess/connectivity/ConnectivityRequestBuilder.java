@@ -26,7 +26,10 @@ public class ConnectivityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the branches property of the microsoft.graph.networkaccess.connectivity entity.
      * @return a {@link BranchesRequestBuilder}
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public BranchesRequestBuilder branches() {
         return new BranchesRequestBuilder(pathParameters, requestAdapter);

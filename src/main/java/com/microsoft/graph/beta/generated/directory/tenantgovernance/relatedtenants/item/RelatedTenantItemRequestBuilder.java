@@ -6,7 +6,7 @@ import com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.item.b
 import com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.item.billingmetrics.BillingMetricsRequestBuilder;
 import com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.item.multitenantapplicationmetrics.MultiTenantApplicationMetricsRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.tenantgovernanceservices.RelatedTenant;
+import com.microsoft.graph.beta.models.RelatedTenant;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -21,12 +21,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the relatedTenants property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.
+ * Provides operations to manage the relatedTenants property of the microsoft.graph.tenantGovernance entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RelatedTenantItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to manage the appB2BSignInActivityMetrics property of the microsoft.graph.tenantGovernanceServices.relatedTenant entity.
+     * Provides operations to manage the appB2BSignInActivityMetrics property of the microsoft.graph.relatedTenant entity.
      * @return a {@link AppB2BSignInActivityMetricsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -34,7 +34,7 @@ public class RelatedTenantItemRequestBuilder extends BaseRequestBuilder {
         return new AppB2BSignInActivityMetricsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the b2BRegistrationMetrics property of the microsoft.graph.tenantGovernanceServices.relatedTenant entity.
+     * Provides operations to manage the b2BRegistrationMetrics property of the microsoft.graph.relatedTenant entity.
      * @return a {@link B2BRegistrationMetricsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -42,7 +42,7 @@ public class RelatedTenantItemRequestBuilder extends BaseRequestBuilder {
         return new B2BRegistrationMetricsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the b2BSignInActivityMetrics property of the microsoft.graph.tenantGovernanceServices.relatedTenant entity.
+     * Provides operations to manage the b2BSignInActivityMetrics property of the microsoft.graph.relatedTenant entity.
      * @return a {@link B2BSignInActivityMetricsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -50,7 +50,7 @@ public class RelatedTenantItemRequestBuilder extends BaseRequestBuilder {
         return new B2BSignInActivityMetricsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the billingMetrics property of the microsoft.graph.tenantGovernanceServices.relatedTenant entity.
+     * Provides operations to manage the billingMetrics property of the microsoft.graph.relatedTenant entity.
      * @return a {@link BillingMetricsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -58,7 +58,7 @@ public class RelatedTenantItemRequestBuilder extends BaseRequestBuilder {
         return new BillingMetricsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the multiTenantApplicationMetrics property of the microsoft.graph.tenantGovernanceServices.relatedTenant entity.
+     * Provides operations to manage the multiTenantApplicationMetrics property of the microsoft.graph.relatedTenant entity.
      * @return a {@link MultiTenantApplicationMetricsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class RelatedTenantItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of microsoft.graph.tenantGovernanceServices.relatedTenant object.
+     * Read the properties and relationships of microsoft.graph.relatedTenant object.
      * @return a {@link RelatedTenant}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-relatedtenant-get?view=graph-rest-beta">Find more info here</a>
@@ -110,7 +110,7 @@ public class RelatedTenantItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of microsoft.graph.tenantGovernanceServices.relatedTenant object.
+     * Read the properties and relationships of microsoft.graph.relatedTenant object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RelatedTenant}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -169,7 +169,7 @@ public class RelatedTenantItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of microsoft.graph.tenantGovernanceServices.relatedTenant object.
+     * Read the properties and relationships of microsoft.graph.relatedTenant object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -177,7 +177,7 @@ public class RelatedTenantItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of microsoft.graph.tenantGovernanceServices.relatedTenant object.
+     * Read the properties and relationships of microsoft.graph.relatedTenant object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -229,7 +229,7 @@ public class RelatedTenantItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of microsoft.graph.tenantGovernanceServices.relatedTenant object.
+     * Read the properties and relationships of microsoft.graph.relatedTenant object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

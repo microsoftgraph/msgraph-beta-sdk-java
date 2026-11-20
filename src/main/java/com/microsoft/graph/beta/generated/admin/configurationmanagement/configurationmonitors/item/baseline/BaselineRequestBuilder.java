@@ -37,25 +37,7 @@ public class BaselineRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/configurationManagement/configurationMonitors/{configurationMonitor%2Did}/baseline{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property baseline for admin
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     */
-    public void delete() {
-        delete(null);
-    }
-    /**
-     * Delete navigation property baseline for admin
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     */
-    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
-        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
-    }
-    /**
-     * Read the properties and relationships of a configurationBaseline object that is attached to a specific monitor.
+     * Get the configurationBaseline attached to a monitor or a configurationTemplateVersion.
      * @return a {@link ConfigurationBaseline}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/configurationbaseline-get?view=graph-rest-beta">Find more info here</a>
@@ -65,7 +47,7 @@ public class BaselineRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a configurationBaseline object that is attached to a specific monitor.
+     * Get the configurationBaseline attached to a monitor or a configurationTemplateVersion.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConfigurationBaseline}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -79,52 +61,7 @@ public class BaselineRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConfigurationBaseline::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property baseline in admin
-     * @param body The request body
-     * @return a {@link ConfigurationBaseline}
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     */
-    @jakarta.annotation.Nullable
-    public ConfigurationBaseline patch(@jakarta.annotation.Nonnull final ConfigurationBaseline body) {
-        return patch(body, null);
-    }
-    /**
-     * Update the navigation property baseline in admin
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link ConfigurationBaseline}
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     */
-    @jakarta.annotation.Nullable
-    public ConfigurationBaseline patch(@jakarta.annotation.Nonnull final ConfigurationBaseline body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
-        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, ConfigurationBaseline::createFromDiscriminatorValue);
-    }
-    /**
-     * Delete navigation property baseline for admin
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation() {
-        return toDeleteRequestInformation(null);
-    }
-    /**
-     * Delete navigation property baseline for admin
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
-        return requestInfo;
-    }
-    /**
-     * Read the properties and relationships of a configurationBaseline object that is attached to a specific monitor.
+     * Get the configurationBaseline attached to a monitor or a configurationTemplateVersion.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +69,7 @@ public class BaselineRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a configurationBaseline object that is attached to a specific monitor.
+     * Get the configurationBaseline attached to a monitor or a configurationTemplateVersion.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -141,30 +78,6 @@ public class BaselineRequestBuilder extends BaseRequestBuilder {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
-        return requestInfo;
-    }
-    /**
-     * Update the navigation property baseline in admin
-     * @param body The request body
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ConfigurationBaseline body) {
-        return toPatchRequestInformation(body, null);
-    }
-    /**
-     * Update the navigation property baseline in admin
-     * @param body The request body
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ConfigurationBaseline body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
@@ -178,13 +91,7 @@ public class BaselineRequestBuilder extends BaseRequestBuilder {
         return new BaselineRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Configuration for the request such as headers, query parameters, and middleware options.
-     */
-    @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class DeleteRequestConfiguration extends BaseRequestConfiguration {
-    }
-    /**
-     * Read the properties and relationships of a configurationBaseline object that is attached to a specific monitor.
+     * Get the configurationBaseline attached to a monitor or a configurationTemplateVersion.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -220,11 +127,5 @@ public class BaselineRequestBuilder extends BaseRequestBuilder {
          */
         @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
-    }
-    /**
-     * Configuration for the request such as headers, query parameters, and middleware options.
-     */
-    @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class PatchRequestConfiguration extends BaseRequestConfiguration {
     }
 }

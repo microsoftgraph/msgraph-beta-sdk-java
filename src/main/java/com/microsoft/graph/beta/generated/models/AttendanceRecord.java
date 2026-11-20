@@ -41,6 +41,14 @@ public class AttendanceRecord extends Entity implements Parsable {
         return this.backingStore.get("emailAddress");
     }
     /**
+     * Gets the engagements property value. The list of real-time participant interaction behaviors during a meeting.
+     * @return a {@link java.util.List<MeetingEngagement>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<MeetingEngagement> getEngagements() {
+        return this.backingStore.get("engagements");
+    }
+    /**
      * Gets the externalRegistrationInformation property value. The external information for a virtual event registration.
      * @return a {@link VirtualEventExternalRegistrationInformation}
      */
@@ -57,6 +65,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("attendanceIntervals", (n) -> { this.setAttendanceIntervals(n.getCollectionOfObjectValues(AttendanceInterval::createFromDiscriminatorValue)); });
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
+        deserializerMap.put("engagements", (n) -> { this.setEngagements(n.getCollectionOfObjectValues(MeetingEngagement::createFromDiscriminatorValue)); });
         deserializerMap.put("externalRegistrationInformation", (n) -> { this.setExternalRegistrationInformation(n.getObjectValue(VirtualEventExternalRegistrationInformation::createFromDiscriminatorValue)); });
         deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("registrantId", (n) -> { this.setRegistrantId(n.getStringValue()); });
@@ -114,6 +123,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("attendanceIntervals", this.getAttendanceIntervals());
         writer.writeStringValue("emailAddress", this.getEmailAddress());
+        writer.writeCollectionOfObjectValues("engagements", this.getEngagements());
         writer.writeObjectValue("externalRegistrationInformation", this.getExternalRegistrationInformation());
         writer.writeObjectValue("identity", this.getIdentity());
         writer.writeStringValue("registrantId", this.getRegistrantId());
@@ -134,6 +144,13 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("emailAddress", value);
+    }
+    /**
+     * Sets the engagements property value. The list of real-time participant interaction behaviors during a meeting.
+     * @param value Value to set for the engagements property.
+     */
+    public void setEngagements(@jakarta.annotation.Nullable final java.util.List<MeetingEngagement> value) {
+        this.backingStore.set("engagements", value);
     }
     /**
      * Sets the externalRegistrationInformation property value. The external information for a virtual event registration.

@@ -23,6 +23,7 @@ public class MarkAsNotJunkPostRequestBody implements AdditionalDataHolder, Backe
     public MarkAsNotJunkPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setMoveToInbox(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

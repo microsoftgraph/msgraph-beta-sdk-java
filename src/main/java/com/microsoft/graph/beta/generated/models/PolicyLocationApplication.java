@@ -23,6 +23,13 @@ public class PolicyLocationApplication extends PolicyLocation implements Parsabl
     @jakarta.annotation.Nonnull
     public static PolicyLocationApplication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.policyLocationAgent": return new PolicyLocationAgent();
+            }
+        }
         return new PolicyLocationApplication();
     }
     /**

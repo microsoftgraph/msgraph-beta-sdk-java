@@ -24,6 +24,7 @@ public class PlayPromptPostRequestBody implements AdditionalDataHolder, BackedMo
     public PlayPromptPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setLoop(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

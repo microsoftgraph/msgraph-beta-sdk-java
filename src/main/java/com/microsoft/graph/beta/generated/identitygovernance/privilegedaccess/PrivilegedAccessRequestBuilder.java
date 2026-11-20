@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.identitygovernance.privilegedaccess;
 
+import com.microsoft.graph.beta.identitygovernance.privilegedaccess.customextensions.CustomExtensionsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.privilegedaccess.group.GroupRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.PrivilegedAccessRoot;
@@ -21,6 +22,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the customExtensions property of the microsoft.graph.privilegedAccessRoot entity.
+     * @return a {@link CustomExtensionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CustomExtensionsRequestBuilder customExtensions() {
+        return new CustomExtensionsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the group property of the microsoft.graph.privilegedAccessRoot entity.
      * @return a {@link GroupRequestBuilder}

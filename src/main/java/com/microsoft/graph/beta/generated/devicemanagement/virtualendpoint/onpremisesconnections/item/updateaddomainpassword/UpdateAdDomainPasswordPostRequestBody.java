@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.devicemanagement.virtualendpoint.onpremisesconnections.item.updateaddomainpassword;
 
+import com.microsoft.graph.beta.models.CloudPcDomainJoinCredential;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -64,13 +65,22 @@ public class UpdateAdDomainPasswordPostRequestBody implements AdditionalDataHold
         return this.backingStore;
     }
     /**
+     * Gets the domainJoinCredential property value. The domainJoinCredential property
+     * @return a {@link CloudPcDomainJoinCredential}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcDomainJoinCredential getDomainJoinCredential() {
+        return this.backingStore.get("domainJoinCredential");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("adDomainPassword", (n) -> { this.setAdDomainPassword(n.getStringValue()); });
+        deserializerMap.put("domainJoinCredential", (n) -> { this.setDomainJoinCredential(n.getObjectValue(CloudPcDomainJoinCredential::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -80,6 +90,7 @@ public class UpdateAdDomainPasswordPostRequestBody implements AdditionalDataHold
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("adDomainPassword", this.getAdDomainPassword());
+        writer.writeObjectValue("domainJoinCredential", this.getDomainJoinCredential());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -103,5 +114,12 @@ public class UpdateAdDomainPasswordPostRequestBody implements AdditionalDataHold
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the domainJoinCredential property value. The domainJoinCredential property
+     * @param value Value to set for the domainJoinCredential property.
+     */
+    public void setDomainJoinCredential(@jakarta.annotation.Nullable final CloudPcDomainJoinCredential value) {
+        this.backingStore.set("domainJoinCredential", value);
     }
 }

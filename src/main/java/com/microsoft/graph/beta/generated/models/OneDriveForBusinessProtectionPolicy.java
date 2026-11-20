@@ -26,7 +26,7 @@ public class OneDriveForBusinessProtectionPolicy extends ProtectionPolicyBase im
         return new OneDriveForBusinessProtectionPolicy();
     }
     /**
-     * Gets the driveExclusionUnits property value. The driveExclusionUnits property
+     * Gets the driveExclusionUnits property value. The drive exclusion units associated with the OneDrive for work or school protection policy.
      * @return a {@link java.util.List<DriveExclusionUnit>}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class OneDriveForBusinessProtectionPolicy extends ProtectionPolicyBase im
         return this.backingStore.get("driveExclusionUnits");
     }
     /**
-     * Gets the driveExclusionUnitsBulkAdditionJobs property value. The driveExclusionUnitsBulkAdditionJobs property
+     * Gets the driveExclusionUnitsBulkAdditionJobs property value. The list of bulk addition jobs for drive exclusion units associated with the OneDrive for work or school protection policy.
      * @return a {@link java.util.List<DriveExclusionUnitsBulkAdditionJob>}
      */
     @jakarta.annotation.Nullable
@@ -93,14 +93,14 @@ public class OneDriveForBusinessProtectionPolicy extends ProtectionPolicyBase im
         writer.writeCollectionOfObjectValues("driveProtectionUnitsBulkAdditionJobs", this.getDriveProtectionUnitsBulkAdditionJobs());
     }
     /**
-     * Sets the driveExclusionUnits property value. The driveExclusionUnits property
+     * Sets the driveExclusionUnits property value. The drive exclusion units associated with the OneDrive for work or school protection policy.
      * @param value Value to set for the driveExclusionUnits property.
      */
     public void setDriveExclusionUnits(@jakarta.annotation.Nullable final java.util.List<DriveExclusionUnit> value) {
         this.backingStore.set("driveExclusionUnits", value);
     }
     /**
-     * Sets the driveExclusionUnitsBulkAdditionJobs property value. The driveExclusionUnitsBulkAdditionJobs property
+     * Sets the driveExclusionUnitsBulkAdditionJobs property value. The list of bulk addition jobs for drive exclusion units associated with the OneDrive for work or school protection policy.
      * @param value Value to set for the driveExclusionUnitsBulkAdditionJobs property.
      */
     public void setDriveExclusionUnitsBulkAdditionJobs(@jakarta.annotation.Nullable final java.util.List<DriveExclusionUnitsBulkAdditionJob> value) {

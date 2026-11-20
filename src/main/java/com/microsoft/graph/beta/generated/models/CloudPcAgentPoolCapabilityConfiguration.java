@@ -26,21 +26,12 @@ public class CloudPcAgentPoolCapabilityConfiguration extends CloudPcPoolCapabili
         return new CloudPcAgentPoolCapabilityConfiguration();
     }
     /**
-     * Gets the enableSingleSignOn property value. The enableSingleSignOn property
-     * @return a {@link Boolean}
-     */
-    @jakarta.annotation.Nullable
-    public Boolean getEnableSingleSignOn() {
-        return this.backingStore.get("enableSingleSignOn");
-    }
-    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("enableSingleSignOn", (n) -> { this.setEnableSingleSignOn(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
@@ -50,13 +41,5 @@ public class CloudPcAgentPoolCapabilityConfiguration extends CloudPcPoolCapabili
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeBooleanValue("enableSingleSignOn", this.getEnableSingleSignOn());
-    }
-    /**
-     * Sets the enableSingleSignOn property value. The enableSingleSignOn property
-     * @param value Value to set for the enableSingleSignOn property.
-     */
-    public void setEnableSingleSignOn(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("enableSingleSignOn", value);
     }
 }

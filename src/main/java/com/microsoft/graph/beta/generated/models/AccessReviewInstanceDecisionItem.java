@@ -74,6 +74,14 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this.backingStore.get("decision");
     }
     /**
+     * Gets the delegatedBy property value. The identities of users who delegated this decision item to the current reviewer. Null if the item wasn&apos;t delegated. A collection because multiple reviewers can delegate to the same user. Only returned via filterByCurrentUser when explicitly requested via $select. Read-only.
+     * @return a {@link java.util.List<UserIdentity>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<UserIdentity> getDelegatedBy() {
+        return this.backingStore.get("delegatedBy");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -86,6 +94,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         deserializerMap.put("applyDescription", (n) -> { this.setApplyDescription(n.getStringValue()); });
         deserializerMap.put("applyResult", (n) -> { this.setApplyResult(n.getStringValue()); });
         deserializerMap.put("decision", (n) -> { this.setDecision(n.getStringValue()); });
+        deserializerMap.put("delegatedBy", (n) -> { this.setDelegatedBy(n.getCollectionOfObjectValues(UserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("insights", (n) -> { this.setInsights(n.getCollectionOfObjectValues(GovernanceInsight::createFromDiscriminatorValue)); });
         deserializerMap.put("instance", (n) -> { this.setInstance(n.getObjectValue(AccessReviewInstance::createFromDiscriminatorValue)); });
         deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
@@ -218,6 +227,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         writer.writeStringValue("applyDescription", this.getApplyDescription());
         writer.writeStringValue("applyResult", this.getApplyResult());
         writer.writeStringValue("decision", this.getDecision());
+        writer.writeCollectionOfObjectValues("delegatedBy", this.getDelegatedBy());
         writer.writeCollectionOfObjectValues("insights", this.getInsights());
         writer.writeObjectValue("instance", this.getInstance());
         writer.writeStringValue("justification", this.getJustification());
@@ -273,6 +283,13 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     public void setDecision(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("decision", value);
+    }
+    /**
+     * Sets the delegatedBy property value. The identities of users who delegated this decision item to the current reviewer. Null if the item wasn&apos;t delegated. A collection because multiple reviewers can delegate to the same user. Only returned via filterByCurrentUser when explicitly requested via $select. Read-only.
+     * @param value Value to set for the delegatedBy property.
+     */
+    public void setDelegatedBy(@jakarta.annotation.Nullable final java.util.List<UserIdentity> value) {
+        this.backingStore.set("delegatedBy", value);
     }
     /**
      * Sets the insights property value. Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.

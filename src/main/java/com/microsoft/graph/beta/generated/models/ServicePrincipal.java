@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.graph.beta.models.identitygovernance.IdentityLifecycle;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -132,7 +133,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.backingStore.get("appRoleAssignments");
     }
     /**
-     * Gets the appRoles property value. The roles exposed by the application, which this service principal represents. For more information, see the appRoles property definition on the application entity. Not nullable.
+     * Gets the appRoles property value. The roles exposed by the application, which this service principal represents. For more information, see the appRoles property definition on the application entity. Not nullable. App roles and exposed delegated permission scopes (publishedPermissionScopes) share a default limit of 700 permission definitions per service principal, including definitions inherited from the application and definitions added directly to the service principal. Enabled and disabled definitions both count. This limit counts definitions, not app role assignments. For counting rules, behavior for existing objects above the limit, and design guidance, see App role limits.
      * @return a {@link java.util.List<AppRole>}
      */
     @jakarta.annotation.Nullable
@@ -269,10 +270,13 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         deserializerMap.put("federatedIdentityCredentials", (n) -> { this.setFederatedIdentityCredentials(n.getCollectionOfObjectValues(FederatedIdentityCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("homepage", (n) -> { this.setHomepage(n.getStringValue()); });
         deserializerMap.put("homeRealmDiscoveryPolicies", (n) -> { this.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("idJag", (n) -> { this.setIdJag(n.getObjectValue(IdJagServicePrincipalConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("info", (n) -> { this.setInfo(n.getObjectValue(InformationalUrl::createFromDiscriminatorValue)); });
         deserializerMap.put("isDisabled", (n) -> { this.setIsDisabled(n.getBooleanValue()); });
+        deserializerMap.put("isHardDeleteProtectionEnabled", (n) -> { this.setIsHardDeleteProtectionEnabled(n.getBooleanValue()); });
         deserializerMap.put("keyCredentials", (n) -> { this.setKeyCredentials(n.getCollectionOfObjectValues(KeyCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("licenseDetails", (n) -> { this.setLicenseDetails(n.getCollectionOfObjectValues(LicenseDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("lifecycle", (n) -> { this.setLifecycle(n.getObjectValue(IdentityLifecycle::createFromDiscriminatorValue)); });
         deserializerMap.put("loginUrl", (n) -> { this.setLoginUrl(n.getStringValue()); });
         deserializerMap.put("logoutUrl", (n) -> { this.setLogoutUrl(n.getStringValue()); });
         deserializerMap.put("memberOf", (n) -> { this.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
@@ -322,6 +326,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.backingStore.get("homeRealmDiscoveryPolicies");
     }
     /**
+     * Gets the idJag property value. The idJag property
+     * @return a {@link IdJagServicePrincipalConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public IdJagServicePrincipalConfiguration getIdJag() {
+        return this.backingStore.get("idJag");
+    }
+    /**
      * Gets the info property value. Basic profile information of the acquired application such as app&apos;s marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
      * @return a {@link InformationalUrl}
      */
@@ -338,6 +350,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.backingStore.get("isDisabled");
     }
     /**
+     * Gets the isHardDeleteProtectionEnabled property value. Indicates whether hard deletion protection is enabled for the service principal. When true, permanent deletion is blocked for seven days after soft deletion. The service principal can still be soft deleted and restored. Once enabled, protection can&apos;t be disabled or set to null. Enable protection on an existing service principal by using Update servicePrincipal; enabling it during creation isn&apos;t supported. Setting this property to true requires the Microsoft Entra Backup Administrator role. Nullable. Requires $select to retrieve. Supports $filter (eq).
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsHardDeleteProtectionEnabled() {
+        return this.backingStore.get("isHardDeleteProtectionEnabled");
+    }
+    /**
      * Gets the keyCredentials property value. The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, not, ge, le).
      * @return a {@link java.util.List<KeyCredential>}
      */
@@ -352,6 +372,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<LicenseDetails> getLicenseDetails() {
         return this.backingStore.get("licenseDetails");
+    }
+    /**
+     * Gets the lifecycle property value. The lifecycle governance state of the agent identity backed by this service principal.
+     * @return a {@link IdentityLifecycle}
+     */
+    @jakarta.annotation.Nullable
+    public IdentityLifecycle getLifecycle() {
+        return this.backingStore.get("lifecycle");
     }
     /**
      * Gets the loginUrl property value. Specifies the URL where the service provider redirects the user to Microsoft Entra ID to authenticate. Microsoft Entra ID uses the URL to launch the application from Microsoft 365 or the Microsoft Entra My Apps. When blank, Microsoft Entra ID performs IdP-initiated sign-on for applications configured with SAML-based single sign-on. The user launches the application from Microsoft 365, the Microsoft Entra My Apps, or the Microsoft Entra SSO URL.
@@ -466,7 +494,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.backingStore.get("preferredTokenSigningKeyThumbprint");
     }
     /**
-     * Gets the publishedPermissionScopes property value. The delegated permissions exposed by the application. For more information, see the oauth2PermissionScopes property on the application entity&apos;s api property. Not nullable. Note: This property is named oauth2PermissionScopes in v1.0.
+     * Gets the publishedPermissionScopes property value. The delegated permissions exposed by the application. For more information, see the oauth2PermissionScopes property on the application entity&apos;s api property. Not nullable. Note: This property is named oauth2PermissionScopes in v1.0. These scopes and appRoles share a default limit of 700 permission definitions per service principal. Enabled and disabled definitions both count. For counting rules, behavior for existing objects above the limit, and design guidance, see App role limits.
      * @return a {@link java.util.List<PermissionScope>}
      */
     @jakarta.annotation.Nullable
@@ -627,10 +655,13 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("federatedIdentityCredentials", this.getFederatedIdentityCredentials());
         writer.writeStringValue("homepage", this.getHomepage());
         writer.writeCollectionOfObjectValues("homeRealmDiscoveryPolicies", this.getHomeRealmDiscoveryPolicies());
+        writer.writeObjectValue("idJag", this.getIdJag());
         writer.writeObjectValue("info", this.getInfo());
         writer.writeBooleanValue("isDisabled", this.getIsDisabled());
+        writer.writeBooleanValue("isHardDeleteProtectionEnabled", this.getIsHardDeleteProtectionEnabled());
         writer.writeCollectionOfObjectValues("keyCredentials", this.getKeyCredentials());
         writer.writeCollectionOfObjectValues("licenseDetails", this.getLicenseDetails());
+        writer.writeObjectValue("lifecycle", this.getLifecycle());
         writer.writeStringValue("loginUrl", this.getLoginUrl());
         writer.writeStringValue("logoutUrl", this.getLogoutUrl());
         writer.writeCollectionOfObjectValues("memberOf", this.getMemberOf());
@@ -747,7 +778,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.backingStore.set("appRoleAssignments", value);
     }
     /**
-     * Sets the appRoles property value. The roles exposed by the application, which this service principal represents. For more information, see the appRoles property definition on the application entity. Not nullable.
+     * Sets the appRoles property value. The roles exposed by the application, which this service principal represents. For more information, see the appRoles property definition on the application entity. Not nullable. App roles and exposed delegated permission scopes (publishedPermissionScopes) share a default limit of 700 permission definitions per service principal, including definitions inherited from the application and definitions added directly to the service principal. Enabled and disabled definitions both count. This limit counts definitions, not app role assignments. For counting rules, behavior for existing objects above the limit, and design guidance, see App role limits.
      * @param value Value to set for the appRoles property.
      */
     public void setAppRoles(@jakarta.annotation.Nullable final java.util.List<AppRole> value) {
@@ -852,6 +883,13 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.backingStore.set("homeRealmDiscoveryPolicies", value);
     }
     /**
+     * Sets the idJag property value. The idJag property
+     * @param value Value to set for the idJag property.
+     */
+    public void setIdJag(@jakarta.annotation.Nullable final IdJagServicePrincipalConfiguration value) {
+        this.backingStore.set("idJag", value);
+    }
+    /**
      * Sets the info property value. Basic profile information of the acquired application such as app&apos;s marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
      * @param value Value to set for the info property.
      */
@@ -866,6 +904,13 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.backingStore.set("isDisabled", value);
     }
     /**
+     * Sets the isHardDeleteProtectionEnabled property value. Indicates whether hard deletion protection is enabled for the service principal. When true, permanent deletion is blocked for seven days after soft deletion. The service principal can still be soft deleted and restored. Once enabled, protection can&apos;t be disabled or set to null. Enable protection on an existing service principal by using Update servicePrincipal; enabling it during creation isn&apos;t supported. Setting this property to true requires the Microsoft Entra Backup Administrator role. Nullable. Requires $select to retrieve. Supports $filter (eq).
+     * @param value Value to set for the isHardDeleteProtectionEnabled property.
+     */
+    public void setIsHardDeleteProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isHardDeleteProtectionEnabled", value);
+    }
+    /**
      * Sets the keyCredentials property value. The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, not, ge, le).
      * @param value Value to set for the keyCredentials property.
      */
@@ -878,6 +923,13 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     public void setLicenseDetails(@jakarta.annotation.Nullable final java.util.List<LicenseDetails> value) {
         this.backingStore.set("licenseDetails", value);
+    }
+    /**
+     * Sets the lifecycle property value. The lifecycle governance state of the agent identity backed by this service principal.
+     * @param value Value to set for the lifecycle property.
+     */
+    public void setLifecycle(@jakarta.annotation.Nullable final IdentityLifecycle value) {
+        this.backingStore.set("lifecycle", value);
     }
     /**
      * Sets the loginUrl property value. Specifies the URL where the service provider redirects the user to Microsoft Entra ID to authenticate. Microsoft Entra ID uses the URL to launch the application from Microsoft 365 or the Microsoft Entra My Apps. When blank, Microsoft Entra ID performs IdP-initiated sign-on for applications configured with SAML-based single sign-on. The user launches the application from Microsoft 365, the Microsoft Entra My Apps, or the Microsoft Entra SSO URL.
@@ -978,7 +1030,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.backingStore.set("preferredTokenSigningKeyThumbprint", value);
     }
     /**
-     * Sets the publishedPermissionScopes property value. The delegated permissions exposed by the application. For more information, see the oauth2PermissionScopes property on the application entity&apos;s api property. Not nullable. Note: This property is named oauth2PermissionScopes in v1.0.
+     * Sets the publishedPermissionScopes property value. The delegated permissions exposed by the application. For more information, see the oauth2PermissionScopes property on the application entity&apos;s api property. Not nullable. Note: This property is named oauth2PermissionScopes in v1.0. These scopes and appRoles share a default limit of 700 permission definitions per service principal. Enabled and disabled definitions both count. For counting rules, behavior for existing objects above the limit, and design guidance, see App role limits.
      * @param value Value to set for the publishedPermissionScopes property.
      */
     public void setPublishedPermissionScopes(@jakarta.annotation.Nullable final java.util.List<PermissionScope> value) {

@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.deleteditems;
 
+import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.deleteditems.lifecyclepolicies.LifecyclePoliciesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.deleteditems.workflows.WorkflowsRequestBuilder;
 import com.microsoft.graph.beta.models.DeletedItemContainer;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -21,6 +22,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the lifecyclePolicies property of the microsoft.graph.deletedItemContainer entity.
+     * @return a {@link LifecyclePoliciesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public LifecyclePoliciesRequestBuilder lifecyclePolicies() {
+        return new LifecyclePoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the workflows property of the microsoft.graph.deletedItemContainer entity.
      * @return a {@link WorkflowsRequestBuilder}

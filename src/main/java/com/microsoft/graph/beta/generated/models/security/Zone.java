@@ -7,6 +7,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * A security zone grouping cloud environments under a common posture boundary.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Zone extends Entity implements Parsable {
     /**

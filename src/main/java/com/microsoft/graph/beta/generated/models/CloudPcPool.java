@@ -33,20 +33,12 @@ public class CloudPcPool extends Entity implements Parsable {
         return new CloudPcPool();
     }
     /**
-     * Gets the assignments property value. The assignments property
+     * Gets the assignments property value. The collection of assignments that grant user or service principal identities access to this pool.
      * @return a {@link java.util.List<CloudPcPoolAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcPoolAssignment> getAssignments() {
         return this.backingStore.get("assignments");
-    }
-    /**
-     * Gets the capabilities property value. The capabilities property
-     * @return a {@link CloudPcPoolCapabilityConfiguration}
-     */
-    @jakarta.annotation.Nullable
-    public CloudPcPoolCapabilityConfiguration getCapabilities() {
-        return this.backingStore.get("capabilities");
     }
     /**
      * Gets the cloudPcConfiguration property value. The cloudPcConfiguration property
@@ -57,7 +49,7 @@ public class CloudPcPool extends Entity implements Parsable {
         return this.backingStore.get("cloudPcConfiguration");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the pool was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2026 is 2026-01-01T00:00:00Z. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +57,7 @@ public class CloudPcPool extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the pool. The maximum length is 512 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +65,7 @@ public class CloudPcPool extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the pool. The name is unique across Cloud PC pools in an organization. The maximum length is 60 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +80,6 @@ public class CloudPcPool extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(CloudPcPoolAssignment::createFromDiscriminatorValue)); });
-        deserializerMap.put("capabilities", (n) -> { this.setCapabilities(n.getObjectValue(CloudPcPoolCapabilityConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudPcConfiguration", (n) -> { this.setCloudPcConfiguration(n.getObjectValue(CloudPcConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -98,7 +89,7 @@ public class CloudPcPool extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. The date and time when the pool was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2026 is 2026-01-01T00:00:00Z. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +112,6 @@ public class CloudPcPool extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
-        writer.writeObjectValue("capabilities", this.getCapabilities());
         writer.writeObjectValue("cloudPcConfiguration", this.getCloudPcConfiguration());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
@@ -130,18 +120,11 @@ public class CloudPcPool extends Entity implements Parsable {
         writer.writeObjectValue("networkConfiguration", this.getNetworkConfiguration());
     }
     /**
-     * Sets the assignments property value. The assignments property
+     * Sets the assignments property value. The collection of assignments that grant user or service principal identities access to this pool.
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<CloudPcPoolAssignment> value) {
         this.backingStore.set("assignments", value);
-    }
-    /**
-     * Sets the capabilities property value. The capabilities property
-     * @param value Value to set for the capabilities property.
-     */
-    public void setCapabilities(@jakarta.annotation.Nullable final CloudPcPoolCapabilityConfiguration value) {
-        this.backingStore.set("capabilities", value);
     }
     /**
      * Sets the cloudPcConfiguration property value. The cloudPcConfiguration property
@@ -151,28 +134,28 @@ public class CloudPcPool extends Entity implements Parsable {
         this.backingStore.set("cloudPcConfiguration", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the pool was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2026 is 2026-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the pool. The maximum length is 512 characters.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the pool. The name is unique across Cloud PC pools in an organization. The maximum length is 60 characters.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. The date and time when the pool was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2026 is 2026-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

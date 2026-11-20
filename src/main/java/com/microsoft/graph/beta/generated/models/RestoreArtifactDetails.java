@@ -56,7 +56,7 @@ public class RestoreArtifactDetails implements AdditionalDataHolder, BackedModel
         return this.backingStore;
     }
     /**
-     * Gets the failedCount property value. The failedCount property
+     * Gets the failedCount property value. The number of artifacts that failed to be restored during the restore operation.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class RestoreArtifactDetails implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the restoredCount property value. The restoredCount property
+     * Gets the restoredCount property value. The number of artifacts that were successfully restored during the restore operation.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class RestoreArtifactDetails implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("restoredCount");
     }
     /**
-     * Gets the totalArtifactsCount property value. The totalArtifactsCount property
+     * Gets the totalArtifactsCount property value. The total number of artifacts included in the restore operation.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class RestoreArtifactDetails implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the failedCount property value. The failedCount property
+     * Sets the failedCount property value. The number of artifacts that failed to be restored during the restore operation.
      * @param value Value to set for the failedCount property.
      */
     public void setFailedCount(@jakarta.annotation.Nullable final Integer value) {
@@ -142,14 +142,14 @@ public class RestoreArtifactDetails implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the restoredCount property value. The restoredCount property
+     * Sets the restoredCount property value. The number of artifacts that were successfully restored during the restore operation.
      * @param value Value to set for the restoredCount property.
      */
     public void setRestoredCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("restoredCount", value);
     }
     /**
-     * Sets the totalArtifactsCount property value. The totalArtifactsCount property
+     * Sets the totalArtifactsCount property value. The total number of artifacts included in the restore operation.
      * @param value Value to set for the totalArtifactsCount property.
      */
     public void setTotalArtifactsCount(@jakarta.annotation.Nullable final Integer value) {

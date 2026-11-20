@@ -16,6 +16,7 @@ public enum ActivityLogOperationType implements ValuedEnum {
     PolicyLevelOffboarding("policyLevelOffboarding"),
     RestoreTaskCreated("restoreTaskCreated"),
     RestoreTaskCompleted("restoreTaskCompleted"),
+    BackupPolicyDeleted("backupPolicyDeleted"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     ActivityLogOperationType(final String value) {
@@ -38,6 +39,7 @@ public enum ActivityLogOperationType implements ValuedEnum {
             case "policyLevelOffboarding": return PolicyLevelOffboarding;
             case "restoreTaskCreated": return RestoreTaskCreated;
             case "restoreTaskCompleted": return RestoreTaskCompleted;
+            case "backupPolicyDeleted": return BackupPolicyDeleted;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

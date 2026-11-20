@@ -52,6 +52,7 @@ public class AccessReviewSet extends Entity implements Parsable {
         deserializerMap.put("historyDefinitions", (n) -> { this.setHistoryDefinitions(n.getCollectionOfObjectValues(AccessReviewHistoryDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("instances", (n) -> { this.setInstances(n.getCollectionOfObjectValues(AccessReviewInstance::createFromDiscriminatorValue)); });
         deserializerMap.put("policy", (n) -> { this.setPolicy(n.getObjectValue(AccessReviewPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("unified", (n) -> { this.setUnified(n.getObjectValue(UnifiedRoot::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -79,6 +80,14 @@ public class AccessReviewSet extends Entity implements Parsable {
         return this.backingStore.get("policy");
     }
     /**
+     * Gets the unified property value. Entry point for the unified (vNext) access reviews API surface. Requests under this path are routed to the vNext service through the dedicated accessReviews/unified path segment.
+     * @return a {@link UnifiedRoot}
+     */
+    @jakarta.annotation.Nullable
+    public UnifiedRoot getUnified() {
+        return this.backingStore.get("unified");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -90,6 +99,7 @@ public class AccessReviewSet extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("historyDefinitions", this.getHistoryDefinitions());
         writer.writeCollectionOfObjectValues("instances", this.getInstances());
         writer.writeObjectValue("policy", this.getPolicy());
+        writer.writeObjectValue("unified", this.getUnified());
     }
     /**
      * Sets the decisions property value. Represents a Microsoft Entra access review decision on an instance of a review.
@@ -125,5 +135,12 @@ public class AccessReviewSet extends Entity implements Parsable {
      */
     public void setPolicy(@jakarta.annotation.Nullable final AccessReviewPolicy value) {
         this.backingStore.set("policy", value);
+    }
+    /**
+     * Sets the unified property value. Entry point for the unified (vNext) access reviews API surface. Requests under this path are routed to the vNext service through the dedicated accessReviews/unified path segment.
+     * @param value Value to set for the unified property.
+     */
+    public void setUnified(@jakarta.annotation.Nullable final UnifiedRoot value) {
+        this.backingStore.set("unified", value);
     }
 }

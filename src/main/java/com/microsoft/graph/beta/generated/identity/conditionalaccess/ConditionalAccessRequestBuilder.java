@@ -7,6 +7,7 @@ import com.microsoft.graph.beta.identity.conditionalaccess.deleteditems.DeletedI
 import com.microsoft.graph.beta.identity.conditionalaccess.evaluate.EvaluateRequestBuilder;
 import com.microsoft.graph.beta.identity.conditionalaccess.namedlocations.NamedLocationsRequestBuilder;
 import com.microsoft.graph.beta.identity.conditionalaccess.policies.PoliciesRequestBuilder;
+import com.microsoft.graph.beta.identity.conditionalaccess.settings.SettingsRequestBuilder;
 import com.microsoft.graph.beta.identity.conditionalaccess.templates.TemplatesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
@@ -36,7 +37,10 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the authenticationStrengths property of the microsoft.graph.conditionalAccessRoot entity.
      * @return a {@link AuthenticationStrengthsRequestBuilder}
+     * @deprecated
+     * The &amp;apos;authenticationStrengths&amp;apos; segment is deprecated. Please use &amp;apos;authenticationStrength&amp;apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AuthenticationStrengthsRequestBuilder authenticationStrengths() {
         return new AuthenticationStrengthsRequestBuilder(pathParameters, requestAdapter);
@@ -72,6 +76,14 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PoliciesRequestBuilder policies() {
         return new PoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the settings property of the microsoft.graph.conditionalAccessRoot entity.
+     * @return a {@link SettingsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SettingsRequestBuilder settings() {
+        return new SettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the templates property of the microsoft.graph.conditionalAccessRoot entity.

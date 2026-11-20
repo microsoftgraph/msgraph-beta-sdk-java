@@ -60,7 +60,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudPcPools/{cloudPcPool%2Did}/assignments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get assignments from users
+     * The collection of assignments that grant user or service principal identities access to this pool.
      * @return a {@link CloudPcPoolAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get assignments from users
+     * The collection of assignments that grant user or service principal identities access to this pool.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcPoolAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcPoolAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Get assignments from users
+     * The collection of assignments that grant user or service principal identities access to this pool.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get assignments from users
+     * The collection of assignments that grant user or service principal identities access to this pool.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return new AssignmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get assignments from users
+     * The collection of assignments that grant user or service principal identities access to this pool.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

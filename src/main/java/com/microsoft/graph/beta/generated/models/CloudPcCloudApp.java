@@ -26,7 +26,7 @@ public class CloudPcCloudApp extends Entity implements Parsable {
         return new CloudPcCloudApp();
     }
     /**
-     * Gets the actionFailedErrorCode property value. The error code if publishing, unpublishing, or resetting a cloud app fails. The possible values are: cloudAppQuotaExceeded, cloudPcLicenseNotFound, internalServerError, appDiscoveryFailed, unknownFutureValue. The default value is null. Supports $filter, $select, $orderBy. Read-only.
+     * Gets the actionFailedErrorCode property value. The error code if publishing, unpublishing, or resetting a cloud app fails. The possible values are: cloudAppQuotaExceeded, cloudPcLicenseNotFound, internalServerError, appDiscoveryFailed, unknownFutureValue, iconPathInvalid, filePathInvalid. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: iconPathInvalid, filePathInvalid. The default value is null. Supports $filter, $select, $orderBy. Read-only.
      * @return a {@link CloudPcCloudAppActionFailedErrorCode}
      */
     @jakarta.annotation.Nullable
@@ -127,7 +127,7 @@ public class CloudPcCloudApp extends Entity implements Parsable {
         return this.backingStore.get("lastPublishedDateTime");
     }
     /**
-     * Gets the provisioningPolicyId property value. The ID of the provisioning policy associated with this cloud app. For example, 96133506-c05b-4dbb-a150-ed4adc59895f. Supports $filter, $select, and $orderBy. Read-only. Required.
+     * Gets the provisioningPolicyId property value. The ID of the provisioning policy associated with this cloud app. For example, 96133506-c05b-4dbb-a150-ed4adc59895f. Supports $filter, $select, and $orderBy. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -163,7 +163,7 @@ public class CloudPcCloudApp extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("scopeIds", this.getScopeIds());
     }
     /**
-     * Sets the actionFailedErrorCode property value. The error code if publishing, unpublishing, or resetting a cloud app fails. The possible values are: cloudAppQuotaExceeded, cloudPcLicenseNotFound, internalServerError, appDiscoveryFailed, unknownFutureValue. The default value is null. Supports $filter, $select, $orderBy. Read-only.
+     * Sets the actionFailedErrorCode property value. The error code if publishing, unpublishing, or resetting a cloud app fails. The possible values are: cloudAppQuotaExceeded, cloudPcLicenseNotFound, internalServerError, appDiscoveryFailed, unknownFutureValue, iconPathInvalid, filePathInvalid. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: iconPathInvalid, filePathInvalid. The default value is null. Supports $filter, $select, $orderBy. Read-only.
      * @param value Value to set for the actionFailedErrorCode property.
      */
     public void setActionFailedErrorCode(@jakarta.annotation.Nullable final CloudPcCloudAppActionFailedErrorCode value) {
@@ -233,7 +233,7 @@ public class CloudPcCloudApp extends Entity implements Parsable {
         this.backingStore.set("lastPublishedDateTime", value);
     }
     /**
-     * Sets the provisioningPolicyId property value. The ID of the provisioning policy associated with this cloud app. For example, 96133506-c05b-4dbb-a150-ed4adc59895f. Supports $filter, $select, and $orderBy. Read-only. Required.
+     * Sets the provisioningPolicyId property value. The ID of the provisioning policy associated with this cloud app. For example, 96133506-c05b-4dbb-a150-ed4adc59895f. Supports $filter, $select, and $orderBy. Required.
      * @param value Value to set for the provisioningPolicyId property.
      */
     public void setProvisioningPolicyId(@jakarta.annotation.Nullable final String value) {

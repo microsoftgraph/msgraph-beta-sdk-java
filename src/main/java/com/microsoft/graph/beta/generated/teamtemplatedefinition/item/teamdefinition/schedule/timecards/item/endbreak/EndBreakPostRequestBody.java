@@ -24,6 +24,8 @@ public class EndBreakPostRequestBody implements AdditionalDataHolder, BackedMode
     public EndBreakPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setAtApprovedLocation(false);
+        this.setIsAtApprovedLocation(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

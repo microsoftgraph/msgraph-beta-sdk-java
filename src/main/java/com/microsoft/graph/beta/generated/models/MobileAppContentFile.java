@@ -69,6 +69,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("size", (n) -> { this.setSize(n.getLongValue()); });
         deserializerMap.put("sizeEncrypted", (n) -> { this.setSizeEncrypted(n.getLongValue()); });
+        deserializerMap.put("uploadErrorCode", (n) -> { this.setUploadErrorCode(n.getEnumValue(MobileAppContentFileUploadErrorCode::forValue)); });
         deserializerMap.put("uploadState", (n) -> { this.setUploadState(n.getEnumValue(MobileAppContentFileUploadState::forValue)); });
         return deserializerMap;
     }
@@ -127,6 +128,14 @@ public class MobileAppContentFile extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Long getSizeEncrypted() {
         return this.backingStore.get("sizeEncrypted");
+    }
+    /**
+     * Gets the uploadErrorCode property value. Indicates optional error details when uploadState is indicating an error. For example, when uploadState has commitFileFailed value, this field may have the error code of apkIsInvalid. Read-only.
+     * @return a {@link MobileAppContentFileUploadErrorCode}
+     */
+    @jakarta.annotation.Nullable
+    public MobileAppContentFileUploadErrorCode getUploadErrorCode() {
+        return this.backingStore.get("uploadErrorCode");
     }
     /**
      * Gets the uploadState property value. Contains properties for upload request states.
@@ -220,6 +229,13 @@ public class MobileAppContentFile extends Entity implements Parsable {
      */
     public void setSizeEncrypted(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("sizeEncrypted", value);
+    }
+    /**
+     * Sets the uploadErrorCode property value. Indicates optional error details when uploadState is indicating an error. For example, when uploadState has commitFileFailed value, this field may have the error code of apkIsInvalid. Read-only.
+     * @param value Value to set for the uploadErrorCode property.
+     */
+    public void setUploadErrorCode(@jakarta.annotation.Nullable final MobileAppContentFileUploadErrorCode value) {
+        this.backingStore.set("uploadErrorCode", value);
     }
     /**
      * Sets the uploadState property value. Contains properties for upload request states.

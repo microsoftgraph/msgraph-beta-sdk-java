@@ -23,6 +23,7 @@ public class ApproveAppsPostRequestBody implements AdditionalDataHolder, BackedM
     public ApproveAppsPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setApproveAllPermissions(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

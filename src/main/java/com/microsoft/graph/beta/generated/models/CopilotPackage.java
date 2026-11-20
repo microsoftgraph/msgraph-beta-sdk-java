@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -33,6 +34,14 @@ public class CopilotPackage extends Entity implements Parsable {
         return new CopilotPackage();
     }
     /**
+     * Gets the agentIdentityId property value. The agentIdentityId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getAgentIdentityId() {
+        return this.backingStore.get("agentIdentityId");
+    }
+    /**
      * Gets the appId property value. The appId property
      * @return a {@link String}
      */
@@ -55,6 +64,14 @@ public class CopilotPackage extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public PackageStatus getAvailableTo() {
         return this.backingStore.get("availableTo");
+    }
+    /**
+     * Gets the createdDateTime property value. The createdDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getCreatedDateTime() {
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the deployedTo property value. The deployedTo property
@@ -87,12 +104,15 @@ public class CopilotPackage extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("agentIdentityId", (n) -> { this.setAgentIdentityId(n.getStringValue()); });
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("assetId", (n) -> { this.setAssetId(n.getStringValue()); });
         deserializerMap.put("availableTo", (n) -> { this.setAvailableTo(n.getEnumValue(PackageStatus::forValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("deployedTo", (n) -> { this.setDeployedTo(n.getEnumValue(PackageStatus::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("elementTypes", (n) -> { this.setElementTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("governanceMetadata", (n) -> { this.setGovernanceMetadata(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         deserializerMap.put("isBlocked", (n) -> { this.setIsBlocked(n.getBooleanValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("manifestId", (n) -> { this.setManifestId(n.getStringValue()); });
@@ -100,12 +120,22 @@ public class CopilotPackage extends Entity implements Parsable {
         deserializerMap.put("ownerId", (n) -> { this.setOwnerId(n.getStringValue()); });
         deserializerMap.put("platform", (n) -> { this.setPlatform(n.getStringValue()); });
         deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
+        deserializerMap.put("requestStatus", (n) -> { this.setRequestStatus(n.getEnumValue(CopilotPackageRequestStatus::forValue)); });
+        deserializerMap.put("requestType", (n) -> { this.setRequestType(n.getEnumValue(CopilotPackageRequestType::forValue)); });
         deserializerMap.put("shortDescription", (n) -> { this.setShortDescription(n.getStringValue()); });
         deserializerMap.put("supportedHosts", (n) -> { this.setSupportedHosts(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PackageType::forValue)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
         deserializerMap.put("zipFile", (n) -> { this.setZipFile(n.getByteArrayValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the governanceMetadata property value. The governanceMetadata property
+     * @return a {@link UntypedNode}
+     */
+    @jakarta.annotation.Nullable
+    public UntypedNode getGovernanceMetadata() {
+        return this.backingStore.get("governanceMetadata");
     }
     /**
      * Gets the isBlocked property value. The isBlocked property
@@ -164,6 +194,22 @@ public class CopilotPackage extends Entity implements Parsable {
         return this.backingStore.get("publisher");
     }
     /**
+     * Gets the requestStatus property value. The requestStatus property
+     * @return a {@link CopilotPackageRequestStatus}
+     */
+    @jakarta.annotation.Nullable
+    public CopilotPackageRequestStatus getRequestStatus() {
+        return this.backingStore.get("requestStatus");
+    }
+    /**
+     * Gets the requestType property value. The requestType property
+     * @return a {@link CopilotPackageRequestType}
+     */
+    @jakarta.annotation.Nullable
+    public CopilotPackageRequestType getRequestType() {
+        return this.backingStore.get("requestType");
+    }
+    /**
      * Gets the shortDescription property value. The shortDescription property
      * @return a {@link String}
      */
@@ -210,12 +256,15 @@ public class CopilotPackage extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("agentIdentityId", this.getAgentIdentityId());
         writer.writeStringValue("appId", this.getAppId());
         writer.writeStringValue("assetId", this.getAssetId());
         writer.writeEnumValue("availableTo", this.getAvailableTo());
+        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeEnumValue("deployedTo", this.getDeployedTo());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfPrimitiveValues("elementTypes", this.getElementTypes());
+        writer.writeObjectValue("governanceMetadata", this.getGovernanceMetadata());
         writer.writeBooleanValue("isBlocked", this.getIsBlocked());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("manifestId", this.getManifestId());
@@ -223,11 +272,20 @@ public class CopilotPackage extends Entity implements Parsable {
         writer.writeStringValue("ownerId", this.getOwnerId());
         writer.writeStringValue("platform", this.getPlatform());
         writer.writeStringValue("publisher", this.getPublisher());
+        writer.writeEnumValue("requestStatus", this.getRequestStatus());
+        writer.writeEnumValue("requestType", this.getRequestType());
         writer.writeStringValue("shortDescription", this.getShortDescription());
         writer.writeCollectionOfPrimitiveValues("supportedHosts", this.getSupportedHosts());
         writer.writeEnumValue("type", this.getType());
         writer.writeStringValue("version", this.getVersion());
         writer.writeByteArrayValue("zipFile", this.getZipFile());
+    }
+    /**
+     * Sets the agentIdentityId property value. The agentIdentityId property
+     * @param value Value to set for the agentIdentityId property.
+     */
+    public void setAgentIdentityId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("agentIdentityId", value);
     }
     /**
      * Sets the appId property value. The appId property
@@ -251,6 +309,13 @@ public class CopilotPackage extends Entity implements Parsable {
         this.backingStore.set("availableTo", value);
     }
     /**
+     * Sets the createdDateTime property value. The createdDateTime property
+     * @param value Value to set for the createdDateTime property.
+     */
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("createdDateTime", value);
+    }
+    /**
      * Sets the deployedTo property value. The deployedTo property
      * @param value Value to set for the deployedTo property.
      */
@@ -270,6 +335,13 @@ public class CopilotPackage extends Entity implements Parsable {
      */
     public void setElementTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("elementTypes", value);
+    }
+    /**
+     * Sets the governanceMetadata property value. The governanceMetadata property
+     * @param value Value to set for the governanceMetadata property.
+     */
+    public void setGovernanceMetadata(@jakarta.annotation.Nullable final UntypedNode value) {
+        this.backingStore.set("governanceMetadata", value);
     }
     /**
      * Sets the isBlocked property value. The isBlocked property
@@ -319,6 +391,20 @@ public class CopilotPackage extends Entity implements Parsable {
      */
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("publisher", value);
+    }
+    /**
+     * Sets the requestStatus property value. The requestStatus property
+     * @param value Value to set for the requestStatus property.
+     */
+    public void setRequestStatus(@jakarta.annotation.Nullable final CopilotPackageRequestStatus value) {
+        this.backingStore.set("requestStatus", value);
+    }
+    /**
+     * Sets the requestType property value. The requestType property
+     * @param value Value to set for the requestType property.
+     */
+    public void setRequestType(@jakarta.annotation.Nullable final CopilotPackageRequestType value) {
+        this.backingStore.set("requestType", value);
     }
     /**
      * Sets the shortDescription property value. The shortDescription property

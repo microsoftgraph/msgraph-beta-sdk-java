@@ -76,7 +76,7 @@ public class M365CapabilityResourceScope implements AdditionalDataHolder, Backed
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the resourceId property value. The ID of the resource to modify (a user or group ID).
+     * Gets the resourceId property value. The ID of the resource to modify. The value is either All, to apply the capability to all resources of the type specified by resourceType (all users or all groups), or the GUID of a specific user or group.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class M365CapabilityResourceScope implements AdditionalDataHolder, Backed
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the resourceId property value. The ID of the resource to modify (a user or group ID).
+     * Sets the resourceId property value. The ID of the resource to modify. The value is either All, to apply the capability to all resources of the type specified by resourceType (all users or all groups), or the GUID of a specific user or group.
      * @param value Value to set for the resourceId property.
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {

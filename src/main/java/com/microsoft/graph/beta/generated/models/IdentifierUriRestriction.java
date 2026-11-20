@@ -65,7 +65,7 @@ public class IdentifierUriRestriction implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("excludeActors");
     }
     /**
-     * Gets the excludeAppsReceivingV2Tokens property value. If true, the restriction isn&apos;t enforced for applications that are configured to receive V2 tokens in Microsoft Entra ID; else, the restriction isn&apos;t enforced for those applications.
+     * Gets the excludeAppsReceivingV2Tokens property value. If true, the restriction isn&apos;t enforced for applications that are configured to receive V2 tokens in Microsoft Entra ID; else, the restriction is enforced for those applications.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class IdentifierUriRestriction implements AdditionalDataHolder, BackedMod
         this.backingStore.set("excludeActors", value);
     }
     /**
-     * Sets the excludeAppsReceivingV2Tokens property value. If true, the restriction isn&apos;t enforced for applications that are configured to receive V2 tokens in Microsoft Entra ID; else, the restriction isn&apos;t enforced for those applications.
+     * Sets the excludeAppsReceivingV2Tokens property value. If true, the restriction isn&apos;t enforced for applications that are configured to receive V2 tokens in Microsoft Entra ID; else, the restriction is enforced for those applications.
      * @param value Value to set for the excludeAppsReceivingV2Tokens property.
      */
     public void setExcludeAppsReceivingV2Tokens(@jakarta.annotation.Nullable final Boolean value) {

@@ -56,7 +56,7 @@ public class CrossTenantMigrationServiceStatusDetails implements AdditionalDataH
         return this.backingStore;
     }
     /**
-     * Gets the errors property value. Errors associated with the migration for this service
+     * Gets the errors property value. Errors associated with the migration for this service.
      * @return a {@link java.util.List<Error>}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class CrossTenantMigrationServiceStatusDetails implements AdditionalDataH
         return deserializerMap;
     }
     /**
-     * Gets the message property value. Service status message
+     * Gets the message property value. Service status message.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class CrossTenantMigrationServiceStatusDetails implements AdditionalDataH
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the service property value. Service or workload the status details are associated with
+     * Gets the service property value. Service or workload associated with the status details.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,14 +138,14 @@ public class CrossTenantMigrationServiceStatusDetails implements AdditionalDataH
         this.backingStore = value;
     }
     /**
-     * Sets the errors property value. Errors associated with the migration for this service
+     * Sets the errors property value. Errors associated with the migration for this service.
      * @param value Value to set for the errors property.
      */
     public void setErrors(@jakarta.annotation.Nullable final java.util.List<Error> value) {
         this.backingStore.set("errors", value);
     }
     /**
-     * Sets the message property value. Service status message
+     * Sets the message property value. Service status message.
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {
@@ -159,7 +159,7 @@ public class CrossTenantMigrationServiceStatusDetails implements AdditionalDataH
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the service property value. Service or workload the status details are associated with
+     * Sets the service property value. Service or workload associated with the status details.
      * @param value Value to set for the service property.
      */
     public void setService(@jakarta.annotation.Nullable final String value) {

@@ -69,10 +69,11 @@ public class RelatedPerson implements AdditionalDataHolder, BackedModel, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("relationship", (n) -> { this.setRelationship(n.getEnumValue(PersonRelationship::forValue)); });
+        deserializerMap.put("relationshipLabel", (n) -> { this.setRelationshipLabel(n.getStringValue()); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
@@ -92,6 +93,14 @@ public class RelatedPerson implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nullable
     public PersonRelationship getRelationship() {
         return this.backingStore.get("relationship");
+    }
+    /**
+     * Gets the relationshipLabel property value. Information (free-text) describing the relationship between the user and the related person. This property provides additional context beyond the predefined relationship values and can be used by clients, including AI-powered experiences, to better understand and reason about the relationship.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getRelationshipLabel() {
+        return this.backingStore.get("relationshipLabel");
     }
     /**
      * Gets the userId property value. The user&apos;s directory object ID (Microsoft Entra ID or CID).
@@ -118,6 +127,7 @@ public class RelatedPerson implements AdditionalDataHolder, BackedModel, Parsabl
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("relationship", this.getRelationship());
+        writer.writeStringValue("relationshipLabel", this.getRelationshipLabel());
         writer.writeStringValue("userId", this.getUserId());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -157,6 +167,13 @@ public class RelatedPerson implements AdditionalDataHolder, BackedModel, Parsabl
      */
     public void setRelationship(@jakarta.annotation.Nullable final PersonRelationship value) {
         this.backingStore.set("relationship", value);
+    }
+    /**
+     * Sets the relationshipLabel property value. Information (free-text) describing the relationship between the user and the related person. This property provides additional context beyond the predefined relationship values and can be used by clients, including AI-powered experiences, to better understand and reason about the relationship.
+     * @param value Value to set for the relationshipLabel property.
+     */
+    public void setRelationshipLabel(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("relationshipLabel", value);
     }
     /**
      * Sets the userId property value. The user&apos;s directory object ID (Microsoft Entra ID or CID).

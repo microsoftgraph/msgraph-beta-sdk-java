@@ -44,7 +44,7 @@ public class ActivityLogBase extends Entity implements Parsable {
         return this.backingStore.get("activityType");
     }
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. Contains error details if an error occurred while processing this activity.
      * @return a {@link PublicError}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class ActivityLogBase extends Entity implements Parsable {
         return this.backingStore.get("error");
     }
     /**
-     * Gets the eventDateTime property value. The eventDateTime property
+     * Gets the eventDateTime property value. Timestamp of activity completion.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class ActivityLogBase extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the performedBy property value. The performedBy property
+     * Gets the performedBy property value. The identity of the person who performed the activity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -130,21 +130,21 @@ public class ActivityLogBase extends Entity implements Parsable {
         this.backingStore.set("activityType", value);
     }
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. Contains error details if an error occurred while processing this activity.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final PublicError value) {
         this.backingStore.set("error", value);
     }
     /**
-     * Sets the eventDateTime property value. The eventDateTime property
+     * Sets the eventDateTime property value. Timestamp of activity completion.
      * @param value Value to set for the eventDateTime property.
      */
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("eventDateTime", value);
     }
     /**
-     * Sets the performedBy property value. The performedBy property
+     * Sets the performedBy property value. The identity of the person who performed the activity.
      * @param value Value to set for the performedBy property.
      */
     public void setPerformedBy(@jakarta.annotation.Nullable final String value) {

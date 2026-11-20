@@ -68,7 +68,7 @@ public class CloudPcAgentPoolScalingPolicy implements AdditionalDataHolder, Back
         return deserializerMap;
     }
     /**
-     * Gets the maximumCount property value. The maximumCount property
+     * Gets the maximumCount property value. The maximum number of Cloud PCs in the pool. The valid values are 1 to 900, and must be greater than or equal to minimumCount.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class CloudPcAgentPoolScalingPolicy implements AdditionalDataHolder, Back
         return this.backingStore.get("maximumCount");
     }
     /**
-     * Gets the minimumCount property value. The minimumCount property
+     * Gets the minimumCount property value. The minimum number of Cloud PCs in the pool. The valid values are 0 to 900, and must be less than or equal to maximumCount.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class CloudPcAgentPoolScalingPolicy implements AdditionalDataHolder, Back
         this.backingStore = value;
     }
     /**
-     * Sets the maximumCount property value. The maximumCount property
+     * Sets the maximumCount property value. The maximum number of Cloud PCs in the pool. The valid values are 1 to 900, and must be greater than or equal to minimumCount.
      * @param value Value to set for the maximumCount property.
      */
     public void setMaximumCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("maximumCount", value);
     }
     /**
-     * Sets the minimumCount property value. The minimumCount property
+     * Sets the minimumCount property value. The minimum number of Cloud PCs in the pool. The valid values are 0 to 900, and must be less than or equal to maximumCount.
      * @param value Value to set for the minimumCount property.
      */
     public void setMinimumCount(@jakarta.annotation.Nullable final Integer value) {

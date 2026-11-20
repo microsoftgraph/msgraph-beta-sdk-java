@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum ApplicationMode implements ValuedEnum {
     Manual("manual"),
     Automatic("automatic"),
-    Recommended("recommended");
+    Recommended("recommended"),
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     ApplicationMode(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum ApplicationMode implements ValuedEnum {
             case "manual": return Manual;
             case "automatic": return Automatic;
             case "recommended": return Recommended;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

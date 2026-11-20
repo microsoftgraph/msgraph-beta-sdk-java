@@ -36,7 +36,7 @@ public class PersonalTeamsAppInstallationScopeInfo extends TeamsAppInstallationS
         return deserializerMap;
     }
     /**
-     * Gets the userId property value. The userId property
+     * Gets the userId property value. The ID of the user for whom the Teams app is installed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class PersonalTeamsAppInstallationScopeInfo extends TeamsAppInstallationS
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the userId property value. The userId property
+     * Sets the userId property value. The ID of the user for whom the Teams app is installed.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {

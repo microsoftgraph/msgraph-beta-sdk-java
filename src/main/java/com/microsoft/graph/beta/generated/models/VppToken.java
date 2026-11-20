@@ -29,6 +29,14 @@ public class VppToken extends Entity implements Parsable {
         return new VppToken();
     }
     /**
+     * Gets the appleDeviceAppDeliveryProtocolType property value. Enum of the supported types of Apple delivery protocols, representing the available protocols to deliver payloads to Apple devices
+     * @return a {@link AppleDeviceDeliveryProtocol}
+     */
+    @jakarta.annotation.Nullable
+    public AppleDeviceDeliveryProtocol getAppleDeviceAppDeliveryProtocolType() {
+        return this.backingStore.get("appleDeviceAppDeliveryProtocolType");
+    }
+    /**
      * Gets the appleId property value. The apple Id associated with the given Apple Volume Purchase Program Token.
      * @return a {@link String}
      */
@@ -91,6 +99,7 @@ public class VppToken extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appleDeviceAppDeliveryProtocolType", (n) -> { this.setAppleDeviceAppDeliveryProtocolType(n.getEnumValue(AppleDeviceDeliveryProtocol::forValue)); });
         deserializerMap.put("appleId", (n) -> { this.setAppleId(n.getStringValue()); });
         deserializerMap.put("automaticallyUpdateApps", (n) -> { this.setAutomaticallyUpdateApps(n.getBooleanValue()); });
         deserializerMap.put("claimTokenManagementFromExternalMdm", (n) -> { this.setClaimTokenManagementFromExternalMdm(n.getBooleanValue()); });
@@ -197,6 +206,7 @@ public class VppToken extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("appleDeviceAppDeliveryProtocolType", this.getAppleDeviceAppDeliveryProtocolType());
         writer.writeStringValue("appleId", this.getAppleId());
         writer.writeBooleanValue("automaticallyUpdateApps", this.getAutomaticallyUpdateApps());
         writer.writeBooleanValue("claimTokenManagementFromExternalMdm", this.getClaimTokenManagementFromExternalMdm());
@@ -214,6 +224,13 @@ public class VppToken extends Entity implements Parsable {
         writer.writeStringValue("token", this.getToken());
         writer.writeCollectionOfObjectValues("tokenActionResults", this.getTokenActionResults());
         writer.writeEnumValue("vppTokenAccountType", this.getVppTokenAccountType());
+    }
+    /**
+     * Sets the appleDeviceAppDeliveryProtocolType property value. Enum of the supported types of Apple delivery protocols, representing the available protocols to deliver payloads to Apple devices
+     * @param value Value to set for the appleDeviceAppDeliveryProtocolType property.
+     */
+    public void setAppleDeviceAppDeliveryProtocolType(@jakarta.annotation.Nullable final AppleDeviceDeliveryProtocol value) {
+        this.backingStore.set("appleDeviceAppDeliveryProtocolType", value);
     }
     /**
      * Sets the appleId property value. The apple Id associated with the given Apple Volume Purchase Program Token.

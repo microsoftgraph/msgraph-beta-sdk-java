@@ -102,6 +102,7 @@ public class CrossTenantAccessPolicyConfigurationPartner extends PolicyDeletable
         deserializerMap.put("m365Capabilities", (n) -> { this.setM365Capabilities(n.getCollectionOfObjectValues(M365CapabilityBase::createFromDiscriminatorValue)); });
         deserializerMap.put("m365CollaborationInbound", (n) -> { this.setM365CollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyM365CollaborationInboundSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("m365CollaborationOutbound", (n) -> { this.setM365CollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyM365CollaborationOutboundSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("serviceProviderConstraints", (n) -> { this.setServiceProviderConstraints(n.getObjectValue(ServiceProviderConstraints::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         deserializerMap.put("tenantRestrictions", (n) -> { this.setTenantRestrictions(n.getObjectValue(CrossTenantAccessPolicyTenantRestrictions::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -163,6 +164,14 @@ public class CrossTenantAccessPolicyConfigurationPartner extends PolicyDeletable
         return this.backingStore.get("m365CollaborationOutbound");
     }
     /**
+     * Gets the serviceProviderConstraints property value. The serviceProviderConstraints property
+     * @return a {@link ServiceProviderConstraints}
+     */
+    @jakarta.annotation.Nullable
+    public ServiceProviderConstraints getServiceProviderConstraints() {
+        return this.backingStore.get("serviceProviderConstraints");
+    }
+    /**
      * Gets the tenantId property value. The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.
      * @return a {@link String}
      */
@@ -199,6 +208,7 @@ public class CrossTenantAccessPolicyConfigurationPartner extends PolicyDeletable
         writer.writeCollectionOfObjectValues("m365Capabilities", this.getM365Capabilities());
         writer.writeObjectValue("m365CollaborationInbound", this.getM365CollaborationInbound());
         writer.writeObjectValue("m365CollaborationOutbound", this.getM365CollaborationOutbound());
+        writer.writeObjectValue("serviceProviderConstraints", this.getServiceProviderConstraints());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeObjectValue("tenantRestrictions", this.getTenantRestrictions());
     }
@@ -299,6 +309,13 @@ public class CrossTenantAccessPolicyConfigurationPartner extends PolicyDeletable
      */
     public void setM365CollaborationOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyM365CollaborationOutboundSetting value) {
         this.backingStore.set("m365CollaborationOutbound", value);
+    }
+    /**
+     * Sets the serviceProviderConstraints property value. The serviceProviderConstraints property
+     * @param value Value to set for the serviceProviderConstraints property.
+     */
+    public void setServiceProviderConstraints(@jakarta.annotation.Nullable final ServiceProviderConstraints value) {
+        this.backingStore.set("serviceProviderConstraints", value);
     }
     /**
      * Sets the tenantId property value. The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.

@@ -23,6 +23,7 @@ public class IsManagedAppUserBlockedGetResponse implements AdditionalDataHolder,
     public IsManagedAppUserBlockedGetResponse() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setValue(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

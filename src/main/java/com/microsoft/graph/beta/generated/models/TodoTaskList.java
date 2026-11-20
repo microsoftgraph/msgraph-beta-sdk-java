@@ -73,7 +73,7 @@ public class TodoTaskList extends Entity implements Parsable {
         return this.backingStore.get("isShared");
     }
     /**
-     * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the task list. Read-only. Nullable.
+     * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the task list. Nullable.
      * @return a {@link java.util.List<SingleValueExtendedProperty>}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class TodoTaskList extends Entity implements Parsable {
         this.backingStore.set("isShared", value);
     }
     /**
-     * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the task list. Read-only. Nullable.
+     * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the task list. Nullable.
      * @param value Value to set for the singleValueExtendedProperties property.
      */
     public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueExtendedProperty> value) {

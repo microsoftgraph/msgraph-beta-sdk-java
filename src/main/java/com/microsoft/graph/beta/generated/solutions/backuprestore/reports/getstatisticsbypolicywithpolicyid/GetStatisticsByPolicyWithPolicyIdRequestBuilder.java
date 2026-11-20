@@ -38,19 +38,21 @@ public class GetStatisticsByPolicyWithPolicyIdRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/reports/getStatisticsByPolicy(policyId='{policyId}')", rawUrl);
     }
     /**
-     * Invoke function getStatisticsByPolicy
+     * Get the statistics that correspond to the specified policy ID of a backupPolicyReport.
      * @return a {@link BackupPolicyReport}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/backupreport-getstatisticsbypolicy?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BackupPolicyReport get() {
         return get(null);
     }
     /**
-     * Invoke function getStatisticsByPolicy
+     * Get the statistics that correspond to the specified policy ID of a backupPolicyReport.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BackupPolicyReport}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/backupreport-getstatisticsbypolicy?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BackupPolicyReport get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetStatisticsByPolicyWithPolicyIdRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, BackupPolicyReport::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getStatisticsByPolicy
+     * Get the statistics that correspond to the specified policy ID of a backupPolicyReport.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetStatisticsByPolicyWithPolicyIdRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getStatisticsByPolicy
+     * Get the statistics that correspond to the specified policy ID of a backupPolicyReport.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

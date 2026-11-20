@@ -79,7 +79,7 @@ public class RedirectUriConfiguration implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the uriWithBlockedDomain property value. The uriWithBlockedDomain property
+     * Gets the uriWithBlockedDomain property value. Configuration that specifies blocked domains for redirect URIs with global and platform-specific settings.
      * @return a {@link RedirectUriBlockedDomainConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class RedirectUriConfiguration implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("uriWithBlockedDomain");
     }
     /**
-     * Gets the uriWithBlockedScheme property value. The uriWithBlockedScheme property
+     * Gets the uriWithBlockedScheme property value. Configuration that specifies blocked URI schemes for redirect URIs with global and platform-specific settings and exempt format patterns.
      * @return a {@link RedirectUriBlockedSchemeConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class RedirectUriConfiguration implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("uriWithBlockedScheme");
     }
     /**
-     * Gets the uriWithoutAllowedDomain property value. The uriWithoutAllowedDomain property
+     * Gets the uriWithoutAllowedDomain property value. Configuration that specifies allowed domains for redirect URIs with global and platform-specific settings.
      * @return a {@link RedirectUriAllowedDomainConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class RedirectUriConfiguration implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("uriWithoutAllowedDomain");
     }
     /**
-     * Gets the uriWithoutAllowedScheme property value. The uriWithoutAllowedScheme property
+     * Gets the uriWithoutAllowedScheme property value. Configuration that specifies allowed URI schemes for redirect URIs with global and platform-specific settings.
      * @return a {@link RedirectUriAllowedSchemeConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class RedirectUriConfiguration implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("uriWithoutAllowedScheme");
     }
     /**
-     * Gets the uriWithWildcard property value. The uriWithWildcard property
+     * Gets the uriWithWildcard property value. Configuration that controls the use of wildcard patterns in redirect URIs with configurable exceptions.
      * @return a {@link RedirectUriWildcardConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -155,35 +155,35 @@ public class RedirectUriConfiguration implements AdditionalDataHolder, BackedMod
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the uriWithBlockedDomain property value. The uriWithBlockedDomain property
+     * Sets the uriWithBlockedDomain property value. Configuration that specifies blocked domains for redirect URIs with global and platform-specific settings.
      * @param value Value to set for the uriWithBlockedDomain property.
      */
     public void setUriWithBlockedDomain(@jakarta.annotation.Nullable final RedirectUriBlockedDomainConfiguration value) {
         this.backingStore.set("uriWithBlockedDomain", value);
     }
     /**
-     * Sets the uriWithBlockedScheme property value. The uriWithBlockedScheme property
+     * Sets the uriWithBlockedScheme property value. Configuration that specifies blocked URI schemes for redirect URIs with global and platform-specific settings and exempt format patterns.
      * @param value Value to set for the uriWithBlockedScheme property.
      */
     public void setUriWithBlockedScheme(@jakarta.annotation.Nullable final RedirectUriBlockedSchemeConfiguration value) {
         this.backingStore.set("uriWithBlockedScheme", value);
     }
     /**
-     * Sets the uriWithoutAllowedDomain property value. The uriWithoutAllowedDomain property
+     * Sets the uriWithoutAllowedDomain property value. Configuration that specifies allowed domains for redirect URIs with global and platform-specific settings.
      * @param value Value to set for the uriWithoutAllowedDomain property.
      */
     public void setUriWithoutAllowedDomain(@jakarta.annotation.Nullable final RedirectUriAllowedDomainConfiguration value) {
         this.backingStore.set("uriWithoutAllowedDomain", value);
     }
     /**
-     * Sets the uriWithoutAllowedScheme property value. The uriWithoutAllowedScheme property
+     * Sets the uriWithoutAllowedScheme property value. Configuration that specifies allowed URI schemes for redirect URIs with global and platform-specific settings.
      * @param value Value to set for the uriWithoutAllowedScheme property.
      */
     public void setUriWithoutAllowedScheme(@jakarta.annotation.Nullable final RedirectUriAllowedSchemeConfiguration value) {
         this.backingStore.set("uriWithoutAllowedScheme", value);
     }
     /**
-     * Sets the uriWithWildcard property value. The uriWithWildcard property
+     * Sets the uriWithWildcard property value. Configuration that controls the use of wildcard patterns in redirect URIs with configurable exceptions.
      * @param value Value to set for the uriWithWildcard property.
      */
     public void setUriWithWildcard(@jakarta.annotation.Nullable final RedirectUriWildcardConfiguration value) {

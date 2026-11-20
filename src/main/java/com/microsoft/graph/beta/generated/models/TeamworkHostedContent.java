@@ -27,6 +27,7 @@ public class TeamworkHostedContent extends Entity implements Parsable {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.chatMessageHostedContent": return new ChatMessageHostedContent();
+                case "#microsoft.graph.teamworkCustomEmoji": return new TeamworkCustomEmoji();
             }
         }
         return new TeamworkHostedContent();

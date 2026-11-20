@@ -39,7 +39,10 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getCapabilities method.
      * @return a {@link GetCapabilitiesRequestBuilder}
+     * @deprecated
+     * The getCapabilities API is deprecated and will stop returning data on July 31, 2023. Please use the capabilities property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetCapabilitiesRequestBuilder getCapabilities() {
         return new GetCapabilitiesRequestBuilder(pathParameters, requestAdapter);
@@ -55,7 +58,10 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the resetDefaults method.
      * @return a {@link ResetDefaultsRequestBuilder}
+     * @deprecated
+     * The resetDefaults API is deprecated and will stop returning data on July 31, 2023. Please use the restoreFactoryDefaults API instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ResetDefaultsRequestBuilder resetDefaults() {
         return new ResetDefaultsRequestBuilder(pathParameters, requestAdapter);
@@ -71,7 +77,10 @@ public class PrinterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the share property of the microsoft.graph.printer entity.
      * @return a {@link ShareRequestBuilder}
+     * @deprecated
+     * The share navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ShareRequestBuilder share() {
         return new ShareRequestBuilder(pathParameters, requestAdapter);

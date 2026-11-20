@@ -61,6 +61,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         deserializerMap.put("certificateUserBindings", (n) -> { this.setCertificateUserBindings(n.getCollectionOfObjectValues(X509CertificateUserBinding::createFromDiscriminatorValue)); });
         deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("issuerHintsConfiguration", (n) -> { this.setIssuerHintsConfiguration(n.getObjectValue(X509CertificateIssuerHintsConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("requireCertificateSidAlignment", (n) -> { this.setRequireCertificateSidAlignment(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
@@ -80,6 +81,14 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         return this.backingStore.get("issuerHintsConfiguration");
     }
     /**
+     * Gets the requireCertificateSidAlignment property value. When set to true, Microsoft Entra ID matches the SID in the Security Identifier (SID) extension or the SAN URI SID value from the user&apos;s X.509 certificate to the user&apos;s on-premises SID attribute for hybrid users and cloud SID for cloud-only users. Certificate-based authentication fails if the values don&apos;t match. The value can&apos;t be null. The default value is false.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getRequireCertificateSidAlignment() {
+        return this.backingStore.get("requireCertificateSidAlignment");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -91,6 +100,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         writer.writeCollectionOfObjectValues("certificateUserBindings", this.getCertificateUserBindings());
         writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
         writer.writeObjectValue("issuerHintsConfiguration", this.getIssuerHintsConfiguration());
+        writer.writeBooleanValue("requireCertificateSidAlignment", this.getRequireCertificateSidAlignment());
     }
     /**
      * Sets the authenticationModeConfiguration property value. Defines strong authentication configurations. This configuration includes the default authentication mode and the different rules for strong authentication bindings.
@@ -126,5 +136,12 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      */
     public void setIssuerHintsConfiguration(@jakarta.annotation.Nullable final X509CertificateIssuerHintsConfiguration value) {
         this.backingStore.set("issuerHintsConfiguration", value);
+    }
+    /**
+     * Sets the requireCertificateSidAlignment property value. When set to true, Microsoft Entra ID matches the SID in the Security Identifier (SID) extension or the SAN URI SID value from the user&apos;s X.509 certificate to the user&apos;s on-premises SID attribute for hybrid users and cloud SID for cloud-only users. Certificate-based authentication fails if the values don&apos;t match. The value can&apos;t be null. The default value is false.
+     * @param value Value to set for the requireCertificateSidAlignment property.
+     */
+    public void setRequireCertificateSidAlignment(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("requireCertificateSidAlignment", value);
     }
 }

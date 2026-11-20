@@ -57,7 +57,7 @@ public class RedirectUriBlockedSchemeConfiguration implements AdditionalDataHold
         return this.backingStore;
     }
     /**
-     * Gets the blockedSchemes property value. The blockedSchemes property
+     * Gets the blockedSchemes property value. Collection of URI schemes that are blocked globally across all platforms. Schemes refer to URI schemes as defined in RFC 3986 3.1.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class RedirectUriBlockedSchemeConfiguration implements AdditionalDataHold
         return this.backingStore.get("blockedSchemes");
     }
     /**
-     * Gets the excludeActors property value. The excludeActors property
+     * Gets the excludeActors property value. Applications or service principals that are exempt from this restriction.
      * @return a {@link AppManagementPolicyActorExemptions}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class RedirectUriBlockedSchemeConfiguration implements AdditionalDataHold
         return this.backingStore.get("excludeActors");
     }
     /**
-     * Gets the exemptFormats property value. The exemptFormats property
+     * Gets the exemptFormats property value. Collection of URI patterns that are exempt from the blocked scheme restrictions. Patterns must follow specific validation rules for standard URI formats or URN formats.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class RedirectUriBlockedSchemeConfiguration implements AdditionalDataHold
         return deserializerMap;
     }
     /**
-     * Gets the isStateSetByMicrosoft property value. The isStateSetByMicrosoft property
+     * Gets the isStateSetByMicrosoft property value. Indicates whether the restriction state was set by Microsoft.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class RedirectUriBlockedSchemeConfiguration implements AdditionalDataHold
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the publicClient property value. The publicClient property
+     * Gets the publicClient property value. Platform-specific blocked scheme configuration for public client applications (native/mobile apps).
      * @return a {@link RedirectUriPlatformBlockedSchemeConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class RedirectUriBlockedSchemeConfiguration implements AdditionalDataHold
         return this.backingStore.get("publicClient");
     }
     /**
-     * Gets the restrictForAppsCreatedAfterDateTime property value. The restrictForAppsCreatedAfterDateTime property
+     * Gets the restrictForAppsCreatedAfterDateTime property value. Date and time when this restriction starts applying to newly created applications. Applications created before this date are not affected.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class RedirectUriBlockedSchemeConfiguration implements AdditionalDataHold
         return this.backingStore.get("restrictForAppsCreatedAfterDateTime");
     }
     /**
-     * Gets the spa property value. The spa property
+     * Gets the spa property value. Platform-specific blocked scheme configuration for single-page applications (SPAs).
      * @return a {@link RedirectUriPlatformBlockedSchemeConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class RedirectUriBlockedSchemeConfiguration implements AdditionalDataHold
         return this.backingStore.get("state");
     }
     /**
-     * Gets the web property value. The web property
+     * Gets the web property value. Platform-specific blocked scheme configuration for web applications.
      * @return a {@link RedirectUriPlatformBlockedSchemeConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -188,28 +188,28 @@ public class RedirectUriBlockedSchemeConfiguration implements AdditionalDataHold
         this.backingStore = value;
     }
     /**
-     * Sets the blockedSchemes property value. The blockedSchemes property
+     * Sets the blockedSchemes property value. Collection of URI schemes that are blocked globally across all platforms. Schemes refer to URI schemes as defined in RFC 3986 3.1.
      * @param value Value to set for the blockedSchemes property.
      */
     public void setBlockedSchemes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("blockedSchemes", value);
     }
     /**
-     * Sets the excludeActors property value. The excludeActors property
+     * Sets the excludeActors property value. Applications or service principals that are exempt from this restriction.
      * @param value Value to set for the excludeActors property.
      */
     public void setExcludeActors(@jakarta.annotation.Nullable final AppManagementPolicyActorExemptions value) {
         this.backingStore.set("excludeActors", value);
     }
     /**
-     * Sets the exemptFormats property value. The exemptFormats property
+     * Sets the exemptFormats property value. Collection of URI patterns that are exempt from the blocked scheme restrictions. Patterns must follow specific validation rules for standard URI formats or URN formats.
      * @param value Value to set for the exemptFormats property.
      */
     public void setExemptFormats(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("exemptFormats", value);
     }
     /**
-     * Sets the isStateSetByMicrosoft property value. The isStateSetByMicrosoft property
+     * Sets the isStateSetByMicrosoft property value. Indicates whether the restriction state was set by Microsoft.
      * @param value Value to set for the isStateSetByMicrosoft property.
      */
     public void setIsStateSetByMicrosoft(@jakarta.annotation.Nullable final Boolean value) {
@@ -223,21 +223,21 @@ public class RedirectUriBlockedSchemeConfiguration implements AdditionalDataHold
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the publicClient property value. The publicClient property
+     * Sets the publicClient property value. Platform-specific blocked scheme configuration for public client applications (native/mobile apps).
      * @param value Value to set for the publicClient property.
      */
     public void setPublicClient(@jakarta.annotation.Nullable final RedirectUriPlatformBlockedSchemeConfiguration value) {
         this.backingStore.set("publicClient", value);
     }
     /**
-     * Sets the restrictForAppsCreatedAfterDateTime property value. The restrictForAppsCreatedAfterDateTime property
+     * Sets the restrictForAppsCreatedAfterDateTime property value. Date and time when this restriction starts applying to newly created applications. Applications created before this date are not affected.
      * @param value Value to set for the restrictForAppsCreatedAfterDateTime property.
      */
     public void setRestrictForAppsCreatedAfterDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("restrictForAppsCreatedAfterDateTime", value);
     }
     /**
-     * Sets the spa property value. The spa property
+     * Sets the spa property value. Platform-specific blocked scheme configuration for single-page applications (SPAs).
      * @param value Value to set for the spa property.
      */
     public void setSpa(@jakarta.annotation.Nullable final RedirectUriPlatformBlockedSchemeConfiguration value) {
@@ -251,7 +251,7 @@ public class RedirectUriBlockedSchemeConfiguration implements AdditionalDataHold
         this.backingStore.set("state", value);
     }
     /**
-     * Sets the web property value. The web property
+     * Sets the web property value. Platform-specific blocked scheme configuration for web applications.
      * @param value Value to set for the web property.
      */
     public void setWeb(@jakarta.annotation.Nullable final RedirectUriPlatformBlockedSchemeConfiguration value) {

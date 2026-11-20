@@ -54,7 +54,10 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the taskFolders property of the microsoft.graph.outlookUser entity.
      * @return a {@link TaskFoldersRequestBuilder}
+     * @deprecated
+     * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TaskFoldersRequestBuilder taskFolders() {
         return new TaskFoldersRequestBuilder(pathParameters, requestAdapter);
@@ -62,7 +65,10 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the taskGroups property of the microsoft.graph.outlookUser entity.
      * @return a {@link TaskGroupsRequestBuilder}
+     * @deprecated
+     * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TaskGroupsRequestBuilder taskGroups() {
         return new TaskGroupsRequestBuilder(pathParameters, requestAdapter);
@@ -70,7 +76,10 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the tasks property of the microsoft.graph.outlookUser entity.
      * @return a {@link TasksRequestBuilder}
+     * @deprecated
+     * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TasksRequestBuilder tasks() {
         return new TasksRequestBuilder(pathParameters, requestAdapter);

@@ -37,6 +37,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.accessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource": return new AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource();
+                case "#microsoft.graph.accessReviewInstanceDecisionItemAccessPackageResource": return new AccessReviewInstanceDecisionItemAccessPackageResource();
                 case "#microsoft.graph.accessReviewInstanceDecisionItemAzureRoleResource": return new AccessReviewInstanceDecisionItemAzureRoleResource();
                 case "#microsoft.graph.accessReviewInstanceDecisionItemCustomDataProvidedResource": return new AccessReviewInstanceDecisionItemCustomDataProvidedResource();
                 case "#microsoft.graph.accessReviewInstanceDecisionItemServicePrincipalResource": return new AccessReviewInstanceDecisionItemServicePrincipalResource();
@@ -112,7 +113,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the type property value. Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackageAssignmentPolicy, and CustomDataProvidedResource.
+     * Gets the type property value. Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackage, AccessPackageAssignmentPolicy, and CustomDataProvidedResource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -176,7 +177,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the type property value. Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackageAssignmentPolicy, and CustomDataProvidedResource.
+     * Sets the type property value. Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackage, AccessPackageAssignmentPolicy, and CustomDataProvidedResource.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

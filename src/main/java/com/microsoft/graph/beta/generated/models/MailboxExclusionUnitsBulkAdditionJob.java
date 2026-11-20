@@ -36,7 +36,7 @@ public class MailboxExclusionUnitsBulkAdditionJob extends ExclusionUnitBulkAddit
         return deserializerMap;
     }
     /**
-     * Gets the mailboxes property value. The mailboxes property
+     * Gets the mailboxes property value. The email addresses of the mailboxes to be added as exclusion units to the protection policy.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class MailboxExclusionUnitsBulkAdditionJob extends ExclusionUnitBulkAddit
         writer.writeCollectionOfPrimitiveValues("mailboxes", this.getMailboxes());
     }
     /**
-     * Sets the mailboxes property value. The mailboxes property
+     * Sets the mailboxes property value. The email addresses of the mailboxes to be added as exclusion units to the protection policy.
      * @param value Value to set for the mailboxes property.
      */
     public void setMailboxes(@jakarta.annotation.Nullable final java.util.List<String> value) {

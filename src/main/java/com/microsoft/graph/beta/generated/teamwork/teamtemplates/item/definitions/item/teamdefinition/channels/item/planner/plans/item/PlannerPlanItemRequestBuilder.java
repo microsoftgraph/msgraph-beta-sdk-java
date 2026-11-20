@@ -5,7 +5,10 @@ import com.microsoft.graph.beta.models.PlannerPlan;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.planner.plans.item.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.planner.plans.item.buckets.BucketsRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.planner.plans.item.details.DetailsRequestBuilder;
+import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.planner.plans.item.extendexpiry.ExtendExpiryRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.planner.plans.item.getusagerights.GetUsageRightsRequestBuilder;
+import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.planner.plans.item.goals.GoalsRequestBuilder;
+import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.planner.plans.item.historyitems.HistoryItemsRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.planner.plans.item.movetocontainer.MoveToContainerRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.planner.plans.item.tasks.TasksRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.planner.plans.item.unarchive.UnarchiveRequestBuilder;
@@ -52,12 +55,39 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
         return new DetailsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the extendExpiry method.
+     * @return a {@link ExtendExpiryRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ExtendExpiryRequestBuilder extendExpiry() {
+        return new ExtendExpiryRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the getUsageRights method.
      * @return a {@link GetUsageRightsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetUsageRightsRequestBuilder getUsageRights() {
         return new GetUsageRightsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the goals property of the microsoft.graph.plannerPlan entity.
+     * @return a {@link GoalsRequestBuilder}
+     * @deprecated
+     * private preview elements are required to be marked as deprecated as of 2025-03/Tasks_And_Plans on 2025-03-26 and will be removed 2026-03-26
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public GoalsRequestBuilder goals() {
+        return new GoalsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the historyItems property of the microsoft.graph.plannerPlan entity.
+     * @return a {@link HistoryItemsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public HistoryItemsRequestBuilder historyItems() {
+        return new HistoryItemsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the moveToContainer method.

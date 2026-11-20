@@ -69,7 +69,7 @@ public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
         deserializerMap.put("contentSource", (n) -> { this.setContentSource(n.getStringValue()); });
         deserializerMap.put("hitId", (n) -> { this.setHitId(n.getStringValue()); });
         deserializerMap.put("_id", (n) -> { this.setId(n.getStringValue()); });
@@ -80,6 +80,7 @@ public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("resultTemplateId", (n) -> { this.setResultTemplateId(n.getStringValue()); });
         deserializerMap.put("_score", (n) -> { this.setScore(n.getIntegerValue()); });
         deserializerMap.put("_summary", (n) -> { this.setSearchHitSummary(n.getStringValue()); });
+        deserializerMap.put("sensitivityLabel", (n) -> { this.setSensitivityLabel(n.getObjectValue(SensitivityLabelInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("_source", (n) -> { this.setSource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
         deserializerMap.put("summary", (n) -> { this.setSummary(n.getStringValue()); });
         return deserializerMap;
@@ -101,7 +102,7 @@ public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("id");
     }
     /**
-     * Gets the isCollapsed property value. Indicates whether the current result is collapses when the collapseProperties property in the searchRequest is used.
+     * Gets the isCollapsed property value. Indicates whether the current result is collapsed when the collapseProperties property in the searchRequest is used.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +134,7 @@ public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("resource");
     }
     /**
-     * Gets the resultTemplateId property value. ID of the result template for rendering the search result. This ID must map to a display layout in the resultTemplates dictionary, included in the searchresponse as well.
+     * Gets the resultTemplateId property value. ID of the result template for rendering the search result. This ID must map to a display layout in the resultTemplates dictionary, included in the searchResponse as well.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -155,6 +156,14 @@ public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nullable
     public String getSearchHitSummary() {
         return this.backingStore.get("searchHitSummary");
+    }
+    /**
+     * Gets the sensitivityLabel property value. The sensitivity label applied to the search result resource, or null if the resource has no sensitivity label.
+     * @return a {@link SensitivityLabelInfo}
+     */
+    @jakarta.annotation.Nullable
+    public SensitivityLabelInfo getSensitivityLabel() {
+        return this.backingStore.get("sensitivityLabel");
     }
     /**
      * Gets the _source property value. The source property
@@ -188,6 +197,7 @@ public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeStringValue("resultTemplateId", this.getResultTemplateId());
         writer.writeIntegerValue("_score", this.getScore());
         writer.writeStringValue("_summary", this.getSearchHitSummary());
+        writer.writeObjectValue("sensitivityLabel", this.getSensitivityLabel());
         writer.writeObjectValue("_source", this.getSource());
         writer.writeStringValue("summary", this.getSummary());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -229,7 +239,7 @@ public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("id", value);
     }
     /**
-     * Sets the isCollapsed property value. Indicates whether the current result is collapses when the collapseProperties property in the searchRequest is used.
+     * Sets the isCollapsed property value. Indicates whether the current result is collapsed when the collapseProperties property in the searchRequest is used.
      * @param value Value to set for the isCollapsed property.
      */
     public void setIsCollapsed(@jakarta.annotation.Nullable final Boolean value) {
@@ -257,7 +267,7 @@ public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("resource", value);
     }
     /**
-     * Sets the resultTemplateId property value. ID of the result template for rendering the search result. This ID must map to a display layout in the resultTemplates dictionary, included in the searchresponse as well.
+     * Sets the resultTemplateId property value. ID of the result template for rendering the search result. This ID must map to a display layout in the resultTemplates dictionary, included in the searchResponse as well.
      * @param value Value to set for the resultTemplateId property.
      */
     public void setResultTemplateId(@jakarta.annotation.Nullable final String value) {
@@ -276,6 +286,13 @@ public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setSearchHitSummary(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("searchHitSummary", value);
+    }
+    /**
+     * Sets the sensitivityLabel property value. The sensitivity label applied to the search result resource, or null if the resource has no sensitivity label.
+     * @param value Value to set for the sensitivityLabel property.
+     */
+    public void setSensitivityLabel(@jakarta.annotation.Nullable final SensitivityLabelInfo value) {
+        this.backingStore.set("sensitivityLabel", value);
     }
     /**
      * Sets the _source property value. The source property

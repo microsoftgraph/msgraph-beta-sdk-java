@@ -1,8 +1,12 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.EnumSet;
 import java.util.HashMap;
@@ -12,12 +16,18 @@ import java.util.Objects;
  * Singleton entity that acts as a container for all device app management functionality.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceAppManagement extends Entity implements Parsable {
+public class DeviceAppManagement implements AdditionalDataHolder, BackedModel, Parsable {
+    /**
+     * Stores model information.
+     */
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new {@link DeviceAppManagement} and sets the default values.
      */
     public DeviceAppManagement() {
-        super();
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,12 +40,33 @@ public class DeviceAppManagement extends Entity implements Parsable {
         return new DeviceAppManagement();
     }
     /**
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return a {@link Map<String, Object>}
+     */
+    @jakarta.annotation.Nonnull
+    public Map<String, Object> getAdditionalData() {
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
      * Gets the androidManagedAppProtections property value. Android managed app policies.
      * @return a {@link java.util.List<AndroidManagedAppProtection>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidManagedAppProtection> getAndroidManagedAppProtections() {
         return this.backingStore.get("androidManagedAppProtections");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a {@link BackingStore}
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the defaultManagedAppProtections property value. Default managed app policies.
@@ -67,7 +98,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(33);
         deserializerMap.put("androidManagedAppProtections", (n) -> { this.setAndroidManagedAppProtections(n.getCollectionOfObjectValues(AndroidManagedAppProtection::createFromDiscriminatorValue)); });
         deserializerMap.put("defaultManagedAppProtections", (n) -> { this.setDefaultManagedAppProtections(n.getCollectionOfObjectValues(DefaultManagedAppProtection::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceAppManagementTasks", (n) -> { this.setDeviceAppManagementTasks(n.getCollectionOfObjectValues(DeviceAppManagementTask::createFromDiscriminatorValue)); });
@@ -90,6 +121,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
         deserializerMap.put("mobileAppConfigurations", (n) -> { this.setMobileAppConfigurations(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("mobileAppRelationships", (n) -> { this.setMobileAppRelationships(n.getCollectionOfObjectValues(MobileAppRelationship::createFromDiscriminatorValue)); });
         deserializerMap.put("mobileApps", (n) -> { this.setMobileApps(n.getCollectionOfObjectValues(MobileApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("policySets", (n) -> { this.setPolicySets(n.getCollectionOfObjectValues(PolicySet::createFromDiscriminatorValue)); });
         deserializerMap.put("symantecCodeSigningCertificate", (n) -> { this.setSymantecCodeSigningCertificate(n.getObjectValue(SymantecCodeSigningCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("targetedManagedAppConfigurations", (n) -> { this.setTargetedManagedAppConfigurations(n.getCollectionOfObjectValues(TargetedManagedAppConfiguration::createFromDiscriminatorValue)); });
@@ -247,6 +279,14 @@ public class DeviceAppManagement extends Entity implements Parsable {
         return this.backingStore.get("mobileApps");
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getOdataType() {
+        return this.backingStore.get("odataType");
+    }
+    /**
      * Gets the policySets property value. The PolicySet of Policies and Applications
      * @return a {@link java.util.List<PolicySet>}
      */
@@ -332,7 +372,6 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        super.serialize(writer);
         writer.writeCollectionOfObjectValues("androidManagedAppProtections", this.getAndroidManagedAppProtections());
         writer.writeCollectionOfObjectValues("defaultManagedAppProtections", this.getDefaultManagedAppProtections());
         writer.writeCollectionOfObjectValues("deviceAppManagementTasks", this.getDeviceAppManagementTasks());
@@ -355,6 +394,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("mobileAppConfigurations", this.getMobileAppConfigurations());
         writer.writeCollectionOfObjectValues("mobileAppRelationships", this.getMobileAppRelationships());
         writer.writeCollectionOfObjectValues("mobileApps", this.getMobileApps());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("policySets", this.getPolicySets());
         writer.writeObjectValue("symantecCodeSigningCertificate", this.getSymantecCodeSigningCertificate());
         writer.writeCollectionOfObjectValues("targetedManagedAppConfigurations", this.getTargetedManagedAppConfigurations());
@@ -365,6 +405,14 @@ public class DeviceAppManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("windowsInformationProtectionWipeActions", this.getWindowsInformationProtectionWipeActions());
         writer.writeCollectionOfObjectValues("windowsManagedAppProtections", this.getWindowsManagedAppProtections());
         writer.writeObjectValue("windowsManagementApp", this.getWindowsManagementApp());
+        writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
+     */
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the androidManagedAppProtections property value. Android managed app policies.
@@ -372,6 +420,14 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     public void setAndroidManagedAppProtections(@jakarta.annotation.Nullable final java.util.List<AndroidManagedAppProtection> value) {
         this.backingStore.set("androidManagedAppProtections", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the defaultManagedAppProtections property value. Default managed app policies.
@@ -519,6 +575,13 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     public void setMobileApps(@jakarta.annotation.Nullable final java.util.List<MobileApp> value) {
         this.backingStore.set("mobileApps", value);
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the @odata.type property.
+     */
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the policySets property value. The PolicySet of Policies and Applications

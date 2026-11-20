@@ -6,6 +6,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.users.item.devices.count.CountRequestBuilder;
 import com.microsoft.graph.beta.users.item.devices.delta.DeltaRequestBuilder;
 import com.microsoft.graph.beta.users.item.devices.item.DeviceItemRequestBuilder;
+import com.microsoft.graph.beta.users.item.devices.provision.ProvisionRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -39,6 +40,14 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the provision method.
+     * @return a {@link ProvisionRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ProvisionRequestBuilder provision() {
+        return new ProvisionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the devices property of the microsoft.graph.user entity.

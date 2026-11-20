@@ -23,9 +23,11 @@ import com.microsoft.graph.beta.drives.item.items.item.getactivitiesbyintervalwi
 import com.microsoft.graph.beta.drives.item.items.item.invite.InviteRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.listitem.ListItemRequestBuilder;
+import com.microsoft.graph.beta.drives.item.items.item.lock.LockRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.permissions.PermissionsRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.preview.PreviewRequestBuilder;
+import com.microsoft.graph.beta.drives.item.items.item.releaselock.ReleaseLockRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.retentionlabel.RetentionLabelRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.searchwithq.SearchWithQRequestBuilder;
@@ -225,6 +227,14 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
         return new ListItemRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the lock method.
+     * @return a {@link LockRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public LockRequestBuilder lock() {
+        return new LockRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the permanentDelete method.
      * @return a {@link PermanentDeleteRequestBuilder}
      */
@@ -247,6 +257,14 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PreviewRequestBuilder preview() {
         return new PreviewRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the releaseLock method.
+     * @return a {@link ReleaseLockRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReleaseLockRequestBuilder releaseLock() {
+        return new ReleaseLockRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the restore method.

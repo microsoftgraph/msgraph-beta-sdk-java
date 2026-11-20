@@ -7,7 +7,7 @@ import com.microsoft.graph.beta.directory.tenantgovernance.governancerequests.Go
 import com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.RelatedTenantsRequestBuilder;
 import com.microsoft.graph.beta.directory.tenantgovernance.settings.SettingsRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.tenantgovernanceservices.TenantGovernance;
+import com.microsoft.graph.beta.models.TenantGovernance;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -27,7 +27,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to manage the governanceInvitations property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.
+     * Provides operations to manage the governanceInvitations property of the microsoft.graph.tenantGovernance entity.
      * @return a {@link GovernanceInvitationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -35,7 +35,7 @@ public class TenantGovernanceRequestBuilder extends BaseRequestBuilder {
         return new GovernanceInvitationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the governancePolicyTemplates property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.
+     * Provides operations to manage the governancePolicyTemplates property of the microsoft.graph.tenantGovernance entity.
      * @return a {@link GovernancePolicyTemplatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class TenantGovernanceRequestBuilder extends BaseRequestBuilder {
         return new GovernancePolicyTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the governanceRelationships property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.
+     * Provides operations to manage the governanceRelationships property of the microsoft.graph.tenantGovernance entity.
      * @return a {@link GovernanceRelationshipsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class TenantGovernanceRequestBuilder extends BaseRequestBuilder {
         return new GovernanceRelationshipsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the governanceRequests property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.
+     * Provides operations to manage the governanceRequests property of the microsoft.graph.tenantGovernance entity.
      * @return a {@link GovernanceRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class TenantGovernanceRequestBuilder extends BaseRequestBuilder {
         return new GovernanceRequestsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the relatedTenants property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.
+     * Provides operations to manage the relatedTenants property of the microsoft.graph.tenantGovernance entity.
      * @return a {@link RelatedTenantsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class TenantGovernanceRequestBuilder extends BaseRequestBuilder {
         return new RelatedTenantsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the settings property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.
+     * Provides operations to manage the settings property of the microsoft.graph.tenantGovernance entity.
      * @return a {@link SettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull

@@ -42,7 +42,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("allotmentDisplayName");
     }
     /**
-     * Gets the connectionSetting property value. The connection setting of the Cloud PC. Possible values: enableSingleSignOn. Read Only.
+     * Gets the connectionSetting property value. The connection setting of the Cloud PC. Possible values: enableSingleSignOn. Read-only.
      * @return a {@link CloudPcConnectionSetting}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,9 @@ public class CloudPC extends Entity implements Parsable {
         deserializerMap.put("gracePeriodEndDateTime", (n) -> { this.setGracePeriodEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("groupDetail", (n) -> { this.setGroupDetail(n.getObjectValue(CloudPcEntraGroupDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("imageDisplayName", (n) -> { this.setImageDisplayName(n.getStringValue()); });
+        deserializerMap.put("isDisasterRecoveryActive", (n) -> { this.setIsDisasterRecoveryActive(n.getBooleanValue()); });
         deserializerMap.put("lastLoginResult", (n) -> { this.setLastLoginResult(n.getObjectValue(CloudPcLoginResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastLogoffDateTime", (n) -> { this.setLastLogoffDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastRemoteActionResult", (n) -> { this.setLastRemoteActionResult(n.getObjectValue(CloudPcRemoteActionResult::createFromDiscriminatorValue)); });
         deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });
@@ -128,6 +130,7 @@ public class CloudPC extends Entity implements Parsable {
         deserializerMap.put("powerState", (n) -> { this.setPowerState(n.getEnumValue(CloudPcPowerState::forValue)); });
         deserializerMap.put("productType", (n) -> { this.setProductType(n.getEnumValue(CloudPcProductType::forValue)); });
         deserializerMap.put("provisionedDateTime", (n) -> { this.setProvisionedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("provisioningConfiguration", (n) -> { this.setProvisioningConfiguration(n.getObjectValue(CloudPcProvisioningConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("provisioningPolicyId", (n) -> { this.setProvisioningPolicyId(n.getStringValue()); });
         deserializerMap.put("provisioningPolicyName", (n) -> { this.setProvisioningPolicyName(n.getStringValue()); });
         deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPcProvisioningType::forValue)); });
@@ -178,12 +181,28 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("imageDisplayName");
     }
     /**
+     * Gets the isDisasterRecoveryActive property value. Indicates whether the Cloud PC currently runs in its disaster recovery region after a failover event. true if the Cloud PC is currently running in its disaster recovery region; otherwise, false. Read-only.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsDisasterRecoveryActive() {
+        return this.backingStore.get("isDisasterRecoveryActive");
+    }
+    /**
      * Gets the lastLoginResult property value. The last login result of the Cloud PC. For example, { &apos;time&apos;: &apos;2014-01-01T00:00:00Z&apos;}.
      * @return a {@link CloudPcLoginResult}
      */
     @jakarta.annotation.Nullable
     public CloudPcLoginResult getLastLoginResult() {
         return this.backingStore.get("lastLoginResult");
+    }
+    /**
+     * Gets the lastLogoffDateTime property value. The date and time when the user last logged off from the Cloud PC session. Returns null if the user has never established a session or if a session is currently active. The timestamp is shown in ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Returned only when explicitly selected with $select.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastLogoffDateTime() {
+        return this.backingStore.get("lastLogoffDateTime");
     }
     /**
      * Gets the lastModifiedDateTime property value. The last modified date and time of the Cloud PC. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
@@ -266,6 +285,14 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("provisionedDateTime");
     }
     /**
+     * Gets the provisioningConfiguration property value. The policy-derived configuration of the Cloud PC. Contains properties inherited from the provisioning policy that were applied during the most recent provisioning or reprovisioning. Returned only when explicitly selected with $select. Read-only.
+     * @return a {@link CloudPcProvisioningConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcProvisioningConfiguration getProvisioningConfiguration() {
+        return this.backingStore.get("provisioningConfiguration");
+    }
+    /**
      * Gets the provisioningPolicyId property value. The provisioning policy ID of the Cloud PC.
      * @return a {@link String}
      */
@@ -290,7 +317,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("provisioningType");
     }
     /**
-     * Gets the scopeIds property value. The scopeIds property
+     * Gets the scopeIds property value. The scope IDs of the corresponding permission. Currently, it&apos;s the Intune scope tag ID. Read-only.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -405,7 +432,9 @@ public class CloudPC extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("gracePeriodEndDateTime", this.getGracePeriodEndDateTime());
         writer.writeObjectValue("groupDetail", this.getGroupDetail());
         writer.writeStringValue("imageDisplayName", this.getImageDisplayName());
+        writer.writeBooleanValue("isDisasterRecoveryActive", this.getIsDisasterRecoveryActive());
         writer.writeObjectValue("lastLoginResult", this.getLastLoginResult());
+        writer.writeOffsetDateTimeValue("lastLogoffDateTime", this.getLastLogoffDateTime());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeObjectValue("lastRemoteActionResult", this.getLastRemoteActionResult());
         writer.writeStringValue("managedDeviceId", this.getManagedDeviceId());
@@ -416,6 +445,7 @@ public class CloudPC extends Entity implements Parsable {
         writer.writeEnumValue("powerState", this.getPowerState());
         writer.writeEnumValue("productType", this.getProductType());
         writer.writeOffsetDateTimeValue("provisionedDateTime", this.getProvisionedDateTime());
+        writer.writeObjectValue("provisioningConfiguration", this.getProvisioningConfiguration());
         writer.writeStringValue("provisioningPolicyId", this.getProvisioningPolicyId());
         writer.writeStringValue("provisioningPolicyName", this.getProvisioningPolicyName());
         writer.writeEnumValue("provisioningType", this.getProvisioningType());
@@ -447,7 +477,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("allotmentDisplayName", value);
     }
     /**
-     * Sets the connectionSetting property value. The connection setting of the Cloud PC. Possible values: enableSingleSignOn. Read Only.
+     * Sets the connectionSetting property value. The connection setting of the Cloud PC. Possible values: enableSingleSignOn. Read-only.
      * @param value Value to set for the connectionSetting property.
      */
     public void setConnectionSetting(@jakarta.annotation.Nullable final CloudPcConnectionSetting value) {
@@ -524,11 +554,25 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("imageDisplayName", value);
     }
     /**
+     * Sets the isDisasterRecoveryActive property value. Indicates whether the Cloud PC currently runs in its disaster recovery region after a failover event. true if the Cloud PC is currently running in its disaster recovery region; otherwise, false. Read-only.
+     * @param value Value to set for the isDisasterRecoveryActive property.
+     */
+    public void setIsDisasterRecoveryActive(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isDisasterRecoveryActive", value);
+    }
+    /**
      * Sets the lastLoginResult property value. The last login result of the Cloud PC. For example, { &apos;time&apos;: &apos;2014-01-01T00:00:00Z&apos;}.
      * @param value Value to set for the lastLoginResult property.
      */
     public void setLastLoginResult(@jakarta.annotation.Nullable final CloudPcLoginResult value) {
         this.backingStore.set("lastLoginResult", value);
+    }
+    /**
+     * Sets the lastLogoffDateTime property value. The date and time when the user last logged off from the Cloud PC session. Returns null if the user has never established a session or if a session is currently active. The timestamp is shown in ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Returned only when explicitly selected with $select.
+     * @param value Value to set for the lastLogoffDateTime property.
+     */
+    public void setLastLogoffDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastLogoffDateTime", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The last modified date and time of the Cloud PC. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
@@ -601,6 +645,13 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("provisionedDateTime", value);
     }
     /**
+     * Sets the provisioningConfiguration property value. The policy-derived configuration of the Cloud PC. Contains properties inherited from the provisioning policy that were applied during the most recent provisioning or reprovisioning. Returned only when explicitly selected with $select. Read-only.
+     * @param value Value to set for the provisioningConfiguration property.
+     */
+    public void setProvisioningConfiguration(@jakarta.annotation.Nullable final CloudPcProvisioningConfiguration value) {
+        this.backingStore.set("provisioningConfiguration", value);
+    }
+    /**
      * Sets the provisioningPolicyId property value. The provisioning policy ID of the Cloud PC.
      * @param value Value to set for the provisioningPolicyId property.
      */
@@ -622,7 +673,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("provisioningType", value);
     }
     /**
-     * Sets the scopeIds property value. The scopeIds property
+     * Sets the scopeIds property value. The scope IDs of the corresponding permission. Currently, it&apos;s the Intune scope tag ID. Read-only.
      * @param value Value to set for the scopeIds property.
      */
     public void setScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

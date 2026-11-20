@@ -89,7 +89,7 @@ public class TeamsTab extends Entity implements Parsable {
         return this.backingStore.get("teamsAppId");
     }
     /**
-     * Gets the webUrl property value. Deep link URL of the tab instance. Read only.
+     * Gets the webUrl property value. Deep link URL of the tab instance. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -154,7 +154,7 @@ public class TeamsTab extends Entity implements Parsable {
         this.backingStore.set("teamsAppId", value);
     }
     /**
-     * Sets the webUrl property value. Deep link URL of the tab instance. Read only.
+     * Sets the webUrl property value. Deep link URL of the tab instance. Read-only.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

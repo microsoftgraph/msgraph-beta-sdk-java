@@ -14,7 +14,7 @@ public enum WindowsQualityUpdateApprovalStatus implements ValuedEnum {
     Approved("approved"),
     /** suspended for corresponding catalog item */
     Suspended("suspended"),
-    /** Evolvable enumeration sentinel value. Do not use. */
+    /** Evolvable enumeration sentinel value. Do not use */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     WindowsQualityUpdateApprovalStatus(final String value) {

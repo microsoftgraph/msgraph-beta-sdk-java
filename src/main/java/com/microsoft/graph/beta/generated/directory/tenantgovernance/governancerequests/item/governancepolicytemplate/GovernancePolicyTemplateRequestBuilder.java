@@ -1,7 +1,7 @@
 package com.microsoft.graph.beta.directory.tenantgovernance.governancerequests.item.governancepolicytemplate;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.tenantgovernanceservices.GovernancePolicyTemplate;
+import com.microsoft.graph.beta.models.TenantGovernancePolicyTemplate;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the governancePolicyTemplate property of the microsoft.graph.tenantGovernanceServices.governanceRequest entity.
+ * Provides operations to manage the governancePolicyTemplate property of the microsoft.graph.governanceRequest entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GovernancePolicyTemplateRequestBuilder extends BaseRequestBuilder {
@@ -38,25 +38,25 @@ public class GovernancePolicyTemplateRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The governance policy template associated with this request.
-     * @return a {@link GovernancePolicyTemplate}
+     * @return a {@link TenantGovernancePolicyTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public GovernancePolicyTemplate get() {
+    public TenantGovernancePolicyTemplate get() {
         return get(null);
     }
     /**
      * The governance policy template associated with this request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GovernancePolicyTemplate}
+     * @return a {@link TenantGovernancePolicyTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public GovernancePolicyTemplate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public TenantGovernancePolicyTemplate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GovernancePolicyTemplate::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, TenantGovernancePolicyTemplate::createFromDiscriminatorValue);
     }
     /**
      * The governance policy template associated with this request.

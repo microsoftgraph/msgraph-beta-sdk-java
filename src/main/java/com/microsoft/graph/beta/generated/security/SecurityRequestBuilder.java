@@ -2,13 +2,16 @@ package com.microsoft.graph.beta.security;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.Security;
+import com.microsoft.graph.beta.security.agenticsecurity.AgenticSecurityRequestBuilder;
 import com.microsoft.graph.beta.security.alerts_v2.AlertsV2RequestBuilder;
 import com.microsoft.graph.beta.security.alerts.AlertsRequestBuilder;
 import com.microsoft.graph.beta.security.attacksimulation.AttackSimulationRequestBuilder;
 import com.microsoft.graph.beta.security.auditlog.AuditLogRequestBuilder;
+import com.microsoft.graph.beta.security.casemanagement.CaseManagementRequestBuilder;
 import com.microsoft.graph.beta.security.cases.CasesRequestBuilder;
 import com.microsoft.graph.beta.security.cloudappsecurityprofiles.CloudAppSecurityProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.collaboration.CollaborationRequestBuilder;
+import com.microsoft.graph.beta.security.contentmanagement.ContentManagementRequestBuilder;
 import com.microsoft.graph.beta.security.datadiscovery.DataDiscoveryRequestBuilder;
 import com.microsoft.graph.beta.security.datasecurityandgovernance.DataSecurityAndGovernanceRequestBuilder;
 import com.microsoft.graph.beta.security.domainsecurityprofiles.DomainSecurityProfilesRequestBuilder;
@@ -20,6 +23,9 @@ import com.microsoft.graph.beta.security.incidenttasks.IncidentTasksRequestBuild
 import com.microsoft.graph.beta.security.informationprotection.InformationProtectionRequestBuilder;
 import com.microsoft.graph.beta.security.ipsecurityprofiles.IpSecurityProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.labels.LabelsRequestBuilder;
+import com.microsoft.graph.beta.security.microsoftgraphsecuritygethuntingschema.MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder;
+import com.microsoft.graph.beta.security.microsoftgraphsecuritygethuntingschematableswithworkspaceid.MicrosoftGraphSecurityGetHuntingSchemaTablesWithWorkspaceIdRequestBuilder;
+import com.microsoft.graph.beta.security.microsoftgraphsecuritygetrunhuntingquerywithquerytimespantimespanwithworkspaceid.MicrosoftGraphSecurityGetRunHuntingQueryWithQuerytimespanTimespanWithWorkspaceIdRequestBuilder;
 import com.microsoft.graph.beta.security.microsoftgraphsecurityrunhuntingquery.MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
 import com.microsoft.graph.beta.security.partner.PartnerRequestBuilder;
 import com.microsoft.graph.beta.security.providertenantsettings.ProviderTenantSettingsRequestBuilder;
@@ -35,6 +41,7 @@ import com.microsoft.graph.beta.security.tiindicators.TiIndicatorsRequestBuilder
 import com.microsoft.graph.beta.security.triggers.TriggersRequestBuilder;
 import com.microsoft.graph.beta.security.triggertypes.TriggerTypesRequestBuilder;
 import com.microsoft.graph.beta.security.usersecurityprofiles.UserSecurityProfilesRequestBuilder;
+import com.microsoft.graph.beta.security.workbooks.WorkbooksRequestBuilder;
 import com.microsoft.graph.beta.security.zones.ZonesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -55,9 +62,20 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
+     * The agenticSecurity property
+     * @return a {@link AgenticSecurityRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AgenticSecurityRequestBuilder agenticSecurity() {
+        return new AgenticSecurityRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the alerts property of the microsoft.graph.security entity.
      * @return a {@link AlertsRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AlertsRequestBuilder alerts() {
         return new AlertsRequestBuilder(pathParameters, requestAdapter);
@@ -87,6 +105,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         return new AuditLogRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the caseManagement property of the microsoft.graph.security entity.
+     * @return a {@link CaseManagementRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CaseManagementRequestBuilder caseManagement() {
+        return new CaseManagementRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the cases property of the microsoft.graph.security entity.
      * @return a {@link CasesRequestBuilder}
      */
@@ -97,7 +123,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the cloudAppSecurityProfiles property of the microsoft.graph.security entity.
      * @return a {@link CloudAppSecurityProfilesRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CloudAppSecurityProfilesRequestBuilder cloudAppSecurityProfiles() {
         return new CloudAppSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
@@ -109,6 +138,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CollaborationRequestBuilder collaboration() {
         return new CollaborationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * The contentManagement property
+     * @return a {@link ContentManagementRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ContentManagementRequestBuilder contentManagement() {
+        return new ContentManagementRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the dataDiscovery property of the microsoft.graph.security entity.
@@ -129,7 +166,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the domainSecurityProfiles property of the microsoft.graph.security entity.
      * @return a {@link DomainSecurityProfilesRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DomainSecurityProfilesRequestBuilder domainSecurityProfiles() {
         return new DomainSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
@@ -137,7 +177,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the fileSecurityProfiles property of the microsoft.graph.security entity.
      * @return a {@link FileSecurityProfilesRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public FileSecurityProfilesRequestBuilder fileSecurityProfiles() {
         return new FileSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
@@ -145,7 +188,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the hostSecurityProfiles property of the microsoft.graph.security entity.
      * @return a {@link HostSecurityProfilesRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public HostSecurityProfilesRequestBuilder hostSecurityProfiles() {
         return new HostSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
@@ -185,7 +231,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the ipSecurityProfiles property of the microsoft.graph.security entity.
      * @return a {@link IpSecurityProfilesRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public IpSecurityProfilesRequestBuilder ipSecurityProfiles() {
         return new IpSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
@@ -197,6 +246,22 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public LabelsRequestBuilder labels() {
         return new LabelsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getHuntingSchema method.
+     * @return a {@link MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder microsoftGraphSecurityGetHuntingSchema() {
+        return new MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getHuntingSchemaTables method.
+     * @return a {@link MicrosoftGraphSecurityGetHuntingSchemaTablesWithWorkspaceIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityGetHuntingSchemaTablesWithWorkspaceIdRequestBuilder microsoftGraphSecurityGetHuntingSchemaTablesWithWorkspaceId() {
+        return new MicrosoftGraphSecurityGetHuntingSchemaTablesWithWorkspaceIdRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the runHuntingQuery method.
@@ -217,7 +282,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the providerTenantSettings property of the microsoft.graph.security entity.
      * @return a {@link ProviderTenantSettingsRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ProviderTenantSettingsRequestBuilder providerTenantSettings() {
         return new ProviderTenantSettingsRequestBuilder(pathParameters, requestAdapter);
@@ -249,7 +317,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the securityActions property of the microsoft.graph.security entity.
      * @return a {@link SecurityActionsRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SecurityActionsRequestBuilder securityActions() {
         return new SecurityActionsRequestBuilder(pathParameters, requestAdapter);
@@ -289,7 +360,10 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the tiIndicators property of the microsoft.graph.security entity.
      * @return a {@link TiIndicatorsRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TiIndicatorsRequestBuilder tiIndicators() {
         return new TiIndicatorsRequestBuilder(pathParameters, requestAdapter);
@@ -313,10 +387,21 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the userSecurityProfiles property of the microsoft.graph.security entity.
      * @return a {@link UserSecurityProfilesRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public UserSecurityProfilesRequestBuilder userSecurityProfiles() {
         return new UserSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the workbooks property of the microsoft.graph.security entity.
+     * @return a {@link WorkbooksRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public WorkbooksRequestBuilder workbooks() {
+        return new WorkbooksRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the zones property of the microsoft.graph.security entity.
@@ -365,8 +450,18 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Security::createFromDiscriminatorValue);
     }
     /**
+     * Provides operations to call the getRunHuntingQuery method.
+     * @param query Usage: query=&apos;{query}&apos;
+     * @return a {@link MicrosoftGraphSecurityGetRunHuntingQueryWithQuerytimespanTimespanWithWorkspaceIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityGetRunHuntingQueryWithQuerytimespanTimespanWithWorkspaceIdRequestBuilder microsoftGraphSecurityGetRunHuntingQueryWithQuerytimespanTimespanWithWorkspaceId(@jakarta.annotation.Nonnull final String query) {
+        Objects.requireNonNull(query);
+        return new MicrosoftGraphSecurityGetRunHuntingQueryWithQuerytimespanTimespanWithWorkspaceIdRequestBuilder(pathParameters, requestAdapter, query);
+    }
+    /**
      * Update security
-     * @param body Security singleton providing access to audit log resources.
+     * @param body The request body
      * @return a {@link Security}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -376,7 +471,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update security
-     * @param body Security singleton providing access to audit log resources.
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Security}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -411,7 +506,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update security
-     * @param body Security singleton providing access to audit log resources.
+     * @param body The request body
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -420,7 +515,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update security
-     * @param body Security singleton providing access to audit log resources.
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

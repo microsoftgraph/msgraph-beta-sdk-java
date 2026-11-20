@@ -59,7 +59,7 @@ public class ExclusionUnitsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/exclusionUnits{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get exclusionUnits from solutions
+     * The list of exclusion units in the tenant.
      * @return a {@link ExclusionUnitBaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -68,7 +68,7 @@ public class ExclusionUnitsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get exclusionUnits from solutions
+     * The list of exclusion units in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExclusionUnitBaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -81,7 +81,7 @@ public class ExclusionUnitsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExclusionUnitBaseCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get exclusionUnits from solutions
+     * The list of exclusion units in the tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class ExclusionUnitsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get exclusionUnits from solutions
+     * The list of exclusion units in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +111,7 @@ public class ExclusionUnitsRequestBuilder extends BaseRequestBuilder {
         return new ExclusionUnitsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get exclusionUnits from solutions
+     * The list of exclusion units in the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -64,7 +64,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("customizedLabel");
     }
     /**
-     * Gets the defaultLabel property value. Label that would be used if no customizedLabel is provided. Read only.
+     * Gets the defaultLabel property value. Label that would be used if no customizedLabel is provided. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, BackedMo
         this.backingStore.set("customizedLabel", value);
     }
     /**
-     * Sets the defaultLabel property value. Label that would be used if no customizedLabel is provided. Read only.
+     * Sets the defaultLabel property value. Label that would be used if no customizedLabel is provided. Read-only.
      * @param value Value to set for the defaultLabel property.
      */
     public void setDefaultLabel(@jakarta.annotation.Nullable final String value) {

@@ -68,6 +68,14 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
         return this.backingStore.get("displayName");
     }
     /**
+     * Gets the evaluationMode property value. Represents the mode used by the service to evaluate an assignment filter.
+     * @return a {@link AssignmentFilterEvaluationMode}
+     */
+    @jakarta.annotation.Nullable
+    public AssignmentFilterEvaluationMode getEvaluationMode() {
+        return this.backingStore.get("evaluationMode");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -78,6 +86,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("evaluationMode", (n) -> { this.setEvaluationMode(n.getEnumValue(AssignmentFilterEvaluationMode::forValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("payloads", (n) -> { this.setPayloads(n.getCollectionOfObjectValues(PayloadByFilter::createFromDiscriminatorValue)); });
         deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(DevicePlatformType::forValue)); });
@@ -136,6 +145,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeEnumValue("evaluationMode", this.getEvaluationMode());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeCollectionOfObjectValues("payloads", this.getPayloads());
         writer.writeEnumValue("platform", this.getPlatform());
@@ -169,6 +179,13 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the evaluationMode property value. Represents the mode used by the service to evaluate an assignment filter.
+     * @param value Value to set for the evaluationMode property.
+     */
+    public void setEvaluationMode(@jakarta.annotation.Nullable final AssignmentFilterEvaluationMode value) {
+        this.backingStore.set("evaluationMode", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Last modified time of the Assignment Filter. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;
