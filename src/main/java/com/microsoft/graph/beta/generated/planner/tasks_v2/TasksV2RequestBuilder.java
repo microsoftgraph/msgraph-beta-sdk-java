@@ -63,7 +63,7 @@ public class TasksV2RequestBuilder extends BaseRequestBuilder {
      * Get a list of the task objects and their properties.
      * @return a {@link TaskCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plan-list-tasks?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/planner-list-tasks_v2?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TaskCollectionResponse get() {
@@ -74,7 +74,7 @@ public class TasksV2RequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TaskCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plan-list-tasks?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/planner-list-tasks_v2?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TaskCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class TasksV2RequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link Task}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plan-post-tasks?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/planner-post-tasks_v2?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Task post(@jakarta.annotation.Nonnull final Task body) {
@@ -100,7 +100,7 @@ public class TasksV2RequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Task}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plan-post-tasks?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/planner-post-tasks_v2?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Task post(@jakarta.annotation.Nonnull final Task body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -55,7 +55,7 @@ public class ContentLinkItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The collection of content links attached to the task. Read-only. Nullable.
+     * Content links attached to the task. Can be supplied when creating a task by using a deep insert. Nullable.
      * @return a {@link ContentLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class ContentLinkItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The collection of content links attached to the task. Read-only. Nullable.
+     * Content links attached to the task. Can be supplied when creating a task by using a deep insert. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContentLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class ContentLinkItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of content links attached to the task. Read-only. Nullable.
+     * Content links attached to the task. Can be supplied when creating a task by using a deep insert. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class ContentLinkItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of content links attached to the task. Read-only. Nullable.
+     * Content links attached to the task. Can be supplied when creating a task by using a deep insert. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class ContentLinkItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of content links attached to the task. Read-only. Nullable.
+     * Content links attached to the task. Can be supplied when creating a task by using a deep insert. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

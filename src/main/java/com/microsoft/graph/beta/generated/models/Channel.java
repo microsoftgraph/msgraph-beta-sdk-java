@@ -110,6 +110,7 @@ public class Channel extends Entity implements Parsable {
         deserializerMap.put("sharedWithTeams", (n) -> { this.setSharedWithTeams(n.getCollectionOfObjectValues(SharedWithChannelTeamInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("summary", (n) -> { this.setSummary(n.getObjectValue(ChannelSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("tabs", (n) -> { this.setTabs(n.getCollectionOfObjectValues(TeamsTab::createFromDiscriminatorValue)); });
+        deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfObjectValues(TeamworkChannelTag::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
         return deserializerMap;
@@ -235,6 +236,14 @@ public class Channel extends Entity implements Parsable {
         return this.backingStore.get("tabs");
     }
     /**
+     * Gets the tags property value. The tags owned by the channel.
+     * @return a {@link java.util.List<TeamworkChannelTag>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<TeamworkChannelTag> getTags() {
+        return this.backingStore.get("tags");
+    }
+    /**
      * Gets the tenantId property value. The ID of the Microsoft Entra tenant.
      * @return a {@link String}
      */
@@ -279,6 +288,7 @@ public class Channel extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("sharedWithTeams", this.getSharedWithTeams());
         writer.writeObjectValue("summary", this.getSummary());
         writer.writeCollectionOfObjectValues("tabs", this.getTabs());
+        writer.writeCollectionOfObjectValues("tags", this.getTags());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
@@ -435,6 +445,13 @@ public class Channel extends Entity implements Parsable {
      */
     public void setTabs(@jakarta.annotation.Nullable final java.util.List<TeamsTab> value) {
         this.backingStore.set("tabs", value);
+    }
+    /**
+     * Sets the tags property value. The tags owned by the channel.
+     * @param value Value to set for the tags property.
+     */
+    public void setTags(@jakarta.annotation.Nullable final java.util.List<TeamworkChannelTag> value) {
+        this.backingStore.set("tags", value);
     }
     /**
      * Sets the tenantId property value. The ID of the Microsoft Entra tenant.

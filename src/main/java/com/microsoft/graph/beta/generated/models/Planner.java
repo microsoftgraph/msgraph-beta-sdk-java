@@ -65,7 +65,7 @@ public class Planner extends Entity implements Parsable {
         return this.backingStore.get("plans");
     }
     /**
-     * Gets the plans_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 plans.
+     * Gets the plans_v2 property value. Read-only. Nullable. The collection of plans in the Planner Unified plans Graph API.
      * @return a {@link java.util.List<Plan>}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class Planner extends Entity implements Parsable {
         return this.backingStore.get("tasks");
     }
     /**
-     * Gets the tasks_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 tasks.
+     * Gets the tasks_v2 property value. Read-only. Nullable. The collection of tasks in the Planner Unified plans Graph API.
      * @return a {@link java.util.List<Task>}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class Planner extends Entity implements Parsable {
         this.backingStore.set("plans", value);
     }
     /**
-     * Sets the plans_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 plans.
+     * Sets the plans_v2 property value. Read-only. Nullable. The collection of plans in the Planner Unified plans Graph API.
      * @param value Value to set for the plans_v2 property.
      */
     public void setPlansV2(@jakarta.annotation.Nullable final java.util.List<Plan> value) {
@@ -154,7 +154,7 @@ public class Planner extends Entity implements Parsable {
         this.backingStore.set("tasks", value);
     }
     /**
-     * Sets the tasks_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 tasks.
+     * Sets the tasks_v2 property value. Read-only. Nullable. The collection of tasks in the Planner Unified plans Graph API.
      * @param value Value to set for the tasks_v2 property.
      */
     public void setTasksV2(@jakarta.annotation.Nullable final java.util.List<Task> value) {

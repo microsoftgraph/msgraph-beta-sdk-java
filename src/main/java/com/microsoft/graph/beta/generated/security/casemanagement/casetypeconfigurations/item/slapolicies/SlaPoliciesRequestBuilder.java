@@ -60,7 +60,7 @@ public class SlaPoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/caseManagement/caseTypeConfigurations/{caseTypeConfiguration%2Did}/slaPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The contained SLA policy definitions configured for this case type. Supports $filter and $orderby on createdBy, createdDateTime, description, displayName, id, isActive, lastModifiedBy, and lastModifiedDateTime on the collection endpoint. For information about supported query parameters, see List slaPolicies. Also supports $count, $select, $skip, and $top on the collection endpoint. Supports $expand=slaPolicies when getting a case type configuration.
+     * The contained SLA policy definitions configured for this case type. Supports $filter and $orderby on createdBy, createdDateTime, description, displayName, id, isActive, lastModifiedBy, and lastModifiedDateTime on the collection endpoint. For information about supported query parameters, see List slaPolicies. Also supports $count, $select, and $top on the collection endpoint. Supports $expand=slaPolicies when getting a case type configuration.
      * @return a {@link SlaPolicyDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class SlaPoliciesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The contained SLA policy definitions configured for this case type. Supports $filter and $orderby on createdBy, createdDateTime, description, displayName, id, isActive, lastModifiedBy, and lastModifiedDateTime on the collection endpoint. For information about supported query parameters, see List slaPolicies. Also supports $count, $select, $skip, and $top on the collection endpoint. Supports $expand=slaPolicies when getting a case type configuration.
+     * The contained SLA policy definitions configured for this case type. Supports $filter and $orderby on createdBy, createdDateTime, description, displayName, id, isActive, lastModifiedBy, and lastModifiedDateTime on the collection endpoint. For information about supported query parameters, see List slaPolicies. Also supports $count, $select, and $top on the collection endpoint. Supports $expand=slaPolicies when getting a case type configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SlaPolicyDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class SlaPoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SlaPolicyDefinition::createFromDiscriminatorValue);
     }
     /**
-     * The contained SLA policy definitions configured for this case type. Supports $filter and $orderby on createdBy, createdDateTime, description, displayName, id, isActive, lastModifiedBy, and lastModifiedDateTime on the collection endpoint. For information about supported query parameters, see List slaPolicies. Also supports $count, $select, $skip, and $top on the collection endpoint. Supports $expand=slaPolicies when getting a case type configuration.
+     * The contained SLA policy definitions configured for this case type. Supports $filter and $orderby on createdBy, createdDateTime, description, displayName, id, isActive, lastModifiedBy, and lastModifiedDateTime on the collection endpoint. For information about supported query parameters, see List slaPolicies. Also supports $count, $select, and $top on the collection endpoint. Supports $expand=slaPolicies when getting a case type configuration.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class SlaPoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The contained SLA policy definitions configured for this case type. Supports $filter and $orderby on createdBy, createdDateTime, description, displayName, id, isActive, lastModifiedBy, and lastModifiedDateTime on the collection endpoint. For information about supported query parameters, see List slaPolicies. Also supports $count, $select, $skip, and $top on the collection endpoint. Supports $expand=slaPolicies when getting a case type configuration.
+     * The contained SLA policy definitions configured for this case type. Supports $filter and $orderby on createdBy, createdDateTime, description, displayName, id, isActive, lastModifiedBy, and lastModifiedDateTime on the collection endpoint. For information about supported query parameters, see List slaPolicies. Also supports $count, $select, and $top on the collection endpoint. Supports $expand=slaPolicies when getting a case type configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class SlaPoliciesRequestBuilder extends BaseRequestBuilder {
         return new SlaPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The contained SLA policy definitions configured for this case type. Supports $filter and $orderby on createdBy, createdDateTime, description, displayName, id, isActive, lastModifiedBy, and lastModifiedDateTime on the collection endpoint. For information about supported query parameters, see List slaPolicies. Also supports $count, $select, $skip, and $top on the collection endpoint. Supports $expand=slaPolicies when getting a case type configuration.
+     * The contained SLA policy definitions configured for this case type. Supports $filter and $orderby on createdBy, createdDateTime, description, displayName, id, isActive, lastModifiedBy, and lastModifiedDateTime on the collection endpoint. For information about supported query parameters, see List slaPolicies. Also supports $count, $select, and $top on the collection endpoint. Supports $expand=slaPolicies when getting a case type configuration.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

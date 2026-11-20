@@ -26,7 +26,7 @@ public class CaseTypeConfiguration extends Entity implements Parsable {
         return new CaseTypeConfiguration();
     }
     /**
-     * Gets the customFields property value. The contained custom-field definitions that make up the blank-form schema for this case type. Read-only. Supports $count, $expand, $filter, $orderby, $select, $skip, and $top.
+     * Gets the customFields property value. The contained custom-field definitions that make up the blank-form schema for this case type. Read-only. Supports $count, $expand, $filter, $orderby, $select, and $top.
      * @return a {@link java.util.List<CustomFieldDefinition>}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class CaseTypeConfiguration extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the slaPolicies property value. The contained SLA policy definitions configured for this case type. Supports $filter and $orderby on createdBy, createdDateTime, description, displayName, id, isActive, lastModifiedBy, and lastModifiedDateTime on the collection endpoint. For information about supported query parameters, see List slaPolicies. Also supports $count, $select, $skip, and $top on the collection endpoint. Supports $expand=slaPolicies when getting a case type configuration.
+     * Gets the slaPolicies property value. The contained SLA policy definitions configured for this case type. Supports $filter and $orderby on createdBy, createdDateTime, description, displayName, id, isActive, lastModifiedBy, and lastModifiedDateTime on the collection endpoint. For information about supported query parameters, see List slaPolicies. Also supports $count, $select, and $top on the collection endpoint. Supports $expand=slaPolicies when getting a case type configuration.
      * @return a {@link java.util.List<SlaPolicyDefinition>}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class CaseTypeConfiguration extends Entity implements Parsable {
         return this.backingStore.get("slaPolicies");
     }
     /**
-     * Gets the statuses property value. The contained top-level statuses that a case of this type can be set to. Read-only. Supports $count, $expand, $filter, $orderby, $select, $skip, and $top.
+     * Gets the statuses property value. The contained top-level statuses that a case of this type can be set to. Read-only. Supports $count, $expand, $filter, $orderby, $select, and $top.
      * @return a {@link java.util.List<StatusDefinition>}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class CaseTypeConfiguration extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("statuses", this.getStatuses());
     }
     /**
-     * Sets the customFields property value. The contained custom-field definitions that make up the blank-form schema for this case type. Read-only. Supports $count, $expand, $filter, $orderby, $select, $skip, and $top.
+     * Sets the customFields property value. The contained custom-field definitions that make up the blank-form schema for this case type. Read-only. Supports $count, $expand, $filter, $orderby, $select, and $top.
      * @param value Value to set for the customFields property.
      */
     public void setCustomFields(@jakarta.annotation.Nullable final java.util.List<CustomFieldDefinition> value) {
@@ -114,14 +114,14 @@ public class CaseTypeConfiguration extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the slaPolicies property value. The contained SLA policy definitions configured for this case type. Supports $filter and $orderby on createdBy, createdDateTime, description, displayName, id, isActive, lastModifiedBy, and lastModifiedDateTime on the collection endpoint. For information about supported query parameters, see List slaPolicies. Also supports $count, $select, $skip, and $top on the collection endpoint. Supports $expand=slaPolicies when getting a case type configuration.
+     * Sets the slaPolicies property value. The contained SLA policy definitions configured for this case type. Supports $filter and $orderby on createdBy, createdDateTime, description, displayName, id, isActive, lastModifiedBy, and lastModifiedDateTime on the collection endpoint. For information about supported query parameters, see List slaPolicies. Also supports $count, $select, and $top on the collection endpoint. Supports $expand=slaPolicies when getting a case type configuration.
      * @param value Value to set for the slaPolicies property.
      */
     public void setSlaPolicies(@jakarta.annotation.Nullable final java.util.List<SlaPolicyDefinition> value) {
         this.backingStore.set("slaPolicies", value);
     }
     /**
-     * Sets the statuses property value. The contained top-level statuses that a case of this type can be set to. Read-only. Supports $count, $expand, $filter, $orderby, $select, $skip, and $top.
+     * Sets the statuses property value. The contained top-level statuses that a case of this type can be set to. Read-only. Supports $count, $expand, $filter, $orderby, $select, and $top.
      * @param value Value to set for the statuses property.
      */
     public void setStatuses(@jakarta.annotation.Nullable final java.util.List<StatusDefinition> value) {

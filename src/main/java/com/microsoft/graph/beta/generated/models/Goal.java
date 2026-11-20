@@ -131,7 +131,7 @@ public class Goal extends PlannerDelta implements Parsable {
         return this.backingStore.get("notes");
     }
     /**
-     * Gets the planId property value. ID of the plan that contains the goal. Required, and immutable after creation.
+     * Gets the planId property value. ID of the plan that contains the goal. Immutable after creation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -261,7 +261,7 @@ public class Goal extends PlannerDelta implements Parsable {
         this.backingStore.set("notes", value);
     }
     /**
-     * Sets the planId property value. ID of the plan that contains the goal. Required, and immutable after creation.
+     * Sets the planId property value. ID of the plan that contains the goal. Immutable after creation.
      * @param value Value to set for the planId property.
      */
     public void setPlanId(@jakarta.annotation.Nullable final String value) {

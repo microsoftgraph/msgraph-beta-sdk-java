@@ -41,6 +41,7 @@ public class CloudPcBulkAction extends Entity implements Parsable {
                 case "#microsoft.graph.cloudPcBulkResize": return new CloudPcBulkResize();
                 case "#microsoft.graph.cloudPcBulkRestart": return new CloudPcBulkRestart();
                 case "#microsoft.graph.cloudPcBulkRestore": return new CloudPcBulkRestore();
+                case "#microsoft.graph.cloudPcBulkSetDeviceName": return new CloudPcBulkSetDeviceName();
                 case "#microsoft.graph.cloudPcBulkSetReviewStatus": return new CloudPcBulkSetReviewStatus();
                 case "#microsoft.graph.cloudPcBulkTroubleshoot": return new CloudPcBulkTroubleshoot();
             }
@@ -56,7 +57,7 @@ public class CloudPcBulkAction extends Entity implements Parsable {
         return this.backingStore.get("actionSummary");
     }
     /**
-     * Gets the cloudPcIds property value. The cloudPcIds property
+     * Gets the cloudPcIds property value. IDs of the Cloud PCs the bulk action applies to. Individual Cloud PC IDs are GUID-formatted strings.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -142,7 +143,7 @@ public class CloudPcBulkAction extends Entity implements Parsable {
         this.backingStore.set("actionSummary", value);
     }
     /**
-     * Sets the cloudPcIds property value. The cloudPcIds property
+     * Sets the cloudPcIds property value. IDs of the Cloud PCs the bulk action applies to. Individual Cloud PC IDs are GUID-formatted strings.
      * @param value Value to set for the cloudPcIds property.
      */
     public void setCloudPcIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

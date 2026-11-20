@@ -26,7 +26,7 @@ public class Task extends PlannerDelta implements Parsable {
         return new Task();
     }
     /**
-     * Gets the archivalInfo property value. Information about whether the entity is archived, and when it was archived.
+     * Gets the archivalInfo property value. Service-populated information about whether the entity is archived, and when it was archived. Read-only.
      * @return a {@link PlannerArchivalInfo}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class Task extends PlannerDelta implements Parsable {
         return this.backingStore.get("capabilities");
     }
     /**
-     * Gets the checklist property value. The collection of checklist items on the task. Read-only. Nullable.
+     * Gets the checklist property value. Checklist items on the task. Can be supplied when creating a task by using a deep insert. Nullable.
      * @return a {@link java.util.List<ChecklistItemV4>}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class Task extends PlannerDelta implements Parsable {
         return this.backingStore.get("checklist");
     }
     /**
-     * Gets the completedBy property value. Identity of the user who marked the task complete.
+     * Gets the completedBy property value. Identity of the user who marked the task complete. Read-only.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class Task extends PlannerDelta implements Parsable {
         return this.backingStore.get("completedBy");
     }
     /**
-     * Gets the completedDateTime property value. Date and time the task was completed.
+     * Gets the completedDateTime property value. Date and time the task was completed. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -170,7 +170,7 @@ public class Task extends PlannerDelta implements Parsable {
         return this.backingStore.get("goalIds");
     }
     /**
-     * Gets the hasChat property value. Indicates whether the task has an associated chat.
+     * Gets the hasChat property value. Indicates whether the task has an associated chat. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -178,7 +178,7 @@ public class Task extends PlannerDelta implements Parsable {
         return this.backingStore.get("hasChat");
     }
     /**
-     * Gets the hasChildren property value. Indicates whether the task has subtasks.
+     * Gets the hasChildren property value. Indicates whether the task has subtasks. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -186,7 +186,7 @@ public class Task extends PlannerDelta implements Parsable {
         return this.backingStore.get("hasChildren");
     }
     /**
-     * Gets the isCritical property value. Indicates whether the task is on the critical path, as computed from its dependencies.
+     * Gets the isCritical property value. Indicates whether the task is on the critical path, as computed from its dependencies. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -210,7 +210,7 @@ public class Task extends PlannerDelta implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the links property value. The collection of content links attached to the task. Read-only. Nullable.
+     * Gets the links property value. Content links attached to the task. Can be supplied when creating a task by using a deep insert. Nullable.
      * @return a {@link java.util.List<ContentLink>}
      */
     @jakarta.annotation.Nullable
@@ -306,7 +306,7 @@ public class Task extends PlannerDelta implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the userAssignments property value. The collection of user assignments on the task. Read-only. Nullable.
+     * Gets the userAssignments property value. User assignments on the task. Can be supplied when creating a task by using a deep insert. Nullable.
      * @return a {@link java.util.List<UserAssignment>}
      */
     @jakarta.annotation.Nullable
@@ -351,7 +351,7 @@ public class Task extends PlannerDelta implements Parsable {
         writer.writeCollectionOfObjectValues("userAssignments", this.getUserAssignments());
     }
     /**
-     * Sets the archivalInfo property value. Information about whether the entity is archived, and when it was archived.
+     * Sets the archivalInfo property value. Service-populated information about whether the entity is archived, and when it was archived. Read-only.
      * @param value Value to set for the archivalInfo property.
      */
     public void setArchivalInfo(@jakarta.annotation.Nullable final PlannerArchivalInfo value) {
@@ -372,21 +372,21 @@ public class Task extends PlannerDelta implements Parsable {
         this.backingStore.set("capabilities", value);
     }
     /**
-     * Sets the checklist property value. The collection of checklist items on the task. Read-only. Nullable.
+     * Sets the checklist property value. Checklist items on the task. Can be supplied when creating a task by using a deep insert. Nullable.
      * @param value Value to set for the checklist property.
      */
     public void setChecklist(@jakarta.annotation.Nullable final java.util.List<ChecklistItemV4> value) {
         this.backingStore.set("checklist", value);
     }
     /**
-     * Sets the completedBy property value. Identity of the user who marked the task complete.
+     * Sets the completedBy property value. Identity of the user who marked the task complete. Read-only.
      * @param value Value to set for the completedBy property.
      */
     public void setCompletedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("completedBy", value);
     }
     /**
-     * Sets the completedDateTime property value. Date and time the task was completed.
+     * Sets the completedDateTime property value. Date and time the task was completed. Read-only.
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -442,21 +442,21 @@ public class Task extends PlannerDelta implements Parsable {
         this.backingStore.set("goalIds", value);
     }
     /**
-     * Sets the hasChat property value. Indicates whether the task has an associated chat.
+     * Sets the hasChat property value. Indicates whether the task has an associated chat. Read-only.
      * @param value Value to set for the hasChat property.
      */
     public void setHasChat(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("hasChat", value);
     }
     /**
-     * Sets the hasChildren property value. Indicates whether the task has subtasks.
+     * Sets the hasChildren property value. Indicates whether the task has subtasks. Read-only.
      * @param value Value to set for the hasChildren property.
      */
     public void setHasChildren(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("hasChildren", value);
     }
     /**
-     * Sets the isCritical property value. Indicates whether the task is on the critical path, as computed from its dependencies.
+     * Sets the isCritical property value. Indicates whether the task is on the critical path, as computed from its dependencies. Read-only.
      * @param value Value to set for the isCritical property.
      */
     public void setIsCritical(@jakarta.annotation.Nullable final Boolean value) {
@@ -477,7 +477,7 @@ public class Task extends PlannerDelta implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the links property value. The collection of content links attached to the task. Read-only. Nullable.
+     * Sets the links property value. Content links attached to the task. Can be supplied when creating a task by using a deep insert. Nullable.
      * @param value Value to set for the links property.
      */
     public void setLinks(@jakarta.annotation.Nullable final java.util.List<ContentLink> value) {
@@ -561,7 +561,7 @@ public class Task extends PlannerDelta implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the userAssignments property value. The collection of user assignments on the task. Read-only. Nullable.
+     * Sets the userAssignments property value. User assignments on the task. Can be supplied when creating a task by using a deep insert. Nullable.
      * @param value Value to set for the userAssignments property.
      */
     public void setUserAssignments(@jakarta.annotation.Nullable final java.util.List<UserAssignment> value) {

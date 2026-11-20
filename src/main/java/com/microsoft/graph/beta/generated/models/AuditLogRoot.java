@@ -93,13 +93,14 @@ public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("auditActivityTypes", (n) -> { this.setAuditActivityTypes(n.getCollectionOfObjectValues(AuditActivityType::createFromDiscriminatorValue)); });
         deserializerMap.put("customSecurityAttributeAudits", (n) -> { this.setCustomSecurityAttributeAudits(n.getCollectionOfObjectValues(CustomSecurityAttributeAudit::createFromDiscriminatorValue)); });
         deserializerMap.put("directoryAudits", (n) -> { this.setDirectoryAudits(n.getCollectionOfObjectValues(DirectoryAudit::createFromDiscriminatorValue)); });
         deserializerMap.put("directoryProvisioning", (n) -> { this.setDirectoryProvisioning(n.getCollectionOfObjectValues(ProvisioningObjectSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("provisioning", (n) -> { this.setProvisioning(n.getCollectionOfObjectValues(ProvisioningObjectSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourcePolicy", (n) -> { this.setResourcePolicy(n.getCollectionOfObjectValues(ResourcePolicyEvaluationEvent::createFromDiscriminatorValue)); });
         deserializerMap.put("signInEventsAppSummary", (n) -> { this.setSignInEventsAppSummary(n.getCollectionOfObjectValues(SignInEventsAppActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("signInEventsSummary", (n) -> { this.setSignInEventsSummary(n.getCollectionOfObjectValues(SignInEventsActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("signIns", (n) -> { this.setSignIns(n.getCollectionOfObjectValues(SignIn::createFromDiscriminatorValue)); });
@@ -121,6 +122,14 @@ public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable
     @jakarta.annotation.Nullable
     public java.util.List<ProvisioningObjectSummary> getProvisioning() {
         return this.backingStore.get("provisioning");
+    }
+    /**
+     * Gets the resourcePolicy property value. The resourcePolicy property
+     * @return a {@link java.util.List<ResourcePolicyEvaluationEvent>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ResourcePolicyEvaluationEvent> getResourcePolicy() {
+        return this.backingStore.get("resourcePolicy");
     }
     /**
      * Gets the signInEventsAppSummary property value. Represents the number of sign-in events for a specific application.
@@ -166,6 +175,7 @@ public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable
         writer.writeCollectionOfObjectValues("directoryProvisioning", this.getDirectoryProvisioning());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("provisioning", this.getProvisioning());
+        writer.writeCollectionOfObjectValues("resourcePolicy", this.getResourcePolicy());
         writer.writeCollectionOfObjectValues("signInEventsAppSummary", this.getSignInEventsAppSummary());
         writer.writeCollectionOfObjectValues("signInEventsSummary", this.getSignInEventsSummary());
         writer.writeCollectionOfObjectValues("signIns", this.getSignIns());
@@ -228,6 +238,13 @@ public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable
      */
     public void setProvisioning(@jakarta.annotation.Nullable final java.util.List<ProvisioningObjectSummary> value) {
         this.backingStore.set("provisioning", value);
+    }
+    /**
+     * Sets the resourcePolicy property value. The resourcePolicy property
+     * @param value Value to set for the resourcePolicy property.
+     */
+    public void setResourcePolicy(@jakarta.annotation.Nullable final java.util.List<ResourcePolicyEvaluationEvent> value) {
+        this.backingStore.set("resourcePolicy", value);
     }
     /**
      * Sets the signInEventsAppSummary property value. Represents the number of sign-in events for a specific application.

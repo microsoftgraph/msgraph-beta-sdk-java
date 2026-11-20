@@ -37,16 +37,18 @@ public class BucketItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/plans_v2/{plan%2Did}/buckets/{bucket%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property buckets for planner
+     * Delete a bucket object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plan-delete-buckets?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property buckets for planner
+     * Delete a bucket object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plan-delete-buckets?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class BucketItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The collection of buckets in the plan. Read-only. Nullable.
+     * Read the properties and relationships of bucket object.
      * @return a {@link Bucket}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bucket-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Bucket get() {
         return get(null);
     }
     /**
-     * The collection of buckets in the plan. Read-only. Nullable.
+     * Read the properties and relationships of bucket object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Bucket}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bucket-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Bucket get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class BucketItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Bucket::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property buckets in planner
+     * Update the properties of a bucket object.
      * @param body The request body
      * @return a {@link Bucket}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bucket-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Bucket patch(@jakarta.annotation.Nonnull final Bucket body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property buckets in planner
+     * Update the properties of a bucket object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Bucket}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/bucket-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Bucket patch(@jakarta.annotation.Nonnull final Bucket body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class BucketItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Bucket::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property buckets for planner
+     * Delete a bucket object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class BucketItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property buckets for planner
+     * Delete a bucket object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class BucketItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of buckets in the plan. Read-only. Nullable.
+     * Read the properties and relationships of bucket object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class BucketItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of buckets in the plan. Read-only. Nullable.
+     * Read the properties and relationships of bucket object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class BucketItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property buckets in planner
+     * Update the properties of a bucket object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class BucketItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property buckets in planner
+     * Update the properties of a bucket object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class BucketItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of buckets in the plan. Read-only. Nullable.
+     * Read the properties and relationships of bucket object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

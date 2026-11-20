@@ -18,7 +18,10 @@ public enum ConditionCategory implements ValuedEnum {
     FrontlineBufferUsageThreshold("frontlineBufferUsageThreshold"),
     CloudPcUserSettingsPersistenceUsageThreshold("cloudPcUserSettingsPersistenceUsageThreshold"),
     CloudPcDeprovisionedThreshold("cloudPcDeprovisionedThreshold"),
-    CloudPcReserveDeprovisionFailedThreshold("cloudPcReserveDeprovisionFailedThreshold");
+    CloudPcReserveDeprovisionFailedThreshold("cloudPcReserveDeprovisionFailedThreshold"),
+    CloudPcReserveLicensesAvailabilityBelowThreshold("cloudPcReserveLicensesAvailabilityBelowThreshold"),
+    ReserveCloudPcUnlicensedUsersAssignment("reserveCloudPcUnlicensedUsersAssignment"),
+    CloudPcMaxUserStorageUsageThresholdExceeded("cloudPcMaxUserStorageUsageThresholdExceeded");
     public final String value;
     ConditionCategory(final String value) {
         this.value = value;
@@ -43,6 +46,9 @@ public enum ConditionCategory implements ValuedEnum {
             case "cloudPcUserSettingsPersistenceUsageThreshold": return CloudPcUserSettingsPersistenceUsageThreshold;
             case "cloudPcDeprovisionedThreshold": return CloudPcDeprovisionedThreshold;
             case "cloudPcReserveDeprovisionFailedThreshold": return CloudPcReserveDeprovisionFailedThreshold;
+            case "cloudPcReserveLicensesAvailabilityBelowThreshold": return CloudPcReserveLicensesAvailabilityBelowThreshold;
+            case "reserveCloudPcUnlicensedUsersAssignment": return ReserveCloudPcUnlicensedUsersAssignment;
+            case "cloudPcMaxUserStorageUsageThresholdExceeded": return CloudPcMaxUserStorageUsageThresholdExceeded;
             default: return null;
         }
     }

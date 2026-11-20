@@ -91,7 +91,7 @@ public class Dependency extends PlannerDelta implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the sourceItemId property value. ID of the source item in the dependency.
+     * Gets the sourceItemId property value. ID of the source item in the dependency. Immutable after creation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class Dependency extends PlannerDelta implements Parsable {
         return this.backingStore.get("sourceItemId");
     }
     /**
-     * Gets the targetItemId property value. ID of the target item in the dependency.
+     * Gets the targetItemId property value. ID of the target item in the dependency. Immutable after creation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -164,14 +164,14 @@ public class Dependency extends PlannerDelta implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the sourceItemId property value. ID of the source item in the dependency.
+     * Sets the sourceItemId property value. ID of the source item in the dependency. Immutable after creation.
      * @param value Value to set for the sourceItemId property.
      */
     public void setSourceItemId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("sourceItemId", value);
     }
     /**
-     * Sets the targetItemId property value. ID of the target item in the dependency.
+     * Sets the targetItemId property value. ID of the target item in the dependency. Immutable after creation.
      * @param value Value to set for the targetItemId property.
      */
     public void setTargetItemId(@jakarta.annotation.Nullable final String value) {

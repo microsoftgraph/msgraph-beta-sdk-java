@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.security;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.Security;
+import com.microsoft.graph.beta.security.agenticsecurity.AgenticSecurityRequestBuilder;
 import com.microsoft.graph.beta.security.alerts_v2.AlertsV2RequestBuilder;
 import com.microsoft.graph.beta.security.alerts.AlertsRequestBuilder;
 import com.microsoft.graph.beta.security.attacksimulation.AttackSimulationRequestBuilder;
@@ -10,6 +11,7 @@ import com.microsoft.graph.beta.security.casemanagement.CaseManagementRequestBui
 import com.microsoft.graph.beta.security.cases.CasesRequestBuilder;
 import com.microsoft.graph.beta.security.cloudappsecurityprofiles.CloudAppSecurityProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.collaboration.CollaborationRequestBuilder;
+import com.microsoft.graph.beta.security.contentmanagement.ContentManagementRequestBuilder;
 import com.microsoft.graph.beta.security.datadiscovery.DataDiscoveryRequestBuilder;
 import com.microsoft.graph.beta.security.datasecurityandgovernance.DataSecurityAndGovernanceRequestBuilder;
 import com.microsoft.graph.beta.security.domainsecurityprofiles.DomainSecurityProfilesRequestBuilder;
@@ -59,6 +61,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityRequestBuilder extends BaseRequestBuilder {
+    /**
+     * The agenticSecurity property
+     * @return a {@link AgenticSecurityRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AgenticSecurityRequestBuilder agenticSecurity() {
+        return new AgenticSecurityRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the alerts property of the microsoft.graph.security entity.
      * @return a {@link AlertsRequestBuilder}
@@ -128,6 +138,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CollaborationRequestBuilder collaboration() {
         return new CollaborationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * The contentManagement property
+     * @return a {@link ContentManagementRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ContentManagementRequestBuilder contentManagement() {
+        return new ContentManagementRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the dataDiscovery property of the microsoft.graph.security entity.

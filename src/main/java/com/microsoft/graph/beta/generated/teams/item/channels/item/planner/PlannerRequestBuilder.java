@@ -55,18 +55,16 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/channels/{channel%2Did}/planner{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a teamsChannelPlanner object.
+     * Delete navigation property planner for teams
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-delete-planner?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a teamsChannelPlanner object.
+     * Delete navigation property planner for teams
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-delete-planner?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -99,23 +97,21 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsChannelPlanner::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a teamsChannelPlanner object.
+     * Update the navigation property planner in teams
      * @param body The request body
      * @return a {@link TeamsChannelPlanner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/teamschannelplanner-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsChannelPlanner patch(@jakarta.annotation.Nonnull final TeamsChannelPlanner body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a teamsChannelPlanner object.
+     * Update the navigation property planner in teams
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsChannelPlanner}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/teamschannelplanner-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsChannelPlanner patch(@jakarta.annotation.Nonnull final TeamsChannelPlanner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +122,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsChannelPlanner::createFromDiscriminatorValue);
     }
     /**
-     * Delete a teamsChannelPlanner object.
+     * Delete navigation property planner for teams
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +130,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a teamsChannelPlanner object.
+     * Delete navigation property planner for teams
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -166,7 +162,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a teamsChannelPlanner object.
+     * Update the navigation property planner in teams
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -175,7 +171,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a teamsChannelPlanner object.
+     * Update the navigation property planner in teams
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

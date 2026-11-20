@@ -61,6 +61,7 @@ import com.microsoft.graph.beta.users.item.getmanageddeviceswithfailedorpendinga
 import com.microsoft.graph.beta.users.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.beta.users.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.beta.users.item.getpasswordsinglesignoncredentials.GetPasswordSingleSignOnCredentialsRequestBuilder;
+import com.microsoft.graph.beta.users.item.identityverificationstatus.IdentityVerificationStatusRequestBuilder;
 import com.microsoft.graph.beta.users.item.inferenceclassification.InferenceClassificationRequestBuilder;
 import com.microsoft.graph.beta.users.item.informationprotection.InformationProtectionRequestBuilder;
 import com.microsoft.graph.beta.users.item.insights.InsightsRequestBuilder;
@@ -587,6 +588,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetPasswordSingleSignOnCredentialsRequestBuilder getPasswordSingleSignOnCredentials() {
         return new GetPasswordSingleSignOnCredentialsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the identityVerificationStatus property of the microsoft.graph.user entity.
+     * @return a {@link IdentityVerificationStatusRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public IdentityVerificationStatusRequestBuilder identityVerificationStatus() {
+        return new IdentityVerificationStatusRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the inferenceClassification property of the microsoft.graph.user entity.

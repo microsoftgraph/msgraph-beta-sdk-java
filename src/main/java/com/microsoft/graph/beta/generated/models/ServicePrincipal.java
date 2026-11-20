@@ -270,8 +270,10 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         deserializerMap.put("federatedIdentityCredentials", (n) -> { this.setFederatedIdentityCredentials(n.getCollectionOfObjectValues(FederatedIdentityCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("homepage", (n) -> { this.setHomepage(n.getStringValue()); });
         deserializerMap.put("homeRealmDiscoveryPolicies", (n) -> { this.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("idJag", (n) -> { this.setIdJag(n.getObjectValue(IdJagServicePrincipalConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("info", (n) -> { this.setInfo(n.getObjectValue(InformationalUrl::createFromDiscriminatorValue)); });
         deserializerMap.put("isDisabled", (n) -> { this.setIsDisabled(n.getBooleanValue()); });
+        deserializerMap.put("isHardDeleteProtectionEnabled", (n) -> { this.setIsHardDeleteProtectionEnabled(n.getBooleanValue()); });
         deserializerMap.put("keyCredentials", (n) -> { this.setKeyCredentials(n.getCollectionOfObjectValues(KeyCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("licenseDetails", (n) -> { this.setLicenseDetails(n.getCollectionOfObjectValues(LicenseDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("lifecycle", (n) -> { this.setLifecycle(n.getObjectValue(IdentityLifecycle::createFromDiscriminatorValue)); });
@@ -324,6 +326,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.backingStore.get("homeRealmDiscoveryPolicies");
     }
     /**
+     * Gets the idJag property value. The idJag property
+     * @return a {@link IdJagServicePrincipalConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public IdJagServicePrincipalConfiguration getIdJag() {
+        return this.backingStore.get("idJag");
+    }
+    /**
      * Gets the info property value. Basic profile information of the acquired application such as app&apos;s marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
      * @return a {@link InformationalUrl}
      */
@@ -338,6 +348,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsDisabled() {
         return this.backingStore.get("isDisabled");
+    }
+    /**
+     * Gets the isHardDeleteProtectionEnabled property value. Indicates whether hard deletion protection is enabled for the service principal. When true, permanent deletion is blocked for seven days after soft deletion. The service principal can still be soft deleted and restored. Once enabled, protection can&apos;t be disabled or set to null. Enable protection on an existing service principal by using Update servicePrincipal; enabling it during creation isn&apos;t supported. Setting this property to true requires the Microsoft Entra Backup Administrator role. Nullable. Requires $select to retrieve. Supports $filter (eq).
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsHardDeleteProtectionEnabled() {
+        return this.backingStore.get("isHardDeleteProtectionEnabled");
     }
     /**
      * Gets the keyCredentials property value. The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, not, ge, le).
@@ -637,8 +655,10 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("federatedIdentityCredentials", this.getFederatedIdentityCredentials());
         writer.writeStringValue("homepage", this.getHomepage());
         writer.writeCollectionOfObjectValues("homeRealmDiscoveryPolicies", this.getHomeRealmDiscoveryPolicies());
+        writer.writeObjectValue("idJag", this.getIdJag());
         writer.writeObjectValue("info", this.getInfo());
         writer.writeBooleanValue("isDisabled", this.getIsDisabled());
+        writer.writeBooleanValue("isHardDeleteProtectionEnabled", this.getIsHardDeleteProtectionEnabled());
         writer.writeCollectionOfObjectValues("keyCredentials", this.getKeyCredentials());
         writer.writeCollectionOfObjectValues("licenseDetails", this.getLicenseDetails());
         writer.writeObjectValue("lifecycle", this.getLifecycle());
@@ -863,6 +883,13 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.backingStore.set("homeRealmDiscoveryPolicies", value);
     }
     /**
+     * Sets the idJag property value. The idJag property
+     * @param value Value to set for the idJag property.
+     */
+    public void setIdJag(@jakarta.annotation.Nullable final IdJagServicePrincipalConfiguration value) {
+        this.backingStore.set("idJag", value);
+    }
+    /**
      * Sets the info property value. Basic profile information of the acquired application such as app&apos;s marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
      * @param value Value to set for the info property.
      */
@@ -875,6 +902,13 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     public void setIsDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isDisabled", value);
+    }
+    /**
+     * Sets the isHardDeleteProtectionEnabled property value. Indicates whether hard deletion protection is enabled for the service principal. When true, permanent deletion is blocked for seven days after soft deletion. The service principal can still be soft deleted and restored. Once enabled, protection can&apos;t be disabled or set to null. Enable protection on an existing service principal by using Update servicePrincipal; enabling it during creation isn&apos;t supported. Setting this property to true requires the Microsoft Entra Backup Administrator role. Nullable. Requires $select to retrieve. Supports $filter (eq).
+     * @param value Value to set for the isHardDeleteProtectionEnabled property.
+     */
+    public void setIsHardDeleteProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isHardDeleteProtectionEnabled", value);
     }
     /**
      * Sets the keyCredentials property value. The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, not, ge, le).

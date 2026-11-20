@@ -8,6 +8,7 @@ import com.microsoft.graph.beta.auditlogs.getsummarizedmsisigninswithaggregation
 import com.microsoft.graph.beta.auditlogs.getsummarizednoninteractivesigninswithaggregationwindow.GetSummarizedNonInteractiveSignInsWithAggregationWindowRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.getsummarizedserviceprincipalsigninswithaggregationwindow.GetSummarizedServicePrincipalSignInsWithAggregationWindowRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.provisioning.ProvisioningRequestBuilder;
+import com.microsoft.graph.beta.auditlogs.resourcepolicy.ResourcePolicyRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.signineventsappsummary.SignInEventsAppSummaryRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.signineventssummary.SignInEventsSummaryRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.signins.SignInsRequestBuilder;
@@ -71,6 +72,14 @@ public class AuditLogsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ProvisioningRequestBuilder provisioning() {
         return new ProvisioningRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the resourcePolicy property of the microsoft.graph.auditLogRoot entity.
+     * @return a {@link ResourcePolicyRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ResourcePolicyRequestBuilder resourcePolicy() {
+        return new ResourcePolicyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the signInEventsAppSummary property of the microsoft.graph.auditLogRoot entity.

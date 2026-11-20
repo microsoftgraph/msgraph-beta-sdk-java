@@ -84,7 +84,7 @@ public class ConfigurationMonitorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConfigurationMonitorCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new configurationMonitor object that runs periodically in the background at a scheduled frequency.
+     * Create a new configurationMonitor object that runs periodically in the background at a scheduled frequency to detect configuration drift in monitorOnly mode, or applies a desired-state baseline once in applyOnce mode.
      * @param body The request body
      * @return a {@link ConfigurationMonitor}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -95,7 +95,7 @@ public class ConfigurationMonitorsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new configurationMonitor object that runs periodically in the background at a scheduled frequency.
+     * Create a new configurationMonitor object that runs periodically in the background at a scheduled frequency to detect configuration drift in monitorOnly mode, or applies a desired-state baseline once in applyOnce mode.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConfigurationMonitor}
@@ -131,7 +131,7 @@ public class ConfigurationMonitorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new configurationMonitor object that runs periodically in the background at a scheduled frequency.
+     * Create a new configurationMonitor object that runs periodically in the background at a scheduled frequency to detect configuration drift in monitorOnly mode, or applies a desired-state baseline once in applyOnce mode.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +140,7 @@ public class ConfigurationMonitorsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new configurationMonitor object that runs periodically in the background at a scheduled frequency.
+     * Create a new configurationMonitor object that runs periodically in the background at a scheduled frequency to detect configuration drift in monitorOnly mode, or applies a desired-state baseline once in applyOnce mode.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
