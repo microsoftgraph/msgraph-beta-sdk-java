@@ -93,7 +93,7 @@ public class PlanContextLink extends PlannerDelta implements Parsable {
         return this.backingStore.get("isActive");
     }
     /**
-     * Gets the isCreation property value. Indicates whether this context link represents the original creation surface for the plan.
+     * Gets the isCreation property value. Indicates whether this context link represents the original creation surface for the plan. Service-populated. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class PlanContextLink extends PlannerDelta implements Parsable {
         return this.backingStore.get("isCreation");
     }
     /**
-     * Gets the key property value. Identifier for the context the plan is surfaced in.
+     * Gets the key property value. Client-specified identifier for the context the plan is surfaced in. Immutable after creation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class PlanContextLink extends PlannerDelta implements Parsable {
         return this.backingStore.get("key");
     }
     /**
-     * Gets the ownerAppId property value. Application ID of the app that owns the surface the plan is linked from.
+     * Gets the ownerAppId property value. Application ID of the app that owns the surface the plan is linked from. Service-populated. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -184,21 +184,21 @@ public class PlanContextLink extends PlannerDelta implements Parsable {
         this.backingStore.set("isActive", value);
     }
     /**
-     * Sets the isCreation property value. Indicates whether this context link represents the original creation surface for the plan.
+     * Sets the isCreation property value. Indicates whether this context link represents the original creation surface for the plan. Service-populated. Read-only.
      * @param value Value to set for the isCreation property.
      */
     public void setIsCreation(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isCreation", value);
     }
     /**
-     * Sets the key property value. Identifier for the context the plan is surfaced in.
+     * Sets the key property value. Client-specified identifier for the context the plan is surfaced in. Immutable after creation.
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("key", value);
     }
     /**
-     * Sets the ownerAppId property value. Application ID of the app that owns the surface the plan is linked from.
+     * Sets the ownerAppId property value. Application ID of the app that owns the surface the plan is linked from. Service-populated. Read-only.
      * @param value Value to set for the ownerAppId property.
      */
     public void setOwnerAppId(@jakarta.annotation.Nullable final String value) {

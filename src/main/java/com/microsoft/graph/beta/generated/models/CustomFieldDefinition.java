@@ -58,7 +58,7 @@ public class CustomFieldDefinition extends PlannerDelta implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the deletedBy property value. Identity of the user who deleted the custom field definition, if it was deleted.
+     * Gets the deletedBy property value. Identity of the user who deleted the custom field definition, if it was deleted. Read-only.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class CustomFieldDefinition extends PlannerDelta implements Parsable {
         return this.backingStore.get("deletedBy");
     }
     /**
-     * Gets the deletedDateTime property value. Date and time the custom field definition was deleted, if applicable.
+     * Gets the deletedDateTime property value. Date and time the custom field definition was deleted, if applicable. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class CustomFieldDefinition extends PlannerDelta implements Parsable {
         return this.backingStore.get("rollupType");
     }
     /**
-     * Gets the valueType property value. Data type of the custom field&apos;s values.. The possible values are: text, date, utcDateTime, number, decimal, flag, singleChoiceText, multipleChoiceText, unknownFutureValue.
+     * Gets the valueType property value. Data type of the custom field&apos;s values. Immutable after creation. The possible values are: text, date, utcDateTime, number, decimal, flag, singleChoiceText, multipleChoiceText, unknownFutureValue. The values utcDateTime, decimal, and multipleChoiceText can occur on existing fields; they aren&apos;t supported types for new field definitions.
      * @return a {@link CustomFieldValueType}
      */
     @jakarta.annotation.Nullable
@@ -187,14 +187,14 @@ public class CustomFieldDefinition extends PlannerDelta implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the deletedBy property value. Identity of the user who deleted the custom field definition, if it was deleted.
+     * Sets the deletedBy property value. Identity of the user who deleted the custom field definition, if it was deleted. Read-only.
      * @param value Value to set for the deletedBy property.
      */
     public void setDeletedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("deletedBy", value);
     }
     /**
-     * Sets the deletedDateTime property value. Date and time the custom field definition was deleted, if applicable.
+     * Sets the deletedDateTime property value. Date and time the custom field definition was deleted, if applicable. Read-only.
      * @param value Value to set for the deletedDateTime property.
      */
     public void setDeletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -236,7 +236,7 @@ public class CustomFieldDefinition extends PlannerDelta implements Parsable {
         this.backingStore.set("rollupType", value);
     }
     /**
-     * Sets the valueType property value. Data type of the custom field&apos;s values.. The possible values are: text, date, utcDateTime, number, decimal, flag, singleChoiceText, multipleChoiceText, unknownFutureValue.
+     * Sets the valueType property value. Data type of the custom field&apos;s values. Immutable after creation. The possible values are: text, date, utcDateTime, number, decimal, flag, singleChoiceText, multipleChoiceText, unknownFutureValue. The values utcDateTime, decimal, and multipleChoiceText can occur on existing fields; they aren&apos;t supported types for new field definitions.
      * @param value Value to set for the valueType property.
      */
     public void setValueType(@jakarta.annotation.Nullable final CustomFieldValueType value) {

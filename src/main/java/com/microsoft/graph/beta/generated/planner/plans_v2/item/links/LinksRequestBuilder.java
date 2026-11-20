@@ -60,7 +60,7 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/plans_v2/{plan%2Did}/links{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of content links attached to the plan. Read-only. Nullable.
+     * Content links attached to the plan. Can be supplied when creating a plan by using a deep insert. Nullable.
      * @return a {@link ContentLinkCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The collection of content links attached to the plan. Read-only. Nullable.
+     * Content links attached to the plan. Can be supplied when creating a plan by using a deep insert. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContentLinkCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ContentLink::createFromDiscriminatorValue);
     }
     /**
-     * The collection of content links attached to the plan. Read-only. Nullable.
+     * Content links attached to the plan. Can be supplied when creating a plan by using a deep insert. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of content links attached to the plan. Read-only. Nullable.
+     * Content links attached to the plan. Can be supplied when creating a plan by using a deep insert. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
         return new LinksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of content links attached to the plan. Read-only. Nullable.
+     * Content links attached to the plan. Can be supplied when creating a plan by using a deep insert. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -26,7 +26,7 @@ public class UserAssignment extends PlannerDelta implements Parsable {
         return new UserAssignment();
     }
     /**
-     * Gets the assignedBy property value. Identity of the user (or application) that made the assignment.
+     * Gets the assignedBy property value. Identity of the user (or application) that made the assignment. Read-only.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class UserAssignment extends PlannerDelta implements Parsable {
         return this.backingStore.get("assignedBy");
     }
     /**
-     * Gets the assignedDateTime property value. Date and time the assignment was made.
+     * Gets the assignedDateTime property value. Date and time the assignment was made. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -82,14 +82,14 @@ public class UserAssignment extends PlannerDelta implements Parsable {
         writer.writeObjectValue("user", this.getUser());
     }
     /**
-     * Sets the assignedBy property value. Identity of the user (or application) that made the assignment.
+     * Sets the assignedBy property value. Identity of the user (or application) that made the assignment. Read-only.
      * @param value Value to set for the assignedBy property.
      */
     public void setAssignedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("assignedBy", value);
     }
     /**
-     * Sets the assignedDateTime property value. Date and time the assignment was made.
+     * Sets the assignedDateTime property value. Date and time the assignment was made. Read-only.
      * @param value Value to set for the assignedDateTime property.
      */
     public void setAssignedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

@@ -93,7 +93,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamworkSectionItemCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add an item, such as a chat, channel, meeting, or community, to a user-defined section in a user&apos;s teamwork. Each item can belong to only one section at a time. You can only add items that are currently in a system-defined section. If the item is already in another user-defined section, use the move action to relocate it.
+     * Add an item, such as a chat, channel, meeting, or community, to a user-defined section in a user&apos;s teamwork. An item can belong to only one section at a time. If the item is in a different user-defined section, this request moves it to the target section. If the item is already in the target section, the request succeeds without making changes.
      * @param body The request body
      * @return a {@link TeamworkSectionItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -104,7 +104,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Add an item, such as a chat, channel, meeting, or community, to a user-defined section in a user&apos;s teamwork. Each item can belong to only one section at a time. You can only add items that are currently in a system-defined section. If the item is already in another user-defined section, use the move action to relocate it.
+     * Add an item, such as a chat, channel, meeting, or community, to a user-defined section in a user&apos;s teamwork. An item can belong to only one section at a time. If the item is in a different user-defined section, this request moves it to the target section. If the item is already in the target section, the request succeeds without making changes.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamworkSectionItem}
@@ -140,7 +140,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add an item, such as a chat, channel, meeting, or community, to a user-defined section in a user&apos;s teamwork. Each item can belong to only one section at a time. You can only add items that are currently in a system-defined section. If the item is already in another user-defined section, use the move action to relocate it.
+     * Add an item, such as a chat, channel, meeting, or community, to a user-defined section in a user&apos;s teamwork. An item can belong to only one section at a time. If the item is in a different user-defined section, this request moves it to the target section. If the item is already in the target section, the request succeeds without making changes.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -149,7 +149,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add an item, such as a chat, channel, meeting, or community, to a user-defined section in a user&apos;s teamwork. Each item can belong to only one section at a time. You can only add items that are currently in a system-defined section. If the item is already in another user-defined section, use the move action to relocate it.
+     * Add an item, such as a chat, channel, meeting, or community, to a user-defined section in a user&apos;s teamwork. An item can belong to only one section at a time. If the item is in a different user-defined section, this request moves it to the target section. If the item is already in the target section, the request succeeds without making changes.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -598,6 +598,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("identities", (n) -> { this.setIdentities(n.getCollectionOfObjectValues(ObjectIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("identityGovernance", (n) -> { this.setIdentityGovernance(n.getObjectValue(IdentityGovernanceUserSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("identityParentId", (n) -> { this.setIdentityParentId(n.getStringValue()); });
+        deserializerMap.put("identityVerificationStatus", (n) -> { this.setIdentityVerificationStatus(n.getObjectValue(IdentityVerificationStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("imAddresses", (n) -> { this.setImAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("inferenceClassification", (n) -> { this.setInferenceClassification(n.getObjectValue(InferenceClassification::createFromDiscriminatorValue)); });
         deserializerMap.put("infoCatalogs", (n) -> { this.setInfoCatalogs(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -605,6 +606,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("insights", (n) -> { this.setInsights(n.getObjectValue(ItemInsights::createFromDiscriminatorValue)); });
         deserializerMap.put("interests", (n) -> { this.setInterests(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("invitedBy", (n) -> { this.setInvitedBy(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("isHardDeleteProtectionEnabled", (n) -> { this.setIsHardDeleteProtectionEnabled(n.getBooleanValue()); });
         deserializerMap.put("isLicenseReconciliationNeeded", (n) -> { this.setIsLicenseReconciliationNeeded(n.getBooleanValue()); });
         deserializerMap.put("isManagementRestricted", (n) -> { this.setIsManagementRestricted(n.getBooleanValue()); });
         deserializerMap.put("isResourceAccount", (n) -> { this.setIsResourceAccount(n.getBooleanValue()); });
@@ -733,7 +735,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("identities");
     }
     /**
-     * Gets the identityGovernance property value. The identity governance settings for the user. You can get or update the user&apos;s approver delegate through the approverDelegate property. Nullable. Returned only on $select. Supports $expand.
+     * Gets the identityGovernance property value. The identity governance settings for the user, including the approver delegate configuration. You can get or update the user&apos;s approver delegate through the approverDelegate property. Nullable. Returned only on $select. Supports $expand.
      * @return a {@link IdentityGovernanceUserSettings}
      */
     @jakarta.annotation.Nullable
@@ -747,6 +749,14 @@ public class User extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public String getIdentityParentId() {
         return this.backingStore.get("identityParentId");
+    }
+    /**
+     * Gets the identityVerificationStatus property value. The user&apos;s overall identity verification state and recent verification events. Retrieve through the get identity verification status operation.
+     * @return a {@link IdentityVerificationStatus}
+     */
+    @jakarta.annotation.Nullable
+    public IdentityVerificationStatus getIdentityVerificationStatus() {
+        return this.backingStore.get("identityVerificationStatus");
     }
     /**
      * Gets the imAddresses property value. The instant message voice-over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only. Supports $filter (eq, not, ge, le, startsWith).
@@ -803,6 +813,14 @@ public class User extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public DirectoryObject getInvitedBy() {
         return this.backingStore.get("invitedBy");
+    }
+    /**
+     * Gets the isHardDeleteProtectionEnabled property value. Indicates whether hard deletion protection is enabled for the user (excluding on-premises synchronized users). When true, permanent deletion is blocked for seven days after soft deletion. The user can still be soft deleted and restored. Once enabled, protection can&apos;t be disabled or set to null. Enable protection on an existing user by using Update user; enabling it during creation isn&apos;t supported. Setting this property to true requires the Microsoft Entra Backup Administrator role. Nullable. Requires $select to retrieve. Supports $filter (eq).
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsHardDeleteProtectionEnabled() {
+        return this.backingStore.get("isHardDeleteProtectionEnabled");
     }
     /**
      * Gets the isLicenseReconciliationNeeded property value. Indicates whether the user is pending an exchange mailbox license assignment.  Read-only.  Supports $filter (eq where true only).
@@ -1622,6 +1640,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("identities", this.getIdentities());
         writer.writeObjectValue("identityGovernance", this.getIdentityGovernance());
         writer.writeStringValue("identityParentId", this.getIdentityParentId());
+        writer.writeObjectValue("identityVerificationStatus", this.getIdentityVerificationStatus());
         writer.writeCollectionOfPrimitiveValues("imAddresses", this.getImAddresses());
         writer.writeObjectValue("inferenceClassification", this.getInferenceClassification());
         writer.writeCollectionOfPrimitiveValues("infoCatalogs", this.getInfoCatalogs());
@@ -1629,6 +1648,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeObjectValue("insights", this.getInsights());
         writer.writeCollectionOfPrimitiveValues("interests", this.getInterests());
         writer.writeObjectValue("invitedBy", this.getInvitedBy());
+        writer.writeBooleanValue("isHardDeleteProtectionEnabled", this.getIsHardDeleteProtectionEnabled());
         writer.writeBooleanValue("isLicenseReconciliationNeeded", this.getIsLicenseReconciliationNeeded());
         writer.writeBooleanValue("isManagementRestricted", this.getIsManagementRestricted());
         writer.writeBooleanValue("isResourceAccount", this.getIsResourceAccount());
@@ -2179,7 +2199,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("identities", value);
     }
     /**
-     * Sets the identityGovernance property value. The identity governance settings for the user. You can get or update the user&apos;s approver delegate through the approverDelegate property. Nullable. Returned only on $select. Supports $expand.
+     * Sets the identityGovernance property value. The identity governance settings for the user, including the approver delegate configuration. You can get or update the user&apos;s approver delegate through the approverDelegate property. Nullable. Returned only on $select. Supports $expand.
      * @param value Value to set for the identityGovernance property.
      */
     public void setIdentityGovernance(@jakarta.annotation.Nullable final IdentityGovernanceUserSettings value) {
@@ -2191,6 +2211,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setIdentityParentId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("identityParentId", value);
+    }
+    /**
+     * Sets the identityVerificationStatus property value. The user&apos;s overall identity verification state and recent verification events. Retrieve through the get identity verification status operation.
+     * @param value Value to set for the identityVerificationStatus property.
+     */
+    public void setIdentityVerificationStatus(@jakarta.annotation.Nullable final IdentityVerificationStatus value) {
+        this.backingStore.set("identityVerificationStatus", value);
     }
     /**
      * Sets the imAddresses property value. The instant message voice-over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only. Supports $filter (eq, not, ge, le, startsWith).
@@ -2240,6 +2267,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setInvitedBy(@jakarta.annotation.Nullable final DirectoryObject value) {
         this.backingStore.set("invitedBy", value);
+    }
+    /**
+     * Sets the isHardDeleteProtectionEnabled property value. Indicates whether hard deletion protection is enabled for the user (excluding on-premises synchronized users). When true, permanent deletion is blocked for seven days after soft deletion. The user can still be soft deleted and restored. Once enabled, protection can&apos;t be disabled or set to null. Enable protection on an existing user by using Update user; enabling it during creation isn&apos;t supported. Setting this property to true requires the Microsoft Entra Backup Administrator role. Nullable. Requires $select to retrieve. Supports $filter (eq).
+     * @param value Value to set for the isHardDeleteProtectionEnabled property.
+     */
+    public void setIsHardDeleteProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isHardDeleteProtectionEnabled", value);
     }
     /**
      * Sets the isLicenseReconciliationNeeded property value. Indicates whether the user is pending an exchange mailbox license assignment.  Read-only.  Supports $filter (eq where true only).

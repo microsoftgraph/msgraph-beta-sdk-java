@@ -60,19 +60,21 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/tasks_v2/{task%2Did}/messages{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of chat messages associated with the task. Read-only. Nullable.
+     * Get a list of the plannerChatMessage objects associated with the task.
      * @return a {@link PlannerChatMessageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/task-list-messages?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerChatMessageCollectionResponse get() {
         return get(null);
     }
     /**
-     * The collection of chat messages associated with the task. Read-only. Nullable.
+     * Get a list of the plannerChatMessage objects associated with the task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerChatMessageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/task-list-messages?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerChatMessageCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerChatMessage::createFromDiscriminatorValue);
     }
     /**
-     * The collection of chat messages associated with the task. Read-only. Nullable.
+     * Get a list of the plannerChatMessage objects associated with the task.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of chat messages associated with the task. Read-only. Nullable.
+     * Get a list of the plannerChatMessage objects associated with the task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return new MessagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of chat messages associated with the task. Read-only. Nullable.
+     * Get a list of the plannerChatMessage objects associated with the task.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

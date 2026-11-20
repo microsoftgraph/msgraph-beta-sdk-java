@@ -90,7 +90,7 @@ public class ConfigurationMonitorItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConfigurationMonitor::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a configurationMonitor object, including the monitor name, description, and baseline. You must provide the full monitor body when you call this API.
+     * Update the properties of a configurationMonitor, including its name, description, baseline, mode, status, or referenced version of the same template. When updating an inline baseline, provide the full monitor body as described in the request body section.
      * @param body The request body
      * @return a {@link ConfigurationMonitor}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -101,7 +101,7 @@ public class ConfigurationMonitorItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a configurationMonitor object, including the monitor name, description, and baseline. You must provide the full monitor body when you call this API.
+     * Update the properties of a configurationMonitor, including its name, description, baseline, mode, status, or referenced version of the same template. When updating an inline baseline, provide the full monitor body as described in the request body section.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConfigurationMonitor}
@@ -157,7 +157,7 @@ public class ConfigurationMonitorItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a configurationMonitor object, including the monitor name, description, and baseline. You must provide the full monitor body when you call this API.
+     * Update the properties of a configurationMonitor, including its name, description, baseline, mode, status, or referenced version of the same template. When updating an inline baseline, provide the full monitor body as described in the request body section.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -166,7 +166,7 @@ public class ConfigurationMonitorItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a configurationMonitor object, including the monitor name, description, and baseline. You must provide the full monitor body when you call this API.
+     * Update the properties of a configurationMonitor, including its name, description, baseline, mode, status, or referenced version of the same template. When updating an inline baseline, provide the full monitor body as described in the request body section.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

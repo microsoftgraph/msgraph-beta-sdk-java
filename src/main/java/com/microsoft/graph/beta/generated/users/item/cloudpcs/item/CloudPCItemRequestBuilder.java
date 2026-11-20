@@ -19,10 +19,13 @@ import com.microsoft.graph.beta.users.item.cloudpcs.item.resize.ResizeRequestBui
 import com.microsoft.graph.beta.users.item.cloudpcs.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.retrievecloudpclaunchdetail.RetrieveCloudPcLaunchDetailRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.retrievecloudpcremoteactionresults.RetrieveCloudPCRemoteActionResultsRequestBuilder;
+import com.microsoft.graph.beta.users.item.cloudpcs.item.retrieveflexcloudpcaccessconfiguration.RetrieveFlexCloudPcAccessConfigurationRequestBuilder;
+import com.microsoft.graph.beta.users.item.cloudpcs.item.retrieveflexcloudpcconfigurationdetail.RetrieveFlexCloudPcConfigurationDetailRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.retrievefrontlinecloudpcdetail.RetrieveFrontlineCloudPcDetailRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.retrievereviewstatus.RetrieveReviewStatusRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.retrievesnapshots.RetrieveSnapshotsRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.retrypartneragentinstallation.RetryPartnerAgentInstallationRequestBuilder;
+import com.microsoft.graph.beta.users.item.cloudpcs.item.setdevicename.SetDeviceNameRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.setreviewstatus.SetReviewStatusRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.start.StartRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.stop.StopRequestBuilder;
@@ -185,6 +188,22 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
         return new RetrieveCloudPCRemoteActionResultsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the retrieveFlexCloudPcAccessConfiguration method.
+     * @return a {@link RetrieveFlexCloudPcAccessConfigurationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveFlexCloudPcAccessConfigurationRequestBuilder retrieveFlexCloudPcAccessConfiguration() {
+        return new RetrieveFlexCloudPcAccessConfigurationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveFlexCloudPcConfigurationDetail method.
+     * @return a {@link RetrieveFlexCloudPcConfigurationDetailRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveFlexCloudPcConfigurationDetailRequestBuilder retrieveFlexCloudPcConfigurationDetail() {
+        return new RetrieveFlexCloudPcConfigurationDetailRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the retrieveFrontlineCloudPcDetail method.
      * @return a {@link RetrieveFrontlineCloudPcDetailRequestBuilder}
      */
@@ -215,6 +234,14 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RetryPartnerAgentInstallationRequestBuilder retryPartnerAgentInstallation() {
         return new RetryPartnerAgentInstallationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the setDeviceName method.
+     * @return a {@link SetDeviceNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SetDeviceNameRequestBuilder setDeviceName() {
+        return new SetDeviceNameRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the setReviewStatus method.

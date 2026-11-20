@@ -55,18 +55,16 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/planner{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a plannerGroup object.
+     * Delete navigation property planner for groups
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-delete-planner?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a plannerGroup object.
+     * Delete navigation property planner for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-delete-planner?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -99,23 +97,21 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerGroup::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a plannerGroup object.
+     * Update the navigation property planner in groups
      * @param body The request body
      * @return a {@link PlannerGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannergroup-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerGroup patch(@jakarta.annotation.Nonnull final PlannerGroup body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a plannerGroup object.
+     * Update the navigation property planner in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannergroup-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerGroup patch(@jakarta.annotation.Nonnull final PlannerGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +122,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerGroup::createFromDiscriminatorValue);
     }
     /**
-     * Delete a plannerGroup object.
+     * Delete navigation property planner for groups
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +130,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a plannerGroup object.
+     * Delete navigation property planner for groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -166,7 +162,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a plannerGroup object.
+     * Update the navigation property planner in groups
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -175,7 +171,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a plannerGroup object.
+     * Update the navigation property planner in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

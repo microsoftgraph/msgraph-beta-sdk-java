@@ -60,7 +60,7 @@ public class ContextsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/plans_v2/{plan%2Did}/contexts{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of context links describing where the plan is surfaced. Read-only. Nullable.
+     * Context links describing where the plan is surfaced. Can be supplied when creating a plan by using a deep insert. Nullable.
      * @return a {@link PlanContextLinkCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class ContextsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The collection of context links describing where the plan is surfaced. Read-only. Nullable.
+     * Context links describing where the plan is surfaced. Can be supplied when creating a plan by using a deep insert. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlanContextLinkCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class ContextsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlanContextLink::createFromDiscriminatorValue);
     }
     /**
-     * The collection of context links describing where the plan is surfaced. Read-only. Nullable.
+     * Context links describing where the plan is surfaced. Can be supplied when creating a plan by using a deep insert. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class ContextsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of context links describing where the plan is surfaced. Read-only. Nullable.
+     * Context links describing where the plan is surfaced. Can be supplied when creating a plan by using a deep insert. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class ContextsRequestBuilder extends BaseRequestBuilder {
         return new ContextsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of context links describing where the plan is surfaced. Read-only. Nullable.
+     * Context links describing where the plan is surfaced. Can be supplied when creating a plan by using a deep insert. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

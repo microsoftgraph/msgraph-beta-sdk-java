@@ -80,7 +80,7 @@ public class RuleSchedule implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("frequency");
     }
     /**
-     * Gets the lookback property value. The lookback property
+     * Gets the lookback property value. The time window evaluated by each scheduled rule run, expressed as an ISO 8601 duration, for example PT4H for four hours. Events match this window based on either event time or ingestion time. The value must be at least frequency. When omitted, the service derives the default lookback from frequency. Not supported for near-real-time rules with a zero frequency.
      * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
@@ -147,7 +147,7 @@ public class RuleSchedule implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("frequency", value);
     }
     /**
-     * Sets the lookback property value. The lookback property
+     * Sets the lookback property value. The time window evaluated by each scheduled rule run, expressed as an ISO 8601 duration, for example PT4H for four hours. Events match this window based on either event time or ingestion time. The value must be at least frequency. When omitted, the service derives the default lookback from frequency. Not supported for near-real-time rules with a zero frequency.
      * @param value Value to set for the lookback property.
      */
     public void setLookback(@jakarta.annotation.Nullable final PeriodAndDuration value) {

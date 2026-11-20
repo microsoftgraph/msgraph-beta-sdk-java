@@ -26,7 +26,7 @@ public class Plan extends PlannerDelta implements Parsable {
         return new Plan();
     }
     /**
-     * Gets the archivalInfo property value. Information about whether the entity is archived, and when it was archived.
+     * Gets the archivalInfo property value. Service-populated information about whether the entity is archived, and when it was archived. Read-only.
      * @return a {@link PlannerArchivalInfo}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class Plan extends PlannerDelta implements Parsable {
         return this.backingStore.get("contentSensitivityLabelAssignment");
     }
     /**
-     * Gets the contexts property value. The collection of context links describing where the plan is surfaced. Read-only. Nullable.
+     * Gets the contexts property value. Context links describing where the plan is surfaced. Can be supplied when creating a plan by using a deep insert. Nullable.
      * @return a {@link java.util.List<PlanContextLink>}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class Plan extends PlannerDelta implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the duration property value. Duration of the plan, in days.
+     * Gets the duration property value. Computed duration of the plan, in seconds. Read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -169,7 +169,7 @@ public class Plan extends PlannerDelta implements Parsable {
         return this.backingStore.get("goals");
     }
     /**
-     * Gets the hasChat property value. Indicates whether the plan has an associated chat.
+     * Gets the hasChat property value. Indicates whether the plan has an associated chat. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -201,7 +201,7 @@ public class Plan extends PlannerDelta implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the links property value. The collection of content links attached to the plan. Read-only. Nullable.
+     * Gets the links property value. Content links attached to the plan. Can be supplied when creating a plan by using a deep insert. Nullable.
      * @return a {@link java.util.List<ContentLink>}
      */
     @jakarta.annotation.Nullable
@@ -261,7 +261,7 @@ public class Plan extends PlannerDelta implements Parsable {
         writer.writeCollectionOfObjectValues("tasks", this.getTasks());
     }
     /**
-     * Sets the archivalInfo property value. Information about whether the entity is archived, and when it was archived.
+     * Sets the archivalInfo property value. Service-populated information about whether the entity is archived, and when it was archived. Read-only.
      * @param value Value to set for the archivalInfo property.
      */
     public void setArchivalInfo(@jakarta.annotation.Nullable final PlannerArchivalInfo value) {
@@ -303,7 +303,7 @@ public class Plan extends PlannerDelta implements Parsable {
         this.backingStore.set("contentSensitivityLabelAssignment", value);
     }
     /**
-     * Sets the contexts property value. The collection of context links describing where the plan is surfaced. Read-only. Nullable.
+     * Sets the contexts property value. Context links describing where the plan is surfaced. Can be supplied when creating a plan by using a deep insert. Nullable.
      * @param value Value to set for the contexts property.
      */
     public void setContexts(@jakarta.annotation.Nullable final java.util.List<PlanContextLink> value) {
@@ -338,7 +338,7 @@ public class Plan extends PlannerDelta implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the duration property value. Duration of the plan, in days.
+     * Sets the duration property value. Computed duration of the plan, in seconds. Read-only.
      * @param value Value to set for the duration property.
      */
     public void setDuration(@jakarta.annotation.Nullable final Integer value) {
@@ -359,7 +359,7 @@ public class Plan extends PlannerDelta implements Parsable {
         this.backingStore.set("goals", value);
     }
     /**
-     * Sets the hasChat property value. Indicates whether the plan has an associated chat.
+     * Sets the hasChat property value. Indicates whether the plan has an associated chat. Read-only.
      * @param value Value to set for the hasChat property.
      */
     public void setHasChat(@jakarta.annotation.Nullable final Boolean value) {
@@ -387,7 +387,7 @@ public class Plan extends PlannerDelta implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the links property value. The collection of content links attached to the plan. Read-only. Nullable.
+     * Sets the links property value. Content links attached to the plan. Can be supplied when creating a plan by using a deep insert. Nullable.
      * @param value Value to set for the links property.
      */
     public void setLinks(@jakarta.annotation.Nullable final java.util.List<ContentLink> value) {

@@ -59,7 +59,7 @@ public class PlansV2RequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamTemplateDefinition/{teamTemplateDefinition%2Did}/teamDefinition/primaryChannel/planner/plans_v2{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Read-only. Nullable. The collection of Planner Graph V4 plans owned by the Teams channel. Currently, only shared channels are supported.
+     * Read-only. Nullable. The collection of plans in the Planner Unified plans Graph API owned by the Teams channel. Currently, only shared channels are supported.
      * @return a {@link PlanCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -68,7 +68,7 @@ public class PlansV2RequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read-only. Nullable. The collection of Planner Graph V4 plans owned by the Teams channel. Currently, only shared channels are supported.
+     * Read-only. Nullable. The collection of plans in the Planner Unified plans Graph API owned by the Teams channel. Currently, only shared channels are supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlanCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -81,7 +81,7 @@ public class PlansV2RequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlanCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Read-only. Nullable. The collection of Planner Graph V4 plans owned by the Teams channel. Currently, only shared channels are supported.
+     * Read-only. Nullable. The collection of plans in the Planner Unified plans Graph API owned by the Teams channel. Currently, only shared channels are supported.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class PlansV2RequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. The collection of Planner Graph V4 plans owned by the Teams channel. Currently, only shared channels are supported.
+     * Read-only. Nullable. The collection of plans in the Planner Unified plans Graph API owned by the Teams channel. Currently, only shared channels are supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +111,7 @@ public class PlansV2RequestBuilder extends BaseRequestBuilder {
         return new PlansV2RequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read-only. Nullable. The collection of Planner Graph V4 plans owned by the Teams channel. Currently, only shared channels are supported.
+     * Read-only. Nullable. The collection of plans in the Planner Unified plans Graph API owned by the Teams channel. Currently, only shared channels are supported.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

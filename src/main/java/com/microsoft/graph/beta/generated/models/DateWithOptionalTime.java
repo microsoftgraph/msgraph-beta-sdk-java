@@ -80,7 +80,7 @@ public class DateWithOptionalTime implements AdditionalDataHolder, BackedModel, 
         return deserializerMap;
     }
     /**
-     * Gets the isTimeSpecified property value. Indicates whether a specific time (not just a date) was provided.
+     * Gets the isTimeSpecified property value. Indicates whether a specific time (not just a date) was provided. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class DateWithOptionalTime implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the time property value. The optional time-of-day component of the value.
+     * Gets the time property value. The optional time-of-day component of the value. Read-only.
      * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class DateWithOptionalTime implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("time");
     }
     /**
-     * Gets the timeZone property value. Time zone the time value is expressed in, if time is set.
+     * Gets the timeZone property value. Time zone the time value is expressed in, if time is set. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -147,7 +147,7 @@ public class DateWithOptionalTime implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("date", value);
     }
     /**
-     * Sets the isTimeSpecified property value. Indicates whether a specific time (not just a date) was provided.
+     * Sets the isTimeSpecified property value. Indicates whether a specific time (not just a date) was provided. Read-only.
      * @param value Value to set for the isTimeSpecified property.
      */
     public void setIsTimeSpecified(@jakarta.annotation.Nullable final Boolean value) {
@@ -161,14 +161,14 @@ public class DateWithOptionalTime implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the time property value. The optional time-of-day component of the value.
+     * Sets the time property value. The optional time-of-day component of the value. Read-only.
      * @param value Value to set for the time property.
      */
     public void setTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.backingStore.set("time", value);
     }
     /**
-     * Sets the timeZone property value. Time zone the time value is expressed in, if time is set.
+     * Sets the timeZone property value. Time zone the time value is expressed in, if time is set. Read-only.
      * @param value Value to set for the timeZone property.
      */
     public void setTimeZone(@jakarta.annotation.Nullable final String value) {

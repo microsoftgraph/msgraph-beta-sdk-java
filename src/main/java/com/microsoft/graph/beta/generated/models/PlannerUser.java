@@ -85,7 +85,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         return this.backingStore.get("plans");
     }
     /**
-     * Gets the plans_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 plans associated with the user.
+     * Gets the plans_v2 property value. Read-only. Nullable. The collection of plans in the Planner Unified plans Graph API associated with the user.
      * @return a {@link java.util.List<Plan>}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         return this.backingStore.get("tasks");
     }
     /**
-     * Gets the tasks_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 tasks assigned to the user.
+     * Gets the tasks_v2 property value. Read-only. Nullable. The collection of tasks in the Planner Unified plans Graph API assigned to the user.
      * @return a {@link java.util.List<Task>}
      */
     @jakarta.annotation.Nullable
@@ -187,7 +187,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         this.backingStore.set("plans", value);
     }
     /**
-     * Sets the plans_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 plans associated with the user.
+     * Sets the plans_v2 property value. Read-only. Nullable. The collection of plans in the Planner Unified plans Graph API associated with the user.
      * @param value Value to set for the plans_v2 property.
      */
     public void setPlansV2(@jakarta.annotation.Nullable final java.util.List<Plan> value) {
@@ -222,7 +222,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         this.backingStore.set("tasks", value);
     }
     /**
-     * Sets the tasks_v2 property value. Read-only. Nullable. The collection of Planner Graph V4 tasks assigned to the user.
+     * Sets the tasks_v2 property value. Read-only. Nullable. The collection of tasks in the Planner Unified plans Graph API assigned to the user.
      * @param value Value to set for the tasks_v2 property.
      */
     public void setTasksV2(@jakarta.annotation.Nullable final java.util.List<Task> value) {

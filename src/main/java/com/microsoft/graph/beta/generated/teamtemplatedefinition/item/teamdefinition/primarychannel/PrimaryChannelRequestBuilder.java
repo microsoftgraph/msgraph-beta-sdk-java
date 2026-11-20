@@ -17,6 +17,7 @@ import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.prima
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.sharedwithteams.SharedWithTeamsRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.startmigration.StartMigrationRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.tabs.TabsRequestBuilder;
+import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.tags.TagsRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -155,6 +156,14 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TabsRequestBuilder tabs() {
         return new TabsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tags property of the microsoft.graph.channel entity.
+     * @return a {@link TagsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TagsRequestBuilder tags() {
+        return new TagsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the unarchive method.

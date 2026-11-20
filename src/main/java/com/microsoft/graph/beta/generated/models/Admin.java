@@ -119,7 +119,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(17);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(18);
         deserializerMap.put("appsAndServices", (n) -> { this.setAppsAndServices(n.getObjectValue(AdminAppsAndServices::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudLicensing", (n) -> { this.setCloudLicensing(n.getObjectValue(AdminCloudLicensing::createFromDiscriminatorValue)); });
         deserializerMap.put("configurationManagement", (n) -> { this.setConfigurationManagement(n.getObjectValue(ConfigurationManagement::createFromDiscriminatorValue)); });
@@ -132,6 +132,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("people", (n) -> { this.setPeople(n.getObjectValue(PeopleAdminSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("reportSettings", (n) -> { this.setReportSettings(n.getObjectValue(AdminReportSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourcePolicy", (n) -> { this.setResourcePolicy(n.getObjectValue(ResourcePolicyRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("serviceAnnouncement", (n) -> { this.setServiceAnnouncement(n.getObjectValue(ServiceAnnouncement::createFromDiscriminatorValue)); });
         deserializerMap.put("sharepoint", (n) -> { this.setSharepoint(n.getObjectValue(Sharepoint::createFromDiscriminatorValue)); });
         deserializerMap.put("teams", (n) -> { this.setTeams(n.getObjectValue(TeamsAdminRoot::createFromDiscriminatorValue)); });
@@ -178,6 +179,14 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nullable
     public AdminReportSettings getReportSettings() {
         return this.backingStore.get("reportSettings");
+    }
+    /**
+     * Gets the resourcePolicy property value. The resourcePolicy property
+     * @return a {@link ResourcePolicyRoot}
+     */
+    @jakarta.annotation.Nullable
+    public ResourcePolicyRoot getResourcePolicy() {
+        return this.backingStore.get("resourcePolicy");
     }
     /**
      * Gets the serviceAnnouncement property value. A container for service communications resources. Read-only.
@@ -237,6 +246,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("people", this.getPeople());
         writer.writeObjectValue("reportSettings", this.getReportSettings());
+        writer.writeObjectValue("resourcePolicy", this.getResourcePolicy());
         writer.writeObjectValue("serviceAnnouncement", this.getServiceAnnouncement());
         writer.writeObjectValue("sharepoint", this.getSharepoint());
         writer.writeObjectValue("teams", this.getTeams());
@@ -342,6 +352,13 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setReportSettings(@jakarta.annotation.Nullable final AdminReportSettings value) {
         this.backingStore.set("reportSettings", value);
+    }
+    /**
+     * Sets the resourcePolicy property value. The resourcePolicy property
+     * @param value Value to set for the resourcePolicy property.
+     */
+    public void setResourcePolicy(@jakarta.annotation.Nullable final ResourcePolicyRoot value) {
+        this.backingStore.set("resourcePolicy", value);
     }
     /**
      * Sets the serviceAnnouncement property value. A container for service communications resources. Read-only.

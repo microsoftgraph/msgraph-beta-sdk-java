@@ -37,7 +37,7 @@ public class TaskItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/planner/tasks_v2/{task%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Read-only. Nullable. The collection of Planner Graph V4 tasks assigned to the user.
+     * Read-only. Nullable. The collection of tasks in the Planner Unified plans Graph API assigned to the user.
      * @return a {@link Task}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class TaskItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read-only. Nullable. The collection of Planner Graph V4 tasks assigned to the user.
+     * Read-only. Nullable. The collection of tasks in the Planner Unified plans Graph API assigned to the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Task}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class TaskItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Task::createFromDiscriminatorValue);
     }
     /**
-     * Read-only. Nullable. The collection of Planner Graph V4 tasks assigned to the user.
+     * Read-only. Nullable. The collection of tasks in the Planner Unified plans Graph API assigned to the user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class TaskItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. The collection of Planner Graph V4 tasks assigned to the user.
+     * Read-only. Nullable. The collection of tasks in the Planner Unified plans Graph API assigned to the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class TaskItemRequestBuilder extends BaseRequestBuilder {
         return new TaskItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read-only. Nullable. The collection of Planner Graph V4 tasks assigned to the user.
+     * Read-only. Nullable. The collection of tasks in the Planner Unified plans Graph API assigned to the user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

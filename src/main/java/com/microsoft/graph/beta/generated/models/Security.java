@@ -67,6 +67,14 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         return value;
     }
     /**
+     * Gets the agenticSecurity property value. The agenticSecurity property
+     * @return a {@link AgenticSecurityRoot}
+     */
+    @jakarta.annotation.Nullable
+    public AgenticSecurityRoot getAgenticSecurity() {
+        return this.backingStore.get("agenticSecurity");
+    }
+    /**
      * Gets the alerts property value. Notifications for suspicious or potential security issues in a customer&apos;s tenant.
      * @return a {@link java.util.List<Alert>}
      */
@@ -139,6 +147,14 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("collaboration");
     }
     /**
+     * Gets the contentManagement property value. The contentManagement property
+     * @return a {@link ContentManagementRoot}
+     */
+    @jakarta.annotation.Nullable
+    public ContentManagementRoot getContentManagement() {
+        return this.backingStore.get("contentManagement");
+    }
+    /**
      * Gets the dataDiscovery property value. The dataDiscovery property
      * @return a {@link DataDiscoveryRoot}
      */
@@ -168,7 +184,8 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(36);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(38);
+        deserializerMap.put("agenticSecurity", (n) -> { this.setAgenticSecurity(n.getObjectValue(AgenticSecurityRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("alerts_v2", (n) -> { this.setAlertsV2(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("attackSimulation", (n) -> { this.setAttackSimulation(n.getObjectValue(AttackSimulationRoot::createFromDiscriminatorValue)); });
@@ -177,6 +194,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("cases", (n) -> { this.setCases(n.getObjectValue(CasesRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudAppSecurityProfiles", (n) -> { this.setCloudAppSecurityProfiles(n.getCollectionOfObjectValues(CloudAppSecurityProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("collaboration", (n) -> { this.setCollaboration(n.getObjectValue(CollaborationRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentManagement", (n) -> { this.setContentManagement(n.getObjectValue(ContentManagementRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("dataDiscovery", (n) -> { this.setDataDiscovery(n.getObjectValue(DataDiscoveryRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("dataSecurityAndGovernance", (n) -> { this.setDataSecurityAndGovernance(n.getObjectValue(TenantDataSecurityAndGovernance::createFromDiscriminatorValue)); });
         deserializerMap.put("domainSecurityProfiles", (n) -> { this.setDomainSecurityProfiles(n.getCollectionOfObjectValues(DomainSecurityProfile::createFromDiscriminatorValue)); });
@@ -413,6 +431,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("agenticSecurity", this.getAgenticSecurity());
         writer.writeCollectionOfObjectValues("alerts", this.getAlerts());
         writer.writeCollectionOfObjectValues("alerts_v2", this.getAlertsV2());
         writer.writeObjectValue("attackSimulation", this.getAttackSimulation());
@@ -421,6 +440,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeObjectValue("cases", this.getCases());
         writer.writeCollectionOfObjectValues("cloudAppSecurityProfiles", this.getCloudAppSecurityProfiles());
         writer.writeObjectValue("collaboration", this.getCollaboration());
+        writer.writeObjectValue("contentManagement", this.getContentManagement());
         writer.writeObjectValue("dataDiscovery", this.getDataDiscovery());
         writer.writeObjectValue("dataSecurityAndGovernance", this.getDataSecurityAndGovernance());
         writer.writeCollectionOfObjectValues("domainSecurityProfiles", this.getDomainSecurityProfiles());
@@ -457,6 +477,13 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the agenticSecurity property value. The agenticSecurity property
+     * @param value Value to set for the agenticSecurity property.
+     */
+    public void setAgenticSecurity(@jakarta.annotation.Nullable final AgenticSecurityRoot value) {
+        this.backingStore.set("agenticSecurity", value);
     }
     /**
      * Sets the alerts property value. Notifications for suspicious or potential security issues in a customer&apos;s tenant.
@@ -521,6 +548,13 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setCollaboration(@jakarta.annotation.Nullable final CollaborationRoot value) {
         this.backingStore.set("collaboration", value);
+    }
+    /**
+     * Sets the contentManagement property value. The contentManagement property
+     * @param value Value to set for the contentManagement property.
+     */
+    public void setContentManagement(@jakarta.annotation.Nullable final ContentManagementRoot value) {
+        this.backingStore.set("contentManagement", value);
     }
     /**
      * Sets the dataDiscovery property value. The dataDiscovery property

@@ -37,7 +37,7 @@ public class CustomFieldDefinitionItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/security/caseManagement/caseTypeConfigurations/{caseTypeConfiguration%2Did}/customFields/{customFieldDefinition%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The contained custom-field definitions that make up the blank-form schema for this case type. Read-only. Supports $count, $expand, $filter, $orderby, $select, $skip, and $top.
+     * The contained custom-field definitions that make up the blank-form schema for this case type. Read-only. Supports $count, $expand, $filter, $orderby, $select, and $top.
      * @return a {@link CustomFieldDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class CustomFieldDefinitionItemRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * The contained custom-field definitions that make up the blank-form schema for this case type. Read-only. Supports $count, $expand, $filter, $orderby, $select, $skip, and $top.
+     * The contained custom-field definitions that make up the blank-form schema for this case type. Read-only. Supports $count, $expand, $filter, $orderby, $select, and $top.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomFieldDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class CustomFieldDefinitionItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, CustomFieldDefinition::createFromDiscriminatorValue);
     }
     /**
-     * The contained custom-field definitions that make up the blank-form schema for this case type. Read-only. Supports $count, $expand, $filter, $orderby, $select, $skip, and $top.
+     * The contained custom-field definitions that make up the blank-form schema for this case type. Read-only. Supports $count, $expand, $filter, $orderby, $select, and $top.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class CustomFieldDefinitionItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * The contained custom-field definitions that make up the blank-form schema for this case type. Read-only. Supports $count, $expand, $filter, $orderby, $select, $skip, and $top.
+     * The contained custom-field definitions that make up the blank-form schema for this case type. Read-only. Supports $count, $expand, $filter, $orderby, $select, and $top.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class CustomFieldDefinitionItemRequestBuilder extends BaseRequestBuilder 
         return new CustomFieldDefinitionItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The contained custom-field definitions that make up the blank-form schema for this case type. Read-only. Supports $count, $expand, $filter, $orderby, $select, $skip, and $top.
+     * The contained custom-field definitions that make up the blank-form schema for this case type. Read-only. Supports $count, $expand, $filter, $orderby, $select, and $top.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
